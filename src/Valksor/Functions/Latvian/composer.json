@@ -1,0 +1,39 @@
+{
+    "name": "valksor/php-functions-latvian",
+    "description": "A PHP library providing functions specific to Latvian language and data formats, including Latvian text comparison, sorting according to Latvian alphabet rules, and validation of Latvian personal identification codes",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "latvian",
+        "language",
+        "sorting",
+        "comparison",
+        "validation",
+        "personal code",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "valksor/php-functions-date": "^1.0",
+        "valksor/php-functions-iteration": "^1.0",
+        "valksor/php-functions-text": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Latvian\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

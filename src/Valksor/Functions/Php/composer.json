@@ -1,0 +1,41 @@
+{
+    "name": "valksor/php-functions-php",
+    "description": "A PHP library providing enhanced PHP utility functions for reflection, introspection, and general PHP programming tasks",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "utility",
+        "reflection",
+        "introspection",
+        "system",
+        "class",
+        "method",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "ext-random": "*",
+        "valksor/php-functions-text": "^1.0"
+    },
+    "suggest": {
+        "doctrine/persistence": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Php\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

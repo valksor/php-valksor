@@ -1,0 +1,36 @@
+{
+    "name": "valksor/php-functions-handler",
+    "description": "A PHP library providing function handling utilities including a Chain of Responsibility pattern implementation and function execution utilities",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "handler",
+        "chain",
+        "pipeline",
+        "function",
+        "execution",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "valksor/php-functions-php": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Handler\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

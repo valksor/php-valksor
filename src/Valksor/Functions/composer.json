@@ -1,0 +1,64 @@
+{
+    "name": "valksor/php-functions",
+    "description": "A comprehensive collection of PHP utility functions and helpers for various tasks including date manipulation, web operations, text processing, and more",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "utility",
+        "functions",
+        "helpers",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-random": "*",
+        "composer-runtime-api": "^2",
+        "symfony/http-foundation": "*",
+        "symfony/intl": "*",
+        "symfony/process": "*",
+        "symfony/property-access": "*",
+        "symfony/routing": "*",
+        "symfony/string": "*"
+    },
+    "replace": {
+        "valksor/php-functions-date": "self.version",
+        "valksor/php-functions-handler": "self.version",
+        "valksor/php-functions-iteration": "self.version",
+        "valksor/php-functions-latvian": "self.version",
+        "valksor/php-functions-local": "self.version",
+        "valksor/php-functions-memoize": "self.version",
+        "valksor/php-functions-number": "self.version",
+        "valksor/php-functions-pagination": "self.version",
+        "valksor/php-functions-php": "self.version",
+        "valksor/php-functions-preg": "self.version",
+        "valksor/php-functions-queue": "self.version",
+        "valksor/php-functions-sort": "self.version",
+        "valksor/php-functions-text": "self.version",
+        "valksor/php-functions-web": "self.version"
+    },
+    "suggest": {
+        "ext-gmp": "*",
+        "doctrine/persistence": "*",
+        "valksor/php-bundle": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "name": "valksor/php-functions-date",
+    "description": "A PHP library providing enhanced date and time manipulation functions with improved validation and formatting capabilities",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "date",
+        "time",
+        "formatting",
+        "validation",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "valksor/php-functions-php": "^1.0",
+        "valksor/php-functions-text": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Date\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

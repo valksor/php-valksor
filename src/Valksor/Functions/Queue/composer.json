@@ -1,0 +1,37 @@
+{
+    "name": "valksor/php-functions-queue",
+    "description": "A PHP library providing a simple and efficient queue implementation for managing collections of items in a FIFO (First-In-First-Out) manner",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "queue",
+        "fifo",
+        "collection",
+        "data-structure",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4"
+    },
+    "suggest": {
+        "valksor/php-bundle": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Queue\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

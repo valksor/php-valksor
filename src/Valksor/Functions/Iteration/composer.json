@@ -1,0 +1,40 @@
+{
+    "name": "valksor/php-functions-iteration",
+    "description": "A PHP library providing enhanced array and iteration utility functions for array manipulation, transformation, and validation",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "array",
+        "iteration",
+        "manipulation",
+        "transformation",
+        "validation",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "ext-json": "*",
+        "symfony/property-access": "*",
+        "valksor/php-functions-local": "^1.0",
+        "valksor/php-functions-php": "^1.0",
+        "valksor/php-functions-text": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Iteration\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

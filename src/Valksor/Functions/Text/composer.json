@@ -1,0 +1,40 @@
+{
+    "name": "valksor/php-functions-text",
+    "description": "A PHP library providing enhanced text manipulation functions for string operations, formatting, and transformations",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "text",
+        "string",
+        "manipulation",
+        "formatting",
+        "transformation",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "symfony/intl": "*",
+        "symfony/string": "*",
+        "valksor/php-functions-iteration": "^1.0",
+        "valksor/php-functions-local": "^1.0",
+        "valksor/php-functions-preg": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Text\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "name": "valksor/php-bundle",
+    "license": "BSD-3-Clause",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=8.4",
+        "doctrine/dbal": "*",
+        "doctrine/migrations": "*",
+        "symfony/config": "*",
+        "symfony/dependency-injection": "*",
+        "symfony/event-dispatcher": "*",
+        "symfony/finder": "*",
+        "symfony/http-kernel": "*",
+        "symfony/serializer": "*",
+        "symfony/validator": "*",
+        "valksor/php-functions-iteration": "^1.0",
+        "valksor/php-functions-local": "^1.0",
+        "valksor/php-functions-memoize": "^1.0",
+        "valksor/php-functions-php": "^1.0",
+        "valksor/php-functions-text": "^1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Bundle\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

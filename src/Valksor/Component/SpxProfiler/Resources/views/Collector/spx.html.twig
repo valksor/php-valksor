@@ -1,0 +1,221 @@
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block head %}
+    {{ parent() }}
+    {{ include('@ValksorSpx/Collector/styles.html.twig') }}
+{% endblock %}
+
+{% block toolbar %}
+    {% set icon %}
+        {{ include('@ValksorSpx/Collector/icon.svg.twig') }}
+        <span class="sf-toolbar-value">SPX</span>
+    {% endset %}
+
+    {% set text %}
+        <div class="sf-toolbar-info-piece">
+            <b>SPX Installed</b>
+            <span class="sf-toolbar-status sf-toolbar-status-{{ collector.isInstalled ? 'green' : 'red' }}">
+                {{ collector.isInstalled ? 'Yes' : 'No' }}
+            </span>
+        </div>
+
+        <div class="sf-toolbar-info-piece">
+            <b>SPX Enabled</b>
+            <span class="sf-toolbar-status sf-toolbar-status-{{ collector.isEnabled ? 'green' : 'red' }}">
+                {{ collector.isEnabled ? 'Yes' : 'No' }}
+            </span>
+        </div>
+
+        {% if collector.isEnabled %}
+            <div class="sf-toolbar-info-piece">
+                <b>Report</b>
+                <a href="{{ collector.reportUrlFromData }}">View SPX Report</a>
+            </div>
+        {% endif %}
+    {% endset %}
+
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', {link: profiler_url}) }}
+{% endblock %}
+
+{% block menu %}
+    <span class="label {{ not collector.isInstalled or not collector.isEnabled ? 'disabled' }}">
+        <span class="spx-icon icon">
+            {{ include('@ValksorSpx/Collector/icon.svg.twig') }}
+        </span>
+        <strong>SPX</strong>
+    </span>
+{% endblock %}
+
+{% block panel %}
+    <h2>SPX</h2>
+
+    {% if not collector.isInstalled %}
+        {# Not installed state #}
+        <div class="empty">
+            <p>SPX is not installed.</p>
+            <p>Install it with <code>pecl install spx</code> and enable it in your php.ini.</p>
+        </div>
+    {% elseif not collector.isEnabled %}
+        <div class="sf-tabs">
+            <div class="tab">
+                {# Installed but not enabled state #}
+                <div class="empty">
+                    <p>SPX is installed but not enabled.</p>
+                    <p>Enable it by:</p>
+                    <ul>
+                        <li>Setting the <code>SPX_ENABLED=1</code> cookie in your request</li>
+                    </ul>
+                </div>
+            </div>
+            {# Control Panel Tab #}
+            <div class="tab">
+                <h3 class="tab-title">SPX Control Panel</h3>
+                <div class="tab-content">
+                    <div class="spx-card">
+                        <iframe src="{{ collector.baseUri }}" class="spx-iframe" title="panel-iframe"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        {# SPX is enabled and working #}
+        <div class="metrics">
+            <div class="metric">
+                <span class="value">SPX Enabled</span>
+                <span class="label">Status</span>
+            </div>
+        </div>
+
+        <div class="sf-tabs">
+            {# Current Report Tab #}
+            <div class="tab">
+                <h3 class="tab-title">Current Report</h3>
+                <div class="tab-content">
+                    {% if collector.reportUrlFromData %}
+                        {# Multiple reports section #}
+                        {% if collector.multipleReports|length > 0 %}
+                            <div class="spx-card">
+                                <h4>Multiple SPX reports found within 5 seconds of profiler time</h4>
+                                <p>Profiler time: {{ collector.formattedProfilerTime }}</p>
+                                <p>Select a report to view:</p>
+
+                                <table class="spx-metadata">
+                                    <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>HTTP Host</th>
+                                        <th>Request</th>
+                                        <th>Host</th>
+                                        <th>Metadata</th>
+                                        <th>Wall time</th>
+                                        <th>Memory</th>
+                                        <th>Metrics</th>
+                                        <th>Calls</th>
+                                        <th>URL</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for report in collector.multipleReports %}
+                                        <tr>
+                                            <td>{{ report.metadata.date }}</td>
+                                            <td>{{ report.metadata.http_host }}</td>
+                                            <td>{{ report.metadata.request }}</td>
+                                            <td>{{ report.metadata.host }}</td>
+                                            <td>{{ report.metadata.custom_metadata }}</td>
+                                            <td>{{ report.metadata.wall_time }}</td>
+                                            <td>{{ report.metadata.memory }}</td>
+                                            <td>{{ report.metadata.metrics }}</td>
+                                            <td>{{ report.metadata.recorded_calls }}</td>
+                                            <td>
+                                                <a href="{{ report.url }}" target="_blank" title="Open SPX Report">
+                                                    {{ include('@ValksorSpx/Collector/icon.svg.twig') }}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% endif %}
+
+                        {# Selected report section #}
+                        {% if collector.reportMetadata %}
+                            <div class="spx-card">
+                                <h4>Selected Report</h4>
+
+                                {# Time difference warning #}
+                                {% set profilerTime = collector.formattedProfilerTime %}
+                                {% set reportTime = collector.reportMetadata.date|date('Y-m-d H:i:s') %}
+                                {% if profilerTime != reportTime and profilerTime != 'N/A' %}
+                                    <div class="spx-alert spx-alert-warning">
+                                        <strong>Warning:</strong> There is a time difference between the profiler and the SPX report.
+                                        <ul>
+                                            <li>Profiler time: {{ profilerTime }}</li>
+                                            <li>Report time: {{ reportTime }}</li>
+                                        </ul>
+                                        <p>This might indicate that the wrong report has been selected. Consider selecting a different report from the list above if available.</p>
+                                    </div>
+                                {% endif %}
+
+                                <table class="spx-metadata">
+                                    <thead>
+                                    <tr>
+                                        <th>Profiler</th>
+                                        <th>Report</th>
+                                        <th>HTTP Host</th>
+                                        <th>Request</th>
+                                        <th>Host</th>
+                                        <th>Metadata</th>
+                                        <th>Wall time</th>
+                                        <th>Memory</th>
+                                        <th>Metrics</th>
+                                        <th>Calls</th>
+                                        <th>URL</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>{{ profilerTime }}</td>
+                                        <td>{{ collector.reportMetadata.date }}</td>
+                                        <td>{{ collector.reportMetadata.http_host }}</td>
+                                        <td>{{ collector.reportMetadata.request }}</td>
+                                        <td>{{ collector.reportMetadata.host }}</td>
+                                        <td>{{ collector.reportMetadata.custom_metadata }}</td>
+                                        <td>{{ collector.reportMetadata.wall_time }}</td>
+                                        <td>{{ collector.reportMetadata.memory }}</td>
+                                        <td>{{ collector.reportMetadata.metrics }}</td>
+                                        <td>{{ collector.reportMetadata.recorded_calls }}</td>
+                                        <td>
+                                            <a href="{{ collector.reportUrlFromData }}" target="_blank" title="Open SPX Report">
+                                                {{ include('@ValksorSpx/Collector/icon.svg.twig') }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% endif %}
+
+                        {# Report iframe #}
+                        <div class="spx-card">
+                            <iframe src="{{ collector.reportUrlFromData }}" class="spx-iframe" title="report-iframe"></iframe>
+                        </div>
+                    {% else %}
+                        <div class="empty">
+                            <p>No SPX report available for this request.</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            {# Control Panel Tab #}
+            <div class="tab">
+                <h3 class="tab-title">SPX Control Panel</h3>
+                <div class="tab-content">
+                    <div class="spx-card">
+                        <iframe src="{{ collector.baseUri }}" class="spx-iframe" title="panel-iframe"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

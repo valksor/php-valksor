@@ -1,0 +1,38 @@
+{
+    "name": "valksor/php-functions-memoize",
+    "description": "A PHP library providing memoization functionality to cache the results of expensive function calls and return the cached result when the same inputs occur again",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "memoize",
+        "memoization",
+        "cache",
+        "performance",
+        "optimization",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4"
+    },
+    "suggest": {
+        "valksor/php-bundle": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Memoize\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "name": "valksor/php-spx-profiler",
+    "description": "A Symfony profiler data collector for the SPX PHP profiler, which collects and displays profiling data for PHP applications",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "profiler",
+        "spx",
+        "symfony",
+        "performance",
+        "debugging",
+        "profiling",
+        "valksor",
+        "data-collector"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "symfony/dependency-injection": "*",
+        "symfony/framework-bundle": "*",
+        "symfony/http-foundation": "*",
+        "valksor/php-bundle": "^1.0",
+        "valksor/php-functions-iteration": "^1.0",
+        "valksor/php-functions-text": "^1.0"
+    },
+    "suggest": {
+        "ext-spx": "*",
+        "symfony/twig-bundle": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Component\\SpxProfiler\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "name": "valksor/php-functions-local",
+    "description": "A PHP library providing utility functions for working with the local filesystem, environment variables, system resources, and more",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "filesystem",
+        "environment",
+        "system",
+        "resources",
+        "file",
+        "directory",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "composer-runtime-api": "^2",
+        "symfony/process": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Local\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

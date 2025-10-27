@@ -1,0 +1,35 @@
+{
+    "name": "valksor/php-functions-preg",
+    "description": "A PHP library providing enhanced regular expression (preg_*) functions with improved error handling and UTF-8 support",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "regex",
+        "regular expression",
+        "preg",
+        "pattern matching",
+        "utf-8",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Preg\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

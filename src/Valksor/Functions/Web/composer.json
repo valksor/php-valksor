@@ -1,0 +1,43 @@
+{
+    "name": "valksor/php-functions-web",
+    "description": "A PHP library providing a collection of web-related utility functions for handling HTTP requests, validating web data, and working with URLs",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "web",
+        "http",
+        "url",
+        "validation",
+        "request",
+        "valksor",
+        "symfony"
+    ],
+    "homepage": "https://github.com/valksor/valksor",
+    "require": {
+        "php": ">=8.4",
+        "ext-curl": "*",
+        "symfony/http-foundation": "*",
+        "symfony/routing": "*",
+        "valksor/php-functions-iteration": "^1.0",
+        "valksor/php-functions-local": "^1.0",
+        "valksor/php-functions-php": "^1.0",
+        "valksor/php-functions-preg": "^1.0",
+        "valksor/php-functions-text": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Functions\\Web\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
