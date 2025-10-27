@@ -7,7 +7,7 @@ A comprehensive collection of PHP utility functions and helpers for various task
 Install the package via Composer:
 
 ```bash
-composer require valksor/functions
+composer require valksor/php-functions
 ```
 
 This will install all the function sub-libraries at once.
@@ -22,20 +22,20 @@ This will install all the function sub-libraries at once.
 
 This meta-package includes the following function libraries:
 
-- [valksor/functions-date](Date) - Date and time manipulation utilities
-- [valksor/functions-handler](Handler) - Error and exception handling utilities
-- [valksor/functions-iteration](Iteration) - Array and collection iteration utilities
-- [valksor/functions-latvian](Latvian) - Latvian language specific utilities
-- [valksor/functions-local](Local) - Localization and internationalization utilities
-- [valksor/functions-memoize](Memoize) - Function result caching utilities
-- [valksor/functions-number](Number) - Number manipulation and formatting utilities
-- [valksor/functions-pagination](Pagination) - Pagination utilities for arrays and collections
-- [valksor/functions-php](Php) - PHP language enhancement utilities
-- [valksor/functions-preg](Preg) - Regular expression utilities
-- [valksor/functions-queue](Queue) - FIFO queue implementation for managing collections of items
-- [valksor/functions-sort](Sort) - Sorting algorithms and utilities
-- [valksor/functions-text](Text) - Text processing and manipulation utilities
-- [valksor/functions-web](Web) - Web-related utilities for HTTP requests, URLs, etc.
+- [valksor/php-functions-date](Date) - Date and time manipulation utilities
+- [valksor/php-functions-handler](Handler) - Error and exception handling utilities
+- [valksor/php-functions-iteration](Iteration) - Array and collection iteration utilities
+- [valksor/php-functions-latvian](Latvian) - Latvian language specific utilities
+- [valksor/php-functions-local](Local) - Localization and internationalization utilities
+- [valksor/php-functions-memoize](Memoize) - Function result caching utilities
+- [valksor/php-functions-number](Number) - Number manipulation and formatting utilities
+- [valksor/php-functions-pagination](Pagination) - Pagination utilities for arrays and collections
+- [valksor/php-functions-php](Php) - PHP language enhancement utilities
+- [valksor/php-functions-preg](Preg) - Regular expression utilities
+- [valksor/php-functions-queue](Queue) - FIFO queue implementation for managing collections of items
+- [valksor/php-functions-sort](Sort) - Sorting algorithms and utilities
+- [valksor/php-functions-text](Text) - Text processing and manipulation utilities
+- [valksor/php-functions-web](Web) - Web-related utilities for HTTP requests, URLs, etc.
 
 Each sub-library can also be installed individually if you only need specific functionality.
 
@@ -54,7 +54,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 
 ## About Valksor
 
-This package is part of the [valksor/valksor](https://github.com/valksor/valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
+This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
 - Various utility functions and components
@@ -67,5 +67,5 @@ If you find these function components useful, you might want to check out the fu
 To install the complete package:
 
 ```bash
-composer require valksor/valksor
+composer require valksor/php-valksor
 ```

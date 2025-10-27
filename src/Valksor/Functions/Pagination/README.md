@@ -7,7 +7,7 @@ A PHP library providing pagination functionality to generate page numbers for UI
 Install the package via Composer:
 
 ```bash
-composer require valksor/functions-pagination
+composer require valksor/php-functions-pagination
 ```
 
 ## Requirements
@@ -88,7 +88,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 
 ## About Valksor
 
-This package is part of the [valksor/valksor](https://github.com/valksor/valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
+This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
 - Various utility functions and components
@@ -101,5 +101,5 @@ If you find this Pagination component useful, you might want to check out the fu
 To install the complete package:
 
 ```bash
-composer require valksor/valksor
+composer require valksor/php-valksor
 ```

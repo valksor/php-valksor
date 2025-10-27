@@ -7,7 +7,7 @@ A PHP library providing various sorting algorithms and utilities for arrays and 
 Install the package via Composer:
 
 ```bash
-composer require valksor/functions-sort
+composer require valksor/php-functions-sort
 ```
 
 ## Requirements
@@ -97,7 +97,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 
 ## About Valksor
 
-This package is part of the [valksor/valksor](https://github.com/valksor/valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
+This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
 - Various utility functions and components
@@ -110,5 +110,5 @@ If you find this Sort component useful, you might want to check out the full Val
 To install the complete package:
 
 ```bash
-composer require valksor/valksor
+composer require valksor/php-valksor
 ```

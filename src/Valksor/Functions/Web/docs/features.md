@@ -411,7 +411,7 @@ public function latestReleaseTag(
 Gets the latest release tag from a GitHub repository.
 
 Parameters:
-- `$repository`: The GitHub repository (e.g., "valksor/valksor")
+- `$repository`: The GitHub repository (e.g., "valksor/php-valksor")
 - `$default`: The default value to return if no release is found
 
 Returns the latest release tag or the default value.

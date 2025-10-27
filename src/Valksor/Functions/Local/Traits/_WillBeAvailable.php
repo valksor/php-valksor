@@ -24,7 +24,7 @@ trait _WillBeAvailable
         string $package,
         string $class,
         array $parentPackages,
-        string $rootPackageCheck = 'valksor/valksor',
+        string $rootPackageCheck = 'valksor/php-valksor',
     ): bool {
         if (!$this->classExists(InstalledVersions::class)) {
             throw new LogicException(message: sprintf('Calling "%s" when dependencies have been installed with Composer 1 is not supported. Consider upgrading to Composer 2.', __METHOD__));

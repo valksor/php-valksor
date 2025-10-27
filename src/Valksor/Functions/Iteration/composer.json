@@ -13,7 +13,7 @@
         "valksor",
         "symfony"
     ],
-    "homepage": "https://github.com/valksor/valksor",
+    "homepage": "https://github.com/valksor/php-valksor",
     "require": {
         "php": ">=8.4",
         "ext-json": "*",

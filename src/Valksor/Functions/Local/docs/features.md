@@ -855,7 +855,7 @@ public function willBeAvailable(
     string $package,
     string $class,
     array $parentPackages,
-    string $rootPackageCheck = 'valksor/valksor',
+    string $rootPackageCheck = 'valksor/php-valksor',
 ): bool
 ```
 
