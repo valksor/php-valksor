@@ -46,8 +46,7 @@
         "valksor/php-bundle": "self.version",
         "valksor/php-doctrine-tools": "self.version",
         "valksor/php-functions": "self.version",
-        "valksor/php-spx-profiler": "self.version",
-        "valksor/php-sse": "self.version"
+        "valksor/php-spx-profiler": "self.version"
     },
     "conflict": {
         "doctrine/dbal": "<4.0",
