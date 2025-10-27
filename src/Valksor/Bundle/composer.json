@@ -1,7 +1,19 @@
 {
     "name": "valksor/php-bundle",
+    "description": "Symfony bundle providing integration services, dependency injection configuration, and enhanced functionality for valksor libraries",
     "license": "BSD-3-Clause",
     "type": "symfony-bundle",
+    "keywords": [
+        "php",
+        "symfony",
+        "bundle",
+        "framework",
+        "integration",
+        "dependency-injection",
+        "valksor",
+        "services"
+    ],
+    "homepage": "https://github.com/valksor/php-valksor",
     "require": {
         "php": ">=8.4",
         "doctrine/dbal": "*",

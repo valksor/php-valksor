@@ -1,7 +1,20 @@
 {
     "name": "valksor/php-doctrine-tools",
+    "description": "Database utilities and enhanced tools for Doctrine ORM including migrations, console commands, and performance optimizations",
     "license": "BSD-3-Clause",
     "type": "library",
+    "keywords": [
+        "php",
+        "doctrine",
+        "database",
+        "orm",
+        "migrations",
+        "tools",
+        "utilities",
+        "valksor",
+        "dbal"
+    ],
+    "homepage": "https://github.com/valksor/php-valksor",
     "require": {
         "php": ">=8.4",
         "doctrine/dbal": "*",

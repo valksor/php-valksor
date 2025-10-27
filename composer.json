@@ -1,7 +1,22 @@
 {
     "name": "valksor/php-valksor",
+    "description": "A comprehensive PHP library for Symfony applications providing bundles, utility functions, and components including Doctrine tools, performance profiling, and Server-Sent Events",
     "license": "BSD-3-Clause",
     "type": "library",
+    "keywords": [
+        "php",
+        "symfony",
+        "framework",
+        "bundle",
+        "utilities",
+        "functions",
+        "components",
+        "doctrine",
+        "profiling",
+        "sse",
+        "tools"
+    ],
+    "homepage": "https://github.com/valksor/php-valksor",
     "require": {
         "php": ">=8.4",
         "ext-curl": "*",
