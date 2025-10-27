@@ -1,0 +1,245 @@
+# Valksor Bundle
+
+A comprehensive Symfony bundle that provides automatic component discovery, configuration management, and dependency injection for Valksor components and related packages.
+
+## Features
+
+- **Automatic Component Discovery**: Automatically discovers and registers Valksor components and ValksorDev packages
+- **Dynamic Configuration**: Provides flexible configuration system for all components
+- **Dependency Management**: Handles component dependencies and enables/disables components based on availability
+- **Doctrine Integration**: Supports Doctrine migrations and database schema management
+- **Memoization**: Built-in caching and memoization support for improved performance
+- **Bundle Architecture**: Follows Symfony best practices for bundle development
+
+## Installation
+
+Install the package via Composer:
+
+```bash
+composer require valksor/php-bundle
+```
+
+## Requirements
+
+- PHP 8.4 or higher
+- Symfony Framework
+- Doctrine DBAL (for database-related components)
+- Doctrine Migrations (for schema management)
+
+## Usage
+
+### Basic Setup
+
+1. Register the bundle in your Symfony application:
+
+```php
+// config/bundles.php
+return [
+    // ...
+    Valksor\Bundle\ValksorBundle::class => ['all' => true],
+    // ...
+];
+```
+
+2. Create a basic configuration file:
+
+```yaml
+# config/packages/valksor.yaml
+valksor:
+    # Global bundle configuration
+    enabled: true
+
+    # Component-specific configurations will be automatically discovered
+    # Each discovered component can be enabled/disabled individually
+```
+
+### Component Discovery
+
+The bundle automatically discovers all available components that implement the `Dependency` interface and end with `Configuration` in their class name. Components are discovered from:
+
+- All namespaces starting with `Valksor\`
+- All namespaces starting with `ValksorDev\`
+
+### Configuration Examples
+
+#### Enable/Disable Specific Components
+
+```yaml
+# config/packages/valksor.yaml
+valksor:
+    # Disable a specific component
+    some_component:
+        enabled: false
+
+    # Configure a specific component
+    another_component:
+        enabled: true
+        option1: value1
+        option2: value2
+```
+
+#### Component-Specific Configuration
+
+Each component can define its own configuration structure. The bundle automatically merges component configurations with the global Valksor configuration.
+
+```yaml
+# Example configuration for a hypothetical cache component
+valksor:
+    cache_component:
+        enabled: true
+        ttl: 3600
+        storage: redis
+        redis:
+            host: localhost
+            port: 6379
+```
+
+### Working with Components
+
+#### Accessing Configuration in Services
+
+You can access component configuration in your services:
+
+```php
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Valksor\Bundle\ValksorBundle;
+
+class YourService
+{
+    public function __construct(ContainerBuilder $builder)
+    {
+        // Get global Valksor configuration
+        $config = ValksorBundle::getConfig('valksor', $builder);
+
+        // Get specific component parameter
+        $enabled = ValksorBundle::p($builder, 'your_component', 'enabled');
+    }
+}
+```
+
+#### Creating Custom Components
+
+To create a custom component that will be discovered by the bundle:
+
+1. Create a configuration class that implements the `Dependency` interface:
+
+```php
+<?php
+
+namespace YourNamespace;
+
+use Valksor\Bundle\DependencyInjection\Dependency;
+
+class YourComponentConfiguration implements Dependency
+{
+    public function build(ContainerBuilder $container): void
+    {
+        // Build-time logic
+    }
+
+    public function addSection(ArrayNodeDefinition $rootNode, callable $wrapper, string $component): void
+    {
+        // Define configuration schema
+    }
+
+    public function registerConfiguration(ContainerConfigurator $container, ContainerBuilder $builder, string $component): void
+    {
+        // Register services and parameters
+    }
+
+    public function registerPreConfiguration(ContainerConfigurator $container, ContainerBuilder $builder, string $component): void
+    {
+        // Pre-configuration logic
+    }
+
+    public function autoDiscover(): bool
+    {
+        return true; // Set to false to disable auto-discovery
+    }
+
+    public function usesDoctrine(): bool
+    {
+        return false; // Set to true if this component uses Doctrine
+    }
+}
+```
+
+2. The component will be automatically discovered and can be configured under:
+
+```yaml
+valksor:
+    your_component:
+        enabled: true
+        # Your component-specific options
+```
+
+### Advanced Features
+
+#### Conditional Component Loading
+
+Components can be conditionally loaded based on:
+
+- Package availability (checked via autoloader)
+- Explicit enabled/disabled configuration
+- Dependency availability
+
+#### Doctrine Integration
+
+If any component reports that it uses Doctrine (`usesDoctrine()` returns `true`), the bundle automatically:
+
+- Registers global migrations
+- Sets up Doctrine configuration
+- Handles database-related setup
+
+#### Memoization
+
+The bundle includes built-in memoization support to improve performance by caching expensive operations during component discovery and configuration.
+
+## Configuration Reference
+
+### Global Configuration
+
+```yaml
+valksor:
+    # Enable/disable the entire bundle
+    enabled: true
+
+    # Component configurations (auto-discovered)
+    component_name:
+        enabled: true
+        # Component-specific options...
+```
+
+### Component Configuration Pattern
+
+Each discovered component follows this pattern:
+
+```yaml
+valksor:
+    component_id:
+        enabled: boolean
+        # Component-specific configuration options
+```
+
+## License
+
+This package is licensed under the [BSD-3-Clause License](LICENSE).
+
+## About Valksor
+
+This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
+
+The main project includes:
+- Various utility functions and components
+- Doctrine ORM tools and extensions
+- API Platform integrations
+- Symfony bundle for easy configuration
+- And much more
+
+If you find this Bundle component useful, you might want to check out the full Valksor project for additional tools and utilities that can enhance your Symfony application development.
+
+To install the complete package:
+
+```bash
+composer require valksor/php-valksor
+```
