@@ -1,5 +1,10 @@
 # Valksor Functions
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions.svg)](https://packagist.org/packages/valksor/php-functions)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions.svg)](https://packagist.org/packages/valksor/php-functions)
+[![License](https://img.shields.io/packagist/l/valksor/php-functions.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions/php)](https://packagist.org/packages/valksor/php-functions)
+
 A comprehensive collection of PHP utility functions and helpers for various tasks including date manipulation, web operations, text processing, and more. This is a meta-package that includes all the Valksor function sub-libraries.
 
 ## Installation
@@ -47,6 +52,58 @@ Generally, there are two ways to use these libraries:
 
 1. Via the Functions class provided by each sub-library
 2. By directly using the traits in your own classes
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to function libraries:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-function`)
+3. Implement your function following existing patterns
+4. Add comprehensive tests
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+### Creating New Function Libraries
+
+When adding new function libraries:
+
+1. Create namespace under `Valksor\Functions\{Name}`
+2. Implement Functions class and individual traits
+3. Add comprehensive test coverage in `tests/Functions/{Name}/`
+4. Create composer.json with proper dependencies
+5. Update meta-package composer.json to include new library
+6. Update documentation with examples
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-functions`
+- **Individual Library Support**: Each library has dedicated documentation
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[PHP Community](https://www.php.net)** - Language and ecosystem support
+- **[Symfony Components](https://symfony.com/components)** - Many functions utilize Symfony components
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 

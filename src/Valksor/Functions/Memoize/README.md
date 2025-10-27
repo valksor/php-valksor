@@ -1,3 +1,8 @@
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-memoize.svg)](https://packagist.org/packages/valksor/php-functions-memoize)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-memoize.svg)](https://packagist.org/packages/valksor/php-functions-memoize)
+[![License](https://img.shields.io/packagist/l/valksor/php-functions-memoize.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-memoize/php)](https://packagist.org/packages/valksor/php-functions-memoize)
+
 # Valksor Functions: Memoize
 
 A PHP library providing memoization functionality to cache the results of expensive function calls and return the cached result when the same inputs occur again.
@@ -131,7 +136,53 @@ $result = $memoize->memoize(
 
 ## Features
 
+- **Context-based caching**: Organize cached values by context using BackedEnums
+- **Nested key support**: Use hierarchical keys for complex caching scenarios
+- **Cache refresh control**: Force cache refresh when needed
+- **Symfony integration**: Seamless integration with Symfony's RequestCache when available
+- **Memory efficient**: Simple in-memory caching with minimal overhead
+- **Type safe**: Strong typing with proper return type declarations
+
 For a complete list of all functions available in this package, see [Features](docs/features.md).
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to Memoize functions:
+
+1. Fork repository
+2. Create a feature branch (`git checkout -b feature/new-memoize-function`)
+3. Implement your function following existing patterns
+4. Add comprehensive tests including edge cases
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-functions-memoize`
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[Relevant PHP Documentation](https://www.php.net/manual/en/)** - Core PHP functionality inspiration
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 

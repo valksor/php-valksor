@@ -1,5 +1,10 @@
 # Valksor Functions: Number
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-number.svg)](https://packagist.org/packages/valksor/php-functions-number)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-number.svg)](https://packagist.org/packages/valksor/php-functions-number)
+[![License](https://img.shields.io/packagist/l/valksor/php-functions-number.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-number/php)](https://packagist.org/packages/valksor/php-functions-number)
+
 A PHP library providing various number-related functions including prime number checking, distance calculations, and mathematical operations.
 
 ## Installation
@@ -90,6 +95,46 @@ Note that some traits may depend on other helper traits. For example, the `_IsPr
 ## Features
 
 For a complete list of all functions available in this package, see [Features](docs/features.md).
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to Number functions:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-number-function`)
+3. Implement your function following existing patterns
+4. Add comprehensive tests including edge cases
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-functions-number`
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[PHP Math Functions](https://www.php.net/manual/en/book.math.php)** - Core mathematics functionality inspiration
+- **[GMP Extension](https://www.php.net/manual/en/book.gmp.php)** - High-precision arithmetic inspiration
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 

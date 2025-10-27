@@ -1,5 +1,10 @@
 # Valksor Functions: Preg
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-preg.svg)](https://packagist.org/packages/valksor/php-functions-preg)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-preg.svg)](https://packagist.org/packages/valksor/php-functions-preg)
+[![License](https://img.shields.io/packagist/l/valksor/php-functions-preg.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-preg/php)](https://packagist.org/packages/valksor/php-functions-preg)
+
 A PHP library providing enhanced regular expression (preg_*) functions with improved error handling and UTF-8 support.
 
 ## Installation
@@ -110,6 +115,45 @@ try {
 ## Features
 
 For a complete list of all functions available in this package, see [Features](docs/features.md).
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to Preg functions:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-preg-function`)
+3. Implement your function following existing patterns
+4. Add comprehensive tests including edge cases
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-functions-preg`
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[PCRE Documentation](https://www.pcre.org/)** - Regular expression inspiration and standards
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 

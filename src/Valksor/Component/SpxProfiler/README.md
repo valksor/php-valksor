@@ -1,21 +1,28 @@
 # Valksor Component: SpxProfiler
 
-A Symfony profiler data collector for the SPX PHP profiler, which collects and displays profiling data for PHP applications.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-spx-profiler.svg)](https://packagist.org/packages/valksor/php-spx-profiler)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-spx-profiler.svg)](https://packagist.org/packages/valksor/php-spx-profiler)
+[![License](https://img.shields.io/packagist/l/valksor/php-spx-profiler.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-spx-profiler/php)](https://packagist.org/packages/valksor/php-spx-profiler)
+
+A Symfony profiler data collector for the SPX PHP profiler, which collects and displays detailed profiling data for PHP applications. This component integrates SPX profiling directly into the Symfony web profiler for easy access to performance metrics during development.
 
 ## Installation
 
 Install the package via Composer:
 
 ```bash
-composer require valksor/spx-profiler
+composer require valksor/php-spx-profiler
 ```
 
 ## Requirements
 
-- PHP 8.4 or higher
-- SPX PHP extension installed
+- **PHP 8.4 or higher**
+- **SPX PHP extension** installed and configured
+- **Symfony Framework** (7.2.0 or higher)
+- **Valksor Bundle** for automatic configuration
 
-## Usage
+## Basic Usage
 
 The SpxProfiler component provides a data collector for the Symfony web profiler that integrates with the SPX PHP profiler. It allows you to view detailed profiling information for your PHP applications directly in the Symfony web profiler.
 
@@ -50,6 +57,17 @@ valksor:
         spx_profiler: ~
 ```
 
+## Features
+
+The SpxProfiler component provides comprehensive profiling integration for Symfony applications:
+
+- **Symfony Profiler Integration**: Seamless integration with Symfony's web profiler toolbar
+- **SPX Data Collection**: Automatic collection and display of detailed SPX profiling metrics
+- **Real-time Performance Metrics**: Wall time, memory usage, call graphs, and execution traces
+- **Request Matching**: Automatic matching of SPX reports with Symfony profiler requests
+- **Configurable Profiling**: Support for different SPX modes and data collection options
+- **Development Workflow**: Streamlined profiling setup for development environments
+
 ### Viewing Profiling Data
 
 Once the component is installed and configured, you can view profiling data in the Symfony web profiler:
@@ -81,6 +99,57 @@ The SPX PHP extension provides several configuration options that can be set in 
 - `spx.http_key`: Secret key for HTTP interface
 - `spx.http_ip_whitelist`: IP whitelist for HTTP interface
 - `spx.data_dir`: Directory for SPX data files (default: /tmp/spx)
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to SpxProfiler component:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/spx-enhancement`)
+3. Implement your enhancement following existing patterns
+4. Add comprehensive tests for new functionality
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+### Adding New Profiling Features
+
+When adding new profiling functionality:
+
+1. Extend the data collector to capture additional metrics
+2. Update Twig templates for displaying new data
+3. Add configuration options for new features
+4. Test integration with SPX extension
+5. Update documentation with examples
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-spx-profiler`
+- **SPX Extension**: [SPX GitHub](https://github.com/NoiseByNorthwest/php-spx) for extension-specific issues
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[SPX Author](https://github.com/NoiseByNorthwest)** - Creator of the SPX PHP profiler extension
+- **[Symfony Profiler Team](https://symfony.com/doc/current/profiler.html)** - Profiler framework and best practices inspiration
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 

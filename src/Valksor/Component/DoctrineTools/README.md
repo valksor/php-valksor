@@ -1,5 +1,10 @@
 # Valksor Component: DoctrineTools
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-doctrine-tools.svg)](https://packagist.org/packages/valksor/php-doctrine-tools)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-doctrine-tools.svg)](https://packagist.org/packages/valksor/php-doctrine-tools)
+[![License](https://img.shields.io/packagist/l/valksor/php-doctrine-tools.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-doctrine-tools/php)](https://packagist.org/packages/valksor/php-doctrine-tools)
+
 A comprehensive collection of Doctrine tools, traits, and utilities that enhance database operations, provide custom DQL functions, UTC datetime handling, and entity management capabilities for Symfony applications using Doctrine ORM and DBAL.
 
 ## Features
@@ -423,6 +428,68 @@ php bin/console doctrine:migrations:migrate
 - **Lazy Loading**: Entity traits use lazy initialization where appropriate
 - **Indexing**: Consider adding database indexes for commonly queried fields
 - **Query Optimization**: Use the provided DQL functions for database-level operations
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to DoctrineTools component:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/doctrine-enhancement`)
+3. Implement your enhancement following existing patterns
+4. Add comprehensive tests for new functionality
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+### Adding New Entity Traits
+
+When adding new entity traits:
+
+1. Create trait under `Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\`
+2. Follow naming conventions (prefixed with underscore)
+3. Add proper property declarations and methods
+4. Add comprehensive unit tests
+5. Update documentation with examples
+
+### Adding New DQL Functions
+
+When adding new DQL functions:
+
+1. Create function class implementing appropriate interface
+2. Register function in configuration
+3. Add SQL implementations for each supported database
+4. Add comprehensive tests
+5. Update documentation with usage examples
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-doctrine-tools`
+- **Doctrine Documentation**: [Official Doctrine docs](https://www.doctrine-project.org/)
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[Doctrine Project](https://www.doctrine-project.org)** - ORM and DBAL framework inspiration
+- **[PostgreSQL Team](https://www.postgresql.org)** - Database-specific features and extensions
+- **[Symfony Team](https://symfony.com/doc/current/doctrine.html)** - Doctrine integration best practices
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 

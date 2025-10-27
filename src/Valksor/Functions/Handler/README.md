@@ -1,5 +1,10 @@
 # Valksor Functions: Handler
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-handler.svg)](https://packagist.org/packages/valksor/php-functions-handler)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-handler.svg)](https://packagist.org/packages/valksor/php-functions-handler)
+[![License](https://img.shields.io/packagist/l/valksor/php-functions-handler.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-handler/php)](https://packagist.org/packages/valksor/php-functions-handler)
+
 A PHP library providing function handling utilities including a Chain of Responsibility pattern implementation and function execution utilities.
 
 ## Installation
@@ -109,6 +114,45 @@ $result = $handler->handle('hello'); // If the function returns null, passes to 
 ## Features
 
 For a complete list of all classes and methods available in this package, see [Features](docs/features.md).
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to Handler functions:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-handler-function`)
+3. Implement your function following existing patterns
+4. Add comprehensive tests
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-functions-handler`
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[Design Patterns](https://refactoring.guru/design-patterns/)** - Chain of Responsibility pattern inspiration
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 

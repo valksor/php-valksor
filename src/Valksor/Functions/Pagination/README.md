@@ -1,3 +1,8 @@
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-pagination.svg)](https://packagist.org/packages/valksor/php-functions-pagination)
+[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-pagination.svg)](https://packagist.org/packages/valksor/php-functions-pagination)
+[![License](https://img.shields.io/packagist/l/valksor/php-functions-pagination.svg)](LICENSE)
+[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-pagination/php)](https://packagist.org/packages/valksor/php-functions-pagination)
+
 # Valksor Functions: Pagination
 
 A PHP library providing pagination functionality to generate page numbers for UI pagination controls, with smart handling of large page sets.
@@ -72,6 +77,13 @@ $pages = $pagination->paginate(7, 20, 10); // [1, -1, 8, 9, 10, 11, 12, -1, 20]
 
 ## Features
 
+- **Smart page generation**: Intelligently generates page numbers for UI pagination controls
+- **Omitted page handling**: Uses indicators to show where pages are omitted in large sets
+- **Configurable visible pages**: Control how many page numbers are shown
+- **Flexible indicators**: Customize the indicator value for omitted pages
+- **Input validation**: Comprehensive validation of all input parameters
+- **Multiple scenarios**: Handles current page at beginning, middle, or end of page set
+
 For a complete list of all functions available in this package, see [Features](docs/features.md).
 
 ## Validation
@@ -81,6 +93,45 @@ The class performs several validations:
 - The total number of pages must be at least 1
 - The current page must be between 1 and the total number of pages
 - The indicator value must not be a valid page number (between 1 and total)
+
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Code style requirements (PSR-12)
+- Testing requirements for PRs
+- One feature per pull request
+- Development setup instructions
+
+To contribute to Pagination functions:
+
+1. Fork repository
+2. Create a feature branch (`git checkout -b feature/new-pagination-function`)
+3. Implement your function following existing patterns
+4. Add comprehensive tests including edge cases
+5. Ensure all tests pass and code style is correct
+6. Submit a pull request
+
+## Security
+
+If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+
+For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
+- **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Stack Overflow**: Use tag `valksor-php-functions-pagination`
+
+## Credits
+
+- **[Original Author](https://github.com/valksor)** - Creator and maintainer
+- **[All Contributors](https://github.com/valksor/php-valksor/graphs/contributors)** - Thank you to all who contributed
+- **[Relevant PHP Documentation](https://www.php.net/manual/en/)** - Core PHP functionality inspiration
+- **[Valksor Project](https://github.com/valksor)** - Part of the larger Valksor PHP ecosystem
 
 ## License
 
