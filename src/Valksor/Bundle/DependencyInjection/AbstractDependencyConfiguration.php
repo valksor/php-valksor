@@ -18,6 +18,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Valksor\Bundle\ValksorBundle;
 use Valksor\Functions\Php;
 
+use function array_merge_recursive;
 use function dirname;
 use function is_file;
 use function sprintf;
@@ -76,5 +77,12 @@ abstract class AbstractDependencyConfiguration implements Dependency
     public function usesDoctrine(): bool
     {
         return false;
+    }
+
+    protected function mergeConfig(
+        ContainerBuilder $builder,
+        string $extension,
+    ): array {
+        return array_merge_recursive(...($builder->getExtensionConfig($extension) ?? []));
     }
 }
