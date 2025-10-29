@@ -19,6 +19,7 @@
         "doctrine/dbal": "*",
         "doctrine/migrations": "*",
         "symfony/config": "*",
+        "symfony/console": "*",
         "symfony/dependency-injection": "*",
         "symfony/event-dispatcher": "*",
         "symfony/finder": "*",

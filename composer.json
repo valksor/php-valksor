@@ -67,7 +67,7 @@
     "conflict": {
         "doctrine/dbal": "<4.0",
         "friendsofphp/php-cs-fixer": "<3.81.0",
-        "symfony/framework-bundle": "<7.2.0"
+        "symfony/framework-bundle": "<7.4.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": false,

@@ -39,6 +39,16 @@ final class ValksorConfiguration extends AbstractDependencyConfiguration
                         ->defaultNull()
                         ->example('infrastructure')
                     ->end()
+                    ->arrayNode('autoload')
+                        ->info('Autoload configuration')
+                        ->addDefaultsIfNotSet()
+                        ->children()
+                            ->scalarNode('namespace_prefix')
+                                ->info('Namespace prefix for generated autoload classes')
+                                ->defaultValue('Application')
+                            ->end()
+                        ->end()
+                    ->end()
                 ->end()
             ->end();
     }
