@@ -1,8 +1,3 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-memoize.svg)](https://packagist.org/packages/valksor/php-functions-memoize)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-memoize.svg)](https://packagist.org/packages/valksor/php-functions-memoize)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-memoize.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-memoize/php)](https://packagist.org/packages/valksor/php-functions-memoize)
-
 # Valksor Functions: Memoize
 
 A PHP library providing memoization functionality to cache the results of expensive function calls and return the cached result when the same inputs occur again.

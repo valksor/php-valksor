@@ -1,10 +1,5 @@
 # Valksor Component: SpxProfiler
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-spx-profiler.svg)](https://packagist.org/packages/valksor/php-spx-profiler)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-spx-profiler.svg)](https://packagist.org/packages/valksor/php-spx-profiler)
-[![License](https://img.shields.io/packagist/l/valksor/php-spx-profiler.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-spx-profiler/php)](https://packagist.org/packages/valksor/php-spx-profiler)
-
 A Symfony profiler data collector for the SPX PHP profiler, which collects and displays detailed profiling data for PHP applications. This component integrates SPX profiling directly into the Symfony web profiler for easy access to performance metrics during development.
 
 ## Installation

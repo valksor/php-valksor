@@ -1,10 +1,5 @@
 # Valksor Functions: Preg
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-preg.svg)](https://packagist.org/packages/valksor/php-functions-preg)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-preg.svg)](https://packagist.org/packages/valksor/php-functions-preg)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-preg.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-preg/php)](https://packagist.org/packages/valksor/php-functions-preg)
-
 A PHP library providing enhanced regular expression (preg_*) functions with improved error handling and UTF-8 support.
 
 ## Installation

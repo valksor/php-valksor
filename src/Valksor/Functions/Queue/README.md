@@ -1,8 +1,3 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-queue.svg)](https://packagist.org/packages/valksor/php-functions-queue)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-queue.svg)](https://packagist.org/packages/valksor/php-functions-queue)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-queue.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-queue/php)](https://packagist.org/packages/valksor/php-functions-queue)
-
 # Valksor Functions: Queue
 
 A PHP library providing a simple and efficient queue implementation for managing collections of items in a FIFO (First-In-First-Out) manner.

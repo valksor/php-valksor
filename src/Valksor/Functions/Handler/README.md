@@ -1,10 +1,5 @@
 # Valksor Functions: Handler
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-handler.svg)](https://packagist.org/packages/valksor/php-functions-handler)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-handler.svg)](https://packagist.org/packages/valksor/php-functions-handler)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-handler.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-handler/php)](https://packagist.org/packages/valksor/php-functions-handler)
-
 A PHP library providing function handling utilities including a Chain of Responsibility pattern implementation and function execution utilities.
 
 ## Installation

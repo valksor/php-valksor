@@ -1,10 +1,5 @@
 # Valksor Functions: Iteration
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-iteration.svg)](https://packagist.org/packages/valksor/php-functions-iteration)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-iteration.svg)](https://packagist.org/packages/valksor/php-functions-iteration)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-iteration.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-iteration/php)](https://packagist.org/packages/valksor/php-functions-iteration)
-
 A PHP library providing enhanced array and iteration utility functions for array manipulation, transformation, and validation.
 
 ## Installation

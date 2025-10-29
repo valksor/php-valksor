@@ -1,10 +1,5 @@
 # Valksor Functions
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions.svg)](https://packagist.org/packages/valksor/php-functions)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions.svg)](https://packagist.org/packages/valksor/php-functions)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions/php)](https://packagist.org/packages/valksor/php-functions)
-
 A comprehensive collection of PHP utility functions and helpers for various tasks including date manipulation, web operations, text processing, and more. This is a meta-package that includes all the Valksor function sub-libraries.
 
 ## Installation

@@ -1,10 +1,5 @@
 # Valksor Functions: Sort
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-sort.svg)](https://packagist.org/packages/valksor/php-functions-sort)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-sort.svg)](https://packagist.org/packages/valksor/php-functions-sort)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-sort.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-sort/php)](https://packagist.org/packages/valksor/php-functions-sort)
-
 A PHP library providing various sorting algorithms and utilities for arrays and objects.
 
 ## Installation

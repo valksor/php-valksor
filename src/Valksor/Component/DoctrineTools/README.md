@@ -1,10 +1,5 @@
 # Valksor Component: DoctrineTools
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-doctrine-tools.svg)](https://packagist.org/packages/valksor/php-doctrine-tools)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-doctrine-tools.svg)](https://packagist.org/packages/valksor/php-doctrine-tools)
-[![License](https://img.shields.io/packagist/l/valksor/php-doctrine-tools.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-doctrine-tools/php)](https://packagist.org/packages/valksor/php-doctrine-tools)
-
 A comprehensive collection of Doctrine tools, traits, and utilities that enhance database operations, provide custom DQL functions, UTC datetime handling, and entity management capabilities for Symfony applications using Doctrine ORM and DBAL.
 
 ## Features

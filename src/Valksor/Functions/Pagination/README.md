@@ -1,8 +1,3 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-pagination.svg)](https://packagist.org/packages/valksor/php-functions-pagination)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-pagination.svg)](https://packagist.org/packages/valksor/php-functions-pagination)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-pagination.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-pagination/php)](https://packagist.org/packages/valksor/php-functions-pagination)
-
 # Valksor Functions: Pagination
 
 A PHP library providing pagination functionality to generate page numbers for UI pagination controls, with smart handling of large page sets.

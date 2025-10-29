@@ -1,10 +1,5 @@
 # Valksor PHP Library
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-valksor.svg)](https://packagist.org/packages/valksor/php-valksor)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-valksor.svg)](https://packagist.org/packages/valksor/php-valksor)
-[![License](https://img.shields.io/packagist/l/valksor/php-valksor.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-valksor/php)](https://packagist.org/packages/valksor/php-valksor)
-
 A comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for modern Symfony applications. This ecosystem includes function libraries, development tools, Doctrine extensions, and real-time communication components.
 
 ## Features

@@ -1,10 +1,5 @@
 # Valksor Functions: Web
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-web.svg)](https://packagist.org/packages/valksor/php-functions-web)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-web.svg)](https://packagist.org/packages/valksor/php-functions-web)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-web.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-web/php)](https://packagist.org/packages/valksor/php-functions-web)
-
 A PHP library providing a collection of web-related utility functions for handling HTTP requests, validating web data, and working with URLs.
 
 ## Installation

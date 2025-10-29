@@ -1,10 +1,5 @@
 # Valksor Functions: Date
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-date.svg)](https://packagist.org/packages/valksor/php-functions-date)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-date.svg)](https://packagist.org/packages/valksor/php-functions-date)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-date.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-date/php)](https://packagist.org/packages/valksor/php-functions-date)
-
 A PHP library providing enhanced date and time manipulation functions with improved validation and formatting capabilities.
 
 ## Installation

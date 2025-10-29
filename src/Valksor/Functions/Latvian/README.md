@@ -1,10 +1,5 @@
 # Valksor Functions: Latvian
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-latvian.svg)](https://packagist.org/packages/valksor/php-functions-latvian)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-latvian.svg)](https://packagist.org/packages/valksor/php-functions-latvian)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-latvian.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-latvian/php)](https://packagist.org/packages/valksor/php-functions-latvian)
-
 A PHP library providing functions specific to Latvian language and data formats, including Latvian text comparison, sorting according to Latvian alphabet rules, and validation of Latvian personal identification codes.
 
 ## Installation

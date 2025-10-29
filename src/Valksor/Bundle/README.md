@@ -1,10 +1,5 @@
 # Valksor Bundle
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-bundle.svg)](https://packagist.org/packages/valksor/php-bundle)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-bundle.svg)](https://packagist.org/packages/valksor/php-bundle)
-[![License](https://img.shields.io/packagist/l/valksor/php-bundle.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-bundle/php)](https://packagist.org/packages/valksor/php-bundle)
-
 A comprehensive Symfony bundle that provides automatic component discovery, configuration management, and dependency injection for Valksor components and related packages.
 
 ## Features

@@ -1,8 +1,3 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-php.svg)](https://packagist.org/packages/valksor/php-functions-php)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-php.svg)](https://packagist.org/packages/valksor/php-functions-php)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-php.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-php/php)](https://packagist.org/packages/valksor/php-functions-php)
-
 # Valksor Functions: PHP
 
 A PHP library providing enhanced PHP utility functions for reflection, introspection, and general PHP programming tasks.

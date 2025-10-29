@@ -1,10 +1,5 @@
 # Valksor Functions: Number
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/valksor/php-functions-number.svg)](https://packagist.org/packages/valksor/php-functions-number)
-[![Total Downloads](https://img.shields.io/packagist/dt/valksor/php-functions-number.svg)](https://packagist.org/packages/valksor/php-functions-number)
-[![License](https://img.shields.io/packagist/l/valksor/php-functions-number.svg)](LICENSE)
-[![PHP Version Require](https://img.shields.io/packagist/require-v/valksor/php-functions-number/php)](https://packagist.org/packages/valksor/php-functions-number)
-
 A PHP library providing various number-related functions including prime number checking, distance calculations, and mathematical operations.
 
 ## Installation
