@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php declare(strict_types = 1);
+
+use App\Console\ConsoleEntrypoint;
+
+if (!is_file(__DIR__ . '/../vendor/autoload_runtime.php')) {
+    throw new LogicException('Symfony Runtime is missing. Try running "composer require symfony/runtime".');
+}
+
+require_once __DIR__ . '/../vendor/autoload_runtime.php';
+
+return ConsoleEntrypoint::create(dirname(__DIR__));

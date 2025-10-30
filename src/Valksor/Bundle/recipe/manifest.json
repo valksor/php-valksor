@@ -1,0 +1,6 @@
+{
+    "env": {
+        "VALKSOR_APPS_DIR": "apps",
+        "VALKSOR_INFRASTRUCTURE_DIR": "infrastructure"
+    }
+}

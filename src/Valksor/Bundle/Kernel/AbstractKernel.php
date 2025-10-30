@@ -36,9 +36,9 @@ use const PATHINFO_FILENAME;
 abstract class AbstractKernel extends BaseKernel
 {
     use MicroKernelTrait;
-    protected ?string $appsDir = null;
+    protected ?string $apps = null;
 
-    protected ?string $infrastructureDir = null;
+    protected ?string $infrastructure = null;
 
     private ?array $allBundles = null;
 
@@ -50,11 +50,11 @@ abstract class AbstractKernel extends BaseKernel
         $_SERVER['APP_KERNEL_NAME'] = $this->id;
         $_ENV['APP_KERNEL_NAME'] = $this->id;
 
-        if (null === $this->appsDir) {
+        if (null === $this->apps) {
             throw new LogicException('Apps dir not set');
         }
 
-        if (null === $this->infrastructureDir) {
+        if (null === $this->infrastructure) {
             throw new LogicException('Infrastructure dir not set');
         }
 
@@ -66,7 +66,7 @@ abstract class AbstractKernel extends BaseKernel
 
     public function getAppConfigDir(): string
     {
-        return $this->getProjectDir() . '/' . $this->appsDir . '/' . $this->id . '/config';
+        return $this->getProjectDir() . '/' . $this->apps . '/' . $this->id . '/config';
     }
 
     public function getCacheDir(): string
@@ -76,7 +76,7 @@ abstract class AbstractKernel extends BaseKernel
 
     public function getConfigDir(): string
     {
-        return $this->getProjectDir() . '/' . $this->infrastructureDir . '/config';
+        return $this->getProjectDir() . '/' . $this->infrastructure . '/config';
     }
 
     public function getLogDir(): string
@@ -96,7 +96,7 @@ abstract class AbstractKernel extends BaseKernel
     protected function configureContainer(
         ContainerConfigurator $container,
     ): void {
-        $infrastructureDir = $this->getProjectDir() . '/' . $this->infrastructureDir . '/config';
+        $infrastructureDir = $this->getProjectDir() . '/' . $this->infrastructure . '/config';
         $appDir = $this->getAppConfigDir();
 
         // Set app-specific parameters
@@ -114,7 +114,7 @@ abstract class AbstractKernel extends BaseKernel
     protected function configureRoutes(
         RoutingConfigurator $routes,
     ): void {
-        $infrastructureDir = $this->getProjectDir() . '/' . $this->infrastructureDir . '/config';
+        $infrastructureDir = $this->getProjectDir() . '/' . $this->infrastructure . '/config';
         $appDir = $this->getAppConfigDir();
 
         $this->importInfrastructureRoutesWithOverride($infrastructureDir, $appDir, $routes);
@@ -140,7 +140,7 @@ abstract class AbstractKernel extends BaseKernel
 
         $this->allBundles = [];
 
-        $infrastructureBundlesFile = $this->getProjectDir() . '/' . $this->infrastructureDir . '/config/bundles.php';
+        $infrastructureBundlesFile = $this->getProjectDir() . '/' . $this->infrastructure . '/config/bundles.php';
 
         if (is_file($infrastructureBundlesFile)) {
             $infrastructureBundles = require $infrastructureBundlesFile;
@@ -299,8 +299,8 @@ abstract class AbstractKernel extends BaseKernel
      */
     private function loadAppEnvironmentFiles(): void
     {
-        $appDir = $this->getProjectDir() . '/' . $this->appsDir . '/' . $this->id;
-        $infrastructureDir = $this->getProjectDir() . '/' . $this->infrastructureDir;
+        $appDir = $this->getProjectDir() . '/' . $this->apps . '/' . $this->id;
+        $infrastructureDir = $this->getProjectDir() . '/' . $this->infrastructure;
         $dotenv = new Dotenv();
 
         $envFiles = [

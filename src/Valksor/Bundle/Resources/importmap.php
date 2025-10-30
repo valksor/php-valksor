@@ -1,10 +1,20 @@
 <?php declare(strict_types = 1);
 
+/*
+ * This file is part of the Valksor package.
+ *
+ * (c) Davis Zalitis (k0d3r1s)
+ * (c) SIA Valksor <packages@valksor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 use Valksor\FullStack;
 
-$projectDir = __DIR__;
-$infrastructure = 'infrastructure';
-$apps = 'apps';
+if (!isset($apps, $infrastructure, $projectDir)) {
+    throw new LogicException('Required parameters not set');
+}
 
 if (is_dir($projectDir . '/valksor')) {
     $path = '/valksor/src/Valksor/Component/Sse/Resources/assets';
@@ -29,6 +39,7 @@ if (is_dir($projectDir . $path)) {
 }
 
 $appId = $_SERVER['APP_KERNEL_NAME'] ?? $_ENV['APP_KERNEL_NAME'] ?? null;
+
 if (is_string($appId) && '' !== $appId) {
     $roots[$appId] = [
         'source' => $projectDir . '/' . $apps . '/' . $appId . '/assets/js',
@@ -78,11 +89,13 @@ $collectEntries = static function (array $config) use ($projectDir, $mkdir): arr
         }
 
         $entryName = substr($relative, 0, -strlen('.entry.js'));
+
         if (is_array($entries) ? array_key_exists($entryName, $entries) : isset($entries[$entryName])) {
             continue;
         }
 
         $targetPath = $distDir . '/' . $relative;
+
         if (!is_file($targetPath)) {
             $mkdir(dirname($targetPath));
 

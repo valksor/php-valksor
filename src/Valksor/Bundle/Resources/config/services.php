@@ -23,7 +23,7 @@ return static function (
         ->autoconfigure();
 
     $services->load(namespace: 'Valksor\\Bundle\\', resource: __DIR__ . '/../../*')
-        ->exclude(excludes: [__DIR__ . '/../../{Entity,Resources}']);
+        ->exclude(excludes: [__DIR__ . '/../../{Entity,Resources,recipe}']);
 
     $services->set(MemoizeCache::class);
 };
