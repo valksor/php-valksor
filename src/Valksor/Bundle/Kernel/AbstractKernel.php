@@ -19,7 +19,6 @@ use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
-use function array_any;
 use function array_merge;
 use function explode;
 use function file_exists;
@@ -162,7 +161,7 @@ abstract class AbstractKernel extends BaseKernel
         string $dir,
         string $base,
     ): bool {
-        return array_any(['php', 'yaml'], static fn ($ext) => is_file($dir . '/' . $base . '.override.' . $ext));
+        return is_file($dir . '/' . $base . '.override.php');
     }
 
     private function importConfig(
@@ -170,12 +169,10 @@ abstract class AbstractKernel extends BaseKernel
         ContainerConfigurator $container,
         bool $check = true,
     ): void {
-        foreach (['yaml', 'php'] as $ext) {
-            $file = sprintf($filename, $ext);
+        $file = sprintf($filename, 'php');
 
-            if (!$check || file_exists($file)) {
-                $container->import($file);
-            }
+        if (!$check || file_exists($file)) {
+            $container->import($file);
         }
     }
 
@@ -234,17 +231,9 @@ abstract class AbstractKernel extends BaseKernel
             $routes,
         );
 
-        foreach (['yaml', 'php'] as $ext) {
-            $infrastructureFile = $infrastructureConfigDir . '/routes.' . $ext;
+        $infrastructureFile = $infrastructureConfigDir . '/routes.php';
 
-            if (!is_file($infrastructureFile)) {
-                continue;
-            }
-
-            if ($this->hasOverride($appConfigDir, 'routes')) {
-                continue;
-            }
-
+        if (is_file($infrastructureFile) && !$this->hasOverride($appConfigDir, 'routes')) {
             $routes->import($infrastructureFile);
         }
     }
@@ -254,17 +243,15 @@ abstract class AbstractKernel extends BaseKernel
         RoutingConfigurator $routes,
         bool $check = true,
     ): void {
-        foreach (['yaml', 'php'] as $ext) {
-            $file = sprintf($filename, $ext);
+        $file = sprintf($filename, 'php');
 
-            if (!$check || file_exists($file)) {
-                $routes->import($file);
-            }
+        if (!$check || file_exists($file)) {
+            $routes->import($file);
         }
     }
 
     /**
-     * Build a sorted list of infrastructure config files (php|yaml) from a directory,
+     * Build a sorted list of infrastructure config files (php) from a directory,
      * excluding any whose base names are overridden by app-level override files.
      * Results are sorted alphabetically.
      *
@@ -278,10 +265,7 @@ abstract class AbstractKernel extends BaseKernel
             return [];
         }
 
-        $files = array_merge(
-            glob($infrastructureDir . '/*.php', GLOB_NOSORT) ?: [],
-            glob($infrastructureDir . '/*.yaml', GLOB_NOSORT) ?: [],
-        );
+        $files = glob($infrastructureDir . '/*.php', GLOB_NOSORT) ?: [];
         sort($files);
 
         $result = [];
