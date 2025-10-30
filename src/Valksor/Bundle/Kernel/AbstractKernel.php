@@ -12,7 +12,7 @@
 
 namespace Valksor\Bundle\Kernel;
 
-use RuntimeException;
+use LogicException;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\Dotenv\Dotenv;
@@ -52,11 +52,11 @@ abstract class AbstractKernel extends BaseKernel
         $_ENV['APP_KERNEL_NAME'] = $this->id;
 
         if (null === $this->appsDir) {
-            throw new RuntimeException('Apps dir not set');
+            throw new LogicException('Apps dir not set');
         }
 
         if (null === $this->infrastructureDir) {
-            throw new RuntimeException('Infrastructure dir not set');
+            throw new LogicException('Infrastructure dir not set');
         }
 
         parent::__construct($environment, $debug);
