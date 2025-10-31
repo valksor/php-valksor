@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
+         executionOrder="depends,defects"
+         beStrictAboutOutputDuringTests="true"
+         failOnWarning="true">
+
+    <testsuites>
+        <testsuite name="All Functions">
+            <directory>Date/tests</directory>
+            <!-- Add more function library test directories as they are created:
+            <directory>Handler/tests</directory>
+            <directory>Iteration/tests</directory>
+            <directory>Latvian/tests</directory>
+            <directory>Local/tests</directory>
+            <directory>Memoize/tests</directory>
+            <directory>Number/tests</directory>
+            <directory>Pagination/tests</directory>
+            <directory>Php/tests</directory>
+            <directory>Preg/tests</directory>
+            <directory>Queue/tests</directory>
+            <directory>Sort/tests</directory>
+            <directory>Text/tests</directory>
+            <directory>Web/tests</directory>
+            -->
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory>Date</directory>
+            <directory>Handler</directory>
+            <directory>Iteration</directory>
+            <directory>Latvian</directory>
+            <directory>Local</directory>
+            <directory>Memoize</directory>
+            <directory>Number</directory>
+            <directory>Pagination</directory>
+            <directory>Php</directory>
+            <directory>Preg</directory>
+            <directory>Queue</directory>
+            <directory>Sort</directory>
+            <directory>Text</directory>
+            <directory>Web</directory>
+        </include>
+        <exclude>
+            <directory>*/tests</directory>
+            <directory>*/vendor</directory>
+            <directory>*/.coverage</directory>
+            <directory>*/.phpunit.cache</directory>
+            <directory>*/docs</directory>
+            <directory>*/.github</directory>
+            <directory>vendor</directory>
+            <directory>.coverage</directory>
+            <directory>.phpunit.cache</directory>
+            <directory>.github</directory>
+        </exclude>
+    </source>
+
+    <coverage>
+        <report>
+            <html outputDirectory=".coverage"/>
+            <text outputFile=".coverage/coverage.txt"/>
+            <clover outputFile=".coverage/clover.xml"/>
+            <cobertura outputFile=".coverage/cobertura.xml"/>
+        </report>
+    </coverage>
+
+    <logging>
+        <junit outputFile=".coverage/tests-results.xml"/>
+    </logging>
+</phpunit>

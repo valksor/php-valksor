@@ -55,6 +55,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "*",
+        "phpunit/phpunit": "^12.0",
         "roave/security-advisories": "dev-latest"
     },
     "replace": {

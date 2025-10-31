@@ -1,0 +1,7 @@
+# Test artifacts
+.coverage/
+.phpunit.cache/
+
+# Dependencies
+vendor/
+composer.lock
