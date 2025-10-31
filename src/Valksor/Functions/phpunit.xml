@@ -11,12 +11,12 @@
     <testsuites>
         <testsuite name="All Functions">
             <directory>Date/tests</directory>
+            <directory>Memoize/tests</directory>
             <!-- Add more function library test directories as they are created:
             <directory>Handler/tests</directory>
             <directory>Iteration/tests</directory>
             <directory>Latvian/tests</directory>
             <directory>Local/tests</directory>
-            <directory>Memoize/tests</directory>
             <directory>Number/tests</directory>
             <directory>Pagination/tests</directory>
             <directory>Php/tests</directory>

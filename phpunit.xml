@@ -10,8 +10,9 @@
 
     <testsuites>
         <testsuite name="Valksor Complete">
-            <!-- Currently only Date functions have tests -->
+            <!-- Function library tests -->
             <directory>src/Valksor/Functions/Date/tests</directory>
+            <directory>src/Valksor/Functions/Memoize/tests</directory>
             <!-- Add more test directories as they are created:
             <directory>src/Valksor/Bundle/tests</directory>
             <directory>src/Valksor/Component/DoctrineTools/tests</directory>
@@ -21,7 +22,6 @@
             <directory>src/Valksor/Functions/Iteration/tests</directory>
             <directory>src/Valksor/Functions/Latvian/tests</directory>
             <directory>src/Valksor/Functions/Local/tests</directory>
-            <directory>src/Valksor/Functions/Memoize/tests</directory>
             <directory>src/Valksor/Functions/Number/tests</directory>
             <directory>src/Valksor/Functions/Pagination/tests</directory>
             <directory>src/Valksor/Functions/Php/tests</directory>
