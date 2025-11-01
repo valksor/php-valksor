@@ -17,12 +17,12 @@
             <directory>src/Valksor/Functions/Pagination/tests</directory>
             <directory>src/Valksor/Functions/Preg/tests</directory>
             <directory>src/Valksor/Functions/Queue/tests</directory>
+            <directory>src/Valksor/Functions/Handler/tests</directory>
             <!-- Add more test directories as they are created:
-            <directory>src/Valksor/Bundle/tests</directory>
             <directory>src/Valksor/Component/DoctrineTools/tests</directory>
             <directory>src/Valksor/Component/SpxProfiler/tests</directory>
             <directory>src/Valksor/Component/Sse/tests</directory>
-            <directory>src/Valksor/Functions/Handler/tests</directory>
+            <directory>src/Valksor/Bundle/tests</directory>
             <directory>src/Valksor/Functions/Iteration/tests</directory>
             <directory>src/Valksor/Functions/Latvian/tests</directory>
             <directory>src/Valksor/Functions/Local/tests</directory>

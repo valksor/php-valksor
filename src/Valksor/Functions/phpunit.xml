@@ -16,8 +16,8 @@
             <directory>Pagination/tests</directory>
             <directory>Preg/tests</directory>
             <directory>Queue/tests</directory>
-            <!-- Add more function library test directories as they are created:
             <directory>Handler/tests</directory>
+            <!-- Add more function library test directories as they are created:
             <directory>Iteration/tests</directory>
             <directory>Latvian/tests</directory>
             <directory>Local/tests</directory>
