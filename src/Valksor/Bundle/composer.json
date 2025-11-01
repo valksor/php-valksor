@@ -16,8 +16,10 @@
     "homepage": "https://github.com/valksor/php-valksor",
     "require": {
         "php": ">=8.4",
+        "composer-runtime-api": "^2",
         "doctrine/dbal": "*",
         "doctrine/migrations": "*",
+        "seld/jsonlint": "*",
         "symfony/config": "*",
         "symfony/console": "*",
         "symfony/dependency-injection": "*",

@@ -12,11 +12,13 @@
 
 namespace Valksor\Bundle;
 
+use Composer\Json\JsonFile;
 use FilesystemIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionException;
 use RuntimeException;
+use Seld\JsonLint\ParsingException;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -35,6 +37,7 @@ use function array_merge_recursive;
 use function class_exists;
 use function dirname;
 use function file_exists;
+use function in_array;
 use function is_a;
 use function is_bool;
 use function is_dir;
@@ -53,6 +56,12 @@ final class ValksorBundle extends AbstractBundle
 {
     public const string VALKSOR = 'valksor';
 
+    private const array SELFS = [
+        'valksor/php-valksor',
+        'valksor/php-dev',
+        'valksor/php-plugin',
+    ];
+
     private ?MemoizeCache $cache = null;
 
     private ?array $discoveredComponents = null;
@@ -63,6 +72,9 @@ final class ValksorBundle extends AbstractBundle
         $this->memoize();
     }
 
+    /**
+     * @throws ParsingException
+     */
     public function build(
         ContainerBuilder $container,
     ): void {
@@ -84,6 +96,9 @@ final class ValksorBundle extends AbstractBundle
         new ValksorConfiguration()->build($container);
     }
 
+    /**
+     * @throws ParsingException
+     */
     public function configure(
         DefinitionConfigurator $definition,
     ): void {
@@ -120,6 +135,9 @@ final class ValksorBundle extends AbstractBundle
         }
     }
 
+    /**
+     * @throws ParsingException
+     */
     public function loadExtension(
         array $config,
         ContainerConfigurator $container,
@@ -148,6 +166,9 @@ final class ValksorBundle extends AbstractBundle
         new ValksorConfiguration()->registerConfiguration($container, $builder, '');
     }
 
+    /**
+     * @throws ParsingException
+     */
     public function prependExtension(
         ContainerConfigurator $container,
         ContainerBuilder $builder,
@@ -245,6 +266,8 @@ final class ValksorBundle extends AbstractBundle
 
     /**
      * @return array<string, array{string, available: bool}> Array of component ID => {class, available}
+     *
+     * @throws ParsingException
      */
     private function discoverComponents(): array
     {
@@ -352,6 +375,8 @@ final class ValksorBundle extends AbstractBundle
 
     /**
      * Recursively find the project root by looking for composer.json.
+     *
+     * @throws ParsingException
      */
     private function findProjectRoot(): string
     {
@@ -359,8 +384,12 @@ final class ValksorBundle extends AbstractBundle
 
         while ($dir !== dirname($dir)) {
             // Check if this is the actual project root (has vendor directory)
-            if (file_exists($dir . '/composer.json') && is_dir($dir . '/vendor')) {
-                return $dir;
+            if (file_exists($dir . '/composer.json')) {
+                $data = new JsonFile($dir . '/composer.json')->read();
+
+                if (is_dir($dir . '/vendor') && !in_array($data['name'], self::SELFS, true)) {
+                    return $dir;
+                }
             }
             $dir = dirname($dir);
         }
