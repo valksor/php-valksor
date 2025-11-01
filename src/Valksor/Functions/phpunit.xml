@@ -19,10 +19,10 @@
             <directory>Queue/Tests</directory>
             <directory>Sort/Tests</directory>
             <directory>Text/Tests</directory>
+            <directory>Local/Tests</directory>
             <!-- Add more function library test directories as they are created:
             <directory>Iteration/Tests</directory>
             <directory>Latvian/Tests</directory>
-            <directory>Local/Tests</directory>
             <directory>Php/Tests</directory>
             <directory>Web/Tests</directory>
             -->

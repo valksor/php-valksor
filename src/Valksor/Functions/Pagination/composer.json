@@ -26,11 +26,6 @@
             "Valksor\\Functions\\Pagination\\": ""
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Valksor\\Functions\\Pagination\\Tests\\": "Tests/"
-        }
-    },
     "config": {
         "sort-packages": true
     },

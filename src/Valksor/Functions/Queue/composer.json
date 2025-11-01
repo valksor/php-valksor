@@ -29,11 +29,6 @@
             "Valksor\\Functions\\Queue\\": ""
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Valksor\\Functions\\Queue\\Tests\\": "Tests/"
-        }
-    },
     "config": {
         "sort-packages": true
     },

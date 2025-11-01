@@ -27,11 +27,6 @@
             "Valksor\\Functions\\Preg\\": ""
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Valksor\\Functions\\Preg\\Tests\\": "Tests/"
-        }
-    },
     "config": {
         "sort-packages": true
     },

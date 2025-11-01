@@ -31,11 +31,6 @@
             "Valksor\\Functions\\Sort\\": ""
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Valksor\\Functions\\Sort\\Tests\\": "Tests/"
-        }
-    },
     "config": {
         "sort-packages": true
     },

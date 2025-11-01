@@ -28,11 +28,6 @@
             "Valksor\\Functions\\Date\\": ""
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Valksor\\Functions\\Date\\Tests\\": "Tests/"
-        }
-    },
     "config": {
         "sort-packages": true
     },
