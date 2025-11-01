@@ -77,7 +77,9 @@
             "Valksor\\": "src/Valksor/"
         },
         "exclude-from-classmap": [
-            "src/Valksor/Bundle/recipe/files/"
+            "src/Valksor/Bundle/recipe/files/",
+            "src/Valksor/Component/DoctrineTools/Resources/migrations/",
+            "src/Valksor/Bundle/Resources/migrations/"
         ]
     },
     "config": {
