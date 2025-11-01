@@ -14,6 +14,7 @@
             <directory>src/Valksor/Functions/Date/tests</directory>
             <directory>src/Valksor/Functions/Memoize/tests</directory>
             <directory>src/Valksor/Functions/Sort/tests</directory>
+            <directory>src/Valksor/Functions/Pagination/tests</directory>
             <!-- Add more test directories as they are created:
             <directory>src/Valksor/Bundle/tests</directory>
             <directory>src/Valksor/Component/DoctrineTools/tests</directory>
@@ -24,7 +25,6 @@
             <directory>src/Valksor/Functions/Latvian/tests</directory>
             <directory>src/Valksor/Functions/Local/tests</directory>
             <directory>src/Valksor/Functions/Number/tests</directory>
-            <directory>src/Valksor/Functions/Pagination/tests</directory>
             <directory>src/Valksor/Functions/Php/tests</directory>
             <directory>src/Valksor/Functions/Preg/tests</directory>
             <directory>src/Valksor/Functions/Queue/tests</directory>
@@ -39,21 +39,15 @@
             <directory>src/Valksor</directory>
         </include>
         <exclude>
-            <directory>src/Valksor/*/tests</directory>
-            <directory>src/Valksor/*/*/tests</directory>
-            <directory>src/Valksor/*/*/*/tests</directory>
-            <directory>src/Valksor/*/vendor</directory>
-            <directory>src/Valksor/*/*/vendor</directory>
-            <directory>src/Valksor/*/.coverage</directory>
-            <directory>src/Valksor/*/*/.coverage</directory>
-            <directory>src/Valksor/*/.phpunit.cache</directory>
-            <directory>src/Valksor/*/*/.phpunit.cache</directory>
-            <directory>src/Valksor/*/docs</directory>
-            <directory>src/Valksor/*/*/docs</directory>
-            <directory>src/Valksor/*/.github</directory>
-            <directory>src/Valksor/*/*/.github</directory>
-            <directory>src/Valksor/Bundle/var</directory>
-            <directory>src/Valksor/Bundle/recipe</directory>
+            <directory>src/Valksor/**/tests</directory>
+            <directory>src/Valksor/**/vendor</directory>
+            <directory>src/Valksor/**/.coverage</directory>
+            <directory>src/Valksor/**/.phpunit.cache</directory>
+            <directory>src/Valksor/**/docs</directory>
+            <directory>src/Valksor/**/Resources</directory>
+            <directory>src/Valksor/**/.github</directory>
+            <directory>src/Valksor/**/var</directory>
+            <directory>src/Valksor/**/recipe</directory>
             <directory>vendor</directory>
             <directory>.coverage</directory>
             <directory>.phpunit.cache</directory>
