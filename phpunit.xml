@@ -18,6 +18,7 @@
             <directory>src/Valksor/Functions/Preg/tests</directory>
             <directory>src/Valksor/Functions/Queue/tests</directory>
             <directory>src/Valksor/Functions/Handler/tests</directory>
+            <directory>src/Valksor/Functions/Number/tests</directory>
             <!-- Add more test directories as they are created:
             <directory>src/Valksor/Component/DoctrineTools/tests</directory>
             <directory>src/Valksor/Component/SpxProfiler/tests</directory>
@@ -26,7 +27,6 @@
             <directory>src/Valksor/Functions/Iteration/tests</directory>
             <directory>src/Valksor/Functions/Latvian/tests</directory>
             <directory>src/Valksor/Functions/Local/tests</directory>
-            <directory>src/Valksor/Functions/Number/tests</directory>
             <directory>src/Valksor/Functions/Php/tests</directory>
             <directory>src/Valksor/Functions/Text/tests</directory>
             <directory>src/Valksor/Functions/Web/tests</directory>

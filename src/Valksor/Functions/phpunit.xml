@@ -17,11 +17,11 @@
             <directory>Preg/tests</directory>
             <directory>Queue/tests</directory>
             <directory>Handler/tests</directory>
+            <directory>Number/tests</directory>
             <!-- Add more function library test directories as they are created:
             <directory>Iteration/tests</directory>
             <directory>Latvian/tests</directory>
             <directory>Local/tests</directory>
-            <directory>Number/tests</directory>
             <directory>Php/tests</directory>
             <directory>Text/tests</directory>
             <directory>Web/tests</directory>

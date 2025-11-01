@@ -28,7 +28,7 @@ jobs:
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: ${{ matrix.php-version }}
-                    extensions: mbstring, xml, json, iconv, dom, simplexml, tokenizer, random, curl, xmlreader
+                    extensions: mbstring, xml, json, iconv, dom, simplexml, tokenizer, random, curl, xmlreader, gmp
                     tools: composer:v2
                     coverage: pcov
 
