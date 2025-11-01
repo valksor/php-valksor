@@ -20,6 +20,9 @@
         "composer-runtime-api": "^2",
         "symfony/process": "*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
     "minimum-stability": "dev",
     "prefer-stable": false,
     "autoload": {
