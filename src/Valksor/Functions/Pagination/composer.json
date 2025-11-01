@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Valksor\\Functions\\Pagination\\Tests\\": "tests/"
+            "Valksor\\Functions\\Pagination\\Tests\\": "Tests/"
         }
     },
     "config": {

@@ -30,7 +30,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Valksor\\Functions\\Date\\Tests\\": "tests/"
+            "Valksor\\Functions\\Date\\Tests\\": "Tests/"
         }
     },
     "config": {

@@ -15,7 +15,6 @@ namespace Valksor\Functions\Memoize\Tests;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 use Valksor\Functions\Memoize\Memoize;
-use Valksor\Functions\Memoize\Tests\Fixtures\TestContext;
 
 final class MemoizeTest extends TestCase
 {

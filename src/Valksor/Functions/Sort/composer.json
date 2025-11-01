@@ -33,7 +33,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Valksor\\Functions\\Sort\\Tests\\": "tests/"
+            "Valksor\\Functions\\Sort\\Tests\\": "Tests/"
         }
     },
     "config": {

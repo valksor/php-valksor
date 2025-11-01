@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
-    bootstrap="tests/bootstrap.php"
+    bootstrap="Tests/bootstrap.php"
     colors="true"
     cacheDirectory=".phpunit.cache"
     executionOrder="depends,defects"
@@ -10,7 +10,7 @@
 
     <testsuites>
         <testsuite name="Queue Functions">
-            <directory>tests</directory>
+            <directory>Tests</directory>
         </testsuite>
     </testsuites>
 
@@ -19,12 +19,12 @@
             <directory>.</directory>
         </include>
         <exclude>
-            <directory>tests</directory>
-            <directory>vendor</directory>
             <directory>.coverage</directory>
-            <directory>.phpunit.cache</directory>
-            <directory>docs</directory>
             <directory>.github</directory>
+            <directory>.phpunit.cache</directory>
+            <directory>Tests</directory>
+            <directory>docs</directory>
+            <directory>vendor</directory>
         </exclude>
     </source>
 

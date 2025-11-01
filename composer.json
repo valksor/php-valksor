@@ -75,7 +75,10 @@
     "autoload": {
         "psr-4": {
             "Valksor\\": "src/Valksor/"
-        }
+        },
+        "exclude-from-classmap": [
+            "src/Valksor/Bundle/recipe/files/"
+        ]
     },
     "config": {
         "sort-packages": true

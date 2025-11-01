@@ -11,25 +11,25 @@
     <testsuites>
         <testsuite name="Valksor Complete">
             <!-- Function library tests -->
-            <directory>src/Valksor/Functions/Date/tests</directory>
-            <directory>src/Valksor/Functions/Memoize/tests</directory>
-            <directory>src/Valksor/Functions/Sort/tests</directory>
-            <directory>src/Valksor/Functions/Pagination/tests</directory>
-            <directory>src/Valksor/Functions/Preg/tests</directory>
-            <directory>src/Valksor/Functions/Queue/tests</directory>
-            <directory>src/Valksor/Functions/Handler/tests</directory>
-            <directory>src/Valksor/Functions/Number/tests</directory>
-            <directory>src/Valksor/Functions/Text/tests</directory>
+            <directory>src/Valksor/Functions/Date/Tests</directory>
+            <directory>src/Valksor/Functions/Handler/Tests</directory>
+            <directory>src/Valksor/Functions/Memoize/Tests</directory>
+            <directory>src/Valksor/Functions/Number/Tests</directory>
+            <directory>src/Valksor/Functions/Pagination/Tests</directory>
+            <directory>src/Valksor/Functions/Preg/Tests</directory>
+            <directory>src/Valksor/Functions/Queue/Tests</directory>
+            <directory>src/Valksor/Functions/Sort/Tests</directory>
+            <directory>src/Valksor/Functions/Text/Tests</directory>
             <!-- Add more test directories as they are created:
-            <directory>src/Valksor/Component/DoctrineTools/tests</directory>
-            <directory>src/Valksor/Component/SpxProfiler/tests</directory>
-            <directory>src/Valksor/Component/Sse/tests</directory>
-            <directory>src/Valksor/Bundle/tests</directory>
-            <directory>src/Valksor/Functions/Iteration/tests</directory>
-            <directory>src/Valksor/Functions/Latvian/tests</directory>
-            <directory>src/Valksor/Functions/Local/tests</directory>
-            <directory>src/Valksor/Functions/Php/tests</directory>
-            <directory>src/Valksor/Functions/Web/tests</directory>
+            <directory>src/Valksor/Component/DoctrineTools/Tests</directory>
+            <directory>src/Valksor/Component/SpxProfiler/Tests</directory>
+            <directory>src/Valksor/Component/Sse/Tests</directory>
+            <directory>src/Valksor/Bundle/Tests</directory>
+            <directory>src/Valksor/Functions/Iteration/Tests</directory>
+            <directory>src/Valksor/Functions/Latvian/Tests</directory>
+            <directory>src/Valksor/Functions/Local/Tests</directory>
+            <directory>src/Valksor/Functions/Php/Tests</directory>
+            <directory>src/Valksor/Functions/Web/Tests</directory>
             -->
         </testsuite>
     </testsuites>
@@ -39,20 +39,20 @@
             <directory>src/Valksor</directory>
         </include>
         <exclude>
-            <directory>src/Valksor/**/tests</directory>
-            <directory>src/Valksor/**/vendor</directory>
-            <directory>src/Valksor/**/.coverage</directory>
-            <directory>src/Valksor/**/.phpunit.cache</directory>
-            <directory>src/Valksor/**/docs</directory>
-            <directory>src/Valksor/**/Resources</directory>
-            <directory>src/Valksor/**/.github</directory>
-            <directory>src/Valksor/**/var</directory>
-            <directory>src/Valksor/**/recipe</directory>
-            <directory>vendor</directory>
             <directory>.coverage</directory>
-            <directory>.phpunit.cache</directory>
             <directory>.github</directory>
+            <directory>.phpunit.cache</directory>
             <directory>core</directory>
+            <directory>src/Valksor/**/.coverage</directory>
+            <directory>src/Valksor/**/.github</directory>
+            <directory>src/Valksor/**/.phpunit.cache</directory>
+            <directory>src/Valksor/**/Resources</directory>
+            <directory>src/Valksor/**/Tests</directory>
+            <directory>src/Valksor/**/docs</directory>
+            <directory>src/Valksor/**/recipe</directory>
+            <directory>src/Valksor/**/var</directory>
+            <directory>src/Valksor/**/vendor</directory>
+            <directory>vendor</directory>
         </exclude>
     </source>
 

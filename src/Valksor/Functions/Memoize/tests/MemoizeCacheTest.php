@@ -17,7 +17,6 @@ use ReflectionClass;
 use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
 use Valksor\Functions\Memoize\Memoize;
 use Valksor\Functions\Memoize\MemoizeCache;
-use Valksor\Functions\Memoize\Tests\Fixtures\TestContext;
 
 final class MemoizeCacheTest extends TestCase
 {

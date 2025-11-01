@@ -30,7 +30,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Valksor\\Functions\\Handler\\Tests\\": "tests/"
+            "Valksor\\Functions\\Handler\\Tests\\": "Tests/"
         }
     },
     "config": {
