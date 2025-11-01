@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         colors="true"
-         cacheDirectory=".phpunit.cache"
-         executionOrder="depends,defects"
-         beStrictAboutOutputDuringTests="true"
-         failOnWarning="true">
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    cacheDirectory=".phpunit.cache"
+    executionOrder="depends,defects"
+    beStrictAboutOutputDuringTests="true"
+    failOnWarning="true">
 
     <testsuites>
         <testsuite name="All Functions">
             <directory>Date/tests</directory>
             <directory>Memoize/tests</directory>
+            <directory>Sort/tests</directory>
             <!-- Add more function library test directories as they are created:
             <directory>Handler/tests</directory>
             <directory>Iteration/tests</directory>
@@ -22,7 +23,6 @@
             <directory>Php/tests</directory>
             <directory>Preg/tests</directory>
             <directory>Queue/tests</directory>
-            <directory>Sort/tests</directory>
             <directory>Text/tests</directory>
             <directory>Web/tests</directory>
             -->

@@ -30,6 +30,11 @@
             "Valksor\\Functions\\Memoize\\": ""
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Valksor\\Functions\\Memoize\\Tests\\": "tests/"
+        }
+    },
     "config": {
         "sort-packages": true
     },
