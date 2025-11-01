@@ -16,6 +16,9 @@
     "require": {
         "php": ">=8.4"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
     "suggest": {
         "valksor/php-bundle": "*"
     },
@@ -24,6 +27,11 @@
     "autoload": {
         "psr-4": {
             "Valksor\\Functions\\Queue\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Valksor\\Functions\\Queue\\Tests\\": "tests/"
         }
     },
     "config": {
