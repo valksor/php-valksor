@@ -14,7 +14,6 @@ namespace Valksor\Functions\Preg\Traits;
 
 use RuntimeException;
 use Valksor\Functions\Preg\Exception\PregPatternException;
-use Valksor\Functions\Preg\SkipErrorHandler;
 
 use function is_array;
 use function preg_last_error;
@@ -31,23 +30,9 @@ trait _NewPregException
         array|string $pattern,
     ): RuntimeException {
         $processPattern = static function (string $pattern) use ($error, $errorMsg, $method): RuntimeException {
-            $errorMessage = null;
+            $errorMessage = '';
 
-            static $_helper = null;
-
-            if (null === $_helper) {
-                $_helper = new class {
-                    use _Match;
-                    use _Replace;
-                };
-            }
-
-            try {
-                $result = SkipErrorHandler::execute(static fn () => $_helper->match($pattern, ''));
-            } catch (RuntimeException $e) {
-                $result = false;
-                $errorMessage = $e->getMessage();
-            }
+            $result = @preg_match($pattern, '');
 
             if (false !== $result) {
                 return new PregPatternException(sprintf('Unknown error occurred when calling %s: %s.', $method, $errorMsg), $error);
@@ -58,7 +43,7 @@ trait _NewPregException
             $message = sprintf(
                 '(code: %d) %s',
                 $code,
-                $_helper->replace('~preg_[a-z_]+[()]{2}: ~', '', $errorMessage),
+                preg_replace('~preg_[a-z_]+[()]{2}: ~', '', $errorMessage),
             );
 
             return new PregPatternException(

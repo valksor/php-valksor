@@ -33,6 +33,10 @@ trait _LimitWords
             };
         }
 
+        if ($limit <= 0) {
+            return '';
+        }
+
         $_helper->match(pattern: '/^\s*+(?:\S++\s*+){1,' . $limit . '}/u', subject: $text, matches: $matches);
 
         if (!array_key_exists(key: 0, array: $matches) || mb_strlen(string: $text) === mb_strlen(string: $matches[0])) {
