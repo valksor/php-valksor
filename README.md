@@ -1,5 +1,7 @@
 # Valksor PHP Library
 
+[![codecov](https://codecov.io/gh/valksor/php-valksor/graph/badge.svg?token=76KDE1W8PR)](https://codecov.io/gh/valksor/php-valksor)
+
 A comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for modern Symfony applications. This ecosystem includes function libraries, development tools, Doctrine extensions, and real-time communication components.
 
 ## Features
