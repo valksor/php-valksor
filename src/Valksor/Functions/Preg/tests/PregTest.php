@@ -13,6 +13,7 @@
 namespace Valksor\Functions\Preg\Tests;
 
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 use Valksor\Functions\Preg\Functions;
 
 final class PregTest extends TestCase
@@ -101,6 +102,21 @@ final class PregTest extends TestCase
         $this->assertSame('/pattern/iu', $result);
     }
 
+    public function testExceptionWithArrayPatterns(): void
+    {
+        $this->expectException(RuntimeException::class);
+        // This will trigger the array pattern path in _NewPregException
+        $this->preg->replace(['/[valid/', '/[invalid/'], 'replacement', 'test');
+    }
+
+    public function testMatchAllMethodSignature(): void
+    {
+        $matches = [];
+        $result = $this->preg->matchAll('/test/', 'test test', $matches);
+        $this->assertGreaterThanOrEqual(0, $result);
+        $this->assertIsArray($matches);
+    }
+
     // MatchAll Tests
     public function testMatchAllReturnsCountForSuccessfulMatches(): void
     {
@@ -168,6 +184,12 @@ final class PregTest extends TestCase
         $this->assertSame(['789', '789'], $matches[2]);
     }
 
+    public function testMatchAllWithInvalidRegex(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->preg->matchAll('/[invalid/', 'test');
+    }
+
     public function testMatchAllWithLargeInput(): void
     {
         $subject = str_repeat('test ', 1000);
@@ -192,6 +214,15 @@ final class PregTest extends TestCase
         $result = $this->preg->matchAll('/\w+/u', 'héllo wörld', $matches);
 
         $this->assertSame(2, $result);
+    }
+
+    // Coverage tests for method signatures
+    public function testMatchMethodSignature(): void
+    {
+        $matches = [];
+        $result = $this->preg->match('/test/', 'test', $matches);
+        $this->assertTrue($result);
+        $this->assertIsArray($matches);
     }
 
     // Type Safety Tests
@@ -260,6 +291,13 @@ final class PregTest extends TestCase
         $this->assertCount(2, $matches[0]);
         $this->assertSame('hello', $matches[0][0]);
         $this->assertSame(0, $matches[0][1]);
+    }
+
+    // Edge case tests for 100% coverage
+    public function testMatchWithInvalidRegex(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->preg->match('/[invalid/', 'test');
     }
 
     // Large Input Tests
@@ -350,6 +388,19 @@ final class PregTest extends TestCase
         $this->assertSame(['/pattern1/i', '/pattern2/m'], $result);
     }
 
+    // Tests for remaining edge cases
+    public function testRemoveUtf8ModifierWithEmptyArray(): void
+    {
+        $result = $this->preg->removeUtf8Modifier([]);
+        $this->assertSame('', $result);
+    }
+
+    public function testRemoveUtf8ModifierWithEmptyString(): void
+    {
+        $result = $this->preg->removeUtf8Modifier('');
+        $this->assertSame('', $result);
+    }
+
     public function testRemoveUtf8ModifierWithMultipleModifiers(): void
     {
         $result = $this->preg->removeUtf8Modifier('/pattern/iu');
@@ -373,6 +424,12 @@ final class PregTest extends TestCase
         $result = $this->preg->replaceCallback('/\w+/', $callback, 'hello world');
 
         $this->assertSame('HELLO WORLD', $result);
+    }
+
+    public function testReplaceCallbackMethodSignature(): void
+    {
+        $result = $this->preg->replaceCallback('/test/', fn ($matches) => 'replacement', 'test');
+        $this->assertSame('replacement', $result);
     }
 
     public function testReplaceCallbackReturnsString(): void
@@ -427,6 +484,12 @@ final class PregTest extends TestCase
         $this->assertSame('', $result);
     }
 
+    public function testReplaceCallbackWithInvalidRegex(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->preg->replaceCallback('/[invalid/', fn ($matches) => 'replacement', 'test');
+    }
+
     public function testReplaceCallbackWithLargeInput(): void
     {
         $subject = str_repeat('test ', 100);
@@ -450,6 +513,12 @@ final class PregTest extends TestCase
         $result = $this->preg->replaceCallback('/\w+/u', $callback, 'héllo wörld');
 
         $this->assertSame('HÉLLO WÖRLD', $result);
+    }
+
+    public function testReplaceMethodSignature(): void
+    {
+        $result = $this->preg->replace('/test/', 'replacement', 'test');
+        $this->assertSame('replacement', $result);
     }
 
     public function testReplaceReturnsString(): void
@@ -506,6 +575,12 @@ final class PregTest extends TestCase
         $this->assertSame('', $result);
     }
 
+    public function testReplaceWithInvalidRegex(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->preg->replace('/[invalid/', 'replacement', 'test');
+    }
+
     public function testReplaceWithLargeInput(): void
     {
         $subject = str_repeat('test ', 1000);
@@ -526,6 +601,12 @@ final class PregTest extends TestCase
         $result = $this->preg->replace('/wörld/', 'world', 'héllo wörld');
 
         $this->assertSame('héllo world', $result);
+    }
+
+    public function testSplitMethodSignature(): void
+    {
+        $result = $this->preg->split('/\s+/', 'test1 test2');
+        $this->assertSame(['test1', 'test2'], $result);
     }
 
     // Split Tests
@@ -565,6 +646,12 @@ final class PregTest extends TestCase
         $result = $this->preg->split('/\s+/', 'hello world test', -1, PREG_SPLIT_NO_EMPTY);
 
         $this->assertSame(['hello', 'world', 'test'], $result);
+    }
+
+    public function testSplitWithInvalidRegex(): void
+    {
+        $this->expectException(RuntimeException::class);
+        $this->preg->split('/[invalid/', 'test');
     }
 
     public function testSplitWithLargeInput(): void
