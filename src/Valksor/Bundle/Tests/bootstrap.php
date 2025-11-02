@@ -12,7 +12,7 @@
 
 use Valksor\Bundle\Tests\Fixtures\JsonFileStub;
 
-$autoloadPath = __DIR__ . '/vendor/autoload.php';
+$autoloadPath = __DIR__ . '/../vendor/autoload.php';
 
 if (!is_file($autoloadPath)) {
     throw new RuntimeException('Composer autoload file not found. Run "composer install" first.');

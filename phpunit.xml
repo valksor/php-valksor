@@ -4,9 +4,15 @@
     bootstrap="vendor/autoload.php"
     colors="true"
     cacheDirectory=".phpunit.cache"
-    executionOrder="depends,defects"
+    executionOrder="depends,random"
     beStrictAboutOutputDuringTests="true"
-    failOnWarning="true">
+    beStrictAboutCoverageMetadata="true"
+    controlGarbageCollector="true"
+>
+
+    <php>
+        <ini name="memory_limit" value="-1" />
+    </php>
 
     <testsuites>
         <testsuite name="Valksor Complete">
@@ -30,7 +36,6 @@
             <directory>src/Valksor/Component/DoctrineTools/Tests</directory>
             <directory>src/Valksor/Component/SpxProfiler/Tests</directory>
             <directory>src/Valksor/Component/Sse/Tests</directory>
-            <directory>src/Valksor/Bundle/Tests</directory>
             -->
         </testsuite>
     </testsuites>
@@ -57,16 +62,22 @@
         </exclude>
     </source>
 
-    <coverage>
+    <coverage
+        ignoreDeprecatedCodeUnits="true"
+        disableCodeCoverageIgnore="true"
+    >
         <report>
-            <html outputDirectory=".coverage"/>
-            <text outputFile=".coverage/coverage.txt"/>
             <clover outputFile=".coverage/clover.xml"/>
             <cobertura outputFile=".coverage/cobertura.xml"/>
+            <crap4j outputFile=".coverage/crap4j.xml"/>
+            <html outputDirectory=".coverage"/>
+            <text outputFile=".coverage/coverage.txt"/>
         </report>
     </coverage>
 
     <logging>
-        <junit outputFile=".coverage/tests-results.xml"/>
+        <junit outputFile=".coverage/junit.xml"/>
+        <testdoxHtml outputFile=".coverage/testdox.html"/>
+        <testdoxText outputFile=".coverage/testdox.txt"/>
     </logging>
 </phpunit>

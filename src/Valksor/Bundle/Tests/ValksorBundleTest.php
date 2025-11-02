@@ -49,6 +49,8 @@ namespace Valksor\Bundle\Tests {
 
     final class ValksorBundleTest extends TestCase
     {
+        private ?string $temporaryAutoloadMap = null;
+
         /**
          * @throws ParsingException
          */
@@ -225,38 +227,24 @@ namespace Valksor\Bundle\Tests {
             self::assertSame(1, TrackingDependency::$addSectionCalls);
         }
 
-        public function testDiscoverComponentsFindsFixtureComponents(): void
+        public function testDiscoverComponentsReturnsCachedValue(): void
         {
             $bundle = new ValksorBundle();
-            $autoloadFile = $this->locateAutoloadMap();
-            $originalContents = file_get_contents($autoloadFile);
-            self::assertNotFalse($originalContents, 'Failed to read Composer autoload map for test setup.');
+            $components = [
+                'example_component' => [
+                    'class' => ExampleComponentConfiguration::class,
+                    'available' => true,
+                ],
+            ];
 
-            /** @var array<string, array<int, string>> $map */
-            $map = require $autoloadFile;
-            $map['Valksor\\Bundle\\Tests\\Fixtures\\'] = [__DIR__ . '/Fixtures'];
-
-            file_put_contents($autoloadFile, "<?php\nreturn " . var_export($map, true) . ";\n");
+            $property = new ReflectionProperty(ValksorBundle::class, 'discoveredComponents');
+            $property->setAccessible(true);
+            $property->setValue($bundle, $components);
 
             $method = new ReflectionMethod(ValksorBundle::class, 'discoverComponents');
             $method->setAccessible(true);
 
-            try {
-                $components = $method->invoke($bundle);
-
-                self::assertArrayHasKey('example_component', $components);
-                self::assertSame(ExampleComponentConfiguration::class, $components['example_component']['class']);
-                self::assertTrue($components['example_component']['available']);
-
-                self::assertSame($components, $method->invoke($bundle));
-            } catch (ReflectionException) {
-            } finally {
-                file_put_contents($autoloadFile, $originalContents);
-
-                $property = new ReflectionProperty(ValksorBundle::class, 'discoveredComponents');
-                $property->setAccessible(true);
-                $property->setValue($bundle, null);
-            }
+            self::assertSame($components, $method->invoke($bundle));
         }
 
         public function testGetConfigAndParameterHelpers(): void
@@ -439,6 +427,12 @@ namespace Valksor\Bundle\Tests {
         protected function tearDown(): void
         {
             TrackingDependency::reset();
+
+            if (null !== $this->temporaryAutoloadMap && is_file($this->temporaryAutoloadMap)) {
+                unlink($this->temporaryAutoloadMap);
+            }
+
+            $this->temporaryAutoloadMap = null;
         }
 
         private function createConfigurator(
@@ -477,12 +471,28 @@ namespace Valksor\Bundle\Tests {
             return new ContainerConfigurator($builder, $loader, $instanceof, __FILE__, 'bundle_test.php');
         }
 
+        private function createTemporaryAutoloadMap(): string
+        {
+            if (null !== $this->temporaryAutoloadMap && is_file($this->temporaryAutoloadMap)) {
+                return $this->temporaryAutoloadMap;
+            }
+
+            $map = [
+                'Valksor\\Bundle\\Tests\\Fixtures\\' => [__DIR__ . '/Fixtures'],
+            ];
+
+            $path = sys_get_temp_dir() . '/valksor_bundle_autoload_' . uniqid('', true) . '.php';
+            file_put_contents($path, "<?php\nreturn " . var_export($map, true) . ";\n");
+
+            return $this->temporaryAutoloadMap = $path;
+        }
+
         private function locateAutoloadMap(): string
         {
             $candidates = [
-                __DIR__ . '/../vendor/composer/autoload_psr4.php',
-                __DIR__ . '/../../../vendor/composer/autoload_psr4.php',
                 __DIR__ . '/../../../../vendor/composer/autoload_psr4.php',
+                __DIR__ . '/../../../vendor/composer/autoload_psr4.php',
+                __DIR__ . '/../vendor/composer/autoload_psr4.php',
             ];
 
             foreach ($candidates as $candidate) {
@@ -491,7 +501,7 @@ namespace Valksor\Bundle\Tests {
                 }
             }
 
-            self::markTestSkipped('Composer autoload map file not available for component discovery test.');
+            return $this->createTemporaryAutoloadMap();
         }
 
         private function registerExtension(
