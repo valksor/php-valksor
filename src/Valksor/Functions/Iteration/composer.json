@@ -22,6 +22,9 @@
         "valksor/php-functions-php": "^1.0",
         "valksor/php-functions-text": "^1.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
     "minimum-stability": "dev",
     "prefer-stable": false,
     "autoload": {
@@ -31,9 +34,6 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^12.0"
     },
     "extra": {
         "branch-alias": {
