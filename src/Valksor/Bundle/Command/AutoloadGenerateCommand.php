@@ -61,7 +61,7 @@ class AutoloadGenerateCommand extends AbstractCommand
 
             $autoloadContent = "<?php declare(strict_types = 1);\n\n";
 
-            $autoloadContent .= "spl_autoload_register(static function (string \$class): bool {\n";
+            $autoloadContent .= "spl_autoload_register(static function (string \$class): void {\n";
             $autoloadContent .= "    \$autoloadConfig = [\n";
 
             foreach ($autoloadConfig as $namespace => $path) {
@@ -76,11 +76,9 @@ class AutoloadGenerateCommand extends AbstractCommand
             $autoloadContent .= "            \n";
             $autoloadContent .= "            if (is_file(\$file)) {\n";
             $autoloadContent .= "                require_once \$file;\n";
-            $autoloadContent .= "                return true;\n";
             $autoloadContent .= "            }\n";
             $autoloadContent .= "        }\n";
             $autoloadContent .= "    }\n";
-            $autoloadContent .= "    return false;\n";
             $autoloadContent .= "});\n";
 
             $outputFile = $appsDir . '/autoload.php';
