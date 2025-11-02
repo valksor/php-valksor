@@ -90,7 +90,7 @@ $collectEntries = static function (array $config) use ($projectDir, $mkdir): arr
 
         $entryName = substr($relative, 0, -strlen('.entry.js'));
 
-        if (is_array($entries) ? array_key_exists($entryName, $entries) : isset($entries[$entryName])) {
+        if (array_key_exists($entryName, $entries)) {
             continue;
         }
 
