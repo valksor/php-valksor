@@ -12,13 +12,18 @@
 
 namespace Valksor\Functions\Local\Tests;
 
+use Composer\InstalledVersions;
+use LogicException;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use ReflectionException;
 use stdClass;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use UnexpectedValueException;
 use Valksor\Functions\Local\Functions;
+use Valksor\Functions\Local\Traits\_CurlUA;
+use Valksor\Functions\Local\Traits\_WillBeAvailable;
 
 final class LocalTest extends TestCase
 {
@@ -161,11 +166,91 @@ final class LocalTest extends TestCase
         }
     }
 
+    public function testGetCurlUserAgentParsesVersionString(): void
+    {
+        $process = $this->createMock(Process::class);
+        $process->expects($this->once())->method('run');
+        $process->method('isSuccessful')->willReturn(true);
+        $process->method('getOutput')->willReturn("curl 8.5.0-DEV (x86_64-pc-linux-gnu)\nMore details");
+
+        $curl = new class($process) {
+            use _CurlUA;
+
+            public function __construct(
+                private readonly Process $process,
+            ) {
+            }
+
+            protected function createProcess(
+                array $command,
+            ): Process {
+                return $this->process;
+            }
+        };
+
+        $this->assertSame('curl/8.5.0-DEV', $curl->getCurlUserAgent());
+    }
+
+    public function testGetCurlUserAgentReturnsRawOutputWhenPatternDoesNotMatch(): void
+    {
+        $process = $this->createMock(Process::class);
+        $process->expects($this->once())->method('run');
+        $process->method('isSuccessful')->willReturn(true);
+        $process->method('getOutput')->willReturn("custom agent string\nadditional data");
+
+        $curl = new class($process) {
+            use _CurlUA;
+
+            public function __construct(
+                private readonly Process $process,
+            ) {
+            }
+
+            protected function createProcess(
+                array $command,
+            ): Process {
+                return $this->process;
+            }
+        };
+
+        $this->assertSame('custom agent string', $curl->getCurlUserAgent());
+    }
+
     public function testGetCurlUserAgentThrowsExceptionOnFailure(): void
     {
         // Skip this test as Functions class is final and cannot be mocked
         // The curl failure path is tested implicitly through reflection testing
         $this->assertTrue(true);
+    }
+
+    public function testGetCurlUserAgentThrowsWhenProcessFails(): void
+    {
+        $process = $this->createMock(Process::class);
+        $process->expects($this->once())->method('run');
+        $process->method('isSuccessful')->willReturn(false);
+        $process->method('getCommandLine')->willReturn('curl --version');
+        $process->method('getExitCode')->willReturn(1);
+        $process->method('getExitCodeText')->willReturn('General error');
+        $process->method('getErrorOutput')->willReturn('curl: command not found');
+
+        $curl = new class($process) {
+            use _CurlUA;
+
+            public function __construct(
+                private readonly Process $process,
+            ) {
+            }
+
+            protected function createProcess(
+                array $command,
+            ): Process {
+                return $this->process;
+            }
+        };
+
+        $this->expectException(ProcessFailedException::class);
+
+        $curl->getCurlUserAgent();
     }
 
     public function testGetEnvMethodSignature(): void
@@ -463,6 +548,48 @@ final class LocalTest extends TestCase
     {
         $result = $this->local->willBeAvailable('php', 'stdClass', []);
         $this->assertIsBool($result);
+    }
+
+    public function testWillBeAvailableReturnsTrueForDevDependencyParent(): void
+    {
+        $result = $this->local->willBeAvailable('phpunit/phpunit', TestCase::class, ['phpunit/phpunit'], 'different/root');
+
+        $this->assertTrue($result);
+    }
+
+    public function testWillBeAvailableReturnsTrueWhenParentMatchesRootPackage(): void
+    {
+        $rootPackage = InstalledVersions::getRootPackage()['name'] ?? '';
+
+        $result = $this->local->willBeAvailable('phpunit/phpunit', TestCase::class, [$rootPackage], 'different/root');
+
+        $this->assertTrue($result);
+    }
+
+    public function testWillBeAvailableReturnsTrueWhenRootPackageMatchesCheck(): void
+    {
+        $rootPackage = InstalledVersions::getRootPackage()['name'] ?? '';
+
+        $result = $this->local->willBeAvailable('phpunit/phpunit', TestCase::class, [], $rootPackage);
+
+        $this->assertTrue($result);
+    }
+
+    public function testWillBeAvailableThrowsWhenInstalledVersionsClassMissing(): void
+    {
+        $local = new class {
+            use _WillBeAvailable;
+
+            protected function classExists(
+                string $class,
+            ): bool {
+                return false;
+            }
+        };
+
+        $this->expectException(LogicException::class);
+
+        $local->willBeAvailable('phpunit/phpunit', TestCase::class, []);
     }
 
     // Will Be Available extended tests
