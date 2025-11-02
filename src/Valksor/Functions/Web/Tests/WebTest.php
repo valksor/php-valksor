@@ -105,6 +105,19 @@ final class WebTest extends TestCase
     /**
      * @throws ReflectionException
      */
+    public function testBuildHttpQueryArrayWithParentParameter(): void
+    {
+        $input = ['name' => 'john', 'age' => 30, 'active' => true];
+        $result = $this->web->buildHttpQueryArray($input, 'user');
+
+        self::assertSame('john', $result['user[name]']);
+        self::assertSame(30, $result['user[age]']);
+        self::assertTrue($result['user[active]']);
+    }
+
+    /**
+     * @throws ReflectionException
+     */
     public function testBuildHttpQueryStringBuildsQuery(): void
     {
         $payload = new class {

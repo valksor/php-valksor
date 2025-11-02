@@ -14,10 +14,12 @@ namespace Valksor\Functions\Web\Traits;
 
 use CURLFile;
 use ReflectionException;
+use Valksor\Functions\Php\Traits\_Array;
 
 use function array_merge;
 use function is_array;
 use function is_object;
+use function sprintf;
 
 trait _Result
 {
@@ -34,11 +36,18 @@ trait _Result
 
             if (null === $_helper) {
                 $_helper = new class {
-                    use _BuildHttpQueryArray;
+                    use _Array;
                 };
             }
 
-            return array_merge($result, $_helper->buildHttpQueryArray(input: $value, parent: $key));
+            $queryResult = [];
+
+            foreach ($_helper->array(input: $value) as $subKey => $subValue) {
+                $newKey = sprintf('%s[%s]', $key, $subKey);
+                $queryResult = $this->result(result: $queryResult, key: $newKey, value: $subValue);
+            }
+
+            return array_merge($result, $queryResult);
         }
 
         $result[$key] = $value;

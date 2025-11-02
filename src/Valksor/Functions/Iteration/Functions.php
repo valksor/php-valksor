@@ -39,4 +39,5 @@ final class Functions
     use Traits\_Unique;
     use Traits\_UniqueMap;
     use Traits\_Unpack;
+    use Traits\_Value;
 }
