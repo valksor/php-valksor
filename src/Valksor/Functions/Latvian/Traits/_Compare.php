@@ -31,6 +31,6 @@ trait _Compare
             };
         }
 
-        return $_helper->compare(first: $_helper->value(objectOrArray: $first, field: $field), second: $_helper->value(objectOrArray: $second, field: $field), haystack: Text::LV_LOWERCASE);
+        return $_helper->compare(first: $_helper->value(objectOrArray: $first, field: $field), second: $_helper->value(objectOrArray: $second, field: $field), haystack: Text\Functions::LV_LOWERCASE);
     }
 }

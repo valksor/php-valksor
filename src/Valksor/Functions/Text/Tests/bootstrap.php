@@ -10,8 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Valksor\Functions\Text\Tests;
-
+// Autoloader for tests
 $autoloadPath = __DIR__ . '/../vendor/autoload.php';
 
 if (!file_exists($autoloadPath)) {

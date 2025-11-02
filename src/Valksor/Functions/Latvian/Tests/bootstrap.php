@@ -10,14 +10,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Valksor\Functions\Latvian;
+$autoloadPath = __DIR__ . '/../vendor/autoload.php';
 
-final class Functions
-{
-    use Traits\_CleanPersonCode;
-    use Traits\_Compare;
-    use Traits\_SortLatvian;
-    use Traits\_ValidatePersonCode;
-    use Traits\_ValidatePersonCodeNew;
-    use Traits\_ValidatePersonCodeOld;
+if (!file_exists($autoloadPath)) {
+    throw new RuntimeException('Composer autoload file not found. Run "composer install" first.');
 }
+
+require $autoloadPath;
