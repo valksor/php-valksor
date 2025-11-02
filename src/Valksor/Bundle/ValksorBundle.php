@@ -64,6 +64,7 @@ final class ValksorBundle extends AbstractBundle
 
     private ?MemoizeCache $cache = null;
 
+    /** @var array<string, array{class: string, available: bool}>|null */
     private ?array $discoveredComponents = null;
 
     public function boot(): void
@@ -138,6 +139,9 @@ final class ValksorBundle extends AbstractBundle
     /**
      * @throws ParsingException
      */
+    /**
+     * @param array<string, mixed> $config
+     */
     public function loadExtension(
         array $config,
         ContainerConfigurator $container,
@@ -200,6 +204,9 @@ final class ValksorBundle extends AbstractBundle
         }
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public static function getConfig(
         string $package,
         ContainerBuilder $builder,
@@ -215,6 +222,9 @@ final class ValksorBundle extends AbstractBundle
         return $builder->getParameter(sprintf('%s.%s.%s', self::VALKSOR, $component, $parameter));
     }
 
+    /**
+     * @param array<string, mixed> $componentData
+     */
     private function callback(
         string $component,
         array $componentData,
@@ -265,7 +275,7 @@ final class ValksorBundle extends AbstractBundle
     }
 
     /**
-     * @return array<string, array{string, available: bool}> Array of component ID => {class, available}
+     * @return array<string, array{class: string, available: bool}> Array of component ID => {class, available}
      *
      * @throws ParsingException
      */
@@ -399,6 +409,6 @@ final class ValksorBundle extends AbstractBundle
 
     private function memoize(): MemoizeCache
     {
-        return $this->cache ?? new MemoizeCache();
+        return $this->cache ??= new MemoizeCache();
     }
 }

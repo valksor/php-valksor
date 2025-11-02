@@ -79,10 +79,13 @@ abstract class AbstractDependencyConfiguration implements Dependency
         return false;
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     protected function mergeConfig(
         ContainerBuilder $builder,
         string $extension,
     ): array {
-        return array_merge_recursive(...($builder->getExtensionConfig($extension) ?? []));
+        return array_merge_recursive(...$builder->getExtensionConfig($extension));
     }
 }

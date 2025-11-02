@@ -16,6 +16,7 @@ use LogicException;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
@@ -40,6 +41,7 @@ abstract class AbstractKernel extends BaseKernel
 
     protected ?string $infrastructure = null;
 
+    /** @var array<string, BundleInterface>|null */
     private ?array $allBundles = null;
 
     public function __construct(
@@ -124,6 +126,9 @@ abstract class AbstractKernel extends BaseKernel
         $this->importRoutes($appDir . '/routes.%s', $routes);
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     protected function getKernelParameters(): array
     {
         return array_merge(parent::getKernelParameters(), [
@@ -132,6 +137,9 @@ abstract class AbstractKernel extends BaseKernel
         ]);
     }
 
+    /**
+     * @return array<string, BundleInterface>
+     */
     private function getAllBundles(): array
     {
         if (null !== $this->allBundles) {

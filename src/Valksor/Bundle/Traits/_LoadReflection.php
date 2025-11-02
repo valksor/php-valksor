@@ -23,6 +23,8 @@ use function is_object;
 trait _LoadReflection
 {
     /**
+     * @return ReflectionClass<object>
+     *
      * @throws ReflectionException
      */
     public function loadReflection(
