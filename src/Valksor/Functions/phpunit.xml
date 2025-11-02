@@ -12,6 +12,7 @@
         <testsuite name="All Functions">
             <directory>Date/Tests</directory>
             <directory>Handler/Tests</directory>
+            <directory>Iteration/Tests</directory>
             <directory>Latvian/Tests</directory>
             <directory>Local/Tests</directory>
             <directory>Memoize/Tests</directory>
@@ -22,7 +23,6 @@
             <directory>Sort/Tests</directory>
             <directory>Text/Tests</directory>
             <!-- Add more function library test directories as they are created:
-            <directory>Iteration/Tests</directory>
             <directory>Php/Tests</directory>
             <directory>Web/Tests</directory>
             -->

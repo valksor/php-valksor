@@ -13,6 +13,7 @@
             <!-- Function library tests -->
             <directory>src/Valksor/Functions/Date/Tests</directory>
             <directory>src/Valksor/Functions/Handler/Tests</directory>
+            <directory>src/Valksor/Functions/Iteration/Tests</directory>
             <directory>src/Valksor/Functions/Latvian/Tests</directory>
             <directory>src/Valksor/Functions/Local/Tests</directory>
             <directory>src/Valksor/Functions/Memoize/Tests</directory>
@@ -27,7 +28,6 @@
             <directory>src/Valksor/Component/SpxProfiler/Tests</directory>
             <directory>src/Valksor/Component/Sse/Tests</directory>
             <directory>src/Valksor/Bundle/Tests</directory>
-            <directory>src/Valksor/Functions/Iteration/Tests</directory>
             <directory>src/Valksor/Functions/Php/Tests</directory>
             <directory>src/Valksor/Functions/Web/Tests</directory>
             -->
