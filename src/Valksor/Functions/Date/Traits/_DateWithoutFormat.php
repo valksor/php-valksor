@@ -21,6 +21,9 @@ use function array_merge;
 
 trait _DateWithoutFormat
 {
+    /**
+     * @param string[] $guesses
+     */
     public function dateWithoutFormat(
         string $date,
         array $guesses = [],

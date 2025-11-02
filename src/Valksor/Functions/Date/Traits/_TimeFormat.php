@@ -20,6 +20,9 @@ use function trim;
 
 trait _TimeFormat
 {
+    /**
+     * @return array<string, int>|string
+     */
     public function format(
         int|float $timestamp,
         bool $asArray = false,
