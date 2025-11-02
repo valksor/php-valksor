@@ -14,7 +14,10 @@ namespace Valksor\Functions\Preg\Tests;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
+use Valksor\Functions\Preg\Exception\PregExecutionException;
+use Valksor\Functions\Preg\Exception\PregPatternException;
 use Valksor\Functions\Preg\Functions;
+use Valksor\Functions\Preg\SkipErrorHandler;
 
 final class PregTest extends TestCase
 {
@@ -739,6 +742,46 @@ final class PregTest extends TestCase
 
         $this->assertSame('/test/u', $result1);
         $this->assertSame('/test/', $result2);
+    }
+
+    public function testNewPregExceptionReturnsUnknownErrorForValidPattern(): void
+    {
+        $helper = new class {
+            use \Valksor\Functions\Preg\Traits\_NewPregException;
+        };
+
+        $exception = $helper->newPregException(
+            error: 0,
+            errorMsg: 'Simulated error',
+            method: __METHOD__,
+            pattern: '/valid/'
+        );
+
+        $this->assertInstanceOf(PregPatternException::class, $exception);
+        $this->assertStringContainsString('Unknown error occurred', $exception->getMessage());
+    }
+
+    public function testSkipErrorHandlerExecuteReturnsCallbackResult(): void
+    {
+        $result = SkipErrorHandler::execute(static fn (): string => 'value');
+
+        $this->assertSame('value', $result);
+    }
+
+    public function testSkipErrorHandlerExecuteThrowsWhenErrorCaptured(): void
+    {
+        $this->expectException(PregExecutionException::class);
+
+        SkipErrorHandler::execute(static function (): void {
+            preg_match('/[/', 'invalid');
+        });
+    }
+
+    public function testSkipErrorHandlerConstructorCanBeInvokedViaBoundClosure(): void
+    {
+        $factory = \Closure::bind(static fn () => new SkipErrorHandler(), null, SkipErrorHandler::class);
+
+        $this->assertInstanceOf(SkipErrorHandler::class, $factory());
     }
 
     protected function setUp(): void
