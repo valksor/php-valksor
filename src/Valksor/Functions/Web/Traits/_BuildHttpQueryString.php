@@ -28,7 +28,7 @@ trait _BuildHttpQueryString
 
         if (null === $_helper) {
             $_helper = new class {
-                use _BuildHttpQueryString;
+                use _BuildHttpQueryArray;
             };
         }
 
