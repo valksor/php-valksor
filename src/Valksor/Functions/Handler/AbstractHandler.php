@@ -16,6 +16,9 @@ abstract class AbstractHandler implements Handler
 {
     private ?Handler $handler = null;
 
+    /**
+     * @param mixed ...$arguments
+     */
     public function handle(
         ...$arguments,
     ): mixed {

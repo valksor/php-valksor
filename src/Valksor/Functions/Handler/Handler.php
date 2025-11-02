@@ -14,6 +14,9 @@ namespace Valksor\Functions\Handler;
 
 interface Handler
 {
+    /**
+     * @param mixed ...$arguments
+     */
     public function handle(
         ...$arguments,
     ): mixed;

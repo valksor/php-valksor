@@ -24,6 +24,9 @@ class FunctionHandler extends AbstractHandler
     ) {
     }
 
+    /**
+     * @param mixed ...$arguments
+     */
     public function handle(
         ...$arguments,
     ): mixed {
