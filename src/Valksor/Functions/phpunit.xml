@@ -23,9 +23,7 @@
             <directory>Sort/Tests</directory>
             <directory>Text/Tests</directory>
             <directory>Web/Tests</directory>
-            <!-- Add more function library test directories as they are created:
             <directory>Php/Tests</directory>
-            -->
         </testsuite>
     </testsuites>
 

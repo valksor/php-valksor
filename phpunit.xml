@@ -19,6 +19,7 @@
             <directory>src/Valksor/Functions/Memoize/Tests</directory>
             <directory>src/Valksor/Functions/Number/Tests</directory>
             <directory>src/Valksor/Functions/Pagination/Tests</directory>
+            <directory>src/Valksor/Functions/Php/Tests</directory>
             <directory>src/Valksor/Functions/Preg/Tests</directory>
             <directory>src/Valksor/Functions/Queue/Tests</directory>
             <directory>src/Valksor/Functions/Sort/Tests</directory>
@@ -29,7 +30,6 @@
             <directory>src/Valksor/Component/SpxProfiler/Tests</directory>
             <directory>src/Valksor/Component/Sse/Tests</directory>
             <directory>src/Valksor/Bundle/Tests</directory>
-            <directory>src/Valksor/Functions/Php/Tests</directory>
             -->
         </testsuite>
     </testsuites>

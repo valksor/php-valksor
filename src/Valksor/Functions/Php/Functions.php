@@ -29,6 +29,7 @@ final class Functions
     use Traits\_Get;
     use Traits\_GetNonStatic;
     use Traits\_GetStatic;
+    use Traits\_IsBool;
     use Traits\_Namespace;
     use Traits\_Parameter;
     use Traits\_Randomizer;
