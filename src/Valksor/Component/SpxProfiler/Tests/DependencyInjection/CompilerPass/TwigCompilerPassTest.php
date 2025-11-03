@@ -14,6 +14,7 @@ namespace Valksor\Component\SpxProfiler\Tests\DependencyInjection\CompilerPass;
 
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Valksor\Component\SpxProfiler\DependencyInjection\CompilerPass\TwigCompilerPass;
@@ -25,19 +26,13 @@ final class TwigCompilerPassTest extends TestCase
 
     public function testCompilerPassImplementsCompilerPassInterface(): void
     {
-        $reflection = new ReflectionClass($this->compilerPass);
-        $interfaces = $reflection->getInterfaceNames();
+        $interfaces = new ReflectionClass($this->compilerPass)->getInterfaceNames();
 
         $this->assertContains(
-            'Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface',
+            CompilerPassInterface::class,
             $interfaces,
             'Compiler pass should implement CompilerPassInterface',
         );
-    }
-
-    public function testCompilerPassIsInstantiable(): void
-    {
-        $this->assertInstanceOf(TwigCompilerPass::class, $this->compilerPass);
     }
 
     public function testProcessWhenTwigLoaderDoesNotExist(): void

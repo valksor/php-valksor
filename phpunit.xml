@@ -31,13 +31,12 @@
             <directory>src/Valksor/Functions/Sort/Tests</directory>
             <directory>src/Valksor/Functions/Text/Tests</directory>
             <directory>src/Valksor/Functions/Web/Tests</directory>
+            <!-- Bundle tests -->
             <directory>src/Valksor/Bundle/Tests</directory>
             <!-- Component tests -->
             <directory>src/Valksor/Component/SpxProfiler/Tests</directory>
             <directory>src/Valksor/Component/Sse/Tests</directory>
-            <!-- Add more test directories as they are created:
             <directory>src/Valksor/Component/DoctrineTools/Tests</directory>
-            -->
         </testsuite>
     </testsuites>
 
@@ -70,7 +69,6 @@
         <report>
             <clover outputFile=".coverage/clover.xml"/>
             <cobertura outputFile=".coverage/cobertura.xml"/>
-            <crap4j outputFile=".coverage/crap4j.xml"/>
             <html outputDirectory=".coverage"/>
             <text outputFile=".coverage/coverage.txt"/>
         </report>
