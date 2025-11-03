@@ -79,7 +79,6 @@ namespace Valksor\Bundle\Tests {
             $builder->setParameter('valksor.example.enabled', true);
 
             $method = new ReflectionMethod(ValksorBundle::class, 'callback');
-            $method->setAccessible(true);
 
             $componentData = [
                 'class' => ExampleDependency::class,
@@ -107,7 +106,6 @@ namespace Valksor\Bundle\Tests {
             $builder->setParameter('valksor.example.enabled', true);
 
             $method = new ReflectionMethod(ValksorBundle::class, 'callback');
-            $method->setAccessible(true);
 
             $componentData = [
                 'class' => __CLASS__ . '\\\\MissingComponent',
@@ -132,7 +130,6 @@ namespace Valksor\Bundle\Tests {
             $builder->setParameter('valksor.example.enabled', false);
 
             $method = new ReflectionMethod(ValksorBundle::class, 'callback');
-            $method->setAccessible(true);
 
             $componentData = [
                 'class' => ExampleDependency::class,
@@ -157,7 +154,6 @@ namespace Valksor\Bundle\Tests {
             $builder->setParameter('valksor.example.enabled', true);
 
             $method = new ReflectionMethod(ValksorBundle::class, 'callback');
-            $method->setAccessible(true);
 
             $componentData = [
                 'class' => ExampleDependency::class,
@@ -182,7 +178,6 @@ namespace Valksor\Bundle\Tests {
             $builder->setParameter('valksor.example.enabled', 'yes');
 
             $method = new ReflectionMethod(ValksorBundle::class, 'callback');
-            $method->setAccessible(true);
 
             $componentData = [
                 'class' => ExampleDependency::class,
@@ -227,6 +222,9 @@ namespace Valksor\Bundle\Tests {
             self::assertSame(1, TrackingDependency::$addSectionCalls);
         }
 
+        /**
+         * @throws ReflectionException
+         */
         public function testDiscoverComponentsReturnsCachedValue(): void
         {
             $bundle = new ValksorBundle();
@@ -238,11 +236,9 @@ namespace Valksor\Bundle\Tests {
             ];
 
             $property = new ReflectionProperty(ValksorBundle::class, 'discoveredComponents');
-            $property->setAccessible(true);
             $property->setValue($bundle, $components);
 
             $method = new ReflectionMethod(ValksorBundle::class, 'discoverComponents');
-            $method->setAccessible(true);
 
             self::assertSame($components, $method->invoke($bundle));
         }
@@ -277,9 +273,6 @@ namespace Valksor\Bundle\Tests {
             self::assertSame('value', ValksorBundle::p($builder, 'example', 'option'));
         }
 
-        /**
-         * @throws ParsingException
-         */
         public function testLoadExtensionRegistersComponentConfiguration(): void
         {
             $bundle = new ValksorBundle();
@@ -311,9 +304,6 @@ namespace Valksor\Bundle\Tests {
             self::assertSame('tracking_component', TrackingDependency::$registerConfigurationArgs[0][2]);
         }
 
-        /**
-         * @throws ParsingException
-         */
         public function testLoadExtensionSkipsComponentWhenDisabled(): void
         {
             $bundle = new ValksorBundle();
@@ -349,7 +339,6 @@ namespace Valksor\Bundle\Tests {
         {
             $bundle = new ValksorBundle();
             $method = new ReflectionMethod(ValksorBundle::class, 'memoize');
-            $method->setAccessible(true);
 
             $first = $method->invoke($bundle);
             $second = $method->invoke($bundle);
@@ -471,39 +460,6 @@ namespace Valksor\Bundle\Tests {
             return new ContainerConfigurator($builder, $loader, $instanceof, __FILE__, 'bundle_test.php');
         }
 
-        private function createTemporaryAutoloadMap(): string
-        {
-            if (null !== $this->temporaryAutoloadMap && is_file($this->temporaryAutoloadMap)) {
-                return $this->temporaryAutoloadMap;
-            }
-
-            $map = [
-                'Valksor\\Bundle\\Tests\\Fixtures\\' => [__DIR__ . '/Fixtures'],
-            ];
-
-            $path = sys_get_temp_dir() . '/valksor_bundle_autoload_' . uniqid('', true) . '.php';
-            file_put_contents($path, "<?php\nreturn " . var_export($map, true) . ";\n");
-
-            return $this->temporaryAutoloadMap = $path;
-        }
-
-        private function locateAutoloadMap(): string
-        {
-            $candidates = [
-                __DIR__ . '/../../../../vendor/composer/autoload_psr4.php',
-                __DIR__ . '/../../../vendor/composer/autoload_psr4.php',
-                __DIR__ . '/../vendor/composer/autoload_psr4.php',
-            ];
-
-            foreach ($candidates as $candidate) {
-                if (is_file($candidate)) {
-                    return $candidate;
-                }
-            }
-
-            return $this->createTemporaryAutoloadMap();
-        }
-
         private function registerExtension(
             ContainerBuilder $builder,
             string $alias,
@@ -537,7 +493,6 @@ namespace Valksor\Bundle\Tests {
             callable $callback,
         ): void {
             $property = new ReflectionProperty(ValksorBundle::class, 'discoveredComponents');
-            $property->setAccessible(true);
 
             $original = $property->getValue($bundle);
             $property->setValue($bundle, $components);

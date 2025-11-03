@@ -16,7 +16,6 @@ use FilesystemIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionException;
-use RuntimeException;
 use Seld\JsonLint\ParsingException;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
@@ -34,8 +33,6 @@ use Valksor\Functions\Memoize\MemoizeCache;
 use function array_key_exists;
 use function array_merge_recursive;
 use function class_exists;
-use function dirname;
-use function in_array;
 use function is_a;
 use function is_bool;
 use function is_dir;
@@ -54,16 +51,12 @@ final class ValksorBundle extends AbstractBundle
 {
     public const string VALKSOR = 'valksor';
 
-    private const array SELFS = [
-        'valksor/php-valksor',
-        'valksor/php-dev',
-        'valksor/php-plugin',
-    ];
-
     private ?MemoizeCache $cache = null;
 
     /** @var array<string, array{class: string, available: bool}>|null */
     private ?array $discoveredComponents = null;
+
+    private ?string $projectDir = null;
 
     public function boot(): void
     {
@@ -84,6 +77,14 @@ final class ValksorBundle extends AbstractBundle
                 use Local\Traits\_Exists;
                 use Local\Traits\_WillBeAvailable;
             };
+        }
+
+        if (null === $this->projectDir) {
+            $bag = $container->getParameterBag();
+
+            if ($bag->has('kernel.project_dir')) {
+                $this->projectDir = $bag->get('kernel.project_dir');
+            }
         }
 
         foreach ($this->discoverComponents() as $component => $componentData) {
@@ -135,10 +136,9 @@ final class ValksorBundle extends AbstractBundle
     }
 
     /**
-     * @throws ParsingException
-     */
-    /**
      * @param array<string, mixed> $config
+     *
+     * @throws ParsingException
      */
     public function loadExtension(
         array $config,
@@ -186,6 +186,14 @@ final class ValksorBundle extends AbstractBundle
                 use Local\Traits\_Exists;
                 use Local\Traits\_WillBeAvailable;
             };
+        }
+
+        if (null === $this->projectDir) {
+            $bag = $builder->getParameterBag();
+
+            if ($bag->has('kernel.project_dir')) {
+                $this->projectDir = $bag->get('kernel.project_dir');
+            }
         }
 
         foreach ($this->discoverComponents() as $component => $componentData) {
@@ -286,7 +294,7 @@ final class ValksorBundle extends AbstractBundle
         $this->discoveredComponents = [];
         $visitedClasses = [];
 
-        $autoloadPsr4 = require $this->findProjectRoot() . '/vendor/composer/autoload_psr4.php';
+        $autoloadPsr4 = require $this->projectDir . '/vendor/composer/autoload_psr4.php';
 
         static $_helper = null;
 
@@ -379,38 +387,6 @@ final class ValksorBundle extends AbstractBundle
 
             yield rtrim($namespacePrefix, '\\') . '\\' . $relativeClass;
         }
-    }
-
-    /**
-     * Recursively find the project root by looking for composer.json.
-     *
-     * @throws ParsingException
-     */
-    private function findProjectRoot(): string
-    {
-        $dir = __DIR__;
-
-        static $_helper = null;
-
-        if (null === $_helper) {
-            $_helper = new class {
-                use Iteration\Traits\_JsonDecode;
-            };
-        }
-
-        while ($dir !== dirname($dir)) {
-            // Check if this is the actual project root (has vendor directory)
-            if (is_file($dir . '/composer.json')) {
-                $data = $_helper->jsonDecode(file_get_contents($dir . '/composer.json'), true);
-
-                if (is_dir($dir . '/vendor') && !in_array($data['name'], self::SELFS, true)) {
-                    return $dir;
-                }
-            }
-            $dir = dirname($dir);
-        }
-
-        throw new RuntimeException('Could not find project root (composer.json with vendor directory)');
     }
 
     private function memoize(): MemoizeCache
