@@ -22,12 +22,6 @@ final class SpxProfilerConfigurationTest extends TestCase
     private SpxProfilerConfiguration $configuration;
     private ContainerBuilder $container;
 
-    protected function setUp(): void
-    {
-        $this->configuration = new SpxProfilerConfiguration();
-        $this->container = new ContainerBuilder();
-    }
-
     public function testConfigurationBuild(): void
     {
         $this->configuration->build($this->container);
@@ -36,10 +30,13 @@ final class SpxProfilerConfigurationTest extends TestCase
         $passes = $this->container->getCompilerPassConfig()->getPasses();
 
         $hasTwigCompilerPass = false;
+
         foreach ($passes as $pass) {
             $reflection = new ReflectionClass($pass);
-            if ($reflection->getShortName() === 'TwigCompilerPass') {
+
+            if ('TwigCompilerPass' === $reflection->getShortName()) {
                 $hasTwigCompilerPass = true;
+
                 break;
             }
         }
@@ -53,5 +50,11 @@ final class SpxProfilerConfigurationTest extends TestCase
         $configuration2 = new SpxProfilerConfiguration();
 
         $this->assertNotSame($configuration1, $configuration2, 'Configuration should not be singleton');
+    }
+
+    protected function setUp(): void
+    {
+        $this->configuration = new SpxProfilerConfiguration();
+        $this->container = new ContainerBuilder();
     }
 }

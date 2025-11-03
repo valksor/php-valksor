@@ -23,10 +23,30 @@ final class TwigCompilerPassTest extends TestCase
     private TwigCompilerPass $compilerPass;
     private ContainerBuilder $container;
 
-    protected function setUp(): void
+    public function testCompilerPassImplementsCompilerPassInterface(): void
     {
-        $this->compilerPass = new TwigCompilerPass();
-        $this->container = new ContainerBuilder();
+        $reflection = new ReflectionClass($this->compilerPass);
+        $interfaces = $reflection->getInterfaceNames();
+
+        $this->assertContains(
+            'Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface',
+            $interfaces,
+            'Compiler pass should implement CompilerPassInterface',
+        );
+    }
+
+    public function testCompilerPassIsInstantiable(): void
+    {
+        $this->assertInstanceOf(TwigCompilerPass::class, $this->compilerPass);
+    }
+
+    public function testProcessWhenTwigLoaderDoesNotExist(): void
+    {
+        // Don't add the twig loader definition
+        $this->compilerPass->process($this->container);
+
+        // Container should not have any issues
+        $this->assertTrue(true, 'Process should complete without errors when twig loader does not exist');
     }
 
     public function testProcessWhenTwigLoaderExists(): void
@@ -43,9 +63,11 @@ final class TwigCompilerPassTest extends TestCase
         $this->assertNotEmpty($methodCalls, 'Loader should have method calls');
 
         $addPathCall = null;
+
         foreach ($methodCalls as $call) {
-            if ($call[0] === 'addPath') {
+            if ('addPath' === $call[0]) {
                 $addPathCall = $call;
+
                 break;
             }
         }
@@ -58,29 +80,9 @@ final class TwigCompilerPassTest extends TestCase
         $this->assertSame('ValksorSpx', $namespace, 'Namespace should be ValksorSpx');
     }
 
-    public function testProcessWhenTwigLoaderDoesNotExist(): void
+    protected function setUp(): void
     {
-        // Don't add the twig loader definition
-        $this->compilerPass->process($this->container);
-
-        // Container should not have any issues
-        $this->assertTrue(true, 'Process should complete without errors when twig loader does not exist');
-    }
-
-    public function testCompilerPassIsInstantiable(): void
-    {
-        $this->assertInstanceOf(TwigCompilerPass::class, $this->compilerPass);
-    }
-
-    public function testCompilerPassImplementsCompilerPassInterface(): void
-    {
-        $reflection = new ReflectionClass($this->compilerPass);
-        $interfaces = $reflection->getInterfaceNames();
-
-        $this->assertContains(
-            'Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface',
-            $interfaces,
-            'Compiler pass should implement CompilerPassInterface'
-        );
+        $this->compilerPass = new TwigCompilerPass();
+        $this->container = new ContainerBuilder();
     }
 }

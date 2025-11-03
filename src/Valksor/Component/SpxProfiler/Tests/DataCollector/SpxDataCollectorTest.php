@@ -12,29 +12,30 @@
 
 namespace Valksor\Component\SpxProfiler\Tests\DataCollector;
 
-use DateMalformedStringException;
-use Exception;
-use JsonException;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
-use ReflectionMethod;
-use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Valksor\Component\SpxProfiler\DataCollector\SpxDataCollector;
+
+use function is_array;
+use function is_string;
 
 final class SpxDataCollectorTest extends TestCase
 {
     private SpxDataCollector $collector;
 
-    protected function setUp(): void
+    public function testAddReportsToResultWithEmptyReports(): void
     {
-        $this->collector = new SpxDataCollector();
-    }
+        $reflection = new ReflectionClass($this->collector);
+        $method = $reflection->getMethod('addReportsToResult');
 
-    public function testCollectorImplementsAbstractDataCollector(): void
-    {
-        $this->assertInstanceOf(\Symfony\Bundle\FrameworkBundle\DataCollector\AbstractDataCollector::class, $this->collector);
+        $result = ['url' => null, 'metadata' => null, 'multiple_reports' => []];
+        $method->invoke($this->collector, [], 'test-key', $result);
+
+        $this->assertNull($result['url']);
+        $this->assertNull($result['metadata']);
+        $this->assertEmpty($result['multiple_reports']);
     }
 
     public function testCollectGathersBasicData(): void
@@ -61,200 +62,20 @@ final class SpxDataCollectorTest extends TestCase
         $this->assertSame(1234567890, $this->collector->getStoredProfilerTime());
     }
 
-    public function testIsSpxInstalled(): void
+    public function testCollectorImplementsAbstractDataCollector(): void
     {
-        // Check if SPX extension is actually installed
-        $this->assertIsBool($this->collector->isSpxInstalled());
-        // The result depends on whether SPX is installed in the test environment
+        $this->assertInstanceOf(\Symfony\Bundle\FrameworkBundle\DataCollector\AbstractDataCollector::class, $this->collector);
     }
 
-    public function testIsSpxEnabledWithoutRequest(): void
-    {
-        $this->assertFalse($this->collector->isSpxEnabled());
-    }
-
-    public function testIsSpxEnabledWithNullRequest(): void
-    {
-        $this->assertFalse($this->collector->isSpxEnabled(null));
-    }
-
-    public function testIsSpxEnabledWithoutInstallation(): void
-    {
-        $request = $this->createMockRequest('/test');
-        $this->assertFalse($this->collector->isSpxEnabled($request));
-    }
-
-    public function testIsSpxEnabledViaCookie(): void
-    {
-        $request = $this->createMockRequest('/test');
-        $request->cookies->set('SPX_ENABLED', '1');
-
-        // Result depends on whether SPX is actually installed and enabled
-        $this->assertIsBool($this->collector->isSpxEnabled($request));
-    }
-
-    public function testIsSpxEnabledViaQueryParameter(): void
-    {
-        $request = $this->createMockRequest('/test', ['SPX_KEY' => 'test-key']);
-        $request->query->set('SPX_KEY', 'test-key');
-
-        // Since SPX is not installed, this should still return false
-        $this->assertFalse($this->collector->isSpxEnabled($request));
-    }
-
-    public function testGetReportUrlWhenNotEnabled(): void
-    {
-        $request = $this->createMockRequest('/test');
-        $this->assertNull($this->collector->getReportUrl($request));
-    }
-
-    public function testGetReportUrlReturnsControlPanelUrlWhenNotEnabled(): void
-    {
-        // When SPX is not enabled, getReportUrl should return null
-        $request = $this->createMockRequest('/test');
-        $this->assertNull($this->collector->getReportUrl($request));
-    }
-
-    public function testGetFormattedProfilerTimeWithValidTimestamp(): void
-    {
-        // Use reflection to set the profiler time
-        $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, ['profiler_time' => 1234567890]);
-
-        $formattedTime = $this->collector->getFormattedProfilerTime();
-        $this->assertIsString($formattedTime);
-        $this->assertNotSame('N/A', $formattedTime);
-    }
-
-    public function testGetFormattedProfilerTimeWithZeroTimestamp(): void
+    public function testCreateReportUrl(): void
     {
         $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, ['profiler_time' => 0]);
+        $method = $reflection->getMethod('createReportUrl');
+        $url = $method->invoke($this->collector, 'spx-full-12345', 'test-key');
 
-        $this->assertSame('N/A', $this->collector->getFormattedProfilerTime());
-    }
-
-    public function testGetFormattedProfilerTimeWithNegativeTimestamp(): void
-    {
-        $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, ['profiler_time' => -1]);
-
-        $this->assertSame('N/A', $this->collector->getFormattedProfilerTime());
-    }
-
-    public function testGetBaseUriWithLoadedData(): void
-    {
-        // Set up minimal data to prevent null argument errors
-        $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, [
-            'request_id' => '/test',
-            'profiler_time' => 1234567890
-        ]);
-
-        $this->assertIsString($this->collector->getBaseUri());
-    }
-
-    public function testGetMultipleReportsWithLoadedData(): void
-    {
-        // Set up minimal data to prevent null argument errors
-        $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, [
-            'request_id' => '/test',
-            'profiler_time' => 1234567890
-        ]);
-
-        $this->assertIsArray($this->collector->getMultipleReports());
-    }
-
-    public function testGetReportMetadataWithLoadedData(): void
-    {
-        // Set up minimal data to prevent null argument errors
-        $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, [
-            'request_id' => '/test',
-            'profiler_time' => 1234567890
-        ]);
-
-        // May return null if no report data is found
-        $result = $this->collector->getReportMetadata();
-        $this->assertTrue(is_array($result) || is_null($result));
-    }
-
-    public function testGetReportUrlFromDataWithLoadedData(): void
-    {
-        // Set up minimal data to prevent null argument errors
-        $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, [
-            'request_id' => '/test',
-            'profiler_time' => 1234567890
-        ]);
-
-        // May return null if no report URL is found
-        $result = $this->collector->getReportUrlFromData();
-        $this->assertTrue(is_string($result) || is_null($result));
-    }
-
-    public function testReset(): void
-    {
-        // Set some initial data
-        $reflection = new ReflectionClass($this->collector);
-        $dataProperty = $reflection->getProperty('data');
-        $dataProperty->setValue($this->collector, ['test' => 'value']);
-
-        $this->collector->reset();
-
-        // Check that data is reset to default values
-        $resetData = $dataProperty->getValue($this->collector);
-        $this->assertFalse($resetData['is_installed']);
-        $this->assertFalse($resetData['is_enabled']);
-        $this->assertNull($resetData['request_id']);
-        $this->assertSame(0, $resetData['profiler_time']);
-    }
-
-    public function testGetTemplate(): void
-    {
-        $this->assertSame('@ValksorSpx/Collector/spx.html.twig', SpxDataCollector::getTemplate());
-    }
-
-    public function testGetProfilerTimeWithRequestTimeFloat(): void
-    {
-        $request = $this->createMockRequest('/test', ['REQUEST_TIME_FLOAT' => '1234567890.123']);
-
-        $reflection = new ReflectionClass($this->collector);
-        $method = $reflection->getMethod('getProfilerTime');
-        $timestamp = $method->invoke($this->collector, $request);
-
-        $this->assertSame(1234567890, $timestamp);
-    }
-
-    public function testGetProfilerTimeWithRequestTime(): void
-    {
-        $request = $this->createMockRequest('/test', ['REQUEST_TIME' => '1234567890']);
-
-        $reflection = new ReflectionClass($this->collector);
-        $method = $reflection->getMethod('getProfilerTime');
-        $timestamp = $method->invoke($this->collector, $request);
-
-        $this->assertSame(1234567890, $timestamp);
-    }
-
-    public function testGetProfilerTimeFallbackToCurrentTime(): void
-    {
-        $request = $this->createMockRequest('/test');
-
-        $reflection = new ReflectionClass($this->collector);
-        $method = $reflection->getMethod('getProfilerTime');
-        $timestamp = $method->invoke($this->collector, $request);
-
-        $this->assertIsInt($timestamp);
-        $this->assertGreaterThan(0, $timestamp);
+        $this->assertStringContainsString('SPX_KEY=test-key', $url);
+        $this->assertStringContainsString('key=spx-full-12345', $url);
+        $this->assertStringContainsString('SPX_UI_URI=/report.html', $url);
     }
 
     public function testExtractMetadata(): void
@@ -269,7 +90,7 @@ final class SpxDataCollectorTest extends TestCase
             'http_method' => 'GET',
             'http_request_uri' => '/test',
             'host_name' => 'localhost',
-            'custom_metadata_str' => 'test data'
+            'custom_metadata_str' => 'test data',
         ];
 
         $reflection = new ReflectionClass($this->collector);
@@ -312,28 +133,200 @@ final class SpxDataCollectorTest extends TestCase
         $this->assertSame('null', $metadata['custom_metadata']);
     }
 
-    public function testCreateReportUrl(): void
+    public function testGetBaseUriWithLoadedData(): void
     {
+        // Set up minimal data to prevent null argument errors
         $reflection = new ReflectionClass($this->collector);
-        $method = $reflection->getMethod('createReportUrl');
-        $url = $method->invoke($this->collector, 'spx-full-12345', 'test-key');
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, [
+            'request_id' => '/test',
+            'profiler_time' => 1234567890,
+        ]);
 
-        $this->assertStringContainsString('SPX_KEY=test-key', $url);
-        $this->assertStringContainsString('key=spx-full-12345', $url);
-        $this->assertStringContainsString('SPX_UI_URI=/report.html', $url);
+        $this->assertIsString($this->collector->getBaseUri());
     }
 
-    public function testAddReportsToResultWithEmptyReports(): void
+    public function testGetFormattedProfilerTimeWithNegativeTimestamp(): void
     {
         $reflection = new ReflectionClass($this->collector);
-        $method = $reflection->getMethod('addReportsToResult');
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, ['profiler_time' => -1]);
 
-        $result = ['url' => null, 'metadata' => null, 'multiple_reports' => []];
-        $method->invoke($this->collector, [], 'test-key', $result);
+        $this->assertSame('N/A', $this->collector->getFormattedProfilerTime());
+    }
 
-        $this->assertNull($result['url']);
-        $this->assertNull($result['metadata']);
-        $this->assertEmpty($result['multiple_reports']);
+    public function testGetFormattedProfilerTimeWithValidTimestamp(): void
+    {
+        // Use reflection to set the profiler time
+        $reflection = new ReflectionClass($this->collector);
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, ['profiler_time' => 1234567890]);
+
+        $formattedTime = $this->collector->getFormattedProfilerTime();
+        $this->assertIsString($formattedTime);
+        $this->assertNotSame('N/A', $formattedTime);
+    }
+
+    public function testGetFormattedProfilerTimeWithZeroTimestamp(): void
+    {
+        $reflection = new ReflectionClass($this->collector);
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, ['profiler_time' => 0]);
+
+        $this->assertSame('N/A', $this->collector->getFormattedProfilerTime());
+    }
+
+    public function testGetMultipleReportsWithLoadedData(): void
+    {
+        // Set up minimal data to prevent null argument errors
+        $reflection = new ReflectionClass($this->collector);
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, [
+            'request_id' => '/test',
+            'profiler_time' => 1234567890,
+        ]);
+
+        $this->assertIsArray($this->collector->getMultipleReports());
+    }
+
+    public function testGetProfilerTimeFallbackToCurrentTime(): void
+    {
+        $request = $this->createMockRequest('/test');
+
+        $reflection = new ReflectionClass($this->collector);
+        $method = $reflection->getMethod('getProfilerTime');
+        $timestamp = $method->invoke($this->collector, $request);
+
+        $this->assertIsInt($timestamp);
+        $this->assertGreaterThan(0, $timestamp);
+    }
+
+    public function testGetProfilerTimeWithRequestTime(): void
+    {
+        $request = $this->createMockRequest('/test', ['REQUEST_TIME' => '1234567890']);
+
+        $reflection = new ReflectionClass($this->collector);
+        $method = $reflection->getMethod('getProfilerTime');
+        $timestamp = $method->invoke($this->collector, $request);
+
+        $this->assertSame(1234567890, $timestamp);
+    }
+
+    public function testGetProfilerTimeWithRequestTimeFloat(): void
+    {
+        $request = $this->createMockRequest('/test', ['REQUEST_TIME_FLOAT' => '1234567890.123']);
+
+        $reflection = new ReflectionClass($this->collector);
+        $method = $reflection->getMethod('getProfilerTime');
+        $timestamp = $method->invoke($this->collector, $request);
+
+        $this->assertSame(1234567890, $timestamp);
+    }
+
+    public function testGetReportMetadataWithLoadedData(): void
+    {
+        // Set up minimal data to prevent null argument errors
+        $reflection = new ReflectionClass($this->collector);
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, [
+            'request_id' => '/test',
+            'profiler_time' => 1234567890,
+        ]);
+
+        // May return null if no report data is found
+        $result = $this->collector->getReportMetadata();
+        $this->assertTrue(is_array($result) || null === $result);
+    }
+
+    public function testGetReportUrlFromDataWithLoadedData(): void
+    {
+        // Set up minimal data to prevent null argument errors
+        $reflection = new ReflectionClass($this->collector);
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, [
+            'request_id' => '/test',
+            'profiler_time' => 1234567890,
+        ]);
+
+        // May return null if no report URL is found
+        $result = $this->collector->getReportUrlFromData();
+        $this->assertTrue(is_string($result) || null === $result);
+    }
+
+    public function testGetReportUrlReturnsControlPanelUrlWhenNotEnabled(): void
+    {
+        // When SPX is not enabled, getReportUrl should return null
+        $request = $this->createMockRequest('/test');
+        $this->assertNull($this->collector->getReportUrl($request));
+    }
+
+    public function testGetReportUrlWhenNotEnabled(): void
+    {
+        $request = $this->createMockRequest('/test');
+        $this->assertNull($this->collector->getReportUrl($request));
+    }
+
+    public function testGetTemplate(): void
+    {
+        $this->assertSame('@ValksorSpx/Collector/spx.html.twig', SpxDataCollector::getTemplate());
+    }
+
+    public function testIsSpxEnabledViaCookie(): void
+    {
+        $request = $this->createMockRequest('/test');
+        $request->cookies->set('SPX_ENABLED', '1');
+
+        // Result depends on whether SPX is actually installed and enabled
+        $this->assertIsBool($this->collector->isSpxEnabled($request));
+    }
+
+    public function testIsSpxEnabledViaQueryParameter(): void
+    {
+        $request = $this->createMockRequest('/test', ['SPX_KEY' => 'test-key']);
+        $request->query->set('SPX_KEY', 'test-key');
+
+        // Since SPX is not installed, this should still return false
+        $this->assertFalse($this->collector->isSpxEnabled($request));
+    }
+
+    public function testIsSpxEnabledWithNullRequest(): void
+    {
+        $this->assertFalse($this->collector->isSpxEnabled(null));
+    }
+
+    public function testIsSpxEnabledWithoutInstallation(): void
+    {
+        $request = $this->createMockRequest('/test');
+        $this->assertFalse($this->collector->isSpxEnabled($request));
+    }
+
+    public function testIsSpxEnabledWithoutRequest(): void
+    {
+        $this->assertFalse($this->collector->isSpxEnabled());
+    }
+
+    public function testIsSpxInstalled(): void
+    {
+        // Check if SPX extension is actually installed
+        $this->assertIsBool($this->collector->isSpxInstalled());
+        // The result depends on whether SPX is installed in the test environment
+    }
+
+    public function testReset(): void
+    {
+        // Set some initial data
+        $reflection = new ReflectionClass($this->collector);
+        $dataProperty = $reflection->getProperty('data');
+        $dataProperty->setValue($this->collector, ['test' => 'value']);
+
+        $this->collector->reset();
+
+        // Check that data is reset to default values
+        $resetData = $dataProperty->getValue($this->collector);
+        $this->assertFalse($resetData['is_installed']);
+        $this->assertFalse($resetData['is_enabled']);
+        $this->assertNull($resetData['request_id']);
+        $this->assertSame(0, $resetData['profiler_time']);
     }
 
     public function testSortReportsByTimeDifference(): void
@@ -361,10 +354,18 @@ final class SpxDataCollectorTest extends TestCase
         $this->assertNotSame($reports[0]['file'], $reports[2]['file']);
     }
 
-    private function createMockRequest(string $uri, array $server = []): Request
+    protected function setUp(): void
     {
+        $this->collector = new SpxDataCollector();
+    }
+
+    private function createMockRequest(
+        string $uri,
+        array $server = [],
+    ): Request {
         $request = new Request();
         $request->server->add(['REQUEST_URI' => $uri] + $server);
+
         return $request;
     }
 }
