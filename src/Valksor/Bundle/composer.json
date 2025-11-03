@@ -38,6 +38,7 @@
         "valksor/php-functions-text": "^1.0"
     },
     "require-dev": {
+        "composer/composer": "^2",
         "phpunit/phpunit": "^12.0",
         "roave/security-advisories": "dev-latest"
     },

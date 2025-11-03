@@ -12,7 +12,6 @@
 
 namespace Valksor\Bundle;
 
-use Composer\Json\JsonFile;
 use FilesystemIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -36,7 +35,6 @@ use function array_key_exists;
 use function array_merge_recursive;
 use function class_exists;
 use function dirname;
-use function file_exists;
 use function in_array;
 use function is_a;
 use function is_bool;
@@ -392,10 +390,18 @@ final class ValksorBundle extends AbstractBundle
     {
         $dir = __DIR__;
 
+        static $_helper = null;
+
+        if (null === $_helper) {
+            $_helper = new class {
+                use Iteration\Traits\_JsonDecode;
+            };
+        }
+
         while ($dir !== dirname($dir)) {
             // Check if this is the actual project root (has vendor directory)
-            if (file_exists($dir . '/composer.json')) {
-                $data = new JsonFile($dir . '/composer.json')->read();
+            if (is_file($dir . '/composer.json')) {
+                $data = $_helper->jsonDecode(file_get_contents($dir . '/composer.json'), true);
 
                 if (is_dir($dir . '/vendor') && !in_array($data['name'], self::SELFS, true)) {
                     return $dir;

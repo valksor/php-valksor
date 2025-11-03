@@ -30,8 +30,9 @@ trait _JsonDecode
      */
     public function jsonDecode(
         string $json,
-        int $flags = 0,
+        bool $associative = false,
         int $depth = 512,
+        int $flags = 0,
     ): mixed {
         $flags |= JSON_BIGINT_AS_STRING;
 
@@ -39,6 +40,6 @@ trait _JsonDecode
             throw new JsonException(message: json_last_error_msg(), code: json_last_error());
         }
 
-        return json_decode(json: $json, associative: (bool) ($flags & 0b0001), depth: $depth, flags: $flags | JSON_THROW_ON_ERROR);
+        return json_decode(json: $json, associative: $associative, depth: $depth, flags: $flags | JSON_THROW_ON_ERROR);
     }
 }

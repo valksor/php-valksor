@@ -40,6 +40,6 @@ trait _LatestReleaseTag
         $context = stream_context_create($options);
         $response = file_get_contents(sprintf('https://api.github.com/repos/%s/releases/latest', $repository), false, $context);
 
-        return $_helper->jsonDecode((string) $response, 1)['tag_name'];
+        return $_helper->jsonDecode((string) $response, true)['tag_name'];
     }
 }

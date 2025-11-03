@@ -472,7 +472,7 @@ class SpxDataCollector extends AbstractDataCollector
                 };
             }
 
-            $data = $_helper->jsonDecode($content, 1);
+            $data = $_helper->jsonDecode($content, true);
 
             if (!$data) {
                 continue;

@@ -54,12 +54,14 @@
         "twig/twig": "*"
     },
     "require-dev": {
+        "composer/composer": "^2",
         "friendsofphp/php-cs-fixer": "*",
         "phpunit/phpunit": "^12.0",
         "roave/security-advisories": "dev-latest"
     },
     "replace": {
         "valksor/php-bundle": "self.version",
+        "valksor/php-docs": "self.version",
         "valksor/php-doctrine-tools": "self.version",
         "valksor/php-functions": "self.version",
         "valksor/php-spx-profiler": "self.version",

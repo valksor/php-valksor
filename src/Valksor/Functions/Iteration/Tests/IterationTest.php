@@ -190,7 +190,7 @@ final class IterationTest extends TestCase
      */
     public function testJsonDecodeParsesAndReportsErrors(): void
     {
-        $decoded = $this->iteration->jsonDecode('{"value": 1}', 0b0001);
+        $decoded = $this->iteration->jsonDecode('{"value": 1}', true, flags: 0b0001);
         self::assertSame('1', (string) $decoded['value']);
 
         $this->expectException(JsonException::class);
