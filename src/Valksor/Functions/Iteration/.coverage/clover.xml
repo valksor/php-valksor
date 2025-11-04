@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="0">
+  <project timestamp="0" name="Clover Coverage">
+    <package name="Valksor\Functions\Iteration\Exception">
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Exception/FieldNotFoundException.php">
+        <class name="Valksor\Functions\Iteration\Exception\FieldNotFoundException" namespace="Valksor\Functions\Iteration\Exception">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="18" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Exception/IterationException.php">
+        <class name="Valksor\Functions\Iteration\Exception\IterationException" namespace="Valksor\Functions\Iteration\Exception">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="20" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Valksor\Functions\Iteration">
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Functions.php">
+        <class name="Valksor\Functions\Iteration\Functions" namespace="Valksor\Functions\Iteration">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="44" ncloc="35" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Valksor\Functions\Iteration\Traits">
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_AddElementIfNotExists.php">
+        <class name="Valksor\Functions\Iteration\Traits\_AddElementIfNotExists" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        </class>
+        <line num="20" type="method" name="addElementIfNotExists" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="38" ncloc="29" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_ArrayFlipRecursive.php">
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayFlipRecursive" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="5" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="9" coveredelements="0"/>
+        </class>
+        <line num="25" type="method" name="arrayFlipRecursive" visibility="public" complexity="5" crap="30" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <metrics loc="41" ncloc="29" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="9" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_ArrayIntersectKeyRecursive.php">
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayIntersectKeyRecursive" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="5" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+        </class>
+        <line num="21" type="method" name="arrayIntersectKeyRecursive" visibility="public" complexity="5" crap="30" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <metrics loc="44" ncloc="35" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_ArrayToString.php">
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayToString" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="14" coveredelements="0"/>
+        </class>
+        <line num="23" type="method" name="arrayToString" visibility="public" complexity="6" crap="42" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <metrics loc="53" ncloc="44" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="14" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_ArrayValuesFiltered.php">
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayValuesFiltered" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="9" coveredelements="0"/>
+        </class>
+        <line num="24" type="method" name="arrayValuesFiltered" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <metrics loc="44" ncloc="32" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="9" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_Cases.php">
+        <class name="Valksor\Functions\Iteration\Traits\_Cases" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="21" type="method" name="getCases" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <metrics loc="30" ncloc="21" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_FilterKeyEndsWith.php">
+        <class name="Valksor\Functions\Iteration\Traits\_FilterKeyEndsWith" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="21" type="method" name="filterKeyEndsWith" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <metrics loc="28" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_FilterKeyStartsWith.php">
+        <class name="Valksor\Functions\Iteration\Traits\_FilterKeyStartsWith" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="21" type="method" name="filterKeyStartsWith" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <metrics loc="28" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_FirstMatchAsString.php">
+        <class name="Valksor\Functions\Iteration\Traits\_FirstMatchAsString" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+        </class>
+        <line num="19" type="method" name="firstMatchAsString" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <metrics loc="32" ncloc="23" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_HaveCommonElements.php">
+        <class name="Valksor\Functions\Iteration\Traits\_HaveCommonElements" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="19" type="method" name="haveCommonElements" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <metrics loc="26" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_IsAssociative.php">
+        <class name="Valksor\Functions\Iteration\Traits\_IsAssociative" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+        </class>
+        <line num="20" type="method" name="isAssociative" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <metrics loc="35" ncloc="26" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_IsEmpty.php">
+        <class name="Valksor\Functions\Iteration\Traits\_IsEmpty" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="5" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+        </class>
+        <line num="19" type="method" name="isEmpty" visibility="public" complexity="5" crap="30" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <metrics loc="42" ncloc="33" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_IsMultiDimentional.php">
+        <class name="Valksor\Functions\Iteration\Traits\_IsMultiDimentional" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+        </class>
+        <line num="19" type="method" name="isMultiDimensional" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <metrics loc="31" ncloc="22" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_IsSortable.php">
+        <class name="Valksor\Functions\Iteration\Traits\_IsSortable" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+        </class>
+        <line num="22" type="method" name="isSortable" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="37" ncloc="28" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_IsSortedAscendingInts.php">
+        <class name="Valksor\Functions\Iteration\Traits\_IsSortedAscendingInts" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+        </class>
+        <line num="20" type="method" name="isSortedAscendingInts" visibility="public" complexity="6" crap="42" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <metrics loc="42" ncloc="33" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_JsonDecode.php">
+        <class name="Valksor\Functions\Iteration\Traits\_JsonDecode" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+        </class>
+        <line num="31" type="method" name="jsonDecode" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <metrics loc="46" ncloc="34" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_JsonEncode.php">
+        <class name="Valksor\Functions\Iteration\Traits\_JsonEncode" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+        </class>
+        <line num="31" type="method" name="jsonEncode" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <metrics loc="40" ncloc="28" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_MakeMultiDimensional.php">
+        <class name="Valksor\Functions\Iteration\Traits\_MakeMultiDimensional" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+        </class>
+        <line num="17" type="method" name="makeMultiDimensional" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <metrics loc="35" ncloc="26" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_MakeOneDimension.php">
+        <class name="Valksor\Functions\Iteration\Traits\_MakeOneDimension" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="14" coveredelements="0"/>
+        </class>
+        <line num="21" type="method" name="makeOneDimension" visibility="public" complexity="6" crap="42" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="56" type="stmt" count="0"/>
+        <metrics loc="59" ncloc="50" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="14" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_Pick.php">
+        <class name="Valksor\Functions\Iteration\Traits\_Pick" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+        </class>
+        <line num="22" type="method" name="pick" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <metrics loc="41" ncloc="32" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_RecursiveKSort.php">
+        <class name="Valksor\Functions\Iteration\Traits\_RecursiveKSort" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+        </class>
+        <line num="22" type="method" name="recursiveKSort" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <metrics loc="45" ncloc="36" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_RemoveFromArray.php">
+        <class name="Valksor\Functions\Iteration\Traits\_RemoveFromArray" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="19" type="method" name="removeFromArray" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <metrics loc="26" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_SwapArray.php">
+        <class name="Valksor\Functions\Iteration\Traits\_SwapArray" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="17" type="method" name="swapArray" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <metrics loc="29" ncloc="20" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_Unique.php">
+        <class name="Valksor\Functions\Iteration\Traits\_Unique" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+        </class>
+        <line num="21" type="method" name="unique" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <metrics loc="44" ncloc="35" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_UniqueMap.php">
+        <class name="Valksor\Functions\Iteration\Traits\_UniqueMap" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="20" type="method" name="uniqueMap" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <metrics loc="26" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_Unpack.php">
+        <class name="Valksor\Functions\Iteration\Traits\_Unpack" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="11" coveredelements="0"/>
+        </class>
+        <line num="20" type="method" name="unpack" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <metrics loc="43" ncloc="34" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="11" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/valksor/src/Valksor/Functions/Iteration/Traits/_Value.php">
+        <class name="Valksor\Functions\Iteration\Traits\_Value" namespace="Valksor\Functions\Iteration\Traits">
+          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        </class>
+        <line num="23" type="method" name="value" visibility="public" complexity="4" crap="20" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <metrics loc="41" ncloc="32" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+      </file>
+    </package>
+    <metrics files="30" loc="1108" ncloc="826" classes="27" methods="27" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="158" coveredstatements="0" elements="185" coveredelements="0"/>
+  </project>
+</coverage>

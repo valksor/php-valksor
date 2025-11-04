@@ -1,5 +1,6 @@
 # Test artifacts
-.coverage/
+.coverage/*
+!.coverage/clover.xml
 .phpunit.cache/
 
 # Dependencies
