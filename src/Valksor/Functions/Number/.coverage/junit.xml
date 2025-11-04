@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="44" assertions="97" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Number\Tests\NumberTest" file="/var/www/html/valksor/src/Valksor/Functions/Number/Tests/NumberTest.php" tests="6" assertions="13" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testDistanceInKmForSameLocation" class="Valksor\Functions\Number\Tests\NumberTest" classname="Valksor.Functions.Number.Tests.NumberTest" file="/var/www/html/valksor/src/Valksor/Functions/Number/Tests/NumberTest.php" line="83" assertions="1" time="0.000000"/>
+      <testcase name="testIsFloatAcceptsActualFloats" class="Valksor\Functions\Number\Tests\NumberTest" classname="Valksor.Functions.Number.Tests.NumberTest" file="/var/www/html/valksor/src/Valksor/Functions/Number/Tests/NumberTest.php" line="133" assertions="2" time="0.000000"/>
+      <testcase name="testIsPrimeReturnsFalseForNegativeNumbers" class="Valksor\Functions\Number\Tests\NumberTest" classname="Valksor.Functions.Number.Tests.NumberTest" file="/var/www/html/valksor/src/Valksor/Functions/Number/Tests/NumberTest.php" line="234" assertions="3" time="0.000000"/>
+      <testcase name="testGreatestCommonDivisorWithZero" class="Valksor\Functions\Number\Tests\NumberTest" classname="Valksor.Functions.Number.Tests.NumberTest" file="/var/www/html/valksor/src/Valksor/Functions/Number/Tests/NumberTest.php" line="127" assertions="2" time="0.000000"/>
+      <testcase name="testSwapWithStrings" class="Valksor\Functions\Number\Tests\NumberTest" classname="Valksor.Functions.Number.Tests.NumberTest" file="/var/www/html/valksor/src/Valksor/Functions/Number/Tests/NumberTest.php" line="351" assertions="2" time="0.000000"/>
+      <testcase name="testGreatestCommonDivisorWithNegativeNumbers" class="Valksor\Functions\Number\Tests\NumberTest" classname="Valksor.Functions.Number.Tests.NumberTest" file="/var/www/html/valksor/src/Valksor/Functions/Number/Tests/NumberTest.php" line="115" assertions="3" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

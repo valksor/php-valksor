@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="28" assertions="57" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Iteration\Tests\IterationTest" file="/var/www/html/valksor/src/Valksor/Functions/Iteration/Tests/IterationTest.php" tests="4" assertions="6" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testMakeMultiDimensionalWrapsScalars" class="Valksor\Functions\Iteration\Tests\IterationTest" classname="Valksor.Functions.Iteration.Tests.IterationTest" file="/var/www/html/valksor/src/Valksor/Functions/Iteration/Tests/IterationTest.php" line="212" assertions="2" time="0.000000"/>
+      <testcase name="testCasesTraitReturnsBackingValues" class="Valksor\Functions\Iteration\Tests\IterationTest" classname="Valksor.Functions.Iteration.Tests.IterationTest" file="/var/www/html/valksor/src/Valksor/Functions/Iteration/Tests/IterationTest.php" line="115" assertions="1" time="0.000000"/>
+      <testcase name="testArrayToStringHandlesEmptyArray" class="Valksor\Functions\Iteration\Tests\IterationTest" classname="Valksor.Functions.Iteration.Tests.IterationTest" file="/var/www/html/valksor/src/Valksor/Functions/Iteration/Tests/IterationTest.php" line="98" assertions="1" time="0.000000"/>
+      <testcase name="testIsEmptyRecursivelyChecksNestedArrays" class="Valksor\Functions\Iteration\Tests\IterationTest" classname="Valksor.Functions.Iteration.Tests.IterationTest" file="/var/www/html/valksor/src/Valksor/Functions/Iteration/Tests/IterationTest.php" line="157" assertions="2" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

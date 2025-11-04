@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="57" assertions="76" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Sort\Tests\SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" tests="7" assertions="10" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testBubbleSortWithLargeArray" class="Valksor\Functions\Sort\Tests\SortTest" classname="Valksor.Functions.Sort.Tests.SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" line="79" assertions="1" time="0.000000"/>
+      <testcase name="testMergeWithSortedInputs" class="Valksor\Functions\Sort\Tests\SortTest" classname="Valksor.Functions.Sort.Tests.SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" line="286" assertions="1" time="0.000000"/>
+      <testcase name="testBubbleSortWithSingleElement" class="Valksor\Functions\Sort\Tests\SortTest" classname="Valksor.Functions.Sort.Tests.SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" line="105" assertions="1" time="0.000000"/>
+      <testcase name="testUsortClosureWithMixedTypes" class="Valksor\Functions\Sort\Tests\SortTest" classname="Valksor.Functions.Sort.Tests.SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" line="639" assertions="1" time="0.000000"/>
+      <testcase name="testStableSortWithStringComparison" class="Valksor\Functions\Sort\Tests\SortTest" classname="Valksor.Functions.Sort.Tests.SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" line="539" assertions="4" time="0.000000"/>
+      <testcase name="testMergeSortWithEmptyArray" class="Valksor\Functions\Sort\Tests\SortTest" classname="Valksor.Functions.Sort.Tests.SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" line="156" assertions="1" time="0.000000"/>
+      <testcase name="testMergeIntegrationWithMergeSort" class="Valksor\Functions\Sort\Tests\SortTest" classname="Valksor.Functions.Sort.Tests.SortTest" file="/var/www/html/valksor/src/Valksor/Functions/Sort/Tests/SortTest.php" line="113" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

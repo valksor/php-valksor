@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="54" assertions="100" errors="0" failures="0" skipped="1" time="0.000000">
+    <testsuite name="Valksor\Functions\Php\Tests\PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" tests="7" assertions="16" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testSystemInfoReturnsCorrectInfo" class="Valksor\Functions\Php\Tests\PhpTest" classname="Valksor.Functions.Php.Tests.PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" line="647" assertions="5" time="0.000000"/>
+      <testcase name="testGetMethodDirectly" class="Valksor\Functions\Php\Tests\PhpTest" classname="Valksor.Functions.Php.Tests.PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" line="267" assertions="1" time="0.000000"/>
+      <testcase name="testParameterReturnsArrayParameter" class="Valksor\Functions\Php\Tests\PhpTest" classname="Valksor.Functions.Php.Tests.PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" line="422" assertions="1" time="0.000000"/>
+      <testcase name="testShortNameReturnsClassNameForInvalidClass" class="Valksor\Functions\Php\Tests\PhpTest" classname="Valksor.Functions.Php.Tests.PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" line="610" assertions="1" time="0.000000"/>
+      <testcase name="testGetReturnsPropertyValue" class="Valksor\Functions\Php\Tests\PhpTest" classname="Valksor.Functions.Php.Tests.PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" line="315" assertions="1" time="0.000000"/>
+      <testcase name="testClassMethodsWithParentFilter" class="Valksor\Functions\Php\Tests\PhpTest" classname="Valksor.Functions.Php.Tests.PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" line="195" assertions="3" time="0.000000"/>
+      <testcase name="testSetHandlesStaticAndNonStaticProperties" class="Valksor\Functions\Php\Tests\PhpTest" classname="Valksor.Functions.Php.Tests.PhpTest" file="/var/www/html/valksor/src/Valksor/Functions/Php/Tests/PhpTest.php" line="510" assertions="4" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

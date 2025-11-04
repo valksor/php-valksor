@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="25" assertions="58" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Web\Tests\WebTest" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" tests="4" assertions="7" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testRemoteIpColumns" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="235" assertions="2" time="0.000000"/>
+      <testcase name="testArrayFromQueryStringParsesKeys" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="55" assertions="1" time="0.000000"/>
+      <testcase name="testBuildHttpQueryStringBuildsQuery" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="121" assertions="1" time="0.000000"/>
+      <testcase name="testBuildHttpQueryArrayHandlesObjectsArraysAndFiles" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="84" assertions="3" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

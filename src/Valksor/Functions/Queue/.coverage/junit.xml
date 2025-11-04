@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="38" assertions="588" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Queue\Tests\QueueTest" file="/var/www/html/valksor/src/Valksor/Functions/Queue/Tests/QueueTest.php" tests="5" assertions="5" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testIsEmptyAfterPopAll" class="Valksor\Functions\Queue\Tests\QueueTest" classname="Valksor.Functions.Queue.Tests.QueueTest" file="/var/www/html/valksor/src/Valksor/Functions/Queue/Tests/QueueTest.php" line="146" assertions="1" time="0.000000"/>
+      <testcase name="testIsEmptyReturnsFalseForNonEmptyQueue" class="Valksor\Functions\Queue\Tests\QueueTest" classname="Valksor.Functions.Queue.Tests.QueueTest" file="/var/www/html/valksor/src/Valksor/Functions/Queue/Tests/QueueTest.php" line="153" assertions="1" time="0.000000"/>
+      <testcase name="testContainsReturnsFalseForNonExistingItem" class="Valksor\Functions\Queue\Tests\QueueTest" classname="Valksor.Functions.Queue.Tests.QueueTest" file="/var/www/html/valksor/src/Valksor/Functions/Queue/Tests/QueueTest.php" line="74" assertions="1" time="0.000000"/>
+      <testcase name="testPeekOnEmptyQueueReturnsFalse" class="Valksor\Functions\Queue\Tests\QueueTest" classname="Valksor.Functions.Queue.Tests.QueueTest" file="/var/www/html/valksor/src/Valksor/Functions/Queue/Tests/QueueTest.php" line="220" assertions="1" time="0.000000"/>
+      <testcase name="testCountableInterface" class="Valksor\Functions\Queue\Tests\QueueTest" classname="Valksor.Functions.Queue.Tests.QueueTest" file="/var/www/html/valksor/src/Valksor/Functions/Queue/Tests/QueueTest.php" line="133" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

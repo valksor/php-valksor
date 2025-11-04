@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="36" assertions="228" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Text\Tests\TextTest" file="/var/www/html/valksor/src/Valksor/Functions/Text/Tests/TextTest.php" tests="5" assertions="31" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testNl2br" class="Valksor\Functions\Text\Tests\TextTest" classname="Valksor.Functions.Text.Tests.TextTest" file="/var/www/html/valksor/src/Valksor/Functions/Text/Tests/TextTest.php" line="299" assertions="5" time="0.000000"/>
+      <testcase name="testContainsAny" class="Valksor\Functions\Text\Tests\TextTest" classname="Valksor.Functions.Text.Tests.TextTest" file="/var/www/html/valksor/src/Valksor/Functions/Text/Tests/TextTest.php" line="109" assertions="7" time="0.000000"/>
+      <testcase name="testOneSpace" class="Valksor\Functions\Text\Tests\TextTest" classname="Valksor.Functions.Text.Tests.TextTest" file="/var/www/html/valksor/src/Valksor/Functions/Text/Tests/TextTest.php" line="328" assertions="6" time="0.000000"/>
+      <testcase name="testContains" class="Valksor\Functions\Text\Tests\TextTest" classname="Valksor.Functions.Text.Tests.TextTest" file="/var/www/html/valksor/src/Valksor/Functions/Text/Tests/TextTest.php" line="94" assertions="6" time="0.000000"/>
+      <testcase name="testSnakeCaseFromCamelCase" class="Valksor\Functions\Text\Tests\TextTest" classname="Valksor.Functions.Text.Tests.TextTest" file="/var/www/html/valksor/src/Valksor/Functions/Text/Tests/TextTest.php" line="539" assertions="7" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

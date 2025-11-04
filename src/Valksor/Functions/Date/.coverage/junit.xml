@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="63" assertions="190" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Date\Tests\DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" tests="8" assertions="14" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testIsLeapYearWithZero" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="575" assertions="1" time="0.000000"/>
+      <testcase name="testDateWithValidDateAndFormat" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="257" assertions="1" time="0.000000"/>
+      <testcase name="testDateNullableWithInvalidDateReturnsNull" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="189" assertions="1" time="0.000000"/>
+      <testcase name="testIsLeapYearWithLeapYears" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="537" assertions="7" time="0.000000"/>
+      <testcase name="testValidateDateWithZeroMonth" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="664" assertions="1" time="0.000000"/>
+      <testcase name="testExcelDateWithTimestampBelowBase" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="334" assertions="1" time="0.000000"/>
+      <testcase name="testValidateDateWithValidDate" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="652" assertions="1" time="0.000000"/>
+      <testcase name="testFromUnixTimestampWithNegativeValue" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="510" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

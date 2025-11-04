@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="59" assertions="71" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Handler\Tests\AbstractHandlerTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/AbstractHandlerTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testLongChainOfHandlers" class="Valksor\Functions\Handler\Tests\AbstractHandlerTest" classname="Valksor.Functions.Handler.Tests.AbstractHandlerTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/AbstractHandlerTest.php" line="137" assertions="1" time="0.000000"/>
+      <testcase name="testNextSetsNextHandler" class="Valksor\Functions\Handler\Tests\AbstractHandlerTest" classname="Valksor.Functions.Handler.Tests.AbstractHandlerTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/AbstractHandlerTest.php" line="189" assertions="1" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Functions\Handler\Tests\ChainTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/ChainTest.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testConstructorWithInteger" class="Valksor\Functions\Handler\Tests\ChainTest" classname="Valksor.Functions.Handler.Tests.ChainTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/ChainTest.php" line="72" assertions="1" time="0.000000"/>
+      <testcase name="testConstructorWithObject" class="Valksor\Functions\Handler\Tests\ChainTest" classname="Valksor.Functions.Handler.Tests.ChainTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/ChainTest.php" line="78" assertions="1" time="0.000000"/>
+      <testcase name="testGetReturnsOfValue" class="Valksor\Functions\Handler\Tests\ChainTest" classname="Valksor.Functions.Handler.Tests.ChainTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/ChainTest.php" line="101" assertions="1" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Functions\Handler\Tests\FunctionHandlerTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/FunctionHandlerTest.php" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testMultipleFunctionHandlersWithDifferentFunctions" class="Valksor\Functions\Handler\Tests\FunctionHandlerTest" classname="Valksor.Functions.Handler.Tests.FunctionHandlerTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/FunctionHandlerTest.php" line="177" assertions="2" time="0.000000"/>
+      <testcase name="testHandleExecutesGlobalFunctionWithMultipleArguments" class="Valksor\Functions\Handler\Tests\FunctionHandlerTest" classname="Valksor.Functions.Handler.Tests.FunctionHandlerTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/FunctionHandlerTest.php" line="95" assertions="1" time="0.000000"/>
+      <testcase name="testFunctionHandlerPreservesArgumentTypes" class="Valksor\Functions\Handler\Tests\FunctionHandlerTest" classname="Valksor.Functions.Handler.Tests.FunctionHandlerTest" file="/var/www/html/valksor/src/Valksor/Functions/Handler/Tests/FunctionHandlerTest.php" line="52" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

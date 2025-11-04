@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="91" assertions="120" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Preg\Tests\PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" tests="12" assertions="17" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testSplitUtf8FallbackToNonUtf8" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="663" assertions="1" time="0.000000"/>
+      <testcase name="testMatchReturnsTrueForSuccessfulMatch" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="251" assertions="1" time="0.000000"/>
+      <testcase name="testReplaceWithUnicodeCharacters" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="619" assertions="1" time="0.000000"/>
+      <testcase name="testStaticHelperClassIsCreatedInReplace" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="751" assertions="2" time="0.000000"/>
+      <testcase name="testRemoveUtf8ModifierReturnsArrayForArray" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="382" assertions="1" time="0.000000"/>
+      <testcase name="testMatchWithInvalidRegex" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="302" assertions="1" time="0.000000"/>
+      <testcase name="testRemoveUtf8ModifierString" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="397" assertions="1" time="0.000000"/>
+      <testcase name="testAddUtf8ModifierString" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="89" assertions="1" time="0.000000"/>
+      <testcase name="testMatchAllWithUnicodeCharacters" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="216" assertions="1" time="0.000000"/>
+      <testcase name="testMatchWithFlags" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="290" assertions="4" time="0.000000"/>
+      <testcase name="testMatchWithComplexPattern" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="272" assertions="2" time="0.000000"/>
+      <testcase name="testReplaceWithLimit" class="Valksor\Functions\Preg\Tests\PregTest" classname="Valksor.Functions.Preg.Tests.PregTest" file="/var/www/html/valksor/src/Valksor/Functions/Preg/Tests/PregTest.php" line="612" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

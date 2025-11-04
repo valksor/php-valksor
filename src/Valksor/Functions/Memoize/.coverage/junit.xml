@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="41" assertions="70" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Memoize\Tests\MemoizeCacheTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeCacheTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testMemoizeCacheValueMethodWorks" class="Valksor\Functions\Memoize\Tests\MemoizeCacheTest" classname="Valksor.Functions.Memoize.Tests.MemoizeCacheTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeCacheTest.php" line="83" assertions="1" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Functions\Memoize\Tests\MemoizeTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeTest.php" tests="5" assertions="9" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testValueInitializesContextWhenRetrieving" class="Valksor\Functions\Memoize\Tests\MemoizeTest" classname="Valksor.Functions.Memoize.Tests.MemoizeTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeTest.php" line="384" assertions="1" time="0.000000"/>
+      <testcase name="testMemoizeSubKeysAreIsolated" class="Valksor\Functions\Memoize\Tests\MemoizeTest" classname="Valksor.Functions.Memoize.Tests.MemoizeTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeTest.php" line="136" assertions="2" time="0.000000"/>
+      <testcase name="testMemoizeWithDifferentContextsAreIsolated" class="Valksor\Functions\Memoize\Tests\MemoizeTest" classname="Valksor.Functions.Memoize.Tests.MemoizeTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeTest.php" line="188" assertions="2" time="0.000000"/>
+      <testcase name="testMemoizeOverwritesValueWhenRefreshIsTrue" class="Valksor\Functions\Memoize\Tests\MemoizeTest" classname="Valksor.Functions.Memoize.Tests.MemoizeTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeTest.php" line="95" assertions="3" time="0.000000"/>
+      <testcase name="testMemoizeExecutesCallbackAndReturnsValue" class="Valksor\Functions\Memoize\Tests\MemoizeTest" classname="Valksor.Functions.Memoize.Tests.MemoizeTest" file="/var/www/html/valksor/src/Valksor/Functions/Memoize/Tests/MemoizeTest.php" line="72" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

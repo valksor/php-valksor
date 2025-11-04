@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="43" assertions="104" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Bundle\Tests\Command\AbstractCommandTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Command/AbstractCommandTest.php" tests="1" assertions="0" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testCreateSymfonyStyleUsesProvidedStreams" class="Valksor\Bundle\Tests\Command\AbstractCommandTest" classname="Valksor.Bundle.Tests.Command.AbstractCommandTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Command/AbstractCommandTest.php" line="26" assertions="0" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Bundle\Tests\Command\AutoloadGenerateCommandTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Command/AutoloadGenerateCommandTest.php" tests="1" assertions="6" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testExecuteGeneratesAutoloadFileAndOutputsMappings" class="Valksor\Bundle\Tests\Command\AutoloadGenerateCommandTest" classname="Valksor.Bundle.Tests.Command.AutoloadGenerateCommandTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Command/AutoloadGenerateCommandTest.php" line="35" assertions="6" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Bundle\Tests\Console\AbstractConsoleEntrypointTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Console/AbstractConsoleEntrypointTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testCreateThrowsWhenDependenciesMissing" class="Valksor\Bundle\Tests\Console\AbstractConsoleEntrypointTest" classname="Valksor.Bundle.Tests.Console.AbstractConsoleEntrypointTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Console/AbstractConsoleEntrypointTest.php" line="102" assertions="2" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Bundle\Tests\Constants\BundleContextTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Constants/BundleContextTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testEnumValuesAreStable" class="Valksor\Bundle\Tests\Constants\BundleContextTest" classname="Valksor.Bundle.Tests.Constants.BundleContextTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Constants/BundleContextTest.php" line="20" assertions="4" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Bundle\Tests\Kernel\AbstractKernelTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Kernel/AbstractKernelTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testConfigureContainerImportsInfrastructureAndAppConfigs" class="Valksor\Bundle\Tests\Kernel\AbstractKernelTest" classname="Valksor.Bundle.Tests.Kernel.AbstractKernelTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Kernel/AbstractKernelTest.php" line="46" assertions="1" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Bundle\Tests\Runtime\AppContextResolverTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Runtime/AppContextResolverTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testResolveDefaultsToProdWhenContextIsDev" class="Valksor\Bundle\Tests\Runtime\AppContextResolverTest" classname="Valksor.Bundle.Tests.Runtime.AppContextResolverTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Runtime/AppContextResolverTest.php" line="70" assertions="2" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Bundle\Tests\Traits\TraitsTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Traits/TraitsTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testGetClassFromFileParsesClassName" class="Valksor\Bundle\Tests\Traits\TraitsTest" classname="Valksor.Bundle.Tests.Traits.TraitsTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Traits/TraitsTest.php" line="27" assertions="3" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Bundle\Tests\ValksorBundleTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testCallbackSkipsWhenEnabledFlagNotBoolean" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="177" assertions="1" time="0.000000"/>
+      <testcase name="testPrependExtensionSkipsGlobalMigrationsWhenDoctrineUnused" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="393" assertions="3" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

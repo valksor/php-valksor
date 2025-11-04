@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="15" assertions="17" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Functions\Latvian\Tests\LatvianTest" file="/var/www/html/valksor/src/Valksor/Functions/Latvian/Tests/LatvianTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testValidatePersonCodeThrowsDueToMissingOldHelperMethodOnDateFallback" class="Valksor\Functions\Latvian\Tests\LatvianTest" classname="Valksor.Functions.Latvian.Tests.LatvianTest" file="/var/www/html/valksor/src/Valksor/Functions/Latvian/Tests/LatvianTest.php" line="139" assertions="1" time="0.000000"/>
+      <testcase name="testValidatePersonCodeThrowsDueToMissingOldHelperMethodOnInvalidCode" class="Valksor\Functions\Latvian\Tests\LatvianTest" classname="Valksor.Functions.Latvian.Tests.LatvianTest" file="/var/www/html/valksor/src/Valksor/Functions/Latvian/Tests/LatvianTest.php" line="145" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

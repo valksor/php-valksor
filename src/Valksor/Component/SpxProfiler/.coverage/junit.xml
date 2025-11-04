@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="32" assertions="77" errors="0" failures="0" skipped="0" time="0.000000">
+    <testsuite name="Valksor\Component\SpxProfiler\Tests\DataCollector\SpxDataCollectorTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DataCollector/SpxDataCollectorTest.php" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testGetReportUrlWhenNotEnabled" class="Valksor\Component\SpxProfiler\Tests\DataCollector\SpxDataCollectorTest" classname="Valksor.Component.SpxProfiler.Tests.DataCollector.SpxDataCollectorTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DataCollector/SpxDataCollectorTest.php" line="287" assertions="1" time="0.000000"/>
+      <testcase name="testIsSpxEnabledWithNullRequest" class="Valksor\Component\SpxProfiler\Tests\DataCollector\SpxDataCollectorTest" classname="Valksor.Component.SpxProfiler.Tests.DataCollector.SpxDataCollectorTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DataCollector/SpxDataCollectorTest.php" line="316" assertions="1" time="0.000000"/>
+      <testcase name="testCollectWithExistingData" class="Valksor\Component\SpxProfiler\Tests\DataCollector\SpxDataCollectorTest" classname="Valksor.Component.SpxProfiler.Tests.DataCollector.SpxDataCollectorTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DataCollector/SpxDataCollectorTest.php" line="56" assertions="2" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Component\SpxProfiler\Tests\DependencyInjection\CompilerPass\TwigCompilerPassTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DependencyInjection/CompilerPass/TwigCompilerPassTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testCompilerPassImplementsCompilerPassInterface" class="Valksor\Component\SpxProfiler\Tests\DependencyInjection\CompilerPass\TwigCompilerPassTest" classname="Valksor.Component.SpxProfiler.Tests.DependencyInjection.CompilerPass.TwigCompilerPassTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DependencyInjection/CompilerPass/TwigCompilerPassTest.php" line="27" assertions="1" time="0.000000"/>
+    </testsuite>
+    <testsuite name="Valksor\Component\SpxProfiler\Tests\DependencyInjection\SpxProfilerConfigurationTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DependencyInjection/SpxProfilerConfigurationTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000000">
+      <testcase name="testConfigurationBuild" class="Valksor\Component\SpxProfiler\Tests\DependencyInjection\SpxProfilerConfigurationTest" classname="Valksor.Component.SpxProfiler.Tests.DependencyInjection.SpxProfilerConfigurationTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DependencyInjection/SpxProfilerConfigurationTest.php" line="25" assertions="1" time="0.000000"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
