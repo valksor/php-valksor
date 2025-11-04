@@ -35,10 +35,12 @@ use function array_key_exists;
 use function array_merge_recursive;
 use function class_exists;
 use function dirname;
+use function file_get_contents;
 use function in_array;
 use function is_a;
 use function is_bool;
 use function is_dir;
+use function is_file;
 use function ksort;
 use function preg_replace;
 use function rtrim;
@@ -49,6 +51,8 @@ use function str_starts_with;
 use function strlen;
 use function strtolower;
 use function substr;
+
+use const DIRECTORY_SEPARATOR;
 
 final class ValksorBundle extends AbstractBundle
 {

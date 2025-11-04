@@ -20,6 +20,7 @@ use function array_slice;
 use function file_get_contents;
 
 use const T_CLASS;
+use const T_NAME_QUALIFIED;
 use const T_NAMESPACE;
 use const T_STRING;
 use const T_WHITESPACE;
