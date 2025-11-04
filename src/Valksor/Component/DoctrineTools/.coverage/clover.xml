@@ -68,78 +68,78 @@
     <package name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits">
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Doctrine/DBAL/Traits/_ConvertToDatabaseValue.php">
         <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToDatabaseValue" namespace="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
         </class>
-        <line num="25" type="method" name="convertToDatabaseValue" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <metrics loc="36" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        <line num="25" type="method" name="convertToDatabaseValue" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="29" type="stmt" count="4"/>
+        <line num="30" type="stmt" count="4"/>
+        <line num="33" type="stmt" count="4"/>
+        <metrics loc="36" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Doctrine/DBAL/Traits/_ConvertToPHPValue.php">
         <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToPHPValue" namespace="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits">
-          <metrics complexity="5" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
+          <metrics complexity="5" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="10" elements="12" coveredelements="10"/>
         </class>
-        <line num="28" type="method" name="convertToPHPValueForType" visibility="private" complexity="5" crap="30" count="0"/>
-        <line num="35" type="stmt" count="0"/>
+        <line num="28" type="method" name="convertToPHPValueForType" visibility="private" complexity="5" crap="5.02" count="6"/>
+        <line num="35" type="stmt" count="6"/>
         <line num="36" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <line num="44" type="stmt" count="0"/>
-        <line num="45" type="stmt" count="0"/>
-        <line num="47" type="stmt" count="0"/>
-        <line num="48" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <metrics loc="54" ncloc="42" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="41" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="43" type="stmt" count="6"/>
+        <line num="44" type="stmt" count="6"/>
+        <line num="45" type="stmt" count="6"/>
+        <line num="47" type="stmt" count="5"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="4"/>
+        <metrics loc="54" ncloc="42" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="10" elements="12" coveredelements="10"/>
       </file>
     </package>
     <package name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type">
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Doctrine/DBAL/Type/UTCDateImmutableType.php">
         <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateImmutableType" namespace="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="30" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <metrics loc="37" ncloc="25" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="30" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <metrics loc="37" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Doctrine/DBAL/Type/UTCDateTimeImmutableType.php">
         <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeImmutableType" namespace="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="30" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <metrics loc="37" ncloc="25" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="30" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Doctrine/DBAL/Type/UTCDateTimeType.php">
         <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeType" namespace="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="29" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <metrics loc="36" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="29" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <metrics loc="36" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Doctrine/DBAL/Type/UTCDateType.php">
         <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateType" namespace="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="29" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <metrics loc="36" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="29" type="method" name="convertToPHPValue" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <metrics loc="36" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
     <package name="Valksor\Component\DoctrineTools\Doctrine\Migrations">
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Doctrine/Migrations/VersionComparatorWithoutNamespace.php">
         <class name="Valksor\Component\DoctrineTools\Doctrine\Migrations\VersionComparatorWithoutNamespace" namespace="Valksor\Component\DoctrineTools\Doctrine\Migrations">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
         </class>
-        <line num="24" type="method" name="compare" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="31" type="method" name="versionWithoutNamespace" visibility="private" complexity="1" crap="2" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <metrics loc="39" ncloc="30" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        <line num="24" type="method" name="compare" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="31" type="method" name="versionWithoutNamespace" visibility="private" complexity="1" crap="1" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <metrics loc="39" ncloc="30" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </file>
     </package>
     <package name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST">
@@ -389,32 +389,31 @@
     <package name="Valksor\Component\DoctrineTools\EventSubscriber">
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/EventSubscriber/DoctrineMigrationsFilter.php">
         <class name="Valksor\Component\DoctrineTools\EventSubscriber\DoctrineMigrationsFilter" namespace="Valksor\Component\DoctrineTools\EventSubscriber">
-          <metrics complexity="9" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="0" elements="22" coveredelements="0"/>
+          <metrics complexity="9" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="14" elements="22" coveredelements="14"/>
         </class>
-        <line num="24" type="stmt" count="0"/>
-        <line num="29" type="method" name="__invoke" visibility="public" complexity="5" crap="30" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="44" type="stmt" count="0"/>
+        <line num="29" type="method" name="__invoke" visibility="public" complexity="5" crap="5.02" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="2"/>
         <line num="45" type="stmt" count="0"/>
-        <line num="48" type="stmt" count="0"/>
-        <line num="49" type="stmt" count="0"/>
-        <line num="52" type="stmt" count="0"/>
-        <line num="55" type="method" name="onConsoleCommand" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="58" type="stmt" count="0"/>
-        <line num="60" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="55" type="method" name="onConsoleCommand" visibility="public" complexity="3" crap="3.07" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
         <line num="61" type="stmt" count="0"/>
-        <line num="70" type="stmt" count="0"/>
-        <line num="71" type="stmt" count="0"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
         <line num="75" type="method" name="getSubscribedEvents" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="77" type="stmt" count="0"/>
         <line num="78" type="stmt" count="0"/>
         <line num="79" type="stmt" count="0"/>
-        <metrics loc="82" ncloc="67" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="23" coveredelements="0"/>
+        <metrics loc="82" ncloc="67" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="14" elements="22" coveredelements="14"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/EventSubscriber/FixDefaultSchemaListener.php">
         <class name="Valksor\Component\DoctrineTools\EventSubscriber\FixDefaultSchemaListener" namespace="Valksor\Component\DoctrineTools\EventSubscriber">
@@ -436,44 +435,43 @@
     <package name="Valksor\Component\DoctrineTools\Normalizer">
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Normalizer/UTCDateTimeNormalizer.php">
         <class name="Valksor\Component\DoctrineTools\Normalizer\UTCDateTimeNormalizer" namespace="Valksor\Component\DoctrineTools\Normalizer">
-          <metrics complexity="5" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="12" coveredelements="0"/>
+          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="12" coveredelements="12"/>
         </class>
-        <line num="22" type="stmt" count="0"/>
-        <line num="28" type="method" name="denormalize" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="37" type="method" name="getSupportedTypes" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="40" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="45" type="method" name="normalize" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="53" type="method" name="supportsDenormalization" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="59" type="stmt" count="0"/>
-        <line num="62" type="method" name="supportsNormalization" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="67" type="stmt" count="0"/>
-        <metrics loc="70" ncloc="58" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="13" coveredelements="0"/>
+        <line num="28" type="method" name="denormalize" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="37" type="method" name="getSupportedTypes" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="45" type="method" name="normalize" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="53" type="method" name="supportsDenormalization" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="62" type="method" name="supportsNormalization" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <metrics loc="70" ncloc="58" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="12" coveredelements="12"/>
       </file>
     </package>
     <package name="Valksor\Component\DoctrineTools">
       <file name="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/UTCDateTimeImmutable.php">
         <class name="Valksor\Component\DoctrineTools\UTCDateTimeImmutable" namespace="Valksor\Component\DoctrineTools">
-          <metrics complexity="6" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="12" coveredelements="0"/>
+          <metrics complexity="6" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="12" coveredelements="10"/>
         </class>
-        <line num="29" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="40" type="method" name="createFromFormat" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="45" type="stmt" count="0"/>
-        <line num="47" type="stmt" count="0"/>
-        <line num="48" type="stmt" count="0"/>
+        <line num="29" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="32" type="stmt" count="9"/>
+        <line num="34" type="stmt" count="9"/>
+        <line num="40" type="method" name="createFromFormat" visibility="public" complexity="3" crap="3.14" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="48" type="stmt" count="4"/>
         <line num="51" type="stmt" count="0"/>
-        <line num="57" type="method" name="createFromInterface" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="60" type="stmt" count="0"/>
-        <line num="63" type="method" name="getUTCTimeZone" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="65" type="stmt" count="0"/>
-        <metrics loc="68" ncloc="50" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="12" coveredelements="0"/>
+        <line num="57" type="method" name="createFromInterface" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="60" type="stmt" count="4"/>
+        <line num="63" type="method" name="getUTCTimeZone" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="65" type="stmt" count="16"/>
+        <metrics loc="68" ncloc="50" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="7" elements="12" coveredelements="10"/>
       </file>
     </package>
-    <metrics files="32" loc="1394" ncloc="1049" classes="30" methods="58" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="204" coveredstatements="0" elements="262" coveredelements="0"/>
+    <metrics files="32" loc="1394" ncloc="1049" classes="30" methods="58" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="202" coveredstatements="48" elements="260" coveredelements="63"/>
   </project>
 </coverage>

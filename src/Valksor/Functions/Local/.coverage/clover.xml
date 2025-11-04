@@ -12,123 +12,123 @@
     <package name="Valksor\Functions\Local\Traits">
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_CurlUA.php">
         <class name="Valksor\Functions\Local\Traits\_CurlUA" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="4" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
         </class>
-        <line num="24" type="method" name="getCurlUserAgent" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="42" type="method" name="createProcess" visibility="protected" complexity="1" crap="2" count="0"/>
-        <line num="45" type="stmt" count="0"/>
-        <metrics loc="48" ncloc="39" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="11" coveredelements="0"/>
+        <line num="24" type="method" name="getCurlUserAgent" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="4"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="42" type="method" name="createProcess" visibility="protected" complexity="1" crap="1" count="3"/>
+        <line num="45" type="stmt" count="3"/>
+        <metrics loc="48" ncloc="39" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_Exists.php">
         <class name="Valksor\Functions\Local\Traits\_Exists" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
         </class>
-        <line num="22" type="method" name="exists" visibility="public" complexity="4" crap="20" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <metrics loc="32" ncloc="23" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        <line num="22" type="method" name="exists" visibility="public" complexity="4" crap="4" count="15"/>
+        <line num="25" type="stmt" count="15"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="15"/>
+        <metrics loc="32" ncloc="23" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_FileExistsCwd.php">
         <class name="Valksor\Functions\Local\Traits\_FileExistsCwd" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="22" type="method" name="fileExistsCwd" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <metrics loc="28" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="22" type="method" name="fileExistsCwd" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <metrics loc="28" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_GetEnv.php">
         <class name="Valksor\Functions\Local\Traits\_GetEnv" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="19" type="method" name="getenv" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="23" type="stmt" count="0"/>
-        <metrics loc="26" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="19" type="method" name="getenv" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="23" type="stmt" count="4"/>
+        <metrics loc="26" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_HumanFileSize.php">
         <class name="Valksor\Functions\Local\Traits\_HumanFileSize" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
         </class>
-        <line num="21" type="method" name="humanFileSize" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <metrics loc="32" ncloc="23" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="5" coveredelements="0"/>
+        <line num="21" type="method" name="humanFileSize" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="25" type="stmt" count="12"/>
+        <line num="26" type="stmt" count="12"/>
+        <line num="27" type="stmt" count="12"/>
+        <line num="29" type="stmt" count="12"/>
+        <metrics loc="32" ncloc="23" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_IsInstalled.php">
         <class name="Valksor\Functions\Local\Traits\_IsInstalled" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
         </class>
-        <line num="21" type="method" name="isInstalled" visibility="public" complexity="4" crap="20" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <metrics loc="38" ncloc="29" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="21" type="method" name="isInstalled" visibility="public" complexity="4" crap="4" count="7"/>
+        <line num="25" type="stmt" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="35" type="stmt" count="3"/>
+        <metrics loc="38" ncloc="29" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_MkDir.php">
         <class name="Valksor\Functions\Local\Traits\_MkDir" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
         </class>
-        <line num="23" type="method" name="mkdir" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <metrics loc="37" ncloc="28" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+        <line num="23" type="method" name="mkdir" visibility="public" complexity="3" crap="3" count="10"/>
+        <line num="26" type="stmt" count="10"/>
+        <line num="27" type="stmt" count="9"/>
+        <line num="29" type="stmt" count="9"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="10"/>
+        <metrics loc="37" ncloc="28" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_RmDir.php">
         <class name="Valksor\Functions\Local\Traits\_RmDir" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
         </class>
-        <line num="25" type="method" name="rmdir" visibility="public" complexity="4" crap="20" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <metrics loc="41" ncloc="32" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="25" type="method" name="rmdir" visibility="public" complexity="4" crap="4" count="15"/>
+        <line num="28" type="stmt" count="15"/>
+        <line num="30" type="stmt" count="15"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="15"/>
+        <line num="38" type="stmt" count="15"/>
+        <metrics loc="41" ncloc="32" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Local/Traits/_WillBeAvailable.php">
         <class name="Valksor\Functions\Local\Traits\_WillBeAvailable" namespace="Valksor\Functions\Local\Traits">
-          <metrics complexity="12" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="20" coveredelements="0"/>
+          <metrics complexity="12" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
         </class>
-        <line num="23" type="method" name="willBeAvailable" visibility="public" complexity="11" crap="132" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="45" type="stmt" count="0"/>
-        <line num="46" type="stmt" count="0"/>
-        <line num="49" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <line num="52" type="stmt" count="0"/>
-        <line num="55" type="stmt" count="0"/>
-        <line num="56" type="stmt" count="0"/>
-        <line num="57" type="stmt" count="0"/>
-        <line num="61" type="stmt" count="0"/>
-        <line num="64" type="method" name="classExists" visibility="protected" complexity="1" crap="2" count="0"/>
-        <line num="67" type="stmt" count="0"/>
-        <metrics loc="70" ncloc="61" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="20" coveredelements="0"/>
+        <line num="23" type="method" name="willBeAvailable" visibility="public" complexity="11" crap="11" count="10"/>
+        <line num="29" type="stmt" count="10"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="9"/>
+        <line num="35" type="stmt" count="9"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="9"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="8"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="49" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="4"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="3"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="64" type="method" name="classExists" visibility="protected" complexity="1" crap="1" count="10"/>
+        <line num="67" type="stmt" count="10"/>
+        <metrics loc="70" ncloc="61" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
       </file>
     </package>
-    <metrics files="10" loc="379" ncloc="289" classes="9" methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="0" elements="64" coveredelements="0"/>
+    <metrics files="10" loc="379" ncloc="289" classes="9" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="53" elements="64" coveredelements="64"/>
   </project>
 </coverage>

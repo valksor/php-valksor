@@ -12,101 +12,101 @@
     <package name="Valksor\Functions\Latvian\Traits">
       <file name="/var/www/html/valksor/src/Valksor/Functions/Latvian/Traits/_CleanPersonCode.php">
         <class name="Valksor\Functions\Latvian\Traits\_CleanPersonCode" namespace="Valksor\Functions\Latvian\Traits">
-          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
         </class>
-        <line num="24" type="method" name="cleanPersonCode" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <metrics loc="45" ncloc="36" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+        <line num="24" type="method" name="cleanPersonCode" visibility="public" complexity="3" crap="3" count="11"/>
+        <line num="27" type="stmt" count="11"/>
+        <line num="29" type="stmt" count="11"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="11"/>
+        <line num="36" type="stmt" count="11"/>
+        <line num="38" type="stmt" count="11"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="10"/>
+        <metrics loc="45" ncloc="36" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Latvian/Traits/_Compare.php">
         <class name="Valksor\Functions\Latvian\Traits\_Compare" namespace="Valksor\Functions\Latvian\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
         </class>
-        <line num="20" type="method" name="compare" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <metrics loc="37" ncloc="28" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+        <line num="20" type="method" name="compare" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="4"/>
+        <metrics loc="37" ncloc="28" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Latvian/Traits/_SortLatvian.php">
         <class name="Valksor\Functions\Latvian\Traits\_SortLatvian" namespace="Valksor\Functions\Latvian\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
         </class>
-        <line num="19" type="method" name="sortLatvian" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <metrics loc="37" ncloc="28" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="19" type="method" name="sortLatvian" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <metrics loc="37" ncloc="28" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Latvian/Traits/_ValidatePersonCode.php">
         <class name="Valksor\Functions\Latvian\Traits\_ValidatePersonCode" namespace="Valksor\Functions\Latvian\Traits">
-          <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
+          <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="8" elements="12" coveredelements="8"/>
         </class>
-        <line num="21" type="method" name="validatePersonCode" visibility="public" complexity="6" crap="42" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
+        <line num="21" type="method" name="validatePersonCode" visibility="public" complexity="6" crap="6.73" count="4"/>
+        <line num="24" type="stmt" count="4"/>
+        <line num="26" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="38" type="stmt" count="1"/>
         <line num="39" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="3"/>
         <line num="42" type="stmt" count="0"/>
         <line num="45" type="stmt" count="0"/>
-        <metrics loc="48" ncloc="39" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
+        <metrics loc="48" ncloc="39" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="8" elements="12" coveredelements="8"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Latvian/Traits/_ValidatePersonCodeNew.php">
         <class name="Valksor\Functions\Latvian\Traits\_ValidatePersonCodeNew" namespace="Valksor\Functions\Latvian\Traits">
-          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="14" coveredelements="0"/>
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="14" coveredelements="14"/>
         </class>
-        <line num="17" type="method" name="validatePersonCodeNew" visibility="public" complexity="4" crap="20" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="23" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="40" type="stmt" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <metrics loc="46" ncloc="37" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="14" coveredelements="0"/>
+        <line num="17" type="method" name="validatePersonCodeNew" visibility="public" complexity="4" crap="4" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="33" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="43" type="stmt" count="1"/>
+        <metrics loc="46" ncloc="37" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="14" coveredelements="14"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Latvian/Traits/_ValidatePersonCodeOld.php">
         <class name="Valksor\Functions\Latvian\Traits\_ValidatePersonCodeOld" namespace="Valksor\Functions\Latvian\Traits">
-          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="11" coveredelements="0"/>
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
         </class>
-        <line num="20" type="method" name="validatePersonCodeOld" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="23" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="40" type="stmt" count="0"/>
-        <metrics loc="43" ncloc="34" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="11" coveredelements="0"/>
+        <line num="20" type="method" name="validatePersonCodeOld" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <metrics loc="43" ncloc="34" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
       </file>
     </package>
-    <metrics files="7" loc="280" ncloc="217" classes="6" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="0" elements="60" coveredelements="0"/>
+    <metrics files="7" loc="280" ncloc="217" classes="6" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="54" coveredstatements="51" elements="60" coveredelements="56"/>
   </project>
 </coverage>

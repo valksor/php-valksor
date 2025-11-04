@@ -12,144 +12,144 @@
     <package name="Valksor\Functions\Number\Traits">
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_DistanceBetweenPoints.php">
         <class name="Valksor\Functions\Number\Traits\_DistanceBetweenPoints" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
         </class>
-        <line num="24" type="method" name="distanceBetweenPoints" visibility="public" complexity="4" crap="20" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <metrics loc="44" ncloc="35" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="24" type="method" name="distanceBetweenPoints" visibility="public" complexity="4" crap="4" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="4"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="41" type="stmt" count="4"/>
+        <metrics loc="44" ncloc="35" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_DistanceInKm.php">
         <class name="Valksor\Functions\Number\Traits\_DistanceInKm" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
         </class>
-        <line num="23" type="method" name="distanceInKm" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <metrics loc="39" ncloc="30" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+        <line num="23" type="method" name="distanceInKm" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="29" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="32" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="4"/>
+        <line num="36" type="stmt" count="4"/>
+        <metrics loc="39" ncloc="30" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_GreatestCommonDiviser.php">
         <class name="Valksor\Functions\Number\Traits\_GreatestCommonDiviser" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
         </class>
-        <line num="17" type="method" name="greatestCommonDivisor" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <metrics loc="39" ncloc="30" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="10" coveredelements="0"/>
+        <line num="17" type="method" name="greatestCommonDivisor" visibility="public" complexity="3" crap="3" count="11"/>
+        <line num="21" type="stmt" count="11"/>
+        <line num="22" type="stmt" count="11"/>
+        <line num="24" type="stmt" count="11"/>
+        <line num="25" type="stmt" count="11"/>
+        <line num="28" type="stmt" count="11"/>
+        <line num="30" type="stmt" count="11"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="11"/>
+        <metrics loc="39" ncloc="30" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_IsFloat.php">
         <class name="Valksor\Functions\Number\Traits\_IsFloat" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="19" type="method" name="isFloat" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="25" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="19" type="method" name="isFloat" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="22" type="stmt" count="4"/>
+        <metrics loc="25" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_IsInt.php">
         <class name="Valksor\Functions\Number\Traits\_IsInt" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="19" type="method" name="isInt" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="25" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="19" type="method" name="isInt" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <metrics loc="25" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_IsPrimal.php">
         <class name="Valksor\Functions\Number\Traits\_IsPrimal" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="8" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="11" coveredelements="0"/>
+          <metrics complexity="8" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
         </class>
-        <line num="17" type="method" name="isPrimal" visibility="public" complexity="8" crap="72" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <metrics loc="41" ncloc="32" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="11" coveredelements="0"/>
+        <line num="17" type="method" name="isPrimal" visibility="public" complexity="8" crap="8" count="8"/>
+        <line num="20" type="stmt" count="8"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="4"/>
+        <metrics loc="41" ncloc="32" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_IsPrime.php">
         <class name="Valksor\Functions\Number\Traits\_IsPrime" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
         </class>
-        <line num="19" type="method" name="isPrime" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="23" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <metrics loc="39" ncloc="30" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+        <line num="19" type="method" name="isPrime" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="23" type="stmt" count="8"/>
+        <line num="25" type="stmt" count="8"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="8"/>
+        <line num="34" type="stmt" count="8"/>
+        <line num="36" type="stmt" count="8"/>
+        <metrics loc="39" ncloc="30" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_IsPrimeBelow1000.php">
         <class name="Valksor\Functions\Number\Traits\_IsPrimeBelow1000" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
         </class>
-        <line num="17" type="method" name="isPrimeBelow1000" visibility="public" complexity="4" crap="20" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <metrics loc="33" ncloc="24" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="17" type="method" name="isPrimeBelow1000" visibility="public" complexity="4" crap="4" count="8"/>
+        <line num="20" type="stmt" count="8"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="8"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="6"/>
+        <metrics loc="33" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_IsPrimeGmp.php">
         <class name="Valksor\Functions\Number\Traits\_IsPrimeGmp" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+          <metrics complexity="6" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
         </class>
-        <line num="20" type="method" name="isPrimeGmp" visibility="public" complexity="6" crap="42" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <metrics loc="35" ncloc="26" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+        <line num="20" type="method" name="isPrimeGmp" visibility="public" complexity="6" crap="6" count="10"/>
+        <line num="24" type="stmt" count="10"/>
+        <line num="25" type="stmt" count="9"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="9"/>
+        <line num="29" type="stmt" count="9"/>
+        <line num="32" type="stmt" count="1"/>
+        <metrics loc="35" ncloc="26" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_LeastCommonMultiple.php">
         <class name="Valksor\Functions\Number\Traits\_LeastCommonMultiple" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="4" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
         </class>
-        <line num="17" type="method" name="leastCommonMultiple" visibility="public" complexity="4" crap="20" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <metrics loc="36" ncloc="27" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+        <line num="17" type="method" name="leastCommonMultiple" visibility="public" complexity="4" crap="4" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="4"/>
+        <metrics loc="36" ncloc="27" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
       </file>
       <file name="/var/www/html/valksor/src/Valksor/Functions/Number/Traits/_Swap.php">
         <class name="Valksor\Functions\Number\Traits\_Swap" namespace="Valksor\Functions\Number\Traits">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
         </class>
-        <line num="17" type="method" name="swap" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <metrics loc="28" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        <line num="17" type="method" name="swap" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="5"/>
+        <metrics loc="28" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="12" loc="413" ncloc="305" classes="11" methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="62" coveredstatements="0" elements="73" coveredelements="0"/>
+    <metrics files="12" loc="413" ncloc="305" classes="11" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="62" coveredstatements="62" elements="73" coveredelements="73"/>
   </project>
 </coverage>
