@@ -11,12 +11,15 @@
  */
 
 namespace {
-    if (!class_exists(Composer\Json\JsonFile::class, autoload: false)) {
+    use Composer\Json\JsonFile;
+    use Valksor\Bundle\Tests\Fixtures\JsonFileStub;
+
+    if (!class_exists(JsonFile::class, autoload: false)) {
         $fixture = __DIR__ . '/Fixtures/JsonFileStub.php';
 
         if (is_file($fixture)) {
             require $fixture;
-            class_alias(Valksor\Bundle\Tests\Fixtures\JsonFileStub::class, Composer\Json\JsonFile::class);
+            class_alias(JsonFileStub::class, JsonFile::class);
         }
     }
 }
