@@ -31,7 +31,7 @@ final class DoctrineMigrationsFilterTest extends TestCase
         $filter = new DoctrineMigrationsFilter();
         $tableName = new TableMetadataStorageConfiguration()->getTableName();
 
-        $command = $this->createMock(DoctrineCommand::class);
+        $command = $this->createStub(DoctrineCommand::class);
         $event = new ConsoleCommandEvent($command, new ArrayInput([]), new NullOutput());
 
         $filter->onConsoleCommand($event);

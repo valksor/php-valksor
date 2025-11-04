@@ -35,9 +35,10 @@ final class UTCDateTimeImmutableTypeTest extends TestCase
      */
     public function testConvertToDatabaseValueNormalizesTimezone(): void
     {
-        $platform = $this->createConfiguredMock(AbstractPlatform::class, [
-            'getDateTimeFormatString' => 'Y-m-d H:i:s',
-        ]);
+        $platform = $this->createStub(AbstractPlatform::class);
+        $platform
+            ->method('getDateTimeFormatString')
+            ->willReturn('Y-m-d H:i:s');
 
         $input = new DateTimeImmutable('2024-01-01 10:15:30', new DateTimeZone('America/New_York'));
 
@@ -53,9 +54,10 @@ final class UTCDateTimeImmutableTypeTest extends TestCase
      */
     public function testConvertToPhpValueReturnsUtcImmutable(): void
     {
-        $platform = $this->createConfiguredMock(AbstractPlatform::class, [
-            'getDateTimeFormatString' => 'Y-m-d H:i:s',
-        ]);
+        $platform = $this->createStub(AbstractPlatform::class);
+        $platform
+            ->method('getDateTimeFormatString')
+            ->willReturn('Y-m-d H:i:s');
 
         $result = new UTCDateTimeImmutableType()->convertToPHPValue('2024-01-01 17:00:00', $platform);
 

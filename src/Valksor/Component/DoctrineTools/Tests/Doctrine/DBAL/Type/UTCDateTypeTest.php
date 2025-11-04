@@ -36,7 +36,7 @@ final class UTCDateTypeTest extends TestCase
      */
     public function testConvertToDatabaseValueNormalizesTimezone(): void
     {
-        $platform = $this->createMock(AbstractPlatform::class);
+        $platform = $this->createStub(AbstractPlatform::class);
         $platform
             ->method('getDateFormatString')
             ->willReturn('Y-m-d');
@@ -54,7 +54,7 @@ final class UTCDateTypeTest extends TestCase
      */
     public function testConvertToPhpValueCreatesUtcDateTime(): void
     {
-        $platform = $this->createMock(AbstractPlatform::class);
+        $platform = $this->createStub(AbstractPlatform::class);
         $platform
             ->method('getDateTimeFormatString')
             ->willReturn('Y-m-d H:i:s');
@@ -73,7 +73,7 @@ final class UTCDateTypeTest extends TestCase
     {
         $this->expectException(InvalidFormat::class);
 
-        $platform = $this->createMock(AbstractPlatform::class);
+        $platform = $this->createStub(AbstractPlatform::class);
         $platform
             ->method('getDateTimeFormatString')
             ->willReturn('Y-m-d H:i:s');

@@ -42,7 +42,7 @@ final class SpxDataCollectorTest extends TestCase
 
     public function testCollectGathersBasicData(): void
     {
-        $request = $this->createMockRequest('/test-uri');
+        $request = $this->createStubRequest('/test-uri');
         $response = new Response();
 
         $this->collector->collect($request, $response);
@@ -55,7 +55,7 @@ final class SpxDataCollectorTest extends TestCase
 
     public function testCollectWithExistingData(): void
     {
-        $request = $this->createMockRequest('/another-uri', ['REQUEST_TIME_FLOAT' => '1234567890.123']);
+        $request = $this->createStubRequest('/another-uri', ['REQUEST_TIME_FLOAT' => '1234567890.123']);
         $response = new Response();
 
         $this->collector->collect($request, $response);
@@ -209,7 +209,7 @@ final class SpxDataCollectorTest extends TestCase
      */
     public function testGetProfilerTimeFallbackToCurrentTime(): void
     {
-        $request = $this->createMockRequest('/test');
+        $request = $this->createStubRequest('/test');
 
         $timestamp = new ReflectionClass($this->collector)->getMethod('getProfilerTime')->invoke($this->collector, $request);
 
@@ -222,7 +222,7 @@ final class SpxDataCollectorTest extends TestCase
      */
     public function testGetProfilerTimeWithRequestTime(): void
     {
-        $request = $this->createMockRequest('/test', ['REQUEST_TIME' => '1234567890']);
+        $request = $this->createStubRequest('/test', ['REQUEST_TIME' => '1234567890']);
 
         $timestamp = new ReflectionClass($this->collector)->getMethod('getProfilerTime')->invoke($this->collector, $request);
 
@@ -234,7 +234,7 @@ final class SpxDataCollectorTest extends TestCase
      */
     public function testGetProfilerTimeWithRequestTimeFloat(): void
     {
-        $request = $this->createMockRequest('/test', ['REQUEST_TIME_FLOAT' => '1234567890.123']);
+        $request = $this->createStubRequest('/test', ['REQUEST_TIME_FLOAT' => '1234567890.123']);
 
         $timestamp = new ReflectionClass($this->collector)->getMethod('getProfilerTime')->invoke($this->collector, $request);
 
@@ -280,13 +280,13 @@ final class SpxDataCollectorTest extends TestCase
     public function testGetReportUrlReturnsControlPanelUrlWhenNotEnabled(): void
     {
         // When SPX is not enabled, getReportUrl should return null
-        $request = $this->createMockRequest('/test');
+        $request = $this->createStubRequest('/test');
         $this->assertNull($this->collector->getReportUrl($request));
     }
 
     public function testGetReportUrlWhenNotEnabled(): void
     {
-        $request = $this->createMockRequest('/test');
+        $request = $this->createStubRequest('/test');
         $this->assertNull($this->collector->getReportUrl($request));
     }
 
@@ -297,7 +297,7 @@ final class SpxDataCollectorTest extends TestCase
 
     public function testIsSpxEnabledViaCookie(): void
     {
-        $request = $this->createMockRequest('/test');
+        $request = $this->createStubRequest('/test');
         $request->cookies->set('SPX_ENABLED', '1');
 
         // Result depends on whether SPX is actually installed and enabled
@@ -306,7 +306,7 @@ final class SpxDataCollectorTest extends TestCase
 
     public function testIsSpxEnabledViaQueryParameter(): void
     {
-        $request = $this->createMockRequest('/test', ['SPX_KEY' => 'test-key']);
+        $request = $this->createStubRequest('/test', ['SPX_KEY' => 'test-key']);
         $request->query->set('SPX_KEY', 'test-key');
 
         // Since SPX is not installed, this should still return false
@@ -320,7 +320,7 @@ final class SpxDataCollectorTest extends TestCase
 
     public function testIsSpxEnabledWithoutInstallation(): void
     {
-        $request = $this->createMockRequest('/test');
+        $request = $this->createStubRequest('/test');
         $this->assertFalse($this->collector->isSpxEnabled($request));
     }
 
@@ -387,7 +387,7 @@ final class SpxDataCollectorTest extends TestCase
         $this->collector = new SpxDataCollector();
     }
 
-    private function createMockRequest(
+    private function createStubRequest(
         string $uri,
         array $server = [],
     ): Request {
