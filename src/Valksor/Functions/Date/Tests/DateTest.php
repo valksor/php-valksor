@@ -12,6 +12,7 @@
 
 namespace Valksor\Functions\Date\Tests;
 
+use DateMalformedStringException;
 use DateTimeInterface;
 use Exception;
 use InvalidArgumentException;
@@ -21,6 +22,161 @@ use Valksor\Functions\Date\Functions;
 final class DateTest extends TestCase
 {
     private Functions $dateFunctions;
+
+    public function testCalculateEasterWithDifferentCenturies(): void
+    {
+        // Test across different centuries
+        $easter1900 = $this->dateFunctions->calculateEaster(1900);
+        $this->assertSame('1900-04-15', $easter1900->format('Y-m-d'));
+
+        $easter1800 = $this->dateFunctions->calculateEaster(1800);
+        $this->assertSame('1800-04-13', $easter1800->format('Y-m-d'));
+
+        $easter2100 = $this->dateFunctions->calculateEaster(2100);
+        $this->assertSame('2100-03-28', $easter2100->format('Y-m-d'));
+    }
+
+    public function testCalculateEasterWithEarlyYears(): void
+    {
+        // Test with early years in the algorithm's valid range
+        $easter1583 = $this->dateFunctions->calculateEaster(1583);
+        $this->assertSame('1583-04-10', $easter1583->format('Y-m-d'));
+        $this->assertSame('Sunday', $easter1583->format('l'));
+
+        $easter1600 = $this->dateFunctions->calculateEaster(1600);
+        $this->assertSame('1600-04-02', $easter1600->format('Y-m-d'));
+        $this->assertSame('Sunday', $easter1600->format('l'));
+    }
+
+    // =========================================================================
+    // Tests for _CalculateEaster trait - calculateEaster() method
+    // =========================================================================
+
+    public function testCalculateEasterWithKnownDates(): void
+    {
+        // Test known Easter dates for verification
+        $easter2024 = $this->dateFunctions->calculateEaster(2024);
+        $this->assertSame('2024-03-31', $easter2024->format('Y-m-d'));
+        $this->assertSame('Sunday', $easter2024->format('l'));
+
+        $easter2025 = $this->dateFunctions->calculateEaster(2025);
+        $this->assertSame('2025-04-20', $easter2025->format('Y-m-d'));
+        $this->assertSame('Sunday', $easter2025->format('l'));
+
+        $easter2023 = $this->dateFunctions->calculateEaster(2023);
+        $this->assertSame('2023-04-09', $easter2023->format('Y-m-d'));
+        $this->assertSame('Sunday', $easter2023->format('l'));
+
+        $easter2000 = $this->dateFunctions->calculateEaster(2000);
+        $this->assertSame('2000-04-23', $easter2000->format('Y-m-d'));
+        $this->assertSame('Sunday', $easter2000->format('l'));
+    }
+
+    public function testCalculateEasterWithLeapYear(): void
+    {
+        // Test Easter calculation in a leap year
+        $easter2020 = $this->dateFunctions->calculateEaster(2020);
+        $this->assertSame('2020-04-12', $easter2020->format('Y-m-d'));
+        $this->assertSame('Sunday', $easter2020->format('l'));
+    }
+
+    /**
+     * @throws DateMalformedStringException
+     */
+    public function testCalculateMothersDayReturnsDateTime(): void
+    {
+        $mothersDay = $this->dateFunctions->calculateMothersDay(2024);
+
+        $this->assertSame('00:00:00', $mothersDay->format('H:i:s'));
+        $this->assertSame('UTC', $mothersDay->getTimezone()->getName());
+    }
+
+    /**
+     * @throws DateMalformedStringException
+     */
+    public function testCalculateMothersDayWithDifferentYears(): void
+    {
+        // Test across multiple years to ensure algorithm works
+        foreach ([2000, 2010, 2015, 2020, 2022, 2026, 2030] as $year) {
+            $mothersDay = $this->dateFunctions->calculateMothersDay($year);
+
+            $this->assertSame($year, (int) $mothersDay->format('Y'));
+            $this->assertSame('05', $mothersDay->format('m')); // May
+            $this->assertSame('Sunday', $mothersDay->format('l'));
+
+            // Verify it's the second Sunday (should be between 8th and 14th)
+            $day = (int) $mothersDay->format('d');
+            $this->assertGreaterThanOrEqual(8, $day);
+            $this->assertLessThanOrEqual(14, $day);
+        }
+    }
+
+    /**
+     * @throws DateMalformedStringException
+     */
+    public function testCalculateMothersDayWithEarlyYears(): void
+    {
+        // Test with early years
+        $mothersDay1900 = $this->dateFunctions->calculateMothersDay(1900);
+        $this->assertSame('1900-05-13', $mothersDay1900->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay1900->format('l'));
+
+        $mothersDay1950 = $this->dateFunctions->calculateMothersDay(1950);
+        $this->assertSame('1950-05-14', $mothersDay1950->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay1950->format('l'));
+    }
+
+    /**
+     * @throws DateMalformedStringException
+     */
+    public function testCalculateMothersDayWithFutureYears(): void
+    {
+        // Test with future years
+        $mothersDay2030 = $this->dateFunctions->calculateMothersDay(2030);
+        $this->assertSame('2030-05-12', $mothersDay2030->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay2030->format('l'));
+
+        $mothersDay2050 = $this->dateFunctions->calculateMothersDay(2050);
+        $this->assertSame('2050-05-08', $mothersDay2050->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay2050->format('l'));
+    }
+
+    // =========================================================================
+    // Tests for _CalculateMothersDay trait - calculateMothersDay() method
+    // =========================================================================
+
+    /**
+     * @throws DateMalformedStringException
+     */
+    public function testCalculateMothersDayWithKnownDates(): void
+    {
+        // Mother's Day is always the second Sunday in May
+        $mothersDay2024 = $this->dateFunctions->calculateMothersDay(2024);
+        $this->assertSame('2024-05-12', $mothersDay2024->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay2024->format('l'));
+        $this->assertSame('May', $mothersDay2024->format('F'));
+
+        $mothersDay2025 = $this->dateFunctions->calculateMothersDay(2025);
+        $this->assertSame('2025-05-11', $mothersDay2025->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay2025->format('l'));
+        $this->assertSame('May', $mothersDay2025->format('F'));
+
+        $mothersDay2023 = $this->dateFunctions->calculateMothersDay(2023);
+        $this->assertSame('2023-05-14', $mothersDay2023->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay2023->format('l'));
+        $this->assertSame('May', $mothersDay2023->format('F'));
+    }
+
+    /**
+     * @throws DateMalformedStringException
+     */
+    public function testCalculateMothersDayWithLeapYear(): void
+    {
+        // Test in a leap year (shouldn't affect May, but good to test)
+        $mothersDay2020 = $this->dateFunctions->calculateMothersDay(2020);
+        $this->assertSame('2020-05-10', $mothersDay2020->format('Y-m-d'));
+        $this->assertSame('Sunday', $mothersDay2020->format('l'));
+    }
 
     public function testDateNullableWithDifferentFormats(): void
     {
@@ -372,6 +528,54 @@ final class DateTest extends TestCase
 
         $this->assertIsString($result);
         $this->assertSame('01-01-1970 00:00:00', $result);
+    }
+
+    // =========================================================================
+    // Tests for _IsLeapYear trait - isLeapYear() method
+    // =========================================================================
+
+    public function testIsLeapYearWithLeapYears(): void
+    {
+        // Standard leap years (divisible by 4 but not by 100)
+        $this->assertTrue($this->dateFunctions->isLeapYear(2020));
+        $this->assertTrue($this->dateFunctions->isLeapYear(2024));
+        $this->assertTrue($this->dateFunctions->isLeapYear(1996));
+        $this->assertTrue($this->dateFunctions->isLeapYear(1604));
+
+        // Century years divisible by 400
+        $this->assertTrue($this->dateFunctions->isLeapYear(2000));
+        $this->assertTrue($this->dateFunctions->isLeapYear(1600));
+        $this->assertTrue($this->dateFunctions->isLeapYear(2400));
+    }
+
+    public function testIsLeapYearWithNegativeYears(): void
+    {
+        // Test negative years (should work mathematically)
+        $this->assertTrue($this->dateFunctions->isLeapYear(-4));
+        $this->assertFalse($this->dateFunctions->isLeapYear(-1));
+        $this->assertTrue($this->dateFunctions->isLeapYear(-400));
+        $this->assertFalse($this->dateFunctions->isLeapYear(-100));
+    }
+
+    public function testIsLeapYearWithNonLeapYears(): void
+    {
+        // Common years not divisible by 4
+        $this->assertFalse($this->dateFunctions->isLeapYear(2021));
+        $this->assertFalse($this->dateFunctions->isLeapYear(2022));
+        $this->assertFalse($this->dateFunctions->isLeapYear(2023));
+        $this->assertFalse($this->dateFunctions->isLeapYear(1999));
+
+        // Century years not divisible by 400
+        $this->assertFalse($this->dateFunctions->isLeapYear(1900));
+        $this->assertFalse($this->dateFunctions->isLeapYear(1800));
+        $this->assertFalse($this->dateFunctions->isLeapYear(1700));
+        $this->assertFalse($this->dateFunctions->isLeapYear(2100));
+    }
+
+    public function testIsLeapYearWithZero(): void
+    {
+        // Year 0 is divisible by 400, so it's a leap year
+        $this->assertTrue($this->dateFunctions->isLeapYear(0));
     }
 
     public function testValidateDateBasicWithDefaultFormat(): void

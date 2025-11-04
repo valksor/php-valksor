@@ -14,12 +14,15 @@ namespace Valksor\Functions\Date;
 
 final class Functions
 {
+    use Traits\_CalculateEaster;
+    use Traits\_CalculateMothersDay;
     use Traits\_Date;
     use Traits\_DateNullable;
     use Traits\_DateWithoutFormat;
     use Traits\_ExcelDate;
     use Traits\_FormatDate;
     use Traits\_FromUnixTimestamp;
+    use Traits\_IsLeapYear;
     use Traits\_TimeFormat;
     use Traits\_ValidateDate;
     use Traits\_ValidateDateBasic;
