@@ -34,7 +34,10 @@ use const LOCK_EX;
 #[AsCommand(name: 'valksor:autoload-generate', description: 'Generate autoloader configuration for apps.')]
 class AutoloadGenerateCommand extends AbstractCommand
 {
-    protected function execute(
+    /**
+     * Execute the autoloader generation command.
+     */
+    public function __invoke(
         InputInterface $input,
         OutputInterface $output,
     ): int {
