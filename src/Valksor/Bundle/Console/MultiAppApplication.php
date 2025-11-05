@@ -128,8 +128,6 @@ abstract class MultiAppApplication extends Application
                 $exitCode = 1;
                 $io->error("Error running command for app '" . $this->alias($appId) . "': " . $e->getMessage());
             }
-
-            $io->writeln(''); // Add spacing between apps
         }
 
         if (0 === $exitCode) {

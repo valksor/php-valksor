@@ -29,6 +29,7 @@ use function is_file;
 use function pathinfo;
 use function sort;
 use function sprintf;
+use function strlen;
 use function ucfirst;
 
 use const GLOB_NOSORT;
@@ -108,8 +109,8 @@ abstract class AbstractKernel extends BaseKernel
 
         $this->importInfrastructurePackagesWithOverride($infrastructureDir, $appDir, $container);
         $this->importConfig($infrastructureDir . '/services.%s', $container);
-        $this->importConfig($appDir . '/{packages}/*.%s', $container, false);
-        $this->importConfig($appDir . '/{packages}/' . $this->environment . '/*.%s', $container, false);
+        $this->importConfigWithWildcardSupport($appDir . '/{packages}/*.%s', $container);
+        $this->importConfigWithWildcardSupport($appDir . '/{packages}/' . $this->environment . '/*.%s', $container);
         $this->importConfig($appDir . '/services.%s', $container);
     }
 
@@ -121,8 +122,8 @@ abstract class AbstractKernel extends BaseKernel
 
         $this->importInfrastructureRoutesWithOverride($infrastructureDir, $appDir, $routes);
         // Import app routes normally
-        $this->importRoutes($appDir . '/{routes}/*.%s', $routes, false);
-        $this->importRoutes($appDir . '/{routes}/' . $this->environment . '/*.%s', $routes, false);
+        $this->importRoutesWithWildcardSupport($appDir . '/{routes}/*.%s', $routes);
+        $this->importRoutesWithWildcardSupport($appDir . '/{routes}/' . $this->environment . '/*.%s', $routes);
         $this->importRoutes($appDir . '/routes.%s', $routes);
     }
 
@@ -135,6 +136,30 @@ abstract class AbstractKernel extends BaseKernel
             '.kernel.bundles_definition' => $this->getAllBundles(),
             '.kernel.config_dir' => $this->getConfigDir(),
         ]);
+    }
+
+    private function extractBaseDirectoryFromWildcard(
+        string $wildcardPath,
+    ): ?string {
+        // Extract the base directory before the first wildcard
+        $wildcardStart = strpos($wildcardPath, '{');
+
+        if (false === $wildcardStart) {
+            $wildcardStart = strpos($wildcardPath, '*');
+        }
+
+        if (false === $wildcardStart) {
+            return null;
+        }
+
+        // Find the directory separator before the wildcard
+        $dirSeparator = strrpos($wildcardPath, '/', $wildcardStart - strlen($wildcardPath));
+
+        if (false === $dirSeparator) {
+            return null;
+        }
+
+        return substr($wildcardPath, 0, $dirSeparator);
     }
 
     /**
@@ -180,6 +205,25 @@ abstract class AbstractKernel extends BaseKernel
         $file = sprintf($filename, 'php');
 
         if (!$check || file_exists($file)) {
+            $container->import($file);
+        }
+    }
+
+    private function importConfigWithWildcardSupport(
+        string $filename,
+        ContainerConfigurator $container,
+    ): void {
+        $file = sprintf($filename, 'php');
+
+        // Check if this is a wildcard pattern that needs directory validation
+        if ($this->isWildcardPattern($file)) {
+            $baseDir = $this->extractBaseDirectoryFromWildcard($file);
+
+            if ($baseDir && is_dir($baseDir)) {
+                $container->import($file);
+            }
+        // If base directory doesn't exist, skip the import silently
+        } elseif (file_exists($file)) {
             $container->import($file);
         }
     }
@@ -256,6 +300,31 @@ abstract class AbstractKernel extends BaseKernel
         if (!$check || file_exists($file)) {
             $routes->import($file);
         }
+    }
+
+    private function importRoutesWithWildcardSupport(
+        string $filename,
+        RoutingConfigurator $routes,
+    ): void {
+        $file = sprintf($filename, 'php');
+
+        // Check if this is a wildcard pattern that needs directory validation
+        if ($this->isWildcardPattern($file)) {
+            $baseDir = $this->extractBaseDirectoryFromWildcard($file);
+
+            if ($baseDir && is_dir($baseDir)) {
+                $routes->import($file);
+            }
+        // If base directory doesn't exist, skip the import silently
+        } elseif (file_exists($file)) {
+            $routes->import($file);
+        }
+    }
+
+    private function isWildcardPattern(
+        string $filename,
+    ): bool {
+        return str_contains($filename, '{') || str_contains($filename, '*');
     }
 
     /**
