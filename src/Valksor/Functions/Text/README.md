@@ -1,5 +1,8 @@
 # Valksor Functions: Text
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-text/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-text/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-text?branch=master)
+
 A PHP library providing enhanced text manipulation functions for string operations, formatting, and transformations.
 
 ## Installation

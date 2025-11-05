@@ -1,5 +1,8 @@
 # Valksor Functions
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions?branch=master)
+
 A comprehensive collection of PHP utility functions and helpers for various tasks including date manipulation, web operations, text processing, and more. This is a meta-package that includes all the Valksor function sub-libraries.
 
 ## Installation

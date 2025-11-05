@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.23762376237624" branch-rate="0" lines-covered="48" lines-valid="202" branches-covered="0" branches-valid="0" complexity="94" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Component/DoctrineTools</source>
+  </sources>
+  <packages>
+    <package name="DependencyInjection/DoctrineToolsConfiguration.php" line-rate="0" branch-rate="0" complexity="12">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\DependencyInjection\DoctrineToolsConfiguration" filename="DependencyInjection/DoctrineToolsConfiguration.php" line-rate="0" branch-rate="0" complexity="12">
+          <methods>
+            <method name="registerPreConfiguration" signature="ContainerConfigurator $container, ContainerBuilder $builder, string $component" line-rate="0" branch-rate="0" complexity="11">
+              <lines>
+                <line number="39" hits="0"/>
+                <line number="40" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="42" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+                <line number="49" hits="0"/>
+                <line number="50" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="52" hits="0"/>
+                <line number="53" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="55" hits="0"/>
+                <line number="56" hits="0"/>
+                <line number="57" hits="0"/>
+                <line number="58" hits="0"/>
+                <line number="60" hits="0"/>
+                <line number="62" hits="0"/>
+                <line number="63" hits="0"/>
+                <line number="66" hits="0"/>
+                <line number="67" hits="0"/>
+                <line number="69" hits="0"/>
+                <line number="71" hits="0"/>
+                <line number="72" hits="0"/>
+                <line number="75" hits="0"/>
+                <line number="78" hits="0"/>
+                <line number="79" hits="0"/>
+                <line number="80" hits="0"/>
+                <line number="81" hits="0"/>
+                <line number="83" hits="0"/>
+                <line number="84" hits="0"/>
+                <line number="86" hits="0"/>
+                <line number="87" hits="0"/>
+                <line number="88" hits="0"/>
+                <line number="89" hits="0"/>
+                <line number="91" hits="0"/>
+                <line number="92" hits="0"/>
+                <line number="98" hits="0"/>
+                <line number="99" hits="0"/>
+                <line number="100" hits="0"/>
+                <line number="101" hits="0"/>
+                <line number="102" hits="0"/>
+                <line number="103" hits="0"/>
+                <line number="104" hits="0"/>
+                <line number="105" hits="0"/>
+                <line number="106" hits="0"/>
+                <line number="107" hits="0"/>
+                <line number="108" hits="0"/>
+                <line number="109" hits="0"/>
+                <line number="110" hits="0"/>
+                <line number="111" hits="0"/>
+              </lines>
+            </method>
+            <method name="usesDoctrine" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="118" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="39" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="42" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="52" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="57" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="60" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="63" hits="0"/>
+            <line number="66" hits="0"/>
+            <line number="67" hits="0"/>
+            <line number="69" hits="0"/>
+            <line number="71" hits="0"/>
+            <line number="72" hits="0"/>
+            <line number="75" hits="0"/>
+            <line number="78" hits="0"/>
+            <line number="79" hits="0"/>
+            <line number="80" hits="0"/>
+            <line number="81" hits="0"/>
+            <line number="83" hits="0"/>
+            <line number="84" hits="0"/>
+            <line number="86" hits="0"/>
+            <line number="87" hits="0"/>
+            <line number="88" hits="0"/>
+            <line number="89" hits="0"/>
+            <line number="91" hits="0"/>
+            <line number="92" hits="0"/>
+            <line number="98" hits="0"/>
+            <line number="99" hits="0"/>
+            <line number="100" hits="0"/>
+            <line number="101" hits="0"/>
+            <line number="102" hits="0"/>
+            <line number="103" hits="0"/>
+            <line number="104" hits="0"/>
+            <line number="105" hits="0"/>
+            <line number="106" hits="0"/>
+            <line number="107" hits="0"/>
+            <line number="108" hits="0"/>
+            <line number="109" hits="0"/>
+            <line number="110" hits="0"/>
+            <line number="111" hits="0"/>
+            <line number="118" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/DBAL/Traits/_ConvertToDatabaseValue.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToDatabaseValue" filename="Doctrine/DBAL/Traits/_ConvertToDatabaseValue.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="convertToDatabaseValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="29" hits="4"/>
+                <line number="30" hits="4"/>
+                <line number="33" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="4"/>
+            <line number="30" hits="4"/>
+            <line number="33" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/DBAL/Traits/_ConvertToPHPValue.php" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToPHPValue" filename="Doctrine/DBAL/Traits/_ConvertToPHPValue.php" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+          <methods>
+            <method name="convertToPHPValueForType" signature="$value, AbstractPlatform $platform, DateTimeInterface $object, string $function, string $prefix" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+              <lines>
+                <line number="35" hits="6"/>
+                <line number="36" hits="0"/>
+                <line number="39" hits="6"/>
+                <line number="41" hits="6"/>
+                <line number="42" hits="6"/>
+                <line number="43" hits="6"/>
+                <line number="44" hits="6"/>
+                <line number="45" hits="6"/>
+                <line number="47" hits="5"/>
+                <line number="48" hits="1"/>
+                <line number="51" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="6"/>
+            <line number="36" hits="0"/>
+            <line number="39" hits="6"/>
+            <line number="41" hits="6"/>
+            <line number="42" hits="6"/>
+            <line number="43" hits="6"/>
+            <line number="44" hits="6"/>
+            <line number="45" hits="6"/>
+            <line number="47" hits="5"/>
+            <line number="48" hits="1"/>
+            <line number="51" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/DBAL/Type/UTCDateImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateImmutableType" filename="Doctrine/DBAL/Type/UTCDateImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/DBAL/Type/UTCDateTimeImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeImmutableType" filename="Doctrine/DBAL/Type/UTCDateTimeImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/DBAL/Type/UTCDateTimeType.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeType" filename="Doctrine/DBAL/Type/UTCDateTimeType.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="33" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="33" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/DBAL/Type/UTCDateType.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateType" filename="Doctrine/DBAL/Type/UTCDateType.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="33" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="33" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/Migrations/VersionComparatorWithoutNamespace.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\Migrations\VersionComparatorWithoutNamespace" filename="Doctrine/Migrations/VersionComparatorWithoutNamespace.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="compare" signature="Version $a, Version $b" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="28" hits="2"/>
+              </lines>
+            </method>
+            <method name="versionWithoutNamespace" signature="Version $version" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="2"/>
+                <line number="36" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="36" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/BaseFunction.php" line-rate="0" branch-rate="0" complexity="9">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\BaseFunction" filename="Doctrine/ORM/Query/AST/BaseFunction.php" line-rate="0" branch-rate="0" complexity="9">
+          <methods>
+            <method name="getSql" signature="SqlWalker $sqlWalker" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="33" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="39" hits="0"/>
+              </lines>
+            </method>
+            <method name="parse" signature="Parser $parser" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="48" hits="0"/>
+                <line number="50" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="52" hits="0"/>
+                <line number="53" hits="0"/>
+              </lines>
+            </method>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="56" hits="0"/>
+              </lines>
+            </method>
+            <method name="addNodeMapping" signature="string $parserMethod" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="61" hits="0"/>
+              </lines>
+            </method>
+            <method name="feedParserWithNodes" signature="Parser $parser" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
+                <line number="73" hits="0"/>
+                <line number="74" hits="0"/>
+              </lines>
+            </method>
+            <method name="setFunctionPrototype" signature="string $functionPrototype" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="82" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="33" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="52" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
+            <line number="73" hits="0"/>
+            <line number="74" hits="0"/>
+            <line number="82" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/Datetime/ToChar.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\Datetime\ToChar" filename="Doctrine/ORM/Query/AST/Datetime/ToChar.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/ArrayPosition.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\ArrayPosition" filename="Doctrine/ORM/Query/AST/String/ArrayPosition.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/Cast.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\Cast" filename="Doctrine/ORM/Query/AST/String/Cast.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/CastAsDecimal.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\CastAsDecimal" filename="Doctrine/ORM/Query/AST/String/CastAsDecimal.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/Ilike.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\Ilike" filename="Doctrine/ORM/Query/AST/String/Ilike.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/IlikeUnaccent.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\IlikeUnaccent" filename="Doctrine/ORM/Query/AST/String/IlikeUnaccent.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/RegexpReplace.php" line-rate="0" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\RegexpReplace" filename="Doctrine/ORM/Query/AST/String/RegexpReplace.php" line-rate="0" branch-rate="0" complexity="6">
+          <methods>
+            <method name="getSql" signature="SqlWalker $sqlWalker" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="29" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="37" hits="0"/>
+              </lines>
+            </method>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="42" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+              </lines>
+            </method>
+            <method name="feedParserWithNodes" signature="Parser $parser" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="52" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="55" hits="0"/>
+                <line number="56" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="42" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="52" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="56" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/StringAgg.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\StringAgg" filename="Doctrine/ORM/Query/AST/String/StringAgg.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Query/AST/String/Unaccent.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST\String\Unaccent" filename="Doctrine/ORM/Query/AST/String/Unaccent.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/_CreatedUpdated.php" line-rate="0" branch-rate="0" complexity="8">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\_CreatedUpdated" filename="Doctrine/ORM/Traits/_CreatedUpdated.php" line-rate="0" branch-rate="0" complexity="8">
+          <methods>
+            <method name="getCreatedAt" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="0"/>
+              </lines>
+            </method>
+            <method name="getUpdatedAt" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="36" hits="0"/>
+              </lines>
+            </method>
+            <method name="setCreatedAt" signature="?DateTimeImmutable $createdAt" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="45" hits="0"/>
+                <line number="47" hits="0"/>
+              </lines>
+            </method>
+            <method name="setUpdatedAt" signature="?DateTimeImmutable $updatedAt" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="56" hits="0"/>
+                <line number="58" hits="0"/>
+              </lines>
+            </method>
+            <method name="updatedTimestamps" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="64" hits="0"/>
+                <line number="65" hits="0"/>
+                <line number="68" hits="0"/>
+                <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
+                <line number="74" hits="0"/>
+              </lines>
+            </method>
+            <method name="modifyTimezone" signature="?DateTimeImmutable $dateTimeImmutable" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="83" hits="0"/>
+                <line number="84" hits="0"/>
+                <line number="87" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="64" hits="0"/>
+            <line number="65" hits="0"/>
+            <line number="68" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
+            <line number="74" hits="0"/>
+            <line number="83" hits="0"/>
+            <line number="84" hits="0"/>
+            <line number="87" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/_Entity.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\_Entity" filename="Doctrine/ORM/Traits/_Entity.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/_IsActive.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\_IsActive" filename="Doctrine/ORM/Traits/_IsActive.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getIsActive" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="24" hits="0"/>
+              </lines>
+            </method>
+            <method name="setIsActive" signature="bool $isActive" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="0"/>
+                <line number="32" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="32" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/_SimpleEntity.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\_SimpleEntity" filename="Doctrine/ORM/Traits/_SimpleEntity.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/_Uuid.php" line-rate="0" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\_Uuid" filename="Doctrine/ORM/Traits/_Uuid.php" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="getUuid" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="0"/>
+              </lines>
+            </method>
+            <method name="prePersist" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="29" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="33" hits="0"/>
+              </lines>
+            </method>
+            <method name="setUuid" signature="?Uid\Uuid $uuid" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="40" hits="0"/>
+                <line number="42" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="42" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/_Version.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\_Version" filename="Doctrine/ORM/Traits/_Version.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getVersion" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="0"/>
+              </lines>
+            </method>
+            <method name="setVersion" signature="?int $version" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="32" hits="0"/>
+                <line number="34" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="34" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/__Id.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\__Id" filename="Doctrine/ORM/Traits/__Id.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="getId" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="27" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/__None.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\__None" filename="Doctrine/ORM/Traits/__None.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getId" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="27" hits="0"/>
+              </lines>
+            </method>
+            <method name="setId" signature="?string $id" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="33" hits="0"/>
+                <line number="35" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="35" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/__Ulid.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\__Ulid" filename="Doctrine/ORM/Traits/__Ulid.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="getId" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Doctrine/ORM/Traits/__Uuid.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Doctrine\ORM\Traits\__Uuid" filename="Doctrine/ORM/Traits/__Uuid.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="getId" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="EventSubscriber/DoctrineMigrationsFilter.php" line-rate="0.73684210526316" branch-rate="0" complexity="9">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\EventSubscriber\DoctrineMigrationsFilter" filename="EventSubscriber/DoctrineMigrationsFilter.php" line-rate="0.73684210526316" branch-rate="0" complexity="9">
+          <methods>
+            <method name="__invoke" signature="AbstractAsset|string $asset" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+              <lines>
+                <line number="32" hits="3"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="2"/>
+                <line number="38" hits="2"/>
+                <line number="39" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="44" hits="2"/>
+                <line number="45" hits="0"/>
+                <line number="48" hits="2"/>
+                <line number="49" hits="1"/>
+                <line number="52" hits="2"/>
+              </lines>
+            </method>
+            <method name="onConsoleCommand" signature="ConsoleCommandEvent $event" line-rate="0.8" branch-rate="0" complexity="3">
+              <lines>
+                <line number="58" hits="1"/>
+                <line number="60" hits="1"/>
+                <line number="61" hits="0"/>
+                <line number="70" hits="1"/>
+                <line number="71" hits="1"/>
+              </lines>
+            </method>
+            <method name="getSubscribedEvents" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="77" hits="0"/>
+                <line number="78" hits="0"/>
+                <line number="79" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="3"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="2"/>
+            <line number="38" hits="2"/>
+            <line number="39" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="44" hits="2"/>
+            <line number="45" hits="0"/>
+            <line number="48" hits="2"/>
+            <line number="49" hits="1"/>
+            <line number="52" hits="2"/>
+            <line number="58" hits="1"/>
+            <line number="60" hits="1"/>
+            <line number="61" hits="0"/>
+            <line number="70" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="77" hits="0"/>
+            <line number="78" hits="0"/>
+            <line number="79" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="EventSubscriber/FixDefaultSchemaListener.php" line-rate="0" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\EventSubscriber\FixDefaultSchemaListener" filename="EventSubscriber/FixDefaultSchemaListener.php" line-rate="0" branch-rate="0" complexity="5">
+          <methods>
+            <method name="postGenerateSchema" signature="GenerateSchemaEventArgs $args" line-rate="0" branch-rate="0" complexity="5">
+              <lines>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="39" hits="0"/>
+                <line number="40" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="40" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Normalizer/UTCDateTimeNormalizer.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\Normalizer\UTCDateTimeNormalizer" filename="Normalizer/UTCDateTimeNormalizer.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="denormalize" signature="mixed $data, string $type, ?string $format, array $context" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="1"/>
+              </lines>
+            </method>
+            <method name="getSupportedTypes" signature="?string $format" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="42" hits="1"/>
+              </lines>
+            </method>
+            <method name="normalize" signature="mixed $data, ?string $format, array $context" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="50" hits="1"/>
+              </lines>
+            </method>
+            <method name="supportsDenormalization" signature="mixed $data, string $type, ?string $format, array $context" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="59" hits="1"/>
+              </lines>
+            </method>
+            <method name="supportsNormalization" signature="mixed $data, ?string $format, array $context" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="67" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="59" hits="1"/>
+            <line number="67" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="UTCDateTimeImmutable.php" line-rate="0.875" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Component\DoctrineTools\UTCDateTimeImmutable" filename="UTCDateTimeImmutable.php" line-rate="0.875" branch-rate="0" complexity="6">
+          <methods>
+            <method name="__construct" signature="string $datetime" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="32" hits="9"/>
+                <line number="34" hits="9"/>
+              </lines>
+            </method>
+            <method name="createFromFormat" signature="string $format, string $datetime, ?DateTimeZone $timezone" line-rate="0.75" branch-rate="0" complexity="3">
+              <lines>
+                <line number="45" hits="4"/>
+                <line number="47" hits="4"/>
+                <line number="48" hits="4"/>
+                <line number="51" hits="0"/>
+              </lines>
+            </method>
+            <method name="createFromInterface" signature="DateTimeInterface $object" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="60" hits="4"/>
+              </lines>
+            </method>
+            <method name="getUTCTimeZone" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="65" hits="16"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="9"/>
+            <line number="34" hits="9"/>
+            <line number="45" hits="4"/>
+            <line number="47" hits="4"/>
+            <line number="48" hits="4"/>
+            <line number="51" hits="0"/>
+            <line number="60" hits="4"/>
+            <line number="65" hits="16"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

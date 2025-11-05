@@ -1,5 +1,8 @@
 # Valksor Functions: Local
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-local/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-local/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-local?branch=master)
+
 A PHP library providing utility functions for working with the local filesystem, environment variables, system resources, and more.
 
 ## Installation

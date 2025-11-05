@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="1" branch-rate="0" lines-covered="16" lines-valid="16" branches-covered="0" branches-valid="0" complexity="10" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Handler</source>
+  </sources>
+  <packages>
+    <package name="AbstractHandler.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Handler\AbstractHandler" filename="AbstractHandler.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="handle" signature="$arguments" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="30"/>
+              </lines>
+            </method>
+            <method name="next" signature="Handler $handler" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="18"/>
+                <line number="33" hits="18"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="30"/>
+            <line number="31" hits="18"/>
+            <line number="33" hits="18"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Chain.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Handler\Chain" filename="Chain.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="__construct" signature="mixed $value" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="29" hits="25"/>
+              </lines>
+            </method>
+            <method name="get" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="36" hits="25"/>
+              </lines>
+            </method>
+            <method name="pipe" signature="callable $callback" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="49" hits="15"/>
+              </lines>
+            </method>
+            <method name="of" signature="mixed $value" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="60" hits="20"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="25"/>
+            <line number="36" hits="25"/>
+            <line number="49" hits="15"/>
+            <line number="60" hits="20"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="FunctionHandler.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Handler\FunctionHandler" filename="FunctionHandler.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="__construct" signature="string $function, ?object $instance" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="19"/>
+              </lines>
+            </method>
+            <method name="handle" signature="$arguments" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="33" hits="19"/>
+                <line number="35" hits="19"/>
+                <line number="36" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="42" hits="19"/>
+                <line number="43" hits="11"/>
+                <line number="44" hits="10"/>
+                <line number="46" hits="19"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="19"/>
+            <line number="33" hits="19"/>
+            <line number="35" hits="19"/>
+            <line number="36" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="42" hits="19"/>
+            <line number="43" hits="11"/>
+            <line number="44" hits="10"/>
+            <line number="46" hits="19"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Handler.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+  </packages>
+</coverage>

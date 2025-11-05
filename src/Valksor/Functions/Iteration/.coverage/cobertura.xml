@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.99367088607595" branch-rate="0" lines-covered="157" lines-valid="158" branches-covered="0" branches-valid="0" complexity="92" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Iteration</source>
+  </sources>
+  <packages>
+    <package name="Exception/FieldNotFoundException.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Exception\FieldNotFoundException" filename="Exception/FieldNotFoundException.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Exception/IterationException.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Exception\IterationException" filename="Exception/IterationException.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_AddElementIfNotExists.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_AddElementIfNotExists" filename="Traits/_AddElementIfNotExists.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="addElementIfNotExists" signature="?array $array, mixed $element, mixed $key" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ArrayFlipRecursive.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayFlipRecursive" filename="Traits/_ArrayFlipRecursive.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="arrayFlipRecursive" signature="array $input" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="28" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="2"/>
+                <line number="38" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="2"/>
+            <line number="38" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ArrayIntersectKeyRecursive.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayIntersectKeyRecursive" filename="Traits/_ArrayIntersectKeyRecursive.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="arrayIntersectKeyRecursive" signature="array $first, array $second" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="41" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="41" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ArrayToString.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayToString" filename="Traits/_ArrayToString.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="arrayToString" signature="array $value" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="26" hits="2"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="43" hits="1"/>
+                <line number="44" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="50" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="2"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="50" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ArrayValuesFiltered.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_ArrayValuesFiltered" filename="Traits/_ArrayValuesFiltered.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="arrayValuesFiltered" signature="array $input, string $with, bool $start" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Cases.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_Cases" filename="Traits/_Cases.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getCases" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="2"/>
+                <line number="24" hits="1"/>
+                <line number="27" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="2"/>
+            <line number="24" hits="1"/>
+            <line number="27" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_FilterKeyEndsWith.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_FilterKeyEndsWith" filename="Traits/_FilterKeyEndsWith.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="filterKeyEndsWith" signature="array $input, string $endsWith" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_FilterKeyStartsWith.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_FilterKeyStartsWith" filename="Traits/_FilterKeyStartsWith.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="filterKeyStartsWith" signature="array $input, string $startsWith" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_FirstMatchAsString.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_FirstMatchAsString" filename="Traits/_FirstMatchAsString.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="firstMatchAsString" signature="array $keys, array $haystack" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="29" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="29" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_HaveCommonElements.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_HaveCommonElements" filename="Traits/_HaveCommonElements.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="haveCommonElements" signature="array $array1, array $array2" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="23" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsAssociative.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_IsAssociative" filename="Traits/_IsAssociative.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="isAssociative" signature="mixed $array, bool $allowList" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="24" hits="2"/>
+                <line number="25" hits="2"/>
+                <line number="28" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="32" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="2"/>
+            <line number="25" hits="2"/>
+            <line number="28" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="32" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsEmpty.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_IsEmpty" filename="Traits/_IsEmpty.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="isEmpty" signature="mixed $variable, bool $result" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="39" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="39" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsMultiDimentional.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_IsMultiDimentional" filename="Traits/_IsMultiDimentional.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="isMultiDimensional" signature="array $keys" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="22" hits="3"/>
+                <line number="23" hits="3"/>
+                <line number="24" hits="3"/>
+                <line number="28" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="3"/>
+            <line number="23" hits="3"/>
+            <line number="24" hits="3"/>
+            <line number="28" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsSortable.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_IsSortable" filename="Traits/_IsSortable.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="isSortable" signature="mixed $item, int|string $field" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="34" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="34" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsSortedAscendingInts.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_IsSortedAscendingInts" filename="Traits/_IsSortedAscendingInts.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="isSortedAscendingInts" signature="array $array" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="39" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="39" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_JsonDecode.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_JsonDecode" filename="Traits/_JsonDecode.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="jsonDecode" signature="string $json, bool $associative, int $depth, int $flags" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="37" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="43" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="37" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="43" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_JsonEncode" filename="Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="jsonEncode" signature="mixed $value, int $flags" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="35" hits="1"/>
+                <line number="37" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="1"/>
+            <line number="37" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_MakeMultiDimensional.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_MakeMultiDimensional" filename="Traits/_MakeMultiDimensional.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeMultiDimensional" signature="array $array" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="20" hits="1"/>
+                <line number="22" hits="1"/>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="1"/>
+            <line number="22" hits="1"/>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_MakeOneDimension.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_MakeOneDimension" filename="Traits/_MakeOneDimension.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="makeOneDimension" signature="array $array, string $base, string $separator, bool $onlyLast, int $depth, int $maxDepth, array $result, bool $allowList" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="44" hits="1"/>
+                <line number="45" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="52" hits="1"/>
+                <line number="56" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="45" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="52" hits="1"/>
+            <line number="56" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Pick.php" line-rate="0.85714285714286" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_Pick" filename="Traits/_Pick.php" line-rate="0.85714285714286" branch-rate="0" complexity="3">
+          <methods>
+            <method name="pick" signature="array $array" line-rate="0.85714285714286" branch-rate="0" complexity="3">
+              <lines>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="38" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="38" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RecursiveKSort.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_RecursiveKSort" filename="Traits/_RecursiveKSort.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="recursiveKSort" signature="array $array, int $flags" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="42" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="42" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RemoveFromArray.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_RemoveFromArray" filename="Traits/_RemoveFromArray.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="removeFromArray" signature="array $input, mixed $value" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="23" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_SwapArray.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_SwapArray" filename="Traits/_SwapArray.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="swapArray" signature="array $array, mixed $foo, mixed $bar" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="1"/>
+                <line number="23" hits="1"/>
+                <line number="26" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+            <line number="23" hits="1"/>
+            <line number="26" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Unique.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_Unique" filename="Traits/_Unique.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="unique" signature="array $input, bool $keepKeys" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="41" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="41" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_UniqueMap.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_UniqueMap" filename="Traits/_UniqueMap.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="uniqueMap" signature="array $array" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="23" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Unpack.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_Unpack" filename="Traits/_Unpack.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="unpack" signature="array $oneDimension" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="40" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="40" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Value.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Traits\_Value" filename="Traits/_Value.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="value" signature="array|object $objectOrArray, string|int $field, bool $throw" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="38" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="38" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

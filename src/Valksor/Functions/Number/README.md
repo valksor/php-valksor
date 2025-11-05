@@ -1,5 +1,8 @@
 # Valksor Functions: Number
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-number/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-number/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-number?branch=master)
+
 A PHP library providing various number-related functions including prime number checking, distance calculations, and mathematical operations.
 
 ## Installation

@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.99390243902439" branch-rate="0" lines-covered="163" lines-valid="164" branches-covered="0" branches-valid="0" complexity="79" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Text</source>
+  </sources>
+  <packages>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Text\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Br2nl.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Br2nl" filename="Traits/_Br2nl.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="br2nl" signature="string $string" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="22" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CamelCase.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_CamelCase" filename="Traits/_CamelCase.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="camelCase" signature="string $string" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="27" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="35" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="35" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CleanText.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_CleanText" filename="Traits/_CleanText.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="cleanText" signature="string $text" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="35" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="35" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Compare.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Compare" filename="Traits/_Compare.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="compare" signature="string $first, string $second, string $haystack" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="29" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="45" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="45" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Contains.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Contains" filename="Traits/_Contains.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="contains" signature="string $haystack, string $needle" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="23" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ContainsAny.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_ContainsAny" filename="Traits/_ContainsAny.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="containsAny" signature="string $haystack, array $needles" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="29" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="29" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CountryName.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_CountryName" filename="Traits/_CountryName.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="countryName" signature="string $country, string $locale" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CyrillicToLatin.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_CyrillicToLatin" filename="Traits/_CyrillicToLatin.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="cyrillicToLatin" signature="string $text, array $search, array $replace" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_HtmlEntityDecode.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_HtmlEntityDecode" filename="Traits/_HtmlEntityDecode.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="htmlEntityDecode" signature="string $text" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="2"/>
+                <line number="26" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="32" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="2"/>
+            <line number="26" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="32" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsHex.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_IsHex" filename="Traits/_IsHex.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="isHex" signature="string $string" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_KeepNumeric.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_KeepNumeric" filename="Traits/_KeepNumeric.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="keepNumeric" signature="string $text" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_LastPart.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_LastPart" filename="Traits/_LastPart.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="lastPart" signature="string $text, string $delimiter" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_LatinToCyrillic.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_LatinToCyrillic" filename="Traits/_LatinToCyrillic.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="latinToCyrillic" signature="string $text, array $search, array $replace" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_LimitChars.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_LimitChars" filename="Traits/_LimitChars.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="limitChars" signature="string $text, int $length, string $append" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_LimitWords.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_LimitWords" filename="Traits/_LimitWords.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="limitWords" signature="string $text, int $limit, string $append" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="43" hits="1"/>
+                <line number="46" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="46" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_LongestSubstrLength.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_LongestSubstrLength" filename="Traits/_LongestSubstrLength.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="longestSubstrLength" signature="string $string" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Nl2br.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Nl2br" filename="Traits/_Nl2br.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="nl2br" signature="string $string" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="22" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_NormalizedValue.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_NormalizedValue" filename="Traits/_NormalizedValue.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="normalizedValue" signature="string $value, string $delimiter" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="28" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="28" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_OneSpace.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_OneSpace" filename="Traits/_OneSpace.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="oneSpace" signature="string $text" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="2"/>
+                <line number="24" hits="2"/>
+                <line number="25" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="30" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="2"/>
+            <line number="24" hits="2"/>
+            <line number="25" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="30" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_PascalCase.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_PascalCase" filename="Traits/_PascalCase.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="pascalCase" signature="string $string" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="27" hits="3"/>
+                <line number="29" hits="3"/>
+                <line number="30" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="35" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="3"/>
+            <line number="29" hits="3"/>
+            <line number="30" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="35" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Pluralize.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Pluralize" filename="Traits/_Pluralize.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="pluralize" signature="string $string" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="22" hits="1"/>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RandomString.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_RandomString" filename="Traits/_RandomString.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="randomString" signature="int $length, string $chars" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="28" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="33" hits="2"/>
+                <line number="36" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="33" hits="2"/>
+            <line number="36" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ReverseUTF8.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_ReverseUTF8" filename="Traits/_ReverseUTF8.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="reverseUTF8" signature="string $text" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Sanitize.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Sanitize" filename="Traits/_Sanitize.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="sanitize" signature="string $text" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_SanitizeFloat.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_SanitizeFloat" filename="Traits/_SanitizeFloat.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="sanitizeFloat" signature="string $string" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ScalarToString.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_ScalarToString" filename="Traits/_ScalarToString.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="scalarToString" signature="mixed $value" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="2"/>
+                <line number="26" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="32" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="2"/>
+            <line number="26" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="32" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Sha.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Sha" filename="Traits/_Sha.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="sha" signature="string $text, int $bits" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Shuffle.php" line-rate="0.85714285714286" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Shuffle" filename="Traits/_Shuffle.php" line-rate="0.85714285714286" branch-rate="0" complexity="3">
+          <methods>
+            <method name="shuffle" signature="string $string" line-rate="0.85714285714286" branch-rate="0" complexity="3">
+              <lines>
+                <line number="25" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="28" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="38" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="28" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="38" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Singularize.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_Singularize" filename="Traits/_Singularize.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="singularize" signature="string $string" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="24" hits="2"/>
+                <line number="25" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="28" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="38" hits="2"/>
+                <line number="40" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="2"/>
+            <line number="25" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="28" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="38" hits="2"/>
+            <line number="40" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_SnakeCaseFromCamelCase.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_SnakeCaseFromCamelCase" filename="Traits/_SnakeCaseFromCamelCase.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="snakeCaseFromCamelCase" signature="string $string, string $separator" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="25" hits="3"/>
+                <line number="27" hits="3"/>
+                <line number="28" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="33" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="3"/>
+            <line number="27" hits="3"/>
+            <line number="28" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="33" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_SnakeCaseFromSentence.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_SnakeCaseFromSentence" filename="Traits/_SnakeCaseFromSentence.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="snakeCaseFromSentence" signature="string $string, bool $skipCamel" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="40" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="40" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_StrStartWithAny.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_StrStartWithAny" filename="Traits/_StrStartWithAny.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="strStartsWithAny" signature="string $haystack, array $needles" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="21" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_StripSpace.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_StripSpace" filename="Traits/_StripSpace.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="stripSpace" signature="string $text" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ToString.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_ToString" filename="Traits/_ToString.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="toString" signature="mixed $value" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="24" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_TruncateSafe.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_TruncateSafe" filename="Traits/_TruncateSafe.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="truncateSafe" signature="string $text, int $length, string $append" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_UniqueId.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Text\Traits\_UniqueId" filename="Traits/_UniqueId.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="uniqueId" signature="int $length" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="37" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="37" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

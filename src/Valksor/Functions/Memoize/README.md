@@ -1,5 +1,8 @@
 # Valksor Functions: Memoize
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-memoize/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-memoize/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-memoize?branch=master)
+
 A PHP library providing memoization functionality to cache the results of expensive function calls and return the cached result when the same inputs occur again.
 
 ## Installation

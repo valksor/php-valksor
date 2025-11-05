@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="1" branch-rate="0" lines-covered="95" lines-valid="95" branches-covered="0" branches-valid="0" complexity="42" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Date</source>
+  </sources>
+  <packages>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Date\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CalculateEaster.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_CalculateEaster" filename="Traits/_CalculateEaster.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="calculateEaster" signature="int $year" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="4"/>
+                <line number="29" hits="4"/>
+                <line number="30" hits="4"/>
+                <line number="33" hits="4"/>
+                <line number="34" hits="4"/>
+                <line number="37" hits="4"/>
+                <line number="38" hits="4"/>
+                <line number="41" hits="4"/>
+                <line number="44" hits="4"/>
+                <line number="45" hits="4"/>
+                <line number="48" hits="4"/>
+                <line number="51" hits="4"/>
+                <line number="54" hits="4"/>
+                <line number="55" hits="4"/>
+                <line number="57" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="4"/>
+            <line number="29" hits="4"/>
+            <line number="30" hits="4"/>
+            <line number="33" hits="4"/>
+            <line number="34" hits="4"/>
+            <line number="37" hits="4"/>
+            <line number="38" hits="4"/>
+            <line number="41" hits="4"/>
+            <line number="44" hits="4"/>
+            <line number="45" hits="4"/>
+            <line number="48" hits="4"/>
+            <line number="51" hits="4"/>
+            <line number="54" hits="4"/>
+            <line number="55" hits="4"/>
+            <line number="57" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CalculateMothersDay.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_CalculateMothersDay" filename="Traits/_CalculateMothersDay.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="calculateMothersDay" signature="int $year" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="27" hits="6"/>
+                <line number="30" hits="6"/>
+                <line number="31" hits="6"/>
+                <line number="35" hits="6"/>
+                <line number="37" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="6"/>
+            <line number="30" hits="6"/>
+            <line number="31" hits="6"/>
+            <line number="35" hits="6"/>
+            <line number="37" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Date.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_Date" filename="Traits/_Date.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="date" signature="?string $dateString, ?string $format" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="28" hits="5"/>
+                <line number="29" hits="3"/>
+                <line number="32" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="5"/>
+            <line number="29" hits="3"/>
+            <line number="32" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_DateNullable.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_DateNullable" filename="Traits/_DateNullable.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="dateNullable" signature="?string $dateString, ?string $format" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="24" hits="5"/>
+                <line number="25" hits="3"/>
+                <line number="28" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="5"/>
+            <line number="25" hits="3"/>
+            <line number="28" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_DateWithoutFormat.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_DateWithoutFormat" filename="Traits/_DateWithoutFormat.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="dateWithoutFormat" signature="string $date, array $guesses" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="31" hits="5"/>
+                <line number="33" hits="5"/>
+                <line number="34" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="39" hits="5"/>
+                <line number="41" hits="5"/>
+                <line number="42" hits="5"/>
+                <line number="44" hits="5"/>
+                <line number="45" hits="4"/>
+                <line number="49" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="5"/>
+            <line number="33" hits="5"/>
+            <line number="34" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="39" hits="5"/>
+            <line number="41" hits="5"/>
+            <line number="42" hits="5"/>
+            <line number="44" hits="5"/>
+            <line number="45" hits="4"/>
+            <line number="49" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ExcelDate.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_ExcelDate" filename="Traits/_ExcelDate.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="excelDate" signature="int $timestamp, string $format" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="25" hits="5"/>
+                <line number="27" hits="5"/>
+                <line number="28" hits="4"/>
+                <line number="29" hits="4"/>
+                <line number="31" hits="4"/>
+                <line number="33" hits="4"/>
+                <line number="34" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="39" hits="4"/>
+                <line number="40" hits="4"/>
+                <line number="44" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="5"/>
+            <line number="27" hits="5"/>
+            <line number="28" hits="4"/>
+            <line number="29" hits="4"/>
+            <line number="31" hits="4"/>
+            <line number="33" hits="4"/>
+            <line number="34" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="39" hits="4"/>
+            <line number="40" hits="4"/>
+            <line number="44" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_FormatDate.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_FormatDate" filename="Traits/_FormatDate.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="formatDate" signature="string $string, string $format" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="5"/>
+                <line number="25" hits="4"/>
+                <line number="28" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="5"/>
+            <line number="25" hits="4"/>
+            <line number="28" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_FromUnixTimestamp.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_FromUnixTimestamp" filename="Traits/_FromUnixTimestamp.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="fromUnixTimestamp" signature="int $timestamp, ?string $format" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="28" hits="5"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="5"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsLeapYear.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_IsLeapYear" filename="Traits/_IsLeapYear.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="isLeapYear" signature="int $year" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="20" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_TimeFormat.php" line-rate="1" branch-rate="0" complexity="10">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_TimeFormat" filename="Traits/_TimeFormat.php" line-rate="1" branch-rate="0" complexity="10">
+          <methods>
+            <method name="format" signature="int|float $timestamp, bool $asArray" line-rate="1" branch-rate="0" complexity="10">
+              <lines>
+                <line number="30" hits="7"/>
+                <line number="31" hits="7"/>
+                <line number="33" hits="7"/>
+                <line number="34" hits="7"/>
+                <line number="35" hits="6"/>
+                <line number="37" hits="6"/>
+                <line number="38" hits="6"/>
+                <line number="39" hits="1"/>
+                <line number="40" hits="5"/>
+                <line number="41" hits="6"/>
+                <line number="44" hits="6"/>
+                <line number="48" hits="7"/>
+                <line number="49" hits="1"/>
+                <line number="50" hits="7"/>
+                <line number="51" hits="7"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="7"/>
+            <line number="31" hits="7"/>
+            <line number="33" hits="7"/>
+            <line number="34" hits="7"/>
+            <line number="35" hits="6"/>
+            <line number="37" hits="6"/>
+            <line number="38" hits="6"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="5"/>
+            <line number="41" hits="6"/>
+            <line number="44" hits="6"/>
+            <line number="48" hits="7"/>
+            <line number="49" hits="1"/>
+            <line number="50" hits="7"/>
+            <line number="51" hits="7"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidateDate.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_ValidateDate" filename="Traits/_ValidateDate.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="validateDate" signature="string $date" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="24" hits="7"/>
+                <line number="26" hits="7"/>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="7"/>
+                <line number="33" hits="7"/>
+                <line number="34" hits="7"/>
+                <line number="36" hits="7"/>
+                <line number="37" hits="2"/>
+                <line number="40" hits="5"/>
+                <line number="41" hits="5"/>
+                <line number="42" hits="5"/>
+                <line number="43" hits="5"/>
+                <line number="44" hits="5"/>
+                <line number="45" hits="5"/>
+                <line number="46" hits="5"/>
+                <line number="47" hits="5"/>
+                <line number="48" hits="5"/>
+                <line number="49" hits="5"/>
+                <line number="50" hits="5"/>
+                <line number="51" hits="5"/>
+                <line number="52" hits="5"/>
+                <line number="53" hits="5"/>
+                <line number="55" hits="5"/>
+                <line number="56" hits="4"/>
+                <line number="59" hits="5"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="7"/>
+            <line number="26" hits="7"/>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="7"/>
+            <line number="33" hits="7"/>
+            <line number="34" hits="7"/>
+            <line number="36" hits="7"/>
+            <line number="37" hits="2"/>
+            <line number="40" hits="5"/>
+            <line number="41" hits="5"/>
+            <line number="42" hits="5"/>
+            <line number="43" hits="5"/>
+            <line number="44" hits="5"/>
+            <line number="45" hits="5"/>
+            <line number="46" hits="5"/>
+            <line number="47" hits="5"/>
+            <line number="48" hits="5"/>
+            <line number="49" hits="5"/>
+            <line number="50" hits="5"/>
+            <line number="51" hits="5"/>
+            <line number="52" hits="5"/>
+            <line number="53" hits="5"/>
+            <line number="55" hits="5"/>
+            <line number="56" hits="4"/>
+            <line number="59" hits="5"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidateDateBasic.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Date\Traits\_ValidateDateBasic" filename="Traits/_ValidateDateBasic.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="validateDateBasic" signature="mixed $date, string $format" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="9"/>
+                <line number="26" hits="9"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="9"/>
+            <line number="26" hits="9"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

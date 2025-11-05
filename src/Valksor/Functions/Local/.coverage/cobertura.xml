@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="1" branch-rate="0" lines-covered="53" lines-valid="53" branches-covered="0" branches-valid="0" complexity="35" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Local</source>
+  </sources>
+  <packages>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Local\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CurlUA.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_CurlUA" filename="Traits/_CurlUA.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="getCurlUserAgent" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="26" hits="5"/>
+                <line number="27" hits="5"/>
+                <line number="29" hits="5"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="4"/>
+                <line number="35" hits="4"/>
+                <line number="36" hits="3"/>
+                <line number="39" hits="1"/>
+              </lines>
+            </method>
+            <method name="createProcess" signature="array $command" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="45" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="5"/>
+            <line number="27" hits="5"/>
+            <line number="29" hits="5"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="4"/>
+            <line number="35" hits="4"/>
+            <line number="36" hits="3"/>
+            <line number="39" hits="1"/>
+            <line number="45" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Exists.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_Exists" filename="Traits/_Exists.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="exists" signature="string|object $class" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="25" hits="15"/>
+                <line number="26" hits="1"/>
+                <line number="29" hits="15"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="15"/>
+            <line number="26" hits="1"/>
+            <line number="29" hits="15"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_FileExistsCwd.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_FileExistsCwd" filename="Traits/_FileExistsCwd.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="fileExistsCwd" signature="string $filename" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_GetEnv.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_GetEnv" filename="Traits/_GetEnv.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="getenv" signature="string $name, bool $localOnly" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_HumanFileSize.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_HumanFileSize" filename="Traits/_HumanFileSize.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="humanFileSize" signature="int $bytes, int $decimals" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="12"/>
+                <line number="26" hits="12"/>
+                <line number="27" hits="12"/>
+                <line number="29" hits="12"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="12"/>
+            <line number="26" hits="12"/>
+            <line number="27" hits="12"/>
+            <line number="29" hits="12"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsInstalled.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_IsInstalled" filename="Traits/_IsInstalled.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="isInstalled" signature="array $packages, bool $incDevReq" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="25" hits="7"/>
+                <line number="26" hits="7"/>
+                <line number="27" hits="5"/>
+                <line number="30" hits="4"/>
+                <line number="31" hits="4"/>
+                <line number="35" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="7"/>
+            <line number="26" hits="7"/>
+            <line number="27" hits="5"/>
+            <line number="30" hits="4"/>
+            <line number="31" hits="4"/>
+            <line number="35" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_MkDir.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_MkDir" filename="Traits/_MkDir.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="mkdir" signature="string $dir" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="26" hits="10"/>
+                <line number="27" hits="9"/>
+                <line number="29" hits="9"/>
+                <line number="30" hits="1"/>
+                <line number="34" hits="10"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="10"/>
+            <line number="27" hits="9"/>
+            <line number="29" hits="9"/>
+            <line number="30" hits="1"/>
+            <line number="34" hits="10"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RmDir.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_RmDir" filename="Traits/_RmDir.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="rmdir" signature="string $directory" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="28" hits="15"/>
+                <line number="30" hits="15"/>
+                <line number="31" hits="2"/>
+                <line number="33" hits="2"/>
+                <line number="36" hits="15"/>
+                <line number="38" hits="15"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="15"/>
+            <line number="30" hits="15"/>
+            <line number="31" hits="2"/>
+            <line number="33" hits="2"/>
+            <line number="36" hits="15"/>
+            <line number="38" hits="15"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_WillBeAvailable.php" line-rate="1" branch-rate="0" complexity="12">
+      <classes>
+        <class name="Valksor\Functions\Local\Traits\_WillBeAvailable" filename="Traits/_WillBeAvailable.php" line-rate="1" branch-rate="0" complexity="12">
+          <methods>
+            <method name="willBeAvailable" signature="string $package, string $class, array $parentPackages, string $rootPackageCheck" line-rate="1" branch-rate="0" complexity="11">
+              <lines>
+                <line number="29" hits="10"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="9"/>
+                <line number="35" hits="9"/>
+                <line number="36" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="41" hits="9"/>
+                <line number="42" hits="1"/>
+                <line number="45" hits="8"/>
+                <line number="46" hits="4"/>
+                <line number="49" hits="4"/>
+                <line number="51" hits="4"/>
+                <line number="52" hits="1"/>
+                <line number="55" hits="3"/>
+                <line number="56" hits="2"/>
+                <line number="57" hits="2"/>
+                <line number="61" hits="1"/>
+              </lines>
+            </method>
+            <method name="classExists" signature="string $class" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="67" hits="10"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="10"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="9"/>
+            <line number="35" hits="9"/>
+            <line number="36" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="41" hits="9"/>
+            <line number="42" hits="1"/>
+            <line number="45" hits="8"/>
+            <line number="46" hits="4"/>
+            <line number="49" hits="4"/>
+            <line number="51" hits="4"/>
+            <line number="52" hits="1"/>
+            <line number="55" hits="3"/>
+            <line number="56" hits="2"/>
+            <line number="57" hits="2"/>
+            <line number="61" hits="1"/>
+            <line number="67" hits="10"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

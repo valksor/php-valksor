@@ -1,5 +1,8 @@
 # Valksor Functions: Queue
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-queue/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-queue/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-queue?branch=master)
+
 A PHP library providing a simple and efficient queue implementation for managing collections of items in a FIFO (First-In-First-Out) manner.
 
 ## Installation

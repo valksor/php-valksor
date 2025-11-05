@@ -1,5 +1,8 @@
 # Valksor Component: SpxProfiler
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-spx-profiler/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-spx-profiler/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-spx-profiler?branch=master)
+
 A Symfony profiler data collector for the SPX PHP profiler, which collects and displays detailed profiling data for PHP applications. This component integrates SPX profiling directly into the Symfony web profiler for easy access to performance metrics during development.
 
 ## Installation

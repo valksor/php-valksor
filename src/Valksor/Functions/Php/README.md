@@ -1,5 +1,8 @@
 # Valksor Functions: PHP
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-php/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-php/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-php?branch=master)
+
 A PHP library providing enhanced PHP utility functions for reflection, introspection, and general PHP programming tasks.
 
 ## Installation

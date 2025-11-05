@@ -1,5 +1,8 @@
 # Valksor Functions: Preg
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-preg/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-preg/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-preg?branch=master)
+
 A PHP library providing enhanced regular expression (preg_*) functions with improved error handling and UTF-8 support.
 
 ## Installation

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="1" branch-rate="0" lines-covered="21" lines-valid="21" branches-covered="0" branches-valid="0" complexity="7" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Memoize</source>
+  </sources>
+  <packages>
+    <package name="Memoize.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Functions\Memoize\Memoize" filename="Memoize.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="memoize" signature="BackedEnum $context, int|string $key, callable $callback, bool $refresh, string $subKeys" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="30" hits="32"/>
+                <line number="31" hits="32"/>
+                <line number="33" hits="32"/>
+                <line number="34" hits="9"/>
+                <line number="35" hits="9"/>
+                <line number="36" hits="9"/>
+                <line number="39" hits="32"/>
+                <line number="41" hits="32"/>
+                <line number="42" hits="32"/>
+                <line number="45" hits="32"/>
+              </lines>
+            </method>
+            <method name="value" signature="BackedEnum $context, int|string $key, mixed $default, string $subKeys" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="54" hits="19"/>
+                <line number="55" hits="19"/>
+                <line number="56" hits="19"/>
+                <line number="58" hits="19"/>
+                <line number="59" hits="7"/>
+                <line number="60" hits="1"/>
+                <line number="63" hits="7"/>
+                <line number="64" hits="7"/>
+                <line number="67" hits="18"/>
+                <line number="69" hits="18"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="32"/>
+            <line number="31" hits="32"/>
+            <line number="33" hits="32"/>
+            <line number="34" hits="9"/>
+            <line number="35" hits="9"/>
+            <line number="36" hits="9"/>
+            <line number="39" hits="32"/>
+            <line number="41" hits="32"/>
+            <line number="42" hits="32"/>
+            <line number="45" hits="32"/>
+            <line number="54" hits="19"/>
+            <line number="55" hits="19"/>
+            <line number="56" hits="19"/>
+            <line number="58" hits="19"/>
+            <line number="59" hits="7"/>
+            <line number="60" hits="1"/>
+            <line number="63" hits="7"/>
+            <line number="64" hits="7"/>
+            <line number="67" hits="18"/>
+            <line number="69" hits="18"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MemoizeCache.php" line-rate="1" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Memoize\MemoizeCache" filename="MemoizeCache.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

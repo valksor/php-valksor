@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="1" branch-rate="0" lines-covered="71" lines-valid="71" branches-covered="0" branches-valid="0" complexity="26" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Sort</source>
+  </sources>
+  <packages>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Sort\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_BubbleSort.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Sort\Traits\_BubbleSort" filename="Traits/_BubbleSort.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="bubbleSort" signature="array $array" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="24" hits="10"/>
+                <line number="25" hits="10"/>
+                <line number="27" hits="10"/>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="10"/>
+                <line number="34" hits="9"/>
+                <line number="35" hits="8"/>
+                <line number="36" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="10"/>
+            <line number="25" hits="10"/>
+            <line number="27" hits="10"/>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="10"/>
+            <line number="34" hits="9"/>
+            <line number="35" hits="8"/>
+            <line number="36" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_MergeSort.php" line-rate="1" branch-rate="0" complexity="9">
+      <classes>
+        <class name="Valksor\Functions\Sort\Traits\_MergeSort" filename="Traits/_MergeSort.php" line-rate="1" branch-rate="0" complexity="9">
+          <methods>
+            <method name="merge" signature="array $left, array $right" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="25" hits="18"/>
+                <line number="26" hits="18"/>
+                <line number="28" hits="18"/>
+                <line number="29" hits="18"/>
+                <line number="31" hits="18"/>
+                <line number="32" hits="15"/>
+                <line number="33" hits="14"/>
+                <line number="34" hits="14"/>
+                <line number="36" hits="13"/>
+                <line number="37" hits="13"/>
+                <line number="41" hits="18"/>
+                <line number="42" hits="9"/>
+                <line number="43" hits="9"/>
+                <line number="46" hits="18"/>
+                <line number="47" hits="14"/>
+                <line number="48" hits="14"/>
+                <line number="51" hits="18"/>
+              </lines>
+            </method>
+            <method name="mergeSort" signature="array $array" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="57" hits="10"/>
+                <line number="58" hits="10"/>
+                <line number="61" hits="8"/>
+                <line number="63" hits="8"/>
+                <line number="64" hits="1"/>
+                <line number="66" hits="1"/>
+                <line number="69" hits="8"/>
+                <line number="70" hits="8"/>
+                <line number="71" hits="8"/>
+                <line number="73" hits="8"/>
+                <line number="74" hits="8"/>
+                <line number="76" hits="8"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="18"/>
+            <line number="26" hits="18"/>
+            <line number="28" hits="18"/>
+            <line number="29" hits="18"/>
+            <line number="31" hits="18"/>
+            <line number="32" hits="15"/>
+            <line number="33" hits="14"/>
+            <line number="34" hits="14"/>
+            <line number="36" hits="13"/>
+            <line number="37" hits="13"/>
+            <line number="41" hits="18"/>
+            <line number="42" hits="9"/>
+            <line number="43" hits="9"/>
+            <line number="46" hits="18"/>
+            <line number="47" hits="14"/>
+            <line number="48" hits="14"/>
+            <line number="51" hits="18"/>
+            <line number="57" hits="10"/>
+            <line number="58" hits="10"/>
+            <line number="61" hits="8"/>
+            <line number="63" hits="8"/>
+            <line number="64" hits="1"/>
+            <line number="66" hits="1"/>
+            <line number="69" hits="8"/>
+            <line number="70" hits="8"/>
+            <line number="71" hits="8"/>
+            <line number="73" hits="8"/>
+            <line number="74" hits="8"/>
+            <line number="76" hits="8"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_SortByParameter.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Sort\Traits\_SortByParameter" filename="Traits/_SortByParameter.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="sortByParameter" signature="array|object $data, string $parameter, string $order" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="32" hits="8"/>
+                <line number="33" hits="2"/>
+                <line number="36" hits="6"/>
+                <line number="38" hits="6"/>
+                <line number="39" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="45" hits="6"/>
+                <line number="47" hits="6"/>
+                <line number="48" hits="3"/>
+                <line number="51" hits="3"/>
+                <line number="53" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="8"/>
+            <line number="33" hits="2"/>
+            <line number="36" hits="6"/>
+            <line number="38" hits="6"/>
+            <line number="39" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="45" hits="6"/>
+            <line number="47" hits="6"/>
+            <line number="48" hits="3"/>
+            <line number="51" hits="3"/>
+            <line number="53" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_StableSort.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Sort\Traits\_StableSort" filename="Traits/_StableSort.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="stableSort" signature="array $elements, callable $getComparedValue, callable $compareValues" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="26" hits="8"/>
+                <line number="27" hits="7"/>
+                <line number="28" hits="8"/>
+                <line number="30" hits="8"/>
+                <line number="31" hits="6"/>
+                <line number="33" hits="6"/>
+                <line number="34" hits="5"/>
+                <line number="37" hits="5"/>
+                <line number="38" hits="8"/>
+                <line number="40" hits="8"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="8"/>
+            <line number="27" hits="7"/>
+            <line number="28" hits="8"/>
+            <line number="30" hits="8"/>
+            <line number="31" hits="6"/>
+            <line number="33" hits="6"/>
+            <line number="34" hits="5"/>
+            <line number="37" hits="5"/>
+            <line number="38" hits="8"/>
+            <line number="40" hits="8"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Usort.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Sort\Traits\_Usort" filename="Traits/_Usort.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="usort" signature="string $parameter, string $order" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="24" hits="14"/>
+                <line number="25" hits="13"/>
+                <line number="27" hits="13"/>
+                <line number="28" hits="13"/>
+                <line number="30" hits="13"/>
+                <line number="33" hits="13"/>
+                <line number="34" hits="2"/>
+                <line number="37" hits="11"/>
+                <line number="39" hits="11"/>
+                <line number="40" hits="8"/>
+                <line number="43" hits="7"/>
+                <line number="44" hits="14"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="14"/>
+            <line number="25" hits="13"/>
+            <line number="27" hits="13"/>
+            <line number="28" hits="13"/>
+            <line number="30" hits="13"/>
+            <line number="33" hits="13"/>
+            <line number="34" hits="2"/>
+            <line number="37" hits="11"/>
+            <line number="39" hits="11"/>
+            <line number="40" hits="8"/>
+            <line number="43" hits="7"/>
+            <line number="44" hits="14"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

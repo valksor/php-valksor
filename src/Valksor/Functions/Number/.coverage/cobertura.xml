@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="1" branch-rate="0" lines-covered="62" lines-valid="62" branches-covered="0" branches-valid="0" complexity="38" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Number</source>
+  </sources>
+  <packages>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Number\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_DistanceBetweenPoints.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_DistanceBetweenPoints" filename="Traits/_DistanceBetweenPoints.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="distanceBetweenPoints" signature="float $latitude1, float $longitude1, float $latitude2, float $longitude2, bool $km, int $precision" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="32" hits="5"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="4"/>
+                <line number="37" hits="4"/>
+                <line number="39" hits="4"/>
+                <line number="41" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="5"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="4"/>
+            <line number="37" hits="4"/>
+            <line number="39" hits="4"/>
+            <line number="41" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_DistanceInKm.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_DistanceInKm" filename="Traits/_DistanceInKm.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="distanceInKm" signature="float $latitude1, float $longitude1, float $latitude2, float $longitude2" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="29" hits="4"/>
+                <line number="31" hits="4"/>
+                <line number="32" hits="4"/>
+                <line number="34" hits="4"/>
+                <line number="36" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="4"/>
+            <line number="31" hits="4"/>
+            <line number="32" hits="4"/>
+            <line number="34" hits="4"/>
+            <line number="36" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_GreatestCommonDiviser.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_GreatestCommonDiviser" filename="Traits/_GreatestCommonDiviser.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="greatestCommonDivisor" signature="int $first, int $second" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="21" hits="11"/>
+                <line number="22" hits="11"/>
+                <line number="24" hits="11"/>
+                <line number="25" hits="11"/>
+                <line number="28" hits="11"/>
+                <line number="30" hits="11"/>
+                <line number="31" hits="2"/>
+                <line number="33" hits="2"/>
+                <line number="36" hits="11"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="11"/>
+            <line number="22" hits="11"/>
+            <line number="24" hits="11"/>
+            <line number="25" hits="11"/>
+            <line number="28" hits="11"/>
+            <line number="30" hits="11"/>
+            <line number="31" hits="2"/>
+            <line number="33" hits="2"/>
+            <line number="36" hits="11"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsFloat.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_IsFloat" filename="Traits/_IsFloat.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="isFloat" signature="mixed $value" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsInt.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_IsInt" filename="Traits/_IsInt.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="isInt" signature="mixed $value" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsPrimal.php" line-rate="1" branch-rate="0" complexity="8">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_IsPrimal" filename="Traits/_IsPrimal.php" line-rate="1" branch-rate="0" complexity="8">
+          <methods>
+            <method name="isPrimal" signature="int $number" line-rate="1" branch-rate="0" complexity="8">
+              <lines>
+                <line number="20" hits="8"/>
+                <line number="21" hits="2"/>
+                <line number="24" hits="6"/>
+                <line number="25" hits="1"/>
+                <line number="28" hits="6"/>
+                <line number="29" hits="3"/>
+                <line number="32" hits="5"/>
+                <line number="33" hits="2"/>
+                <line number="34" hits="1"/>
+                <line number="38" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="8"/>
+            <line number="21" hits="2"/>
+            <line number="24" hits="6"/>
+            <line number="25" hits="1"/>
+            <line number="28" hits="6"/>
+            <line number="29" hits="3"/>
+            <line number="32" hits="5"/>
+            <line number="33" hits="2"/>
+            <line number="34" hits="1"/>
+            <line number="38" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsPrime.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_IsPrime" filename="Traits/_IsPrime.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="isPrime" signature="int $number, bool $override" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="8"/>
+                <line number="25" hits="8"/>
+                <line number="26" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="8"/>
+                <line number="34" hits="8"/>
+                <line number="36" hits="8"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="8"/>
+            <line number="25" hits="8"/>
+            <line number="26" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="8"/>
+            <line number="34" hits="8"/>
+            <line number="36" hits="8"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsPrimeBelow1000.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_IsPrimeBelow1000" filename="Traits/_IsPrimeBelow1000.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="isPrimeBelow1000" signature="int $number" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="20" hits="8"/>
+                <line number="21" hits="2"/>
+                <line number="24" hits="8"/>
+                <line number="25" hits="6"/>
+                <line number="26" hits="2"/>
+                <line number="30" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="8"/>
+            <line number="21" hits="2"/>
+            <line number="24" hits="8"/>
+            <line number="25" hits="6"/>
+            <line number="26" hits="2"/>
+            <line number="30" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsPrimeGmp.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_IsPrimeGmp" filename="Traits/_IsPrimeGmp.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="isPrimeGmp" signature="int $number, bool $override" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="24" hits="10"/>
+                <line number="25" hits="9"/>
+                <line number="26" hits="6"/>
+                <line number="27" hits="6"/>
+                <line number="28" hits="9"/>
+                <line number="29" hits="9"/>
+                <line number="32" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="10"/>
+            <line number="25" hits="9"/>
+            <line number="26" hits="6"/>
+            <line number="27" hits="6"/>
+            <line number="28" hits="9"/>
+            <line number="29" hits="9"/>
+            <line number="32" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_LeastCommonMultiple.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_LeastCommonMultiple" filename="Traits/_LeastCommonMultiple.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="leastCommonMultiple" signature="int $first, int $second" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="21" hits="5"/>
+                <line number="22" hits="1"/>
+                <line number="25" hits="4"/>
+                <line number="27" hits="4"/>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="5"/>
+            <line number="22" hits="1"/>
+            <line number="25" hits="4"/>
+            <line number="27" hits="4"/>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Swap.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Number\Traits\_Swap" filename="Traits/_Swap.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="swap" signature="mixed $foo, mixed $bar" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="21" hits="6"/>
+                <line number="22" hits="1"/>
+                <line number="25" hits="5"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="6"/>
+            <line number="22" hits="1"/>
+            <line number="25" hits="5"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

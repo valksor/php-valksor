@@ -1,5 +1,8 @@
 # Valksor Functions: Date
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-date/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-date/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-date?branch=master)
+
 A PHP library providing enhanced date and time manipulation functions with improved validation and formatting capabilities.
 
 ## Installation

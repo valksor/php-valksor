@@ -1,5 +1,8 @@
 # Valksor XlsxParser
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-xlsx-parser/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-xlsx-parser/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-xlsx-parser?branch=master)
+
 A blazingly fast and simple XLSX parser for PHP 8.4+ that extracts data from Excel spreadsheets without any external dependencies.
 
 ## Features

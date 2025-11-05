@@ -1,5 +1,8 @@
 # Valksor Functions: Latvian
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-latvian/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-latvian/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-latvian?branch=master)
+
 A PHP library providing functions specific to Latvian language and data formats, including Latvian text comparison, sorting according to Latvian alphabet rules, and validation of Latvian personal identification codes.
 
 ## Installation

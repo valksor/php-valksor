@@ -1,5 +1,8 @@
 # Valksor Functions: Iteration
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-iteration/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-iteration/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-iteration?branch=master)
+
 A PHP library providing enhanced array and iteration utility functions for array manipulation, transformation, and validation.
 
 ## Installation

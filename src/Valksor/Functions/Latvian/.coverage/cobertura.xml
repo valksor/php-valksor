@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.94444444444444" branch-rate="0" lines-covered="51" lines-valid="54" branches-covered="0" branches-valid="0" complexity="20" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Latvian</source>
+  </sources>
+  <packages>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Latvian\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CleanPersonCode.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Latvian\Traits\_CleanPersonCode" filename="Traits/_CleanPersonCode.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="cleanPersonCode" signature="string $personCode" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="27" hits="11"/>
+                <line number="29" hits="11"/>
+                <line number="30" hits="3"/>
+                <line number="32" hits="3"/>
+                <line number="35" hits="11"/>
+                <line number="36" hits="11"/>
+                <line number="38" hits="11"/>
+                <line number="39" hits="1"/>
+                <line number="42" hits="10"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="11"/>
+            <line number="29" hits="11"/>
+            <line number="30" hits="3"/>
+            <line number="32" hits="3"/>
+            <line number="35" hits="11"/>
+            <line number="36" hits="11"/>
+            <line number="38" hits="11"/>
+            <line number="39" hits="1"/>
+            <line number="42" hits="10"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Compare.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Latvian\Traits\_Compare" filename="Traits/_Compare.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="compare" signature="array|object $first, array|object $second, string|int $field" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="25" hits="4"/>
+                <line number="27" hits="4"/>
+                <line number="28" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="34" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="4"/>
+            <line number="27" hits="4"/>
+            <line number="28" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="34" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_SortLatvian.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Latvian\Traits\_SortLatvian" filename="Traits/_SortLatvian.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="sortLatvian" signature="array $names, string|int $field, ?array $callback" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="2"/>
+                <line number="26" hits="2"/>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="2"/>
+                <line number="34" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="2"/>
+            <line number="26" hits="2"/>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="2"/>
+            <line number="34" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidatePersonCode.php" line-rate="0.72727272727273" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Latvian\Traits\_ValidatePersonCode" filename="Traits/_ValidatePersonCode.php" line-rate="0.72727272727273" branch-rate="0" complexity="6">
+          <methods>
+            <method name="validatePersonCode" signature="string $personCode" line-rate="0.72727272727273" branch-rate="0" complexity="6">
+              <lines>
+                <line number="24" hits="4"/>
+                <line number="26" hits="4"/>
+                <line number="27" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="35" hits="4"/>
+                <line number="37" hits="4"/>
+                <line number="38" hits="1"/>
+                <line number="39" hits="0"/>
+                <line number="41" hits="3"/>
+                <line number="42" hits="0"/>
+                <line number="45" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="4"/>
+            <line number="26" hits="4"/>
+            <line number="27" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="35" hits="4"/>
+            <line number="37" hits="4"/>
+            <line number="38" hits="1"/>
+            <line number="39" hits="0"/>
+            <line number="41" hits="3"/>
+            <line number="42" hits="0"/>
+            <line number="45" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidatePersonCodeNew.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Functions\Latvian\Traits\_ValidatePersonCodeNew" filename="Traits/_ValidatePersonCodeNew.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="validatePersonCodeNew" signature="string $personCode" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="20" hits="5"/>
+                <line number="22" hits="5"/>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="28" hits="5"/>
+                <line number="30" hits="4"/>
+                <line number="31" hits="4"/>
+                <line number="33" hits="4"/>
+                <line number="34" hits="4"/>
+                <line number="37" hits="4"/>
+                <line number="39" hits="4"/>
+                <line number="40" hits="3"/>
+                <line number="43" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="5"/>
+            <line number="22" hits="5"/>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="28" hits="5"/>
+            <line number="30" hits="4"/>
+            <line number="31" hits="4"/>
+            <line number="33" hits="4"/>
+            <line number="34" hits="4"/>
+            <line number="37" hits="4"/>
+            <line number="39" hits="4"/>
+            <line number="40" hits="3"/>
+            <line number="43" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidatePersonCodeOld.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Latvian\Traits\_ValidatePersonCodeOld" filename="Traits/_ValidatePersonCodeOld.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="validatePersonCodeOld" signature="string $personCode" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="23" hits="2"/>
+                <line number="25" hits="2"/>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="31" hits="2"/>
+                <line number="33" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="36" hits="2"/>
+                <line number="37" hits="2"/>
+                <line number="40" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="2"/>
+            <line number="25" hits="2"/>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="31" hits="2"/>
+            <line number="33" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="36" hits="2"/>
+            <line number="37" hits="2"/>
+            <line number="40" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

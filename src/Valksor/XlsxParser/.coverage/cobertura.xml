@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.99489795918367" branch-rate="0" lines-covered="195" lines-valid="196" branches-covered="0" branches-valid="0" complexity="135" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/XlsxParser</source>
+  </sources>
+  <packages>
+    <package name="Contracts/XLSXInterface.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Contracts/XLSXParserInterface.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="Exception/InvalidArchiveException.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\XlsxParser\Exception\InvalidArchiveException" filename="Exception/InvalidArchiveException.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="__construct" signature="int $code, ?Throwable $previous" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="3"/>
+              </lines>
+            </method>
+            <method name="getErrorMessage" signature="int $errorCode" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="37" hits="3"/>
+              </lines>
+            </method>
+            <method name="getZipErrorString" signature="int $value" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="43" hits="3"/>
+                <line number="45" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="3"/>
+            <line number="37" hits="3"/>
+            <line number="43" hits="3"/>
+            <line number="45" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Exception/InvalidIndexException.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\XlsxParser\Exception\InvalidIndexException" filename="Exception/InvalidIndexException.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="__construct" signature="string $name, ?Throwable $previous" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Exception/InvalidXLSXFileException.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\XlsxParser\Exception\InvalidXLSXFileException" filename="Exception/InvalidXLSXFileException.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="__construct" signature="string $path, ?Throwable $previous" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Transformer/Column.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\XlsxParser\Transformer\Column" filename="Transformer/Column.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="transform" signature="string $name" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="26" hits="3"/>
+                <line number="28" hits="3"/>
+                <line number="29" hits="3"/>
+                <line number="31" hits="3"/>
+                <line number="32" hits="3"/>
+                <line number="35" hits="3"/>
+                <line number="38" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="3"/>
+            <line number="28" hits="3"/>
+            <line number="29" hits="3"/>
+            <line number="31" hits="3"/>
+            <line number="32" hits="3"/>
+            <line number="35" hits="3"/>
+            <line number="38" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Transformer/Date.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\XlsxParser\Transformer\Date" filename="Transformer/Date.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="transform" signature="float|int $value" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="37" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="37" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Transformer/Value.php" line-rate="1" branch-rate="0" complexity="11">
+      <classes>
+        <class name="Valksor\XlsxParser\Transformer\Value" filename="Transformer/Value.php" line-rate="1" branch-rate="0" complexity="11">
+          <methods>
+            <method name="__construct" signature="SharedStrings $sharedStrings, Styles $styles, ?Date $dateTransformer" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="41" hits="3"/>
+              </lines>
+            </method>
+            <method name="transform" signature="string $value, string $type, string $style" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="49" hits="3"/>
+                <line number="50" hits="2"/>
+                <line number="51" hits="2"/>
+                <line number="52" hits="3"/>
+                <line number="53" hits="3"/>
+                <line number="54" hits="3"/>
+              </lines>
+            </method>
+            <method name="transformNumber" signature="string $style, mixed $value" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="62" hits="3"/>
+                <line number="63" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="41" hits="3"/>
+            <line number="49" hits="3"/>
+            <line number="50" hits="2"/>
+            <line number="51" hits="2"/>
+            <line number="52" hits="3"/>
+            <line number="53" hits="3"/>
+            <line number="54" hits="3"/>
+            <line number="62" hits="3"/>
+            <line number="63" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="XLSXParser.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\XlsxParser\XLSXParser" filename="XLSXParser.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="open" signature="string $path" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="8"/>
+                <line number="26" hits="8"/>
+                <line number="27" hits="8"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="8"/>
+            <line number="26" hits="8"/>
+            <line number="27" hits="8"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/AbstractXMLDictionary.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\AbstractXMLDictionary" filename="Xlsx/AbstractXMLDictionary.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="get" signature="int $index" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="30" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="38" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="38" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/AbstractXMLResource.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\AbstractXMLResource" filename="Xlsx/AbstractXMLResource.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="__construct" signature="string $path" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="29" hits="5"/>
+              </lines>
+            </method>
+            <method name="__destruct" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="33" hits="5"/>
+              </lines>
+            </method>
+            <method name="closeXMLReader" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="38" hits="5"/>
+                <line number="39" hits="5"/>
+              </lines>
+            </method>
+            <method name="createXMLReader" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="44" hits="5"/>
+              </lines>
+            </method>
+            <method name="getXMLReader" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="49" hits="5"/>
+              </lines>
+            </method>
+            <method name="validateXMLReader" signature="XMLReader $xml" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="56" hits="5"/>
+                <line number="57" hits="5"/>
+                <line number="58" hits="1"/>
+                <line number="59" hits="1"/>
+                <line number="62" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="5"/>
+            <line number="33" hits="5"/>
+            <line number="38" hits="5"/>
+            <line number="39" hits="5"/>
+            <line number="44" hits="5"/>
+            <line number="49" hits="5"/>
+            <line number="56" hits="5"/>
+            <line number="57" hits="5"/>
+            <line number="58" hits="1"/>
+            <line number="59" hits="1"/>
+            <line number="62" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/Archive.php" line-rate="1" branch-rate="0" complexity="13">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\Archive" filename="Xlsx/Archive.php" line-rate="1" branch-rate="0" complexity="13">
+          <methods>
+            <method name="__construct" signature="string $archivePath" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="40" hits="8"/>
+                <line number="42" hits="8"/>
+                <line number="43" hits="8"/>
+                <line number="46" hits="8"/>
+                <line number="47" hits="8"/>
+              </lines>
+            </method>
+            <method name="__destruct" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="52" hits="8"/>
+                <line number="53" hits="8"/>
+              </lines>
+            </method>
+            <method name="extract" signature="string $filePath" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="59" hits="8"/>
+                <line number="61" hits="8"/>
+                <line number="62" hits="8"/>
+                <line number="65" hits="5"/>
+              </lines>
+            </method>
+            <method name="closeArchive" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="70" hits="8"/>
+                <line number="71" hits="8"/>
+              </lines>
+            </method>
+            <method name="deleteTmp" signature="" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="76" hits="8"/>
+                <line number="77" hits="3"/>
+                <line number="80" hits="5"/>
+                <line number="81" hits="4"/>
+                <line number="82" hits="4"/>
+                <line number="84" hits="4"/>
+                <line number="87" hits="4"/>
+                <line number="90" hits="5"/>
+              </lines>
+            </method>
+            <method name="getArchive" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="95" hits="8"/>
+                <line number="96" hits="8"/>
+                <line number="97" hits="8"/>
+                <line number="99" hits="8"/>
+                <line number="100" hits="3"/>
+                <line number="102" hits="3"/>
+                <line number="106" hits="5"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="40" hits="8"/>
+            <line number="42" hits="8"/>
+            <line number="43" hits="8"/>
+            <line number="46" hits="8"/>
+            <line number="47" hits="8"/>
+            <line number="52" hits="8"/>
+            <line number="53" hits="8"/>
+            <line number="59" hits="8"/>
+            <line number="61" hits="8"/>
+            <line number="62" hits="8"/>
+            <line number="65" hits="5"/>
+            <line number="70" hits="8"/>
+            <line number="71" hits="8"/>
+            <line number="76" hits="8"/>
+            <line number="77" hits="3"/>
+            <line number="80" hits="5"/>
+            <line number="81" hits="4"/>
+            <line number="82" hits="4"/>
+            <line number="84" hits="4"/>
+            <line number="87" hits="4"/>
+            <line number="90" hits="5"/>
+            <line number="95" hits="8"/>
+            <line number="96" hits="8"/>
+            <line number="97" hits="8"/>
+            <line number="99" hits="8"/>
+            <line number="100" hits="3"/>
+            <line number="102" hits="3"/>
+            <line number="106" hits="5"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/Relationships.php" line-rate="1" branch-rate="0" complexity="11">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\Relationships" filename="Xlsx/Relationships.php" line-rate="1" branch-rate="0" complexity="11">
+          <methods>
+            <method name="__construct" signature="string $path" line-rate="1" branch-rate="0" complexity="8">
+              <lines>
+                <line number="39" hits="5"/>
+                <line number="40" hits="5"/>
+                <line number="42" hits="4"/>
+                <line number="43" hits="4"/>
+                <line number="44" hits="4"/>
+                <line number="46" hits="4"/>
+                <line number="47" hits="4"/>
+                <line number="48" hits="4"/>
+                <line number="49" hits="3"/>
+                <line number="50" hits="1"/>
+                <line number="51" hits="4"/>
+                <line number="55" hits="4"/>
+              </lines>
+            </method>
+            <method name="getSharedStringsPath" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="60" hits="3"/>
+              </lines>
+            </method>
+            <method name="getStylesPath" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="65" hits="3"/>
+              </lines>
+            </method>
+            <method name="getWorksheetPath" signature="string $rId" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="71" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="39" hits="5"/>
+            <line number="40" hits="5"/>
+            <line number="42" hits="4"/>
+            <line number="43" hits="4"/>
+            <line number="44" hits="4"/>
+            <line number="46" hits="4"/>
+            <line number="47" hits="4"/>
+            <line number="48" hits="4"/>
+            <line number="49" hits="3"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="4"/>
+            <line number="55" hits="4"/>
+            <line number="60" hits="3"/>
+            <line number="65" hits="3"/>
+            <line number="71" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/Row.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\Row" filename="Xlsx/Row.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="addValue" signature="int $columnIndex, mixed $value" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="28" hits="3"/>
+                <line number="29" hits="3"/>
+              </lines>
+            </method>
+            <method name="getData" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="35" hits="3"/>
+                <line number="37" hits="3"/>
+                <line number="38" hits="3"/>
+                <line number="39" hits="2"/>
+                <line number="42" hits="3"/>
+                <line number="45" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="3"/>
+            <line number="29" hits="3"/>
+            <line number="35" hits="3"/>
+            <line number="37" hits="3"/>
+            <line number="38" hits="3"/>
+            <line number="39" hits="2"/>
+            <line number="42" hits="3"/>
+            <line number="45" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/RowIterator.php" line-rate="1" branch-rate="0" complexity="24">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\RowIterator" filename="Xlsx/RowIterator.php" line-rate="1" branch-rate="0" complexity="24">
+          <methods>
+            <method name="__construct" signature="Value $valueTransformer, string $path, ?Column $columnTransformer" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="47" hits="3"/>
+              </lines>
+            </method>
+            <method name="current" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="52" hits="3"/>
+              </lines>
+            </method>
+            <method name="key" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="57" hits="2"/>
+              </lines>
+            </method>
+            <method name="next" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="62" hits="3"/>
+                <line number="64" hits="3"/>
+                <line number="65" hits="3"/>
+                <line number="67" hits="3"/>
+                <line number="68" hits="3"/>
+                <line number="71" hits="3"/>
+              </lines>
+            </method>
+            <method name="rewind" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="77" hits="3"/>
+                <line number="79" hits="3"/>
+                <line number="81" hits="3"/>
+              </lines>
+            </method>
+            <method name="valid" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="86" hits="3"/>
+              </lines>
+            </method>
+            <method name="process" signature="" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="91" hits="3"/>
+                <line number="92" hits="3"/>
+                <line number="93" hits="3"/>
+                <line number="94" hits="3"/>
+                <line number="95" hits="3"/>
+                <line number="96" hits="3"/>
+                <line number="97" hits="3"/>
+              </lines>
+            </method>
+            <method name="processColumn" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="103" hits="3"/>
+                <line number="104" hits="3"/>
+                <line number="105" hits="3"/>
+              </lines>
+            </method>
+            <method name="processDefault" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="110" hits="3"/>
+              </lines>
+            </method>
+            <method name="processEndElement" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="115" hits="3"/>
+                <line number="116" hits="3"/>
+              </lines>
+            </method>
+            <method name="processEndValue" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="122" hits="3"/>
+                <line number="123" hits="3"/>
+                <line number="125" hits="3"/>
+                <line number="126" hits="3"/>
+                <line number="127" hits="3"/>
+              </lines>
+            </method>
+            <method name="processRow" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="134" hits="3"/>
+                <line number="135" hits="3"/>
+              </lines>
+            </method>
+            <method name="processValue" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="140" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="47" hits="3"/>
+            <line number="52" hits="3"/>
+            <line number="57" hits="2"/>
+            <line number="62" hits="3"/>
+            <line number="64" hits="3"/>
+            <line number="65" hits="3"/>
+            <line number="67" hits="3"/>
+            <line number="68" hits="3"/>
+            <line number="71" hits="3"/>
+            <line number="77" hits="3"/>
+            <line number="79" hits="3"/>
+            <line number="81" hits="3"/>
+            <line number="86" hits="3"/>
+            <line number="91" hits="3"/>
+            <line number="92" hits="3"/>
+            <line number="93" hits="3"/>
+            <line number="94" hits="3"/>
+            <line number="95" hits="3"/>
+            <line number="96" hits="3"/>
+            <line number="97" hits="3"/>
+            <line number="103" hits="3"/>
+            <line number="104" hits="3"/>
+            <line number="105" hits="3"/>
+            <line number="110" hits="3"/>
+            <line number="115" hits="3"/>
+            <line number="116" hits="3"/>
+            <line number="122" hits="3"/>
+            <line number="123" hits="3"/>
+            <line number="125" hits="3"/>
+            <line number="126" hits="3"/>
+            <line number="127" hits="3"/>
+            <line number="134" hits="3"/>
+            <line number="135" hits="3"/>
+            <line number="140" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/SharedStrings.php" line-rate="0.90909090909091" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\SharedStrings" filename="Xlsx/SharedStrings.php" line-rate="0.90909090909091" branch-rate="0" complexity="7">
+          <methods>
+            <method name="readNext" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="32" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="36" hits="2"/>
+                <line number="40" hits="2"/>
+                <line number="41" hits="2"/>
+              </lines>
+            </method>
+            <method name="process" signature="XMLReader $xml" line-rate="0.8" branch-rate="0" complexity="4">
+              <lines>
+                <line number="47" hits="2"/>
+                <line number="48" hits="2"/>
+                <line number="49" hits="2"/>
+                <line number="50" hits="0"/>
+                <line number="51" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="36" hits="2"/>
+            <line number="40" hits="2"/>
+            <line number="41" hits="2"/>
+            <line number="47" hits="2"/>
+            <line number="48" hits="2"/>
+            <line number="49" hits="2"/>
+            <line number="50" hits="0"/>
+            <line number="51" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/Styles.php" line-rate="1" branch-rate="0" complexity="27">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\Styles" filename="Xlsx/Styles.php" line-rate="1" branch-rate="0" complexity="27">
+          <methods>
+            <method name="createXMLReader" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="41" hits="2"/>
+                <line number="42" hits="2"/>
+                <line number="44" hits="2"/>
+                <line number="45" hits="2"/>
+                <line number="48" hits="2"/>
+              </lines>
+            </method>
+            <method name="readNext" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="53" hits="2"/>
+                <line number="55" hits="2"/>
+                <line number="56" hits="2"/>
+                <line number="57" hits="2"/>
+                <line number="60" hits="2"/>
+                <line number="63" hits="2"/>
+                <line number="64" hits="2"/>
+              </lines>
+            </method>
+            <method name="getValue" signature="int $fmtId" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="71" hits="2"/>
+                <line number="72" hits="2"/>
+                <line number="73" hits="2"/>
+              </lines>
+            </method>
+            <method name="matchDateFormat" signature="XMLReader $xml" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="80" hits="2"/>
+              </lines>
+            </method>
+            <method name="process" signature="XMLReader $xml" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="86" hits="2"/>
+                <line number="87" hits="2"/>
+                <line number="88" hits="2"/>
+                <line number="89" hits="2"/>
+                <line number="90" hits="2"/>
+                <line number="91" hits="2"/>
+              </lines>
+            </method>
+            <method name="processCellXfs" signature="XMLReader $xml" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="98" hits="2"/>
+                <line number="99" hits="2"/>
+                <line number="100" hits="2"/>
+                <line number="101" hits="2"/>
+                <line number="102" hits="2"/>
+                <line number="103" hits="2"/>
+                <line number="106" hits="2"/>
+              </lines>
+            </method>
+            <method name="processRewind" signature="XMLReader $xml" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="112" hits="2"/>
+                <line number="113" hits="2"/>
+                <line number="114" hits="2"/>
+                <line number="117" hits="2"/>
+              </lines>
+            </method>
+            <method name="xfs" signature="XMLReader $xml" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="123" hits="2"/>
+                <line number="124" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="41" hits="2"/>
+            <line number="42" hits="2"/>
+            <line number="44" hits="2"/>
+            <line number="45" hits="2"/>
+            <line number="48" hits="2"/>
+            <line number="53" hits="2"/>
+            <line number="55" hits="2"/>
+            <line number="56" hits="2"/>
+            <line number="57" hits="2"/>
+            <line number="60" hits="2"/>
+            <line number="63" hits="2"/>
+            <line number="64" hits="2"/>
+            <line number="71" hits="2"/>
+            <line number="72" hits="2"/>
+            <line number="73" hits="2"/>
+            <line number="80" hits="2"/>
+            <line number="86" hits="2"/>
+            <line number="87" hits="2"/>
+            <line number="88" hits="2"/>
+            <line number="89" hits="2"/>
+            <line number="90" hits="2"/>
+            <line number="91" hits="2"/>
+            <line number="98" hits="2"/>
+            <line number="99" hits="2"/>
+            <line number="100" hits="2"/>
+            <line number="101" hits="2"/>
+            <line number="102" hits="2"/>
+            <line number="103" hits="2"/>
+            <line number="106" hits="2"/>
+            <line number="112" hits="2"/>
+            <line number="113" hits="2"/>
+            <line number="114" hits="2"/>
+            <line number="117" hits="2"/>
+            <line number="123" hits="2"/>
+            <line number="124" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/Worksheet.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\Worksheet" filename="Xlsx/Worksheet.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="getWorksheetPaths" signature="Relationships $relationships" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="29" hits="4"/>
+                <line number="30" hits="4"/>
+                <line number="32" hits="4"/>
+                <line number="33" hits="4"/>
+                <line number="34" hits="4"/>
+                <line number="35" hits="4"/>
+                <line number="39" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="4"/>
+            <line number="30" hits="4"/>
+            <line number="32" hits="4"/>
+            <line number="33" hits="4"/>
+            <line number="34" hits="4"/>
+            <line number="35" hits="4"/>
+            <line number="39" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Xlsx/XLSX.php" line-rate="1" branch-rate="0" complexity="11">
+      <classes>
+        <class name="Valksor\XlsxParser\Xlsx\XLSX" filename="Xlsx/XLSX.php" line-rate="1" branch-rate="0" complexity="11">
+          <methods>
+            <method name="__construct" signature="Archive $archive" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="39" hits="8"/>
+              </lines>
+            </method>
+            <method name="getIndex" signature="string $name" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="44" hits="7"/>
+                <line number="46" hits="4"/>
+                <line number="47" hits="3"/>
+                <line number="48" hits="4"/>
+                <line number="49" hits="4"/>
+              </lines>
+            </method>
+            <method name="getRows" signature="int $index" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="55" hits="3"/>
+              </lines>
+            </method>
+            <method name="getWorksheets" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="60" hits="8"/>
+              </lines>
+            </method>
+            <method name="getRelationships" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="65" hits="5"/>
+              </lines>
+            </method>
+            <method name="getSharedStrings" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="70" hits="3"/>
+              </lines>
+            </method>
+            <method name="getStyles" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="75" hits="3"/>
+              </lines>
+            </method>
+            <method name="getValueTransformer" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="80" hits="3"/>
+              </lines>
+            </method>
+            <method name="getWorksheetPaths" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="85" hits="8"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="39" hits="8"/>
+            <line number="44" hits="7"/>
+            <line number="46" hits="4"/>
+            <line number="47" hits="3"/>
+            <line number="48" hits="4"/>
+            <line number="49" hits="4"/>
+            <line number="55" hits="3"/>
+            <line number="60" hits="8"/>
+            <line number="65" hits="5"/>
+            <line number="70" hits="3"/>
+            <line number="75" hits="3"/>
+            <line number="80" hits="3"/>
+            <line number="85" hits="8"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

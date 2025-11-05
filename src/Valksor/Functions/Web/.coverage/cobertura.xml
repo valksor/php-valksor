@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="1" branch-rate="0" lines-covered="167" lines-valid="167" branches-covered="0" branches-valid="0" complexity="81" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Functions/Web</source>
+  </sources>
+  <packages>
+    <package name="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes>
+        <class name="Valksor\Functions\Web\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
+          <methods/>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ArrayFromQueryString.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_ArrayFromQueryString" filename="Traits/_ArrayFromQueryString.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="arrayFromQueryString" signature="string $query" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="29" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="37" hits="2"/>
+                <line number="39" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="37" hits="2"/>
+            <line number="39" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_BuildArrayFromObject.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_BuildArrayFromObject" filename="Traits/_BuildArrayFromObject.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="buildArrayFromObject" signature="object $object" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="27" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="37" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="37" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_BuildHttpQueryArray.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_BuildHttpQueryArray" filename="Traits/_BuildHttpQueryArray.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="buildHttpQueryArray" signature="array|object $input, ?string $parent" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="29" hits="6"/>
+                <line number="31" hits="6"/>
+                <line number="33" hits="6"/>
+                <line number="34" hits="2"/>
+                <line number="37" hits="2"/>
+                <line number="40" hits="6"/>
+                <line number="41" hits="6"/>
+                <line number="42" hits="5"/>
+                <line number="43" hits="1"/>
+                <line number="44" hits="6"/>
+                <line number="46" hits="6"/>
+                <line number="49" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="6"/>
+            <line number="31" hits="6"/>
+            <line number="33" hits="6"/>
+            <line number="34" hits="2"/>
+            <line number="37" hits="2"/>
+            <line number="40" hits="6"/>
+            <line number="41" hits="6"/>
+            <line number="42" hits="5"/>
+            <line number="43" hits="1"/>
+            <line number="44" hits="6"/>
+            <line number="46" hits="6"/>
+            <line number="49" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_BuildHttpQueryString.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_BuildHttpQueryString" filename="Traits/_BuildHttpQueryString.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="buildHttpQueryString" signature="object $object" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="27" hits="3"/>
+                <line number="29" hits="3"/>
+                <line number="30" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="35" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="3"/>
+            <line number="29" hits="3"/>
+            <line number="30" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="35" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CIDRRange.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_CIDRRange" filename="Traits/_CIDRRange.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="CIDRRange" signature="string $cidr, bool $int" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="43" hits="1"/>
+                <line number="44" hits="1"/>
+                <line number="46" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="50" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="50" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CheckHttpXForwardedProto.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_CheckHttpXForwardedProto" filename="Traits/_CheckHttpXForwardedProto.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="checkHttpXForwardedProto" signature="Request $request" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CheckHttpXForwardedSsl.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_CheckHttpXForwardedSsl" filename="Traits/_CheckHttpXForwardedSsl.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="checkHttpXForwardedSsl" signature="Request $request" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CheckHttps.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_CheckHttps" filename="Traits/_CheckHttps.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="checkHttps" signature="Request $request" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_CheckServerPort.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_CheckServerPort" filename="Traits/_CheckServerPort.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="checkServerPort" signature="Request $request" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsAbsolute.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_IsAbsolute" filename="Traits/_IsAbsolute.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="isAbsolute" signature="string $path" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="22" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsCIDR.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_IsCIDR" filename="Traits/_IsCIDR.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="isCIDR" signature="string $cidr" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="24" hits="2"/>
+                <line number="26" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="38" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="2"/>
+            <line number="26" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="38" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsHttps.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_IsHttps" filename="Traits/_IsHttps.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="isHttps" signature="Request $request" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="22" hits="2"/>
+                <line number="24" hits="2"/>
+                <line number="25" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="33" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="2"/>
+            <line number="24" hits="2"/>
+            <line number="25" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="33" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsIE.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_IsIE" filename="Traits/_IsIE.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="isIE" signature="Request $request" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="31" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="31" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_IsUrl.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_IsUrl" filename="Traits/_IsUrl.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="isUrl" signature="string $url" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_LatestReleaseTag.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_LatestReleaseTag" filename="Traits/_LatestReleaseTag.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="latestReleaseTag" signature="string $repository" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="43" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="43" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ParseHeaders.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_ParseHeaders" filename="Traits/_ParseHeaders.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="parseHeaders" signature="string $rawHeaders" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="37" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="37" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RawHeaders.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_RawHeaders" filename="Traits/_RawHeaders.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="rawHeaders" signature="HeaderBag $headerBag" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="22" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="28" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="28" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RemoteIp.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_RemoteIp" filename="Traits/_RemoteIp.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="remoteIp" signature="Request $request, bool $trust" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="25" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="35" hits="2"/>
+                <line number="36" hits="1"/>
+                <line number="39" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="35" hits="2"/>
+            <line number="36" hits="1"/>
+            <line number="39" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RemoteIpCF.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_RemoteIpCF" filename="Traits/_RemoteIpCF.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="remoteIpCF" signature="Request $request, bool $trust" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RequestIdentity.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_RequestIdentity" filename="Traits/_RequestIdentity.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="requestIdentity" signature="Request $request, string $ipUrl" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="43" hits="1"/>
+                <line number="45" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="45" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RequestMethods.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_RequestMethods" filename="Traits/_RequestMethods.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="requestMethods" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="38" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="38" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Result.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_Result" filename="Traits/_Result.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="result" signature="array $result, string $key, mixed $value" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="34" hits="6"/>
+                <line number="35" hits="5"/>
+                <line number="37" hits="5"/>
+                <line number="38" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="43" hits="5"/>
+                <line number="45" hits="5"/>
+                <line number="46" hits="5"/>
+                <line number="47" hits="5"/>
+                <line number="50" hits="5"/>
+                <line number="53" hits="6"/>
+                <line number="55" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="6"/>
+            <line number="35" hits="5"/>
+            <line number="37" hits="5"/>
+            <line number="38" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="43" hits="5"/>
+            <line number="45" hits="5"/>
+            <line number="46" hits="5"/>
+            <line number="47" hits="5"/>
+            <line number="50" hits="5"/>
+            <line number="53" hits="6"/>
+            <line number="55" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_RouteExists.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_RouteExists" filename="Traits/_RouteExists.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="routeExists" signature="RouterInterface $router, string $route" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="23" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_Schema.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_Schema" filename="Traits/_Schema.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="schema" signature="Request $request" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="31" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="31" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_UrlEncode.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_UrlEncode" filename="Traits/_UrlEncode.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="urlEncode" signature="string $url" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="45" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="45" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidateCIDR.php" line-rate="1" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_ValidateCIDR" filename="Traits/_ValidateCIDR.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="validateCIDR" signature="string $cidr" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="23" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="36" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="36" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidateEmail.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_ValidateEmail" filename="Traits/_ValidateEmail.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="validateEmail" signature="string $email" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="25" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Traits/_ValidateIPAddress.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Functions\Web\Traits\_ValidateIPAddress" filename="Traits/_ValidateIPAddress.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="validateIPAddress" signature="string $ipAddress, bool $deny" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="28" hits="3"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="3"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

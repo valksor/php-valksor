@@ -1,5 +1,8 @@
 # Valksor Functions: Handler
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-handler/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-handler/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-handler?branch=master)
+
 A PHP library providing function handling utilities including a Chain of Responsibility pattern implementation and function execution utilities.
 
 ## Installation

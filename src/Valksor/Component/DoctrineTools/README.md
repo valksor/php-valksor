@@ -1,5 +1,8 @@
 # Valksor Component: DoctrineTools
 
+[![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-doctrine-tools/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/valksor/php-doctrine-tools/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-doctrine-tools?branch=master)
+
 A comprehensive collection of Doctrine tools, traits, and utilities that enhance database operations, provide custom DQL functions, UTC datetime handling, and entity management capabilities for Symfony applications using Doctrine ORM and DBAL.
 
 ## Features
