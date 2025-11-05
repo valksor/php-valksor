@@ -37,6 +37,7 @@
             <directory>src/Valksor/Component/SpxProfiler/Tests</directory>
             <directory>src/Valksor/Component/Sse/Tests</directory>
             <directory>src/Valksor/Component/DoctrineTools/Tests</directory>
+            <directory>src/Valksor/XlsxParser/Tests</directory>
         </testsuite>
     </testsuites>
 

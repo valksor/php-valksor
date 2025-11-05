@@ -1,9 +1,5 @@
-| Q             | A
-| ------------- | ---
-| Branch?       | spaghetti
-| Bug fix?      | yes / no
-| New feature?  | yes / no
-| Deprecations? | yes / no
-| Tickets       | Fix #...
-| License       | MIT
+Please do not submit any Pull Requests here. They will be closed.
 ---
+
+Please submit your PR here instead:
+https://github.com/valksor/php-valksor

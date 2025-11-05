@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/var/www/html/valksor/src/Valksor/XlsxParser/phpunit.xml" tests="8" assertions="14" errors="0" failures="0" skipped="0" time="0.001000">
+    <testsuite name="Xlsx Parser Tests" tests="8" assertions="14" errors="0" failures="0" skipped="0" time="0.001000">
+      <testsuite name="Valksor\XlsxParser\Tests\XLSXParserTest" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" tests="8" assertions="14" errors="0" failures="0" skipped="0" time="0.001000">
+        <testcase name="testDataValidity" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="24" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="3" time="0.001000"/>
+        <testcase name="testOpen" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="47" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="4" time="0.001000"/>
+        <testcase name="testOpenCellXfs" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="62" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="2" time="0.001000"/>
+        <testcase name="testOpenNotExists" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="79" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenNotXlsxXml" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="86" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenNotXlsxZip" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="93" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenNotZip" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="100" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenWrongIndex" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="107" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

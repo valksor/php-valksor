@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/var/www/html/valksor/phpunit.xml" tests="812" assertions="2157" errors="0" failures="0" skipped="1" time="0.001000">
-    <testsuite name="Valksor Complete" tests="812" assertions="2157" errors="0" failures="0" skipped="1" time="0.001000">
+  <testsuite name="/var/www/html/valksor/phpunit.xml" tests="820" assertions="2171" errors="0" failures="0" skipped="1" time="0.001000">
+    <testsuite name="Valksor Complete" tests="820" assertions="2171" errors="0" failures="0" skipped="1" time="0.001000">
       <testsuite name="Valksor\Functions\Date\Tests\DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" tests="63" assertions="190" errors="0" failures="0" skipped="0" time="0.001000">
         <testcase name="testCalculateEasterWithDifferentCenturies" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="26" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" assertions="3" time="0.001000"/>
         <testcase name="testCalculateEasterWithEarlyYears" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="39" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" assertions="4" time="0.001000"/>
@@ -901,6 +901,16 @@
         <testcase name="testConstructorInitializesUtcTimezone" file="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Tests/UTCDateTimeImmutableTest.php" line="27" class="Valksor\Component\DoctrineTools\Tests\UTCDateTimeImmutableTest" classname="Valksor.Component.DoctrineTools.Tests.UTCDateTimeImmutableTest" assertions="2" time="0.001000"/>
         <testcase name="testCreateFromFormatNormalizesTimezone" file="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Tests/UTCDateTimeImmutableTest.php" line="38" class="Valksor\Component\DoctrineTools\Tests\UTCDateTimeImmutableTest" classname="Valksor.Component.DoctrineTools.Tests.UTCDateTimeImmutableTest" assertions="3" time="0.001000"/>
         <testcase name="testCreateFromInterfaceReturnsUtcInstance" file="/var/www/html/valksor/src/Valksor/Component/DoctrineTools/Tests/UTCDateTimeImmutableTest.php" line="55" class="Valksor\Component\DoctrineTools\Tests\UTCDateTimeImmutableTest" classname="Valksor.Component.DoctrineTools.Tests.UTCDateTimeImmutableTest" assertions="2" time="0.001000"/>
+      </testsuite>
+      <testsuite name="Valksor\XlsxParser\Tests\XLSXParserTest" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" tests="8" assertions="14" errors="0" failures="0" skipped="0" time="0.001000">
+        <testcase name="testDataValidity" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="24" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="3" time="0.001000"/>
+        <testcase name="testOpen" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="47" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="4" time="0.001000"/>
+        <testcase name="testOpenCellXfs" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="62" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="2" time="0.001000"/>
+        <testcase name="testOpenNotExists" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="79" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenNotXlsxXml" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="86" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenNotXlsxZip" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="93" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenNotZip" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="100" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
+        <testcase name="testOpenWrongIndex" file="/var/www/html/valksor/src/Valksor/XlsxParser/Tests/XLSXParserTest.php" line="107" class="Valksor\XlsxParser\Tests\XLSXParserTest" classname="Valksor.XlsxParser.Tests.XLSXParserTest" assertions="1" time="0.001000"/>
       </testsuite>
     </testsuite>
   </testsuite>
