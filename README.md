@@ -3,6 +3,35 @@
 [![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-valksor/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/valksor/php-valksor/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-valksor?branch=master)
 
+## This repository contains these:
+
+<table>
+<tr>
+<th>Repository</th>
+<th>Coverage</th>
+<th>Repository</th>
+<th>Coverage</th>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-bundle">php-bundle</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-bundle?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-bundle/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-sse">php-sse</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-sse?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-sse/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-doctrine-tools">php-doctrine-tools</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-doctrine-tools?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-doctrine-tools/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-spx-profiler">php-spx-profiler</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-spx-profiler?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-spx-profiler/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions">php-functions</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-xlsx-parser">php-xlsx-parser</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-xlsx-parser?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-xlsx-parser/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+</table>
+
 A comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for modern Symfony applications. This ecosystem includes function libraries, development tools, Doctrine extensions, and real-time communication components.
 
 ## Features

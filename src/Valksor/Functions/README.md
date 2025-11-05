@@ -3,6 +3,59 @@
 [![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions?branch=master)
 
+## This repository contains these:
+
+<table>
+<tr>
+<th>Repository</th>
+<th>Coverage</th>
+<th>Repository</th>
+<th>Coverage</th>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions-date">php-functions-date</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-date?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-date/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-functions-handler">php-functions-handler</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-handler?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-handler/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions-iteration">php-functions-iteration</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-iteration?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-iteration/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-functions-latvian">php-functions-latvian</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-latvian?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-latvian/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions-local">php-functions-local</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-local?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-local/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-functions-memoize">php-functions-memoize</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-memoize?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-memoize/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions-number">php-functions-number</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-number?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-number/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-functions-pagination">php-functions-pagination</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-pagination?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-pagination/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions-php">php-functions-php</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-php?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-php/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-functions-preg">php-functions-preg</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-preg?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-preg/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions-queue">php-functions-queue</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-queue?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-queue/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-functions-sort">php-functions-sort</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-sort?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-sort/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/valksor/php-functions-text">php-functions-text</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-text?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-text/badge.svg?branch=master" alt="Coverage"></a></td>
+<td><a href="https://github.com/valksor/php-functions-web">php-functions-web</a></td>
+<td><a href="https://coveralls.io/github/valksor/php-functions-web?branch=master"><img src="https://coveralls.io/repos/github/valksor/php-functions-web/badge.svg?branch=master" alt="Coverage"></a></td>
+</tr>
+</table>
+
 A comprehensive collection of PHP utility functions and helpers for various tasks including date manipulation, web operations, text processing, and more. This is a meta-package that includes all the Valksor function sub-libraries.
 
 ## Installation
