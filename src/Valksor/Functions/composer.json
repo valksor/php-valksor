@@ -16,6 +16,7 @@
         "php": ">=8.4",
         "ext-curl": "*",
         "ext-json": "*",
+        "ext-mbstring": "*",
         "ext-random": "*",
         "composer-runtime-api": "^2",
         "symfony/http-foundation": "*",

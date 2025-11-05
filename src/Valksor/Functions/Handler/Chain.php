@@ -28,9 +28,6 @@ class Chain
     ) {
     }
 
-    /**
-     * @return T
-     */
     public function get(): mixed
     {
         return $this->value;

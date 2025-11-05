@@ -97,7 +97,7 @@ vendor/bin/phpunit tests/Functions/Date/Traits/
 
 ## Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+Contributions are welcome!
 
 - Code style requirements (PSR-12)
 - Testing requirements for PRs
@@ -115,9 +115,7 @@ To contribute to Date functions:
 
 ## Security
 
-If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
-
-For security policy and vulnerability reporting guidelines, please see our [Security Policy](SECURITY.md).
+If you discover any security-related issues, please email us at packages@valksor.com instead of using the issue tracker.
 
 ## Support
 

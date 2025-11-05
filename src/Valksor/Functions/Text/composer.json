@@ -16,6 +16,7 @@
     "homepage": "https://github.com/valksor/php-valksor",
     "require": {
         "php": ">=8.4",
+        "ext-mbstring": "*",
         "symfony/intl": "*",
         "symfony/string": "*",
         "valksor/php-functions-iteration": "^1.0",

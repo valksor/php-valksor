@@ -36,7 +36,7 @@ class FixDefaultSchemaListener
         }
 
         foreach ($schemaManager->listSchemaNames() as $namespace) {
-            if (!$args->getSchema()->hasNamespace($namespace) && 'public' !== $namespace) {
+            if ('public' !== $namespace && !$args->getSchema()->hasNamespace($namespace)) {
                 $args->getSchema()->createNamespace($namespace);
             }
         }
