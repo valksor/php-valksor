@@ -1,10 +1,10 @@
 <h1 align="center">XLSX Parser</h1>
 
-<p align="center">Very simple to implement xlsx parser to extract data from spreadsheets for php 8.1+ </p>
+<p align="center">Very simple to implement xlsx parser to extract data from spreadsheets for php 8.4+ </p>
 
 What is it?
 ---
-**XLSXParser** is blazingly fast xlsx parser for **php 8.1+**. It is made as a simple tool to get job done. No fancy options of any kind
+**XLSXParser** is blazingly fast xlsx parser for **php 8.4+**. It is made as a simple tool to get job done. No fancy options of any kind
 and no need for any extra libraries other than need for `zip` and `xmlreader` php extensions.
 
 ---
