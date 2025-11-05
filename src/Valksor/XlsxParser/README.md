@@ -126,7 +126,7 @@ Contributions are welcome! To ensure consistency across the project, please foll
 
 ## Security
 
-If you discover any security-related issues, please email us at security@valksor.dev instead of using the issue tracker.
+If you discover any security-related issues, please email us at packages@valksor.com instead of using the issue tracker.
 
 ## Support
 
