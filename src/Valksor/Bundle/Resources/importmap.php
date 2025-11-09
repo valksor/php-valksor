@@ -12,9 +12,12 @@
 
 use Valksor\FullStack;
 
-if (!isset($apps, $infrastructure, $projectDir)) {
+if (!isset($projectDir)) {
     throw new LogicException('Required parameters not set');
 }
+
+$infrastructure ??= '';
+$apps ??= '';
 
 if (is_dir($projectDir . '/valksor')) {
     $path = '/valksor/src/Valksor/Component/Sse/Resources/assets';

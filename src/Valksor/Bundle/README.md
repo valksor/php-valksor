@@ -205,6 +205,47 @@ valksor:
 
 This integration ensures that running `valksor:dev` or `valksor:watch` automatically starts the SSE server with hot reload functionality.
 
+### Import Map System
+
+The bundle provides a flexible import map system that works seamlessly with both single-app and multi-app Symfony projects.
+
+#### Single-App Projects (Default)
+
+For standard Symfony applications, the import map system automatically includes the Valksor import map from your project:
+
+```php
+// importmap.php in your project root
+$projectDir = __DIR__;
+return include $projectDir . '/valksor/src/Valksor/Bundle/Resources/importmap.php';
+```
+
+**How it works:**
+- Automatically detects the project structure
+- Includes the core Valksor import map with SSE and build system assets
+- Works with the standard AssetMapper component
+- No additional configuration needed
+
+#### Advanced: Multi-App Projects
+
+For projects with multiple applications, the import map system can handle separate configurations:
+
+```php
+// importmap.php in project root
+$projectDir = __DIR__;
+$apps = 'apps';           // Your apps directory
+$infrastructure = 'infrastructure'; // Your infrastructure directory
+
+return include $projectDir . '/valksor/src/Valksor/Bundle/Resources/importmap.php';
+```
+
+**How it changes:**
+- The import map system can discover assets in multiple app directories
+- Supports infrastructure-specific shared assets
+- Handles entry point detection for each application (`*.entry.js` files)
+- Generates appropriate import maps for each application context
+
+The import map logic automatically adapts based on whether the `$apps` and `$infrastructure` variables are defined, making it work seamlessly in both project structures.
+
 ### Working with Components
 
 #### Accessing Configuration in Services
