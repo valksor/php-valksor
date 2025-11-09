@@ -20,40 +20,24 @@ composer require valksor/php-spx-profiler
 - **Symfony Framework** (7.2.0 or higher)
 - **Valksor Bundle** for automatic configuration
 
-## Basic Usage
+## Configuration
 
-The SpxProfiler component provides a data collector for the Symfony web profiler that integrates with the SPX PHP profiler. It allows you to view detailed profiling information for your PHP applications directly in the Symfony web profiler.
-
-### Basic Setup
-
-1. Install the SPX PHP extension (https://github.com/NoiseByNorthwest/php-spx)
-2. Enable the extension in your php.ini:
-
-```ini
-extension=spx.so
-spx.http_enabled=1
-spx.http_key=your_secret_key
-```
-
-3. Register the component in your Symfony application:
-
-```php
-// config/bundles.php
-return [
-    // ...
-    Valksor\Bundle\ValksorBundle::class => ['all' => true],
-    // ...
-];
-```
-
-4. Configure the component in your Symfony application:
+The SpxProfiler component has a simple configuration with a single user-configurable option:
 
 ```yaml
 # config/packages/valksor.yaml
 valksor:
-    components:
-        spx_profiler: ~
+    spx_profiler:
+        enabled: true    # Enable/disable the SPX profiler integration
 ```
+
+### Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `enabled` | boolean | `true` | Enable or disable the SPX profiler data collector |
+
+*See: [`SpxProfilerConfiguration.php`](DependencyInjection/SpxProfilerConfiguration.php) for the complete configuration schema.*
 
 ## Features
 
@@ -63,40 +47,20 @@ The SpxProfiler component provides comprehensive profiling integration for Symfo
 - **SPX Data Collection**: Automatic collection and display of detailed SPX profiling metrics
 - **Real-time Performance Metrics**: Wall time, memory usage, call graphs, and execution traces
 - **Request Matching**: Automatic matching of SPX reports with Symfony profiler requests
-- **Configurable Profiling**: Support for different SPX modes and data collection options
 - **Development Workflow**: Streamlined profiling setup for development environments
 
 ### Viewing Profiling Data
 
-Once the component is installed and configured, you can view profiling data in the Symfony web profiler:
+Once the component is installed and enabled, you can view profiling data in the Symfony web profiler:
 
 1. Enable SPX profiling for a request by adding the SPX_KEY parameter to the URL or setting the SPX_ENABLED cookie to 1
 2. Make a request to your application
 3. Open the Symfony web profiler for that request
 4. Click on the SPX tab to view the profiling data
 
-### Features
+### Prerequisites
 
-The SpxProfiler component provides the following features:
-
-- Integration with the Symfony web profiler
-- Display of SPX profiling data in a dedicated tab
-- Automatic matching of SPX reports with Symfony profiler requests
-- Display of detailed metrics including:
-  - Wall time
-  - Memory usage
-  - Enabled metrics
-  - Recorded calls
-- Links to the full SPX report for more detailed analysis
-
-### Configuration Options
-
-The SPX PHP extension provides several configuration options that can be set in your php.ini:
-
-- `spx.http_enabled`: Enable HTTP interface (default: 0)
-- `spx.http_key`: Secret key for HTTP interface
-- `spx.http_ip_whitelist`: IP whitelist for HTTP interface
-- `spx.data_dir`: Directory for SPX data files (default: /tmp/spx)
+The SpxProfiler component requires the SPX PHP extension to be installed and configured separately. For SPX extension setup instructions, see the [SPX documentation](https://github.com/NoiseByNorthwest/php-spx).
 
 
 ## Contributing

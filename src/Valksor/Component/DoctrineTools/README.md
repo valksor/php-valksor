@@ -277,6 +277,14 @@ valksor:
         enabled: true  # Enable/disable the component
 ```
 
+### Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `enabled` | boolean | `true` | Enable or disable the DoctrineTools component |
+
+*See: [`DoctrineToolsConfiguration.php`](DependencyInjection/DoctrineToolsConfiguration.php) for the complete configuration schema.*
+
 ### Custom Entity Manager Configuration
 
 The component automatically configures all registered entity managers:

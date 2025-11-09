@@ -31,6 +31,36 @@ composer require valksor/php-bundle
 - Doctrine DBAL (for database-related components)
 - Doctrine Migrations (for schema management)
 
+## Configuration
+
+The Valksor Bundle provides flexible configuration options for project structure and component management:
+
+### Global Configuration
+
+```yaml
+# config/packages/valksor.yaml
+valksor:
+    # Project directory structure configuration
+    project:
+        apps_dir: null                    # Directory containing applications (relative to project root)
+        infrastructure_dir: null          # Directory containing shared resources (relative to project root)
+        autoload:
+            namespace_prefix: null       # Namespace prefix for generated autoload classes
+
+    # Component configurations (auto-discovered)
+    # Each discovered component can be enabled/disabled individually
+```
+
+### Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `project.apps_dir` | string | `null` | Directory containing applications (relative to project root) |
+| `project.infrastructure_dir` | string | `null` | Directory containing shared resources (relative to project root) |
+| `project.autoload.namespace_prefix` | string | `null` | Namespace prefix for generated autoload classes |
+
+*See: [`ValksorConfiguration.php`](DependencyInjection/ValksorConfiguration.php) for the complete configuration schema.*
+
 ## Usage
 
 ### Basic Setup
