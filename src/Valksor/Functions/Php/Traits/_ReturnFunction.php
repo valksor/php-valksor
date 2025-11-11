@@ -18,7 +18,7 @@ trait _ReturnFunction
 {
     public function returnFunction(
         string $function,
-        ...$arguments,
+        mixed ...$arguments,
     ): mixed {
         if (!function_exists($function)) {
             return null;

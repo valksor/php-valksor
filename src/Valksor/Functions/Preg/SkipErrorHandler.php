@@ -25,7 +25,7 @@ final class SkipErrorHandler
 
     public static function execute(
         callable $callback,
-    ) {
+    ): mixed {
         $error = null;
 
         set_error_handler(static function (int $errorNumber, string $errorString) use (&$error): bool {

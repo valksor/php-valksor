@@ -478,10 +478,10 @@ final class PhpTest extends TestCase
     {
         // The returnFunction method likely throws a different exception or returns false
         // Let's test that it doesn't crash and check the return value
-        $result = $this->php->returnFunction('non_existent_function');
+        $result = $this->php->returnFunction('non_existent_function', 1, 2, 3);
 
         // It might return false or null, let's just check that it doesn't throw
-        $this->assertTrue(true); // If we get here, no exception was thrown
+        $this->assertNull($result); // If we get here, no exception was thrown
     }
 
     public function testReturnObjectCallsObjectMethod(): void

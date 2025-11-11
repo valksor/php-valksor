@@ -11,54 +11,54 @@
           <methods>
             <method name="memoize" signature="BackedEnum $context, int|string $key, callable $callback, bool $refresh, string $subKeys" line-rate="1" branch-rate="0" complexity="4">
               <lines>
-                <line number="30" hits="32"/>
                 <line number="31" hits="32"/>
-                <line number="33" hits="32"/>
-                <line number="34" hits="9"/>
+                <line number="32" hits="32"/>
+                <line number="34" hits="32"/>
                 <line number="35" hits="9"/>
                 <line number="36" hits="9"/>
-                <line number="39" hits="32"/>
-                <line number="41" hits="32"/>
+                <line number="37" hits="9"/>
+                <line number="40" hits="32"/>
                 <line number="42" hits="32"/>
-                <line number="45" hits="32"/>
+                <line number="43" hits="32"/>
+                <line number="46" hits="32"/>
               </lines>
             </method>
             <method name="value" signature="BackedEnum $context, int|string $key, mixed $default, string $subKeys" line-rate="1" branch-rate="0" complexity="3">
               <lines>
-                <line number="54" hits="19"/>
                 <line number="55" hits="19"/>
                 <line number="56" hits="19"/>
-                <line number="58" hits="19"/>
-                <line number="59" hits="7"/>
-                <line number="60" hits="1"/>
-                <line number="63" hits="7"/>
+                <line number="57" hits="19"/>
+                <line number="59" hits="19"/>
+                <line number="60" hits="7"/>
+                <line number="61" hits="1"/>
                 <line number="64" hits="7"/>
-                <line number="67" hits="18"/>
-                <line number="69" hits="18"/>
+                <line number="65" hits="7"/>
+                <line number="68" hits="18"/>
+                <line number="70" hits="18"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="30" hits="32"/>
             <line number="31" hits="32"/>
-            <line number="33" hits="32"/>
-            <line number="34" hits="9"/>
+            <line number="32" hits="32"/>
+            <line number="34" hits="32"/>
             <line number="35" hits="9"/>
             <line number="36" hits="9"/>
-            <line number="39" hits="32"/>
-            <line number="41" hits="32"/>
+            <line number="37" hits="9"/>
+            <line number="40" hits="32"/>
             <line number="42" hits="32"/>
-            <line number="45" hits="32"/>
-            <line number="54" hits="19"/>
+            <line number="43" hits="32"/>
+            <line number="46" hits="32"/>
             <line number="55" hits="19"/>
             <line number="56" hits="19"/>
-            <line number="58" hits="19"/>
-            <line number="59" hits="7"/>
-            <line number="60" hits="1"/>
-            <line number="63" hits="7"/>
+            <line number="57" hits="19"/>
+            <line number="59" hits="19"/>
+            <line number="60" hits="7"/>
+            <line number="61" hits="1"/>
             <line number="64" hits="7"/>
-            <line number="67" hits="18"/>
-            <line number="69" hits="18"/>
+            <line number="65" hits="7"/>
+            <line number="68" hits="18"/>
+            <line number="70" hits="18"/>
           </lines>
         </class>
       </classes>

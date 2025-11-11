@@ -18,6 +18,7 @@ use function array_key_exists;
 
 class Memoize
 {
+    /** @var array<string, mixed> */
     protected array $cache = [];
 
     public function memoize(
