@@ -139,7 +139,8 @@ If you discover any security-related issues, please email us at packages@valksor
 
 ## Credits
 
-- **Author**: [Valksor Team](https://github.com/valksor)
+- **Original author**: [Spaghetti Solutions](https://github.com/spaghettisolutions)
+- **Maintainer**: [Valksor Team](https://github.com/valksor)
 - **Contributors**: All [contributors](https://github.com/valksor/php-valksor/graphs/contributors) who have helped improve this package
 - **Inspiration**: Built for the modern PHP ecosystem with simplicity and performance in mind
 
