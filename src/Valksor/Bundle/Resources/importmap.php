@@ -18,6 +18,7 @@ if (!isset($projectDir)) {
 
 $infrastructure ??= '';
 $apps ??= '';
+$roots ??= [];
 
 if (is_dir($projectDir . '/valksor')) {
     $path = '/valksor/src/Valksor/Component/Sse/Resources/assets';
@@ -27,11 +28,9 @@ if (is_dir($projectDir . '/valksor')) {
     $path = '/vendor/valksor/php-sse/Resources/assets';
 }
 
-$roots = [
-    $infrastructure => [
-        'source' => $projectDir . '/' . $infrastructure . '/assets/js',
-        'dist' => $projectDir . '/' . $infrastructure . '/assets/dist',
-    ],
+$roots[$infrastructure] = [
+    'source' => $projectDir . '/' . $infrastructure . '/assets/js',
+    'dist' => $projectDir . '/' . $infrastructure . '/assets/dist',
 ];
 
 if (is_dir($projectDir . $path)) {
@@ -54,7 +53,7 @@ $mkdir = static function (
     string $dir,
 ): bool {
     if (!is_dir(filename: $dir)) {
-        if (!mkdir($dir) && !is_dir($dir)) {
+        if (!mkdir($dir, recursive: true) && !is_dir($dir)) {
             throw new RuntimeException(sprintf('Directory "%s" was not created', $dir));
         }
 
@@ -80,7 +79,7 @@ $collectEntries = static function (array $config) use ($projectDir, $mkdir): arr
     );
 
     foreach ($iterator as $file) {
-        if (!$file->isFile() || 'js' !== $file->getExtension()) {
+        if (!$file->isFile() && !$file->isDir()) {
             continue;
         }
 

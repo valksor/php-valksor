@@ -3,7 +3,7 @@
 [![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-preg/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-preg/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-preg?branch=master)
 
-A PHP library providing enhanced regular expression (preg_*) functions with improved error handling and UTF-8 support.
+A PHP library providing enhanced regular expression (preg\_\*) functions with improved error handling and UTF-8 support.
 
 ## Installation
 
@@ -23,7 +23,7 @@ There are two ways to use this package: via the Functions class or by directly u
 
 ### Using the Functions Class
 
-The Functions class provides enhanced versions of PHP's preg_* functions with better error handling and UTF-8 support.
+The Functions class provides enhanced versions of PHP's preg\_\* functions with better error handling and UTF-8 support.
 
 ```php
 use Valksor\Functions\Preg\Functions;
@@ -114,7 +114,6 @@ try {
 
 For a complete list of all functions available in this package, see [Features](docs/features.md).
 
-
 ## Contributing
 
 Contributions are welcome!
@@ -160,6 +159,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
+
 - Various utility functions and components
 - Doctrine ORM tools and extensions
 - Symfony bundle for easy configuration

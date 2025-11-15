@@ -61,6 +61,7 @@ composer require valksor/php-valksor
 ```
 
 This meta-package automatically includes:
+
 - **valksor/php-bundle** - Symfony bundle with auto-discovery
 - **valksor/php-functions** - All function libraries
 - **valksor/php-sse** - Server-Sent Events component

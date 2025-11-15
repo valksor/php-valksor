@@ -16,12 +16,14 @@ public function isPrime(
 Checks if a number is prime using multiple algorithms.
 
 Parameters:
+
 - `$number`: The number to check
 - `$override`: Whether to override the default behavior
 
 Returns a boolean indicating whether the number is prime.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -127,11 +129,13 @@ public function isPrimal(
 Internal helper function for prime number checking.
 
 Parameters:
+
 - `$number`: The number to check
 
 Returns a boolean indicating whether the number is prime.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -198,11 +202,13 @@ public function isPrimeBelow1000(
 Optimized function for checking if a number below 1000 is prime.
 
 Parameters:
+
 - `$number`: The number to check (should be below 1000)
 
 Returns a boolean indicating whether the number is prime.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -310,11 +316,13 @@ public function isPrimeGmp(
 Uses the GMP extension to check if a number is prime (more efficient for large numbers).
 
 Parameters:
+
 - `$number`: The number to check
 
 Returns a boolean indicating whether the number is prime.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -443,6 +451,7 @@ public function distanceBetweenPoints(
 Calculates the distance between two geographical points.
 
 Parameters:
+
 - `$latitude1`: Latitude of the first point
 - `$longitude1`: Longitude of the first point
 - `$latitude2`: Latitude of the second point
@@ -453,6 +462,7 @@ Parameters:
 Returns the distance between the two points.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -596,6 +606,7 @@ public function distanceInKm(
 Calculates the distance between two geographical points in kilometers.
 
 Parameters:
+
 - `$latitude1`: Latitude of the first point
 - `$longitude1`: Longitude of the first point
 - `$latitude2`: Latitude of the second point
@@ -605,6 +616,7 @@ Parameters:
 Returns the distance in kilometers.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -726,12 +738,14 @@ public function greatestCommonDivisor(
 Calculates the greatest common divisor (GCD) of two integers.
 
 Parameters:
+
 - `$first`: The first integer
 - `$second`: The second integer
 
 Returns the greatest common divisor.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -860,12 +874,14 @@ public function leastCommonMultiple(
 Calculates the least common multiple (LCM) of two integers.
 
 Parameters:
+
 - `$first`: The first integer
 - `$second`: The second integer
 
 Returns the least common multiple.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -1009,12 +1025,14 @@ public function swap(
 Swaps two values.
 
 Parameters:
+
 - `$first`: The first value
 - `$second`: The second value
 
 Returns an array containing the swapped values.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -1147,11 +1165,13 @@ public function isInt(
 Checks if a value is an integer.
 
 Parameters:
+
 - `$value`: The value to check
 
 Returns a boolean indicating whether the value is an integer.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 
@@ -1272,11 +1292,13 @@ public function isFloat(
 Checks if a value is a float.
 
 Parameters:
+
 - `$value`: The value to check
 
 Returns a boolean indicating whether the value is a float.
 
 Example:
+
 ```php
 use Valksor\Functions\Number;
 

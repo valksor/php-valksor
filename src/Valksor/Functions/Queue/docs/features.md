@@ -6,7 +6,7 @@ This document lists all the methods available in the Valksor Functions: Queue pa
 
 The Queue class implements a FIFO (First-In-First-Out) queue data structure.
 
-### __construct()
+### \_\_construct()
 
 ```php
 public function __construct(array $items = [])
@@ -15,9 +15,11 @@ public function __construct(array $items = [])
 Creates a new Queue instance, optionally with initial items.
 
 Parameters:
+
 - `$items`: An optional array of initial items to add to the queue.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 
@@ -37,6 +39,7 @@ public function clear(): void
 Removes all items from the queue.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 
@@ -56,11 +59,13 @@ public function contains(mixed $item): bool
 Checks if the queue contains a specific item.
 
 Parameters:
+
 - `$item`: The item to check for.
 
 Returns a boolean indicating whether the item exists in the queue.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 
@@ -84,6 +89,7 @@ Removes and returns the first item from the queue.
 Returns the first item in the queue, or `false` if the queue is empty.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 
@@ -109,9 +115,11 @@ public function push(mixed $item): void
 Adds an item to the end of the queue.
 
 Parameters:
+
 - `$item`: The item to add to the queue. If `null`, the item is not added.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 
@@ -139,6 +147,7 @@ Returns the first item in the queue without removing it.
 Returns the first item in the queue, or `null` if the queue is empty.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 
@@ -162,6 +171,7 @@ Checks if the queue is empty.
 Returns a boolean indicating whether the queue is empty.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 
@@ -186,6 +196,7 @@ Gets the number of items in the queue.
 Returns the number of items in the queue.
 
 Example:
+
 ```php
 use Valksor\Functions\Queue\Queue;
 

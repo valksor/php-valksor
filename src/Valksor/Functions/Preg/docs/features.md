@@ -19,6 +19,7 @@ public function match(
 Enhanced version of PHP's preg_match function.
 
 Parameters:
+
 - `$pattern`: The regular expression pattern
 - `$subject`: The input string
 - `$matches`: If provided, will be filled with the results of search
@@ -28,6 +29,7 @@ Parameters:
 Returns a boolean indicating whether the pattern matches the subject.
 
 Example:
+
 ```php
 use Valksor\Functions\Preg;
 
@@ -201,6 +203,7 @@ public function matchAll(
 Enhanced version of PHP's preg_match_all function.
 
 Parameters:
+
 - `$pattern`: The regular expression pattern
 - `$subject`: The input string
 - `$matches`: Array to be filled with all matches
@@ -224,6 +227,7 @@ public function replace(
 Enhanced version of PHP's preg_replace function.
 
 Parameters:
+
 - `$pattern`: The pattern or array of patterns to search for
 - `$replacement`: The string or array of strings to replace with
 - `$subject`: The string or array of strings to search and replace in
@@ -247,6 +251,7 @@ public function replaceCallback(
 Enhanced version of PHP's preg_replace_callback function.
 
 Parameters:
+
 - `$pattern`: The pattern or array of patterns to search for
 - `$callback`: The callback function that will be called for each match
 - `$subject`: The string or array of strings to search and replace in
@@ -269,6 +274,7 @@ public function split(
 Enhanced version of PHP's preg_split function.
 
 Parameters:
+
 - `$pattern`: The pattern to search for
 - `$subject`: The input string
 - `$limit`: The maximum number of elements to return

@@ -18,17 +18,20 @@ public function paginate(
 Generates pagination data based on the specified parameters.
 
 Parameters:
+
 - `$visible`: Number of page links to display (minimum 5)
 - `$total`: Total number of pages
 - `$current`: Current page number
 - `$indicator`: Value to use for indicating omitted pages (default: -1)
 
 Returns:
+
 - An array of page numbers with indicators for omitted pages
 
 #### Validation
 
 The function performs several validations:
+
 - The number of visible pages must be at least 5
 - The total number of pages must be at least 1
 - The current page must be between 1 and the total number of pages
@@ -39,23 +42,25 @@ The function performs several validations:
 The pagination algorithm intelligently handles different scenarios:
 
 1. **All Pages Visible**: When the total number of pages is less than or equal to the number of visible pages
-   ```php
-   $pages = $pagination->paginate(10, 8, 4); // [1, 2, 3, 4, 5, 6, 7, 8]
-   ```
+
+    ```php
+    $pages = $pagination->paginate(10, 8, 4); // [1, 2, 3, 4, 5, 6, 7, 8]
+    ```
 
 2. **Single Omitted Section**: When the current page is near the beginning or end
-   ```php
-   // Current page near beginning
-   $pages = $pagination->paginate(7, 20, 3); // [1, 2, 3, 4, 5, -1, 20]
 
-   // Current page near end
-   $pages = $pagination->paginate(7, 20, 18); // [1, -1, 16, 17, 18, 19, 20]
-   ```
+    ```php
+    // Current page near beginning
+    $pages = $pagination->paginate(7, 20, 3); // [1, 2, 3, 4, 5, -1, 20]
+
+    // Current page near end
+    $pages = $pagination->paginate(7, 20, 18); // [1, -1, 16, 17, 18, 19, 20]
+    ```
 
 3. **Two Omitted Sections**: When the current page is in the middle of a large set
-   ```php
-   $pages = $pagination->paginate(7, 20, 10); // [1, -1, 8, 9, 10, 11, 12, -1, 20]
-   ```
+    ```php
+    $pages = $pagination->paginate(7, 20, 10); // [1, -1, 8, 9, 10, 11, 12, -1, 20]
+    ```
 
 ### Example
 

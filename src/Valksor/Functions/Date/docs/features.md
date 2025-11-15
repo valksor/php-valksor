@@ -16,12 +16,14 @@ public function date(
 Creates a DateTimeInterface object from a date string and format.
 
 Parameters:
+
 - `$dateString`: The date string to parse
 - `$format`: The format of the date string
 
 Returns a DateTimeInterface object. Throws InvalidArgumentException if the date string is invalid.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -46,12 +48,14 @@ public function dateNullable(
 Creates a DateTimeInterface object from a date string and format, or returns null if invalid.
 
 Parameters:
+
 - `$dateString`: The date string to parse
 - `$format`: The format of the date string
 
 Returns a DateTimeInterface object or null if the date string is invalid.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -80,12 +84,14 @@ public function dateWithoutFormat(
 Attempts to create a DateTimeInterface object from a date string without specifying a format.
 
 Parameters:
+
 - `$date`: The date string to parse
 - `$guesses`: Additional format guesses to try
 
 Returns a DateTimeInterface object if successful, or the original date string if not.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -122,12 +128,14 @@ public function excelDate(
 Converts an Excel date (serial number) to a formatted date string.
 
 Parameters:
+
 - `$timestamp`: The Excel date serial number
 - `$format`: The format for the output date string
 
 Returns a formatted date string.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -157,12 +165,14 @@ public function formatDate(
 Formats a date string according to the specified format.
 
 Parameters:
+
 - `$string`: The date string to format
 - `$format`: The format of the input date string
 
 Returns a formatted date string or false if the date is invalid.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -197,12 +207,14 @@ public function fromUnixTimestamp(
 Converts a Unix timestamp to a formatted date string.
 
 Parameters:
+
 - `$timestamp`: The Unix timestamp
 - `$format`: The format for the output date string
 
 Returns a formatted date string.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -234,12 +246,14 @@ public function format(
 Formats a time duration in milliseconds into a human-readable string or array.
 
 Parameters:
+
 - `$timestamp`: The time duration in seconds
 - `$asArray`: Whether to return the result as an array
 
 Returns a formatted time string (e.g., "1 hour 30 minutes") or an array of time units.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -275,11 +289,13 @@ public function validateDate(
 Validates a date string in the format "DDMMYYYY".
 
 Parameters:
+
 - `$date`: The date string to validate
 
 Returns a boolean indicating whether the date is valid.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 
@@ -312,12 +328,14 @@ public function validateDateBasic(
 Validates a date string against a specified format.
 
 Parameters:
+
 - `$date`: The date string to validate
 - `$format`: The format to validate against
 
 Returns a boolean indicating whether the date is valid according to the format.
 
 Example:
+
 ```php
 use Valksor\Functions\Date;
 

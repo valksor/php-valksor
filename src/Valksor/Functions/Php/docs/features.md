@@ -16,12 +16,14 @@ public function classMethods(
 Gets the methods of a class.
 
 Parameters:
+
 - `$class`: The class name or object
 - `$parent`: Optional parent class name. If provided, only methods not inherited from the parent will be returned.
 
 Returns an array of method names.
 
 Example:
+
 ```php
 use Valksor\Functions\Php;
 
@@ -185,11 +187,13 @@ public function classConstants(
 Gets the constants of a class.
 
 Parameters:
+
 - `$class`: The class name
 
 Returns an array of constant names and values.
 
 Example:
+
 ```php
 use Valksor\Functions\Php;
 
@@ -376,11 +380,13 @@ public function classConstantsValues(
 Gets the values of the constants of a class.
 
 Parameters:
+
 - `$class`: The class name
 
 Returns an array of constant values.
 
 Example:
+
 ```php
 use Valksor\Functions\Php;
 
@@ -578,12 +584,14 @@ public function classImplements(
 Checks if a class implements an interface.
 
 Parameters:
+
 - `$class`: The class name
 - `$interface`: The interface name
 
 Returns a boolean indicating whether the class implements the interface.
 
 Example:
+
 ```php
 use Valksor\Functions\Php;
 
@@ -835,6 +843,7 @@ public function attributeExists(
 Checks if an attribute exists on a class or method.
 
 Parameters:
+
 - `$class`: The class name or object
 - `$attribute`: The attribute class name
 - `$method`: Optional method name. If provided, checks if the attribute exists on the method.
@@ -842,6 +851,7 @@ Parameters:
 Returns a boolean indicating whether the attribute exists.
 
 Example:
+
 ```php
 use Valksor\Functions\Php;
 
@@ -1095,11 +1105,13 @@ public function systemInfo(): array
 Gets information about the system's operating system and architecture.
 
 Returns an array with the following keys:
+
 - `os`: Normalized OS name ('windows', 'darwin', or 'linux')
 - `arch`: Normalized architecture ('amd64', 'arm64', or '386')
 - `extension`: File extension for executables (empty string or '.exe' on Windows)
 
 Example:
+
 ```php
 use Valksor\Functions\Php;
 
@@ -1257,11 +1269,13 @@ public function array(
 Converts an input to an array.
 
 Parameters:
+
 - `$input`: The input array or object
 
 Returns an array. If the input is already an array, it is returned unchanged. If the input is an object, it is converted to an array.
 
 Example:
+
 ```php
 use Valksor\Functions\Php;
 

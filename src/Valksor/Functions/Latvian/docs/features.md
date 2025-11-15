@@ -17,16 +17,19 @@ public function compare(
 Compares two arrays or objects based on a specified field using Latvian alphabet rules.
 
 Parameters:
+
 - `$first`: First array or object to compare
 - `$second`: Second array or object to compare
 - `$field`: The field to use for comparison
 
 Returns:
+
 - Negative integer if $first is less than $second
 - Zero if $first equals $second
 - Positive integer if $first is greater than $second
 
 Example:
+
 ```php
 use Valksor\Functions\Latvian;
 
@@ -102,6 +105,7 @@ public function sortLatvian(
 Sorts an array of arrays or objects based on a specified field using Latvian alphabet rules.
 
 Parameters:
+
 - `$names`: The array to sort (passed by reference)
 - `$field`: The field to sort by
 - `$callback`: Optional custom comparison callback
@@ -109,6 +113,7 @@ Parameters:
 Returns a boolean indicating success.
 
 Example:
+
 ```php
 use Valksor\Functions\Latvian;
 
@@ -202,11 +207,13 @@ public function validatePersonCode(
 Validates a Latvian personal identification code (both new and old formats).
 
 Parameters:
+
 - `$personCode`: The personal identification code to validate
 
 Returns a boolean indicating whether the code is valid.
 
 Example:
+
 ```php
 use Valksor\Functions\Latvian;
 
@@ -267,14 +274,17 @@ public function cleanPersonCode(
 Cleans and formats a Latvian personal identification code by removing non-numeric characters and hyphens.
 
 Parameters:
+
 - `$personCode`: The personal identification code to clean
 
 Returns the cleaned personal identification code.
 
 Throws:
+
 - `InvalidArgumentException` if the resulting code is not exactly 11 characters long
 
 Example:
+
 ```php
 use Valksor\Functions\Latvian;
 
@@ -353,11 +363,13 @@ public function validatePersonCodeNew(
 Validates a new format Latvian personal identification code (starting with "32").
 
 Parameters:
+
 - `$personCode`: The personal identification code to validate
 
 Returns a boolean indicating whether the code is valid.
 
 Example:
+
 ```php
 use Valksor\Functions\Latvian;
 
@@ -415,11 +427,13 @@ public function validatePersonCodeOld(
 Validates an old format Latvian personal identification code.
 
 Parameters:
+
 - `$personCode`: The personal identification code to validate
 
 Returns a boolean indicating whether the code is valid.
 
 Example:
+
 ```php
 use Valksor\Functions\Latvian;
 

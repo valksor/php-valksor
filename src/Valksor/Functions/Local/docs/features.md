@@ -15,11 +15,13 @@ public function exists(
 Checks if a PHP class, interface, or trait exists.
 
 Parameters:
+
 - `$class`: The class name or object to check
 
 Returns a boolean indicating whether the class, interface, or trait exists.
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -83,11 +85,13 @@ public function fileExistsCwd(
 Checks if a file exists in the current working directory.
 
 Parameters:
+
 - `$filename`: The name of the file to check
 
 Returns a boolean indicating whether the file exists in the current working directory.
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -156,11 +160,13 @@ public function mkdir(
 Creates a directory if it doesn't exist.
 
 Parameters:
+
 - `$dir`: The path of the directory to create
 
 Returns a boolean indicating whether the directory exists after the operation. Throws an exception if the directory couldn't be created.
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -241,11 +247,13 @@ public function rmdir(
 Removes a directory if it exists.
 
 Parameters:
+
 - `$dir`: The path of the directory to remove
 
 Returns a boolean indicating whether the operation was successful.
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -354,12 +362,14 @@ public function getenv(
 Gets the value of an environment variable.
 
 Parameters:
+
 - `$name`: The name of the environment variable
 - `$localOnly`: Whether to get the variable from the local environment only
 
 Returns the value of the environment variable, or the name of the variable if it doesn't exist.
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -442,12 +452,14 @@ public function humanFileSize(
 Formats a file size in a human-readable way.
 
 Parameters:
+
 - `$bytes`: The size in bytes
 - `$decimals`: The number of decimal places to include in the formatted size
 
 Returns a string with the formatted file size (e.g., "1.00M").
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -580,6 +592,7 @@ Gets the cURL user agent string.
 Returns a string with the cURL user agent (e.g., "curl/7.68.0").
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -702,12 +715,14 @@ public function isInstalled(
 Checks if PHP extensions or Composer packages are installed.
 
 Parameters:
+
 - `$packages`: An array of package names to check
 - `$incDevReq`: Whether to include dev requirements when checking Composer packages
 
 Returns a boolean indicating whether all the specified packages are installed.
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 
@@ -862,6 +877,7 @@ public function willBeAvailable(
 Checks if a class from a package will be available at runtime.
 
 Parameters:
+
 - `$package`: The name of the package to check
 - `$class`: The name of the class to check
 - `$parentPackages`: An array of parent package names to check
@@ -870,6 +886,7 @@ Parameters:
 Returns a boolean indicating whether the class will be available at runtime.
 
 Example:
+
 ```php
 use Valksor\Functions\Local;
 

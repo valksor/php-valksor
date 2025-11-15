@@ -87,11 +87,11 @@ For a complete list of all functions available in this package, see [Features](d
 ## Validation
 
 The class performs several validations:
+
 - The number of visible pages must be at least 5
 - The total number of pages must be at least 1
 - The current page must be between 1 and the total number of pages
 - The indicator value must not be a valid page number (between 1 and total)
-
 
 ## Contributing
 
@@ -138,6 +138,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
+
 - Various utility functions and components
 - Doctrine ORM tools and extensions
 - Symfony bundle for easy configuration

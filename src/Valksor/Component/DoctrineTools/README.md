@@ -85,6 +85,7 @@ class User
 ```
 
 This includes:
+
 - ID field (auto-increment integer)
 - `isActive` boolean field
 - `createdAt` and `updatedAt` datetime fields
@@ -121,6 +122,7 @@ class Product
 #### Available Traits
 
 **Primary Key Traits:**
+
 - `_Id` - Standard auto-increment integer ID
 - `_Uuid` - UUID primary key (string)
 - `_Ulid` - ULID primary key (string)
@@ -130,6 +132,7 @@ class Product
 - `__None` - No primary key trait (for entities without defined primary keys)
 
 **Entity Management Traits:**
+
 - `_Entity` - Complete entity with ID, timestamps, version, and active status
 - `_SimpleEntity` - Entity with ID field only
 - `_CreatedUpdated` - Adds `createdAt` and `updatedAt` timestamp fields
@@ -274,16 +277,16 @@ use Valksor\Component\DoctrineTools\Doctrine\Migrations\VersionComparatorWithout
 # config/packages/valksor.yaml
 valksor:
     doctrine_tools:
-        enabled: true  # Enable/disable the component
+        enabled: true # Enable/disable the component
 ```
 
 ### Configuration Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `enabled` | boolean | `true` | Enable or disable the DoctrineTools component |
+| Option    | Type    | Default | Description                                   |
+| --------- | ------- | ------- | --------------------------------------------- |
+| `enabled` | boolean | `true`  | Enable or disable the DoctrineTools component |
 
-*See: [`DoctrineToolsConfiguration.php`](DependencyInjection/DoctrineToolsConfiguration.php) for the complete configuration schema.*
+_See: [`DoctrineToolsConfiguration.php`](DependencyInjection/DoctrineToolsConfiguration.php) for the complete configuration schema._
 
 ### Custom Entity Manager Configuration
 
@@ -435,7 +438,6 @@ php bin/console doctrine:migrations:migrate
 - **Indexing**: Consider adding database indexes for commonly queried fields
 - **Query Optimization**: Use the provided DQL functions for database-level operations
 
-
 ## Contributing
 
 Contributions are welcome!
@@ -504,6 +506,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
+
 - Various utility functions and components
 - Doctrine ORM tools and extensions
 - API Platform integrations

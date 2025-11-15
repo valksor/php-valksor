@@ -6,7 +6,7 @@ This document lists all the classes and methods available in the Valksor Functio
 
 The Chain class implements a simple pipeline pattern for function composition.
 
-### __construct()
+### \_\_construct()
 
 ```php
 public function __construct(mixed $value)
@@ -15,9 +15,11 @@ public function __construct(mixed $value)
 Creates a new Chain instance with the given initial value.
 
 Parameters:
+
 - `$value`: The initial value to be stored in the chain
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\Chain;
 
@@ -40,6 +42,7 @@ public function get(): mixed
 Returns the current value stored in the chain.
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\Chain;
 
@@ -65,9 +68,11 @@ public function pipe(callable $callback): self
 Applies a transformation function to the current value and returns a new Chain instance with the result.
 
 Parameters:
+
 - `$callback`: A function that takes the current value and returns a new value
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\Chain;
 
@@ -103,9 +108,11 @@ public static function of(mixed $value): self
 Static factory method to create a new Chain instance.
 
 Parameters:
+
 - `$value`: The initial value to be stored in the chain
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\Chain;
 
@@ -144,9 +151,11 @@ public function handle(...$arguments): mixed
 Processes a request with variable arguments.
 
 Parameters:
+
 - `$arguments`: Variable arguments to be processed
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\Handler;
 
@@ -225,9 +234,11 @@ public function next(self $handler): self
 Sets the next handler in the chain.
 
 Parameters:
+
 - `$handler`: The next handler in the chain
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\Handler;
 
@@ -345,9 +356,11 @@ public function handle(...$arguments): mixed
 Processes a request or passes it to the next handler in the chain.
 
 Parameters:
+
 - `$arguments`: Variable arguments to be processed
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\AbstractHandler;
 use Valksor\Functions\Handler\Handler;
@@ -441,9 +454,11 @@ public function next(Handler $handler): Handler
 Sets the next handler in the chain.
 
 Parameters:
+
 - `$handler`: The next handler in the chain
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\AbstractHandler;
 
@@ -538,7 +553,7 @@ $newValidationHandler->handle(['data' => 'example']);
 
 The FunctionHandler executes a specified function as part of the chain.
 
-### __construct()
+### \_\_construct()
 
 ```php
 public function __construct(string $function, ?object $instance = null)
@@ -547,10 +562,12 @@ public function __construct(string $function, ?object $instance = null)
 Creates a new FunctionHandler instance.
 
 Parameters:
+
 - `$function`: The name of the function to execute
 - `$instance`: Optional object instance on which to call the function
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\FunctionHandler;
 use Valksor\Functions\Handler\AbstractHandler;
@@ -633,9 +650,11 @@ public function handle(...$arguments): mixed
 Executes the specified function with the given arguments.
 
 Parameters:
+
 - `$arguments`: Arguments to pass to the function
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\FunctionHandler;
 
@@ -720,9 +739,11 @@ public static function execute(callable $callback)
 Executes a callback while capturing PHP errors and converting them to exceptions.
 
 Parameters:
+
 - `$callback`: The function to execute
 
 Example:
+
 ```php
 use Valksor\Functions\Handler\SkipErrorHandler;
 

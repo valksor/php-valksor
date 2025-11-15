@@ -104,7 +104,6 @@ Generally, there are two ways to use these libraries:
 1. Via the Functions class provided by each sub-library
 2. By directly using the traits in your own classes
 
-
 ## Contributing
 
 Contributions are welcome!
@@ -163,6 +162,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
+
 - Various utility functions and components
 - Doctrine ORM tools and extensions
 - Symfony bundle for easy configuration

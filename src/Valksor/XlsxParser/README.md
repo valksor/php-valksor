@@ -17,6 +17,7 @@ A blazingly fast and simple XLSX parser for PHP 8.4+ that extracts data from Exc
 **XLSXParser** is designed as a simple tool to get the job done. No fancy options of any kind and no need for any extra libraries other than the required `zip` and `xmlreader` PHP extensions.
 
 The parsing workflow is straightforward:
+
 1. Initialize class
 2. Open workbook
 3. Choose worksheet
@@ -34,8 +35,9 @@ composer require valksor/php-xlsx-parser
 
 - **PHP**: 8.4 or higher
 - **Extensions**:
-  - `zip` - For extracting XLSX files
-  - `xmlreader` - For parsing XML data efficiently
+    - `zip` - For extracting XLSX files
+    - `xmlreader` - For parsing XML data efficiently
+
 ## Usage
 
 ### Basic Usage
@@ -153,6 +155,7 @@ This package is licensed under the [BSD-3-Clause License](https://github.com/val
 Valksor is a collection of high-quality PHP libraries designed to make development faster, easier, and more enjoyable. Our libraries are built with modern PHP best practices and focus on performance, security, and developer experience.
 
 Explore our other packages:
+
 - [Valksor Functions](https://github.com/valksor/php-functions) - Utility functions for common tasks
 - [Valksor Component SSE](https://github.com/valksor/php-component-sse) - Server-Sent Events implementation
 - [Valksor Bundle](https://github.com/valksor/php-bundle) - Symfony bundle integration

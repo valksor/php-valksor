@@ -15,6 +15,7 @@ public function bubbleSort(
 Sorts an array in place using the bubble sort algorithm.
 
 Parameters:
+
 - `$array`: The array to sort (passed by reference)
 
 ### mergeSort()
@@ -28,6 +29,7 @@ public function mergeSort(
 Sorts an array using the merge sort algorithm.
 
 Parameters:
+
 - `$array`: The array to sort
 
 Returns a new sorted array.
@@ -44,6 +46,7 @@ public function merge(
 Merges two sorted arrays into a single sorted array.
 
 Parameters:
+
 - `$left`: The first sorted array
 - `$right`: The second sorted array
 
@@ -64,6 +67,7 @@ public function sortByParameter(
 Sorts an array or object by a specific parameter.
 
 Parameters:
+
 - `$data`: The array or object to sort
 - `$parameter`: The parameter to sort by
 - `$order`: The sort order ('ASC' or 'DESC')
@@ -85,6 +89,7 @@ public function stableSort(
 Performs a stable sort on an array of elements.
 
 Parameters:
+
 - `$elements`: The array to sort
 - `$getComparedValue`: A callable that extracts the value to compare from an element
 - `$compareValues`: A callable that compares two values and returns an integer (-1, 0, or 1)
@@ -103,6 +108,7 @@ public function usort(
 Creates a closure for use with PHP's usort function to sort arrays or objects by a specific parameter.
 
 Parameters:
+
 - `$parameter`: The parameter to sort by
 - `$order`: The sort order ('ASC' or 'DESC')
 

@@ -9,6 +9,7 @@ Base functionality.
 See [features.md](docs/features.md) for more information.
 
 ### Functions
+
 - addElementIfNotExists
 - arrayFlipRecursive
 - arrayIntersectKeyRecursive

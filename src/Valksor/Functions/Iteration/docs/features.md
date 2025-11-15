@@ -17,11 +17,13 @@ public function addElementIfNotExists(
 Adds an element to an array if it doesn't already exist.
 
 Parameters:
+
 - `$array`: The array to modify (passed by reference)
 - `$element`: The element to add
 - `$key`: Optional key to use for the element
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -57,11 +59,13 @@ public function arrayFlipRecursive(
 Recursively flips the keys and values of an array.
 
 Parameters:
+
 - `$input`: The input array
 
 Returns a new array with keys and values flipped.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -97,12 +101,14 @@ public function arrayIntersectKeyRecursive(
 Recursively intersects two arrays by their keys.
 
 Parameters:
+
 - `$first`: The first array
 - `$second`: The second array
 
 Returns an array containing all the entries from the first array that have keys which are present in the second array, including nested arrays.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -168,11 +174,13 @@ public function arrayValuesFiltered(
 Returns all the values from an array, filtering out null values and re-indexing the array.
 
 Parameters:
+
 - `$array`: The input array
 
 Returns a filtered array with numeric indices.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -209,12 +217,14 @@ public function filterKeyEndsWith(
 Filters an array to keep only elements whose keys end with the specified string.
 
 Parameters:
+
 - `$array`: The input array
 - `$needle`: The string to check for at the end of keys
 
 Returns a filtered array.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -265,12 +275,14 @@ public function filterKeyStartsWith(
 Filters an array to keep only elements whose keys start with the specified string.
 
 Parameters:
+
 - `$array`: The input array
 - `$needle`: The string to check for at the start of keys
 
 Returns a filtered array.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -321,12 +333,14 @@ public function firstMatchAsString(
 Returns the first element from an array that matches the specified pattern.
 
 Parameters:
+
 - `$array`: The input array
 - `$pattern`: The pattern to match against
 
 Returns the first matching element as a string, or an empty string if no match is found.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -368,12 +382,14 @@ public function haveCommonElements(
 Checks if two arrays have at least one common element.
 
 Parameters:
+
 - `$first`: The first array
 - `$second`: The second array
 
 Returns a boolean indicating whether the arrays have common elements.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -419,12 +435,14 @@ public function isEmpty(
 Checks if a value is empty (null, empty string, empty array, etc.).
 
 Parameters:
+
 - `$value`: The value to check
 
 Returns a boolean indicating whether the value is empty.
 
 Example:
-```php
+
+````php
 use Valksor\Functions\Iteration;
 
 // Null value
@@ -437,17 +455,19 @@ public function isAssociative(
     mixed $array,
     bool $allowList = false,
 ): bool
-```
+````
 
 Checks if an array is associative (has string keys).
 
 Parameters:
+
 - `$array`: The array to check
 - `$allowList`: If true, returns true for any non-empty array
 
 Returns a boolean indicating whether the array is associative.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -491,11 +511,13 @@ public function isMultiDimensional(
 Checks if an array is multi-dimensional.
 
 Parameters:
+
 - `$keys`: The array to check
 
 Returns a boolean indicating whether the array is multi-dimensional.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -552,11 +574,13 @@ public function makeMultiDimensional(
 Converts a one-dimensional array into a multi-dimensional array.
 
 Parameters:
+
 - `$array`: The array to convert
 
 Returns a multi-dimensional array where each element of the original array is wrapped in its own array.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -658,12 +682,14 @@ public function unique(
 Gets unique values from an array.
 
 Parameters:
+
 - `$input`: The input array
 - `$keepKeys`: If true, preserves the keys of the original array
 
 Returns an array with unique values.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -725,12 +751,14 @@ public function arrayToString(
 Converts an array to a string.
 
 Parameters:
+
 - `$array`: The array to convert
 - `$glue`: The string to use as a separator
 
 Returns a string representation of the array.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -780,6 +808,7 @@ public function jsonEncode(
 Encodes a value as JSON with error handling.
 
 Parameters:
+
 - `$value`: The value to encode
 - `$flags`: JSON encoding flags
 - `$depth`: Maximum depth
@@ -787,6 +816,7 @@ Parameters:
 Returns a JSON string.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 
@@ -857,6 +887,7 @@ public function jsonDecode(
 Decodes a JSON string with error handling.
 
 Parameters:
+
 - `$json`: The JSON string to decode
 - `$associative`: When true, returns arrays instead of objects
 - `$depth`: Maximum depth
@@ -865,6 +896,7 @@ Parameters:
 Returns the decoded value.
 
 Example:
+
 ```php
 use Valksor\Functions\Iteration;
 

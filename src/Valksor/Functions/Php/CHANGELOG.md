@@ -9,6 +9,7 @@ Base functionality.
 See [features.md](docs/features.md) for more information.
 
 ### Functions
+
 - array
 - arrayFromObject
 - attributeExists

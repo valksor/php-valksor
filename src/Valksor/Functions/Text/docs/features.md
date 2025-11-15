@@ -15,6 +15,7 @@ public function camelCase(
 Converts a string to camelCase format.
 
 Parameters:
+
 - `$string`: The input string to convert
 
 Returns the string in camelCase format (first word lowercase, subsequent words capitalized with no spaces or underscores).
@@ -30,6 +31,7 @@ public function pascalCase(
 Converts a string to PascalCase format.
 
 Parameters:
+
 - `$string`: The input string to convert
 
 Returns the string in PascalCase format (all words capitalized with no spaces or underscores).
@@ -45,6 +47,7 @@ public function snakeCaseFromCamelCase(
 Converts a camelCase string to snake_case format.
 
 Parameters:
+
 - `$string`: The camelCase string to convert
 
 Returns the string in snake_case format.
@@ -60,6 +63,7 @@ public function snakeCaseFromSentence(
 Converts a sentence to snake_case format.
 
 Parameters:
+
 - `$string`: The sentence to convert
 
 Returns the string in snake_case format.
@@ -78,6 +82,7 @@ public function randomString(
 Generates a random string of the specified length using the given character set.
 
 Parameters:
+
 - `$length`: The length of the random string (default: 32)
 - `$chars`: The character set to use (default: lowercase and uppercase English letters plus digits)
 
@@ -94,6 +99,7 @@ public function uniqueId(
 Generates a unique identifier with an optional prefix.
 
 Parameters:
+
 - `$prefix`: Optional prefix for the unique ID
 
 Returns a unique identifier string.
@@ -111,6 +117,7 @@ public function sanitize(
 Sanitizes text by removing HTML tags and converting quotes to HTML entities.
 
 Parameters:
+
 - `$text`: The text to sanitize
 
 Returns the sanitized text.
@@ -126,6 +133,7 @@ public function sanitizeFloat(
 Sanitizes a float string by ensuring it uses the correct decimal separator.
 
 Parameters:
+
 - `$float`: The float string to sanitize
 
 Returns the sanitized float string.
@@ -141,6 +149,7 @@ public function cleanText(
 Cleans text by removing unwanted characters and normalizing whitespace.
 
 Parameters:
+
 - `$text`: The text to clean
 
 Returns the cleaned text.
@@ -156,6 +165,7 @@ public function keepNumeric(
 Removes all non-numeric characters from a string.
 
 Parameters:
+
 - `$string`: The input string
 
 Returns a string containing only numeric characters.
@@ -171,6 +181,7 @@ public function stripSpace(
 Removes all whitespace characters from a string.
 
 Parameters:
+
 - `$string`: The input string
 
 Returns the string with all whitespace removed.
@@ -186,6 +197,7 @@ public function oneSpace(
 Replaces multiple consecutive spaces with a single space.
 
 Parameters:
+
 - `$string`: The input string
 
 Returns the string with normalized spaces.
@@ -203,6 +215,7 @@ public function cyrillicToLatin(
 Converts Cyrillic characters to their Latin equivalents.
 
 Parameters:
+
 - `$text`: The text with Cyrillic characters
 
 Returns the text with Cyrillic characters converted to Latin.
@@ -218,6 +231,7 @@ public function latinToCyrillic(
 Converts Latin characters to their Cyrillic equivalents.
 
 Parameters:
+
 - `$text`: The text with Latin characters
 
 Returns the text with Latin characters converted to Cyrillic.
@@ -233,6 +247,7 @@ public function htmlEntityDecode(
 Decodes HTML entities in a string.
 
 Parameters:
+
 - `$string`: The string with HTML entities
 
 Returns the decoded string.
@@ -248,6 +263,7 @@ public function br2nl(
 Converts HTML line breaks to newlines.
 
 Parameters:
+
 - `$string`: The string with HTML line breaks
 
 Returns the string with HTML line breaks converted to newlines.
@@ -263,6 +279,7 @@ public function nl2br(
 Converts newlines to HTML line breaks.
 
 Parameters:
+
 - `$string`: The string with newlines
 
 Returns the string with newlines converted to HTML line breaks.
@@ -282,6 +299,7 @@ public function limitChars(
 Limits the number of characters in a text and appends a suffix if truncated.
 
 Parameters:
+
 - `$text`: The text to limit
 - `$limit`: The maximum number of characters (default: 100)
 - `$append`: The string to append if truncated (default: '...')
@@ -301,6 +319,7 @@ public function limitWords(
 Limits the number of words in a text and appends a suffix if truncated.
 
 Parameters:
+
 - `$text`: The text to limit
 - `$limit`: The maximum number of words (default: 100)
 - `$append`: The string to append if truncated (default: '...')
@@ -320,6 +339,7 @@ public function truncateSafe(
 Safely truncates a string to a specified length without cutting words.
 
 Parameters:
+
 - `$string`: The string to truncate
 - `$length`: The maximum length
 - `$append`: The string to append if truncated (default: '...')
@@ -337,6 +357,7 @@ public function reverseUTF8(
 Reverses a UTF-8 encoded string.
 
 Parameters:
+
 - `$string`: The UTF-8 string to reverse
 
 Returns the reversed string.
@@ -352,6 +373,7 @@ public function shuffle(
 Shuffles the characters in a string.
 
 Parameters:
+
 - `$string`: The string to shuffle
 
 Returns the shuffled string.
@@ -368,6 +390,7 @@ public function lastPart(
 Gets the last part of a string after the last occurrence of a delimiter.
 
 Parameters:
+
 - `$string`: The input string
 - `$delimiter`: The delimiter character
 
@@ -387,6 +410,7 @@ public function contains(
 Checks if a string contains a substring.
 
 Parameters:
+
 - `$haystack`: The string to search in
 - `$needle`: The substring to search for
 
@@ -404,6 +428,7 @@ public function containsAny(
 Checks if a string contains any of the given substrings.
 
 Parameters:
+
 - `$haystack`: The string to search in
 - `$needles`: An array of substrings to search for
 
@@ -421,6 +446,7 @@ public function strStartsWithAny(
 Checks if a string starts with any of the given substrings.
 
 Parameters:
+
 - `$haystack`: The string to check
 - `$needles`: An array of possible prefixes to check for
 
@@ -438,6 +464,7 @@ public function compare(
 Compares two strings for equality (case-insensitive).
 
 Parameters:
+
 - `$first`: The first string
 - `$second`: The second string
 
@@ -455,6 +482,7 @@ public function longestSubstrLength(
 Finds the length of the longest common substring between two strings.
 
 Parameters:
+
 - `$first`: The first string
 - `$second`: The second string
 
@@ -471,6 +499,7 @@ public function isHex(
 Checks if a string is a valid hexadecimal value.
 
 Parameters:
+
 - `$string`: The string to check
 
 Returns a boolean indicating whether the string is a valid hexadecimal value.
@@ -488,6 +517,7 @@ public function toString(
 Converts a value to a string representation.
 
 Parameters:
+
 - `$value`: The value to convert
 
 Returns the string representation of the value.
@@ -503,6 +533,7 @@ public function scalarToString(
 Converts a scalar value to a string.
 
 Parameters:
+
 - `$value`: The scalar value to convert
 
 Returns the string representation of the scalar value.
@@ -518,6 +549,7 @@ public function normalizedValue(
 Normalizes a value to a standardized string representation.
 
 Parameters:
+
 - `$value`: The value to normalize
 
 Returns the normalized string representation.
@@ -535,6 +567,7 @@ public function pluralize(
 Converts a singular English word to its plural form.
 
 Parameters:
+
 - `$singular`: The singular word
 
 Returns the plural form of the word.
@@ -550,6 +583,7 @@ public function singularize(
 Converts a plural English word to its singular form.
 
 Parameters:
+
 - `$plural`: The plural word
 
 Returns the singular form of the word.
@@ -565,6 +599,7 @@ public function countryName(
 Gets the country name from a country code.
 
 Parameters:
+
 - `$code`: The country code (ISO 3166-1 alpha-2)
 
 Returns the country name.
@@ -581,6 +616,7 @@ public function sha(
 Generates a SHA hash of a string.
 
 Parameters:
+
 - `$string`: The string to hash
 - `$length`: The length of the hash (default: 40)
 

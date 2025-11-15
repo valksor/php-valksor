@@ -19,6 +19,7 @@ public function memoize(
 Caches the result of a callback function based on a context and keys. If the result is already cached, it returns the cached value unless a refresh is requested.
 
 Parameters:
+
 - `$context`: A BackedEnum instance used as the primary context for caching
 - `$key`: The main key for the cached value
 - `$callback`: The function whose result will be cached
@@ -28,6 +29,7 @@ Parameters:
 Returns the result of the callback function, either freshly calculated or from the cache.
 
 Example:
+
 ```php
 use Valksor\Functions\Memoize;
 
@@ -258,6 +260,7 @@ public function value(
 Retrieves a cached value based on a context and keys, with an option to provide a default value if the requested value isn't cached.
 
 Parameters:
+
 - `$context`: A BackedEnum instance used as the primary context for caching
 - `$key`: The main key for the cached value
 - `$default`: The default value to return if the requested value isn't cached
@@ -266,6 +269,7 @@ Parameters:
 Returns the cached value if found, or the default value if not found.
 
 Example:
+
 ```php
 use Valksor\Functions\Memoize;
 

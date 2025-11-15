@@ -42,10 +42,11 @@ The Valksor Bundle provides flexible configuration options for project structure
 valksor:
     # Project directory structure configuration
     project:
-        apps_dir: null                    # Directory containing applications (relative to project root)
-        infrastructure_dir: null          # Directory containing shared resources (relative to project root)
+        apps_dir: null # Directory containing applications (relative to project root)
+        infrastructure_dir: null # Directory containing shared resources (relative to project root)
         autoload:
-            namespace_prefix: null       # Namespace prefix for generated autoload classes
+            namespace_prefix: null # Namespace prefix for generated autoload classes
+
 
     # Component configurations (auto-discovered)
     # Each discovered component can be enabled/disabled individually
@@ -53,13 +54,13 @@ valksor:
 
 ### Configuration Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `project.apps_dir` | string | `null` | Directory containing applications (relative to project root) |
-| `project.infrastructure_dir` | string | `null` | Directory containing shared resources (relative to project root) |
-| `project.autoload.namespace_prefix` | string | `null` | Namespace prefix for generated autoload classes |
+| Option                              | Type   | Default | Description                                                      |
+| ----------------------------------- | ------ | ------- | ---------------------------------------------------------------- |
+| `project.apps_dir`                  | string | `null`  | Directory containing applications (relative to project root)     |
+| `project.infrastructure_dir`        | string | `null`  | Directory containing shared resources (relative to project root) |
+| `project.autoload.namespace_prefix` | string | `null`  | Namespace prefix for generated autoload classes                  |
 
-*See: [`ValksorConfiguration.php`](DependencyInjection/ValksorConfiguration.php) for the complete configuration schema.*
+_See: [`ValksorConfiguration.php`](DependencyInjection/ValksorConfiguration.php) for the complete configuration schema._
 
 ## Usage
 
@@ -148,25 +149,25 @@ valksor:
                 enabled: true
                 flags: [init, dev, prod]
                 options:
-                    download_dir: 'bin/build-tools/'
-                    esbuild_version: 'latest'
-                    tailwind_version: 'latest'
+                    download_dir: "bin/build-tools/"
+                    esbuild_version: "latest"
+                    tailwind_version: "latest"
 
             # Hot reload with SSE integration
             hot_reload:
                 enabled: true
                 flags: [dev]
                 options:
-                    watch_paths: ['templates/', 'src/', 'assets/']
-                    exclude_patterns: ['vendor/', 'var/']
+                    watch_paths: ["templates/", "src/", "assets/"]
+                    exclude_patterns: ["vendor/", "var/"]
 
             # Tailwind CSS compilation
             tailwind:
                 enabled: true
                 flags: [dev, prod]
                 options:
-                    input: 'assets/css/app.css'
-                    output: 'public/build/app.css'
+                    input: "assets/css/app.css"
+                    output: "public/build/app.css"
                     minify: false
 
             # Import map management
@@ -174,31 +175,31 @@ valksor:
                 enabled: true
                 flags: [dev, prod]
                 options:
-                    importmap_path: 'importmap.json'
-                    vendor_dir: 'assets/vendor/'
+                    importmap_path: "importmap.json"
+                    vendor_dir: "assets/vendor/"
 
             # Icon generation
             icons:
                 enabled: true
                 flags: [prod]
                 options:
-                    input_dir: 'assets/icons/'
-                    output_dir: 'templates/icons/'
+                    input_dir: "assets/icons/"
+                    output_dir: "templates/icons/"
 ```
 
 #### Available Development Commands
 
 The bundle registers the following console commands when build services are enabled:
 
-| Command | Description | Services Run |
-|---------|-------------|--------------|
-| `valksor:dev` | Lightweight development (SSE + hot reload) | `binaries` + `hot_reload` |
-| `valksor:watch` | Full development environment | All services with `dev` flag |
-| `valksor-prod:build` | Production asset building | All services with `prod` flag |
-| `valksor:hot-reload` | Standalone hot reload service | Hot reload only |
-| `valksor:tailwind` | Tailwind CSS compilation | Tailwind only |
-| `valksor:importmap` | Import map synchronization | Import map only |
-| `valksor:binary` | Binary management | Binary download only |
+| Command              | Description                                | Services Run                  |
+| -------------------- | ------------------------------------------ | ----------------------------- |
+| `valksor:dev`        | Lightweight development (SSE + hot reload) | `binaries` + `hot_reload`     |
+| `valksor:watch`      | Full development environment               | All services with `dev` flag  |
+| `valksor-prod:build` | Production asset building                  | All services with `prod` flag |
+| `valksor:hot-reload` | Standalone hot reload service              | Hot reload only               |
+| `valksor:tailwind`   | Tailwind CSS compilation                   | Tailwind only                 |
+| `valksor:importmap`  | Import map synchronization                 | Import map only               |
+| `valksor:binary`     | Binary management                          | Binary download only          |
 
 #### Service Registry Integration
 
@@ -230,7 +231,7 @@ valksor:
                 enabled: true
                 flags: [dev]
                 options:
-                    sse_port: 8080  # Matches SSE configuration
+                    sse_port: 8080 # Matches SSE configuration
 ```
 
 This integration ensures that running `valksor:dev` or `valksor:watch` automatically starts the SSE server with hot reload functionality.
@@ -250,6 +251,7 @@ return include $projectDir . '/valksor/src/Valksor/Bundle/Resources/importmap.ph
 ```
 
 **How it works:**
+
 - Automatically detects the project structure
 - Includes the core Valksor import map with SSE and build system assets
 - Works with the standard AssetMapper component
@@ -269,6 +271,7 @@ return include $projectDir . '/valksor/src/Valksor/Bundle/Resources/importmap.ph
 ```
 
 **How it changes:**
+
 - The import map system can discover assets in multiple app directories
 - Supports infrastructure-specific shared assets
 - Handles entry point detection for each application (`*.entry.js` files)
@@ -403,7 +406,6 @@ valksor:
         # Component-specific configuration options
 ```
 
-
 ## Contributing
 
 Contributions are welcome!
@@ -460,6 +462,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
+
 - Various utility functions and components
 - Doctrine ORM tools and extensions
 - API Platform integrations

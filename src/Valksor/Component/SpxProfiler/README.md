@@ -28,16 +28,16 @@ The SpxProfiler component has a simple configuration with a single user-configur
 # config/packages/valksor.yaml
 valksor:
     spx_profiler:
-        enabled: true    # Enable/disable the SPX profiler integration
+        enabled: true # Enable/disable the SPX profiler integration
 ```
 
 ### Configuration Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `enabled` | boolean | `true` | Enable or disable the SPX profiler data collector |
+| Option    | Type    | Default | Description                                       |
+| --------- | ------- | ------- | ------------------------------------------------- |
+| `enabled` | boolean | `true`  | Enable or disable the SPX profiler data collector |
 
-*See: [`SpxProfilerConfiguration.php`](DependencyInjection/SpxProfilerConfiguration.php) for the complete configuration schema.*
+_See: [`SpxProfilerConfiguration.php`](DependencyInjection/SpxProfilerConfiguration.php) for the complete configuration schema._
 
 ## Features
 
@@ -61,7 +61,6 @@ Once the component is installed and enabled, you can view profiling data in the 
 ### Prerequisites
 
 The SpxProfiler component requires the SPX PHP extension to be installed and configured separately. For SPX extension setup instructions, see the [SPX documentation](https://github.com/NoiseByNorthwest/php-spx).
-
 
 ## Contributing
 
@@ -120,6 +119,7 @@ This package is licensed under the [BSD-3-Clause License](LICENSE).
 This package is part of the [valksor/php-valksor](https://github.com/valksor/php-valksor) project - a comprehensive PHP library and Symfony bundle that provides a collection of utilities, components, and integrations for Symfony applications.
 
 The main project includes:
+
 - Various utility functions and components
 - Doctrine ORM tools and extensions
 - API Platform integrations
