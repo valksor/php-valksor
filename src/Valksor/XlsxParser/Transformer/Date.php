@@ -17,6 +17,8 @@ use DateTimeImmutable;
 use function date_create_immutable_from_format;
 use function floor;
 use function gmdate;
+use function round;
+use function sprintf;
 
 /**
  * @internal
@@ -28,10 +30,19 @@ final class Date
     public function transform(
         float|int $value,
     ): DateTimeImmutable {
-        $value = (int) floor($value);
+        // Handle pure time values (value < 1)
+        if ($value < 1) {
+            $totalSeconds = (int) round($value * 86400); // Convert fractional day to total seconds
+            $hours = floor($totalSeconds / 3600);
+            $minutes = floor(($totalSeconds % 3600) / 60);
 
-        /** @noinspection SummerTimeUnsafeTimeManipulationInspection */
-        $unix = ($value - 25569) * 86400;
+            // Create a DateTimeImmutable with only the time component
+            return new DateTimeImmutable(sprintf('%02d:%02d:00', $hours, $minutes));
+        }
+
+        // Default/Standard: Handle full date or date-time values (value >= 1)
+        // Convert Excel date to UNIX timestamp
+        $unix = (int) (($value - 25569) * 86400);
         $date = gmdate(self::DATETIME_FORMAT, $unix);
 
         return date_create_immutable_from_format('!' . self::DATETIME_FORMAT, $date);

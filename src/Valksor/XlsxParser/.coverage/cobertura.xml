@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.99489795918367" branch-rate="0" lines-covered="195" lines-valid="196" branches-covered="0" branches-valid="0" complexity="135" version="0.4" timestamp="0">
+<coverage line-rate="0.995" branch-rate="0" lines-covered="199" lines-valid="200" branches-covered="0" branches-valid="0" complexity="136" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/XlsxParser</source>
   </sources>
@@ -101,24 +101,32 @@
         </class>
       </classes>
     </package>
-    <package name="Transformer/Date.php" line-rate="1" branch-rate="0" complexity="1">
+    <package name="Transformer/Date.php" line-rate="1" branch-rate="0" complexity="2">
       <classes>
-        <class name="Valksor\XlsxParser\Transformer\Date" filename="Transformer/Date.php" line-rate="1" branch-rate="0" complexity="1">
+        <class name="Valksor\XlsxParser\Transformer\Date" filename="Transformer/Date.php" line-rate="1" branch-rate="0" complexity="2">
           <methods>
-            <method name="transform" signature="float|int $value" line-rate="1" branch-rate="0" complexity="1">
+            <method name="transform" signature="float|int $value" line-rate="1" branch-rate="0" complexity="2">
               <lines>
-                <line number="31" hits="2"/>
-                <line number="34" hits="2"/>
-                <line number="35" hits="2"/>
-                <line number="37" hits="2"/>
+                <line number="32" hits="2"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="42" hits="2"/>
+                <line number="43" hits="2"/>
+                <line number="44" hits="2"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="31" hits="2"/>
-            <line number="34" hits="2"/>
-            <line number="35" hits="2"/>
-            <line number="37" hits="2"/>
+            <line number="32" hits="2"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="42" hits="2"/>
+            <line number="43" hits="2"/>
+            <line number="44" hits="2"/>
           </lines>
         </class>
       </classes>

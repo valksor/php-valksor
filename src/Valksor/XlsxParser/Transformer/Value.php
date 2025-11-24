@@ -60,7 +60,7 @@ final class Value
     ): DateTimeImmutable|float|int {
         return match (true) {
             $style && Styles::FORMAT_DATE === $this->styles->get((int) $style) => $this->dateTransformer->transform((int) $value),
-            default => preg_match('/^\d+\.\d+$/', $value) ? (float) $value : (int) $value,
+            default => preg_match('/^\d+\.\d+$/', (string) $value) ? (float) $value : (int) $value,
         };
     }
 }
