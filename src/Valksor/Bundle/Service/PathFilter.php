@@ -80,6 +80,123 @@ final class PathFilter
         $this->excludePatterns = $patterns;
     }
 
+    // ===== BACKWARD COMPATIBILITY METHODS =====
+    // These methods provide compatibility with the old categorized PathFilter interface
+    // used by HotReloadService and other legacy components.
+
+    /**
+     * Get ignored directory patterns from unified patterns.
+     *
+     * Extracts patterns that are typically directory names (no slashes, no dots, no wildcards).
+     *
+     * @return array<string> Directory patterns to ignore
+     */
+    public function getIgnoredDirectories(): array
+    {
+        $directories = [];
+
+        foreach ($this->excludePatterns as $pattern) {
+            $pattern = strtolower(trim($pattern, '/'));
+
+            // Include as directory if:
+            // - No dots (not an extension)
+            // - No wildcards (not a glob)
+            // - Not too short (likely not a filename like 'a' or 'in')
+            if (!str_contains($pattern, '.')
+                && !str_contains($pattern, '*')
+                && !str_contains($pattern, '?')
+                && strlen($pattern) > 2
+                && !str_starts_with($pattern, '**')) {
+                $directories[] = $pattern;
+            }
+        }
+
+        return $directories;
+    }
+
+    /**
+     * Get ignored file extension patterns from unified patterns.
+     *
+     * Extracts patterns that start with a dot and are likely file extensions.
+     *
+     * @return array<string> File extensions to ignore
+     */
+    public function getIgnoredExtensions(): array
+    {
+        $extensions = [];
+
+        foreach ($this->excludePatterns as $pattern) {
+            $pattern = strtolower(trim($pattern, '/'));
+
+            // Include as extension if:
+            // - No slashes (not a path)
+            // - No wildcards (not a glob)
+            // - Starts with dot (typical extension format)
+            if (!str_contains($pattern, '/')
+                && !str_contains($pattern, '*')
+                && !str_contains($pattern, '?')
+                && str_starts_with($pattern, '.')) {
+                $extensions[] = $pattern;
+            }
+        }
+
+        return $extensions;
+    }
+
+    /**
+     * Get ignored filename patterns from unified patterns.
+     *
+     * Extracts patterns that are typical filenames (no slashes, no dots, no wildcards).
+     *
+     * @return array<string> Filename patterns to ignore
+     */
+    public function getIgnoredFilenames(): array
+    {
+        $filenames = [];
+
+        foreach ($this->excludePatterns as $pattern) {
+            $pattern = strtolower(trim($pattern, '/'));
+
+            // Include as filename if:
+            // - No slashes (not a path)
+            // - No dots or starts with dot (not an extension)
+            // - No wildcards (not a glob)
+            // - Shorter length (typical filenames)
+            if (!str_contains($pattern, '/')
+                && !str_contains($pattern, '*')
+                && !str_contains($pattern, '?')
+                && strlen($pattern) <= 10
+                && (!str_contains($pattern, '.') || str_starts_with($pattern, '.'))) {
+                $filenames[] = $pattern;
+            }
+        }
+
+        return $filenames;
+    }
+
+    /**
+     * Get ignored glob patterns from unified patterns.
+     *
+     * Extracts patterns containing wildcards or glob syntax.
+     *
+     * @return array<string> Glob patterns to ignore
+     */
+    public function getIgnoredGlobs(): array
+    {
+        $globs = [];
+
+        foreach ($this->excludePatterns as $pattern) {
+            $pattern = strtolower(trim($pattern, '/'));
+
+            // Include as glob if it contains wildcards
+            if (str_contains($pattern, '*') || str_contains($pattern, '?') || str_starts_with($pattern, '**')) {
+                $globs[] = $pattern;
+            }
+        }
+
+        return $globs;
+    }
+
     /**
      * Check if a directory should be ignored during file system traversal.
      *
@@ -336,110 +453,5 @@ final class PathFilter
         $pathParts = explode('/', $path);
 
         return self::matchPatternParts($patternParts, $pathParts);
-    }
-
-    // ===== BACKWARD COMPATIBILITY METHODS =====
-    // These methods provide compatibility with the old categorized PathFilter interface
-    // used by HotReloadService and other legacy components.
-
-    /**
-     * Get ignored directory patterns from unified patterns.
-     *
-     * Extracts patterns that are typically directory names (no slashes, no dots, no wildcards).
-     *
-     * @return array<string> Directory patterns to ignore
-     */
-    public function getIgnoredDirectories(): array
-    {
-        $directories = [];
-        foreach ($this->excludePatterns as $pattern) {
-            $pattern = strtolower(trim($pattern, '/'));
-            // Include as directory if:
-            // - No dots (not an extension)
-            // - No wildcards (not a glob)
-            // - Not too short (likely not a filename like 'a' or 'in')
-            if (!str_contains($pattern, '.')
-                && !str_contains($pattern, '*')
-                && !str_contains($pattern, '?')
-                && strlen($pattern) > 2
-                && !str_starts_with($pattern, '**')) {
-                $directories[] = $pattern;
-            }
-        }
-        return $directories;
-    }
-
-    /**
-     * Get ignored glob patterns from unified patterns.
-     *
-     * Extracts patterns containing wildcards or glob syntax.
-     *
-     * @return array<string> Glob patterns to ignore
-     */
-    public function getIgnoredGlobs(): array
-    {
-        $globs = [];
-        foreach ($this->excludePatterns as $pattern) {
-            $pattern = strtolower(trim($pattern, '/'));
-            // Include as glob if it contains wildcards
-            if (str_contains($pattern, '*') || str_contains($pattern, '?') || str_starts_with($pattern, '**')) {
-                $globs[] = $pattern;
-            }
-        }
-        return $globs;
-    }
-
-    /**
-     * Get ignored filename patterns from unified patterns.
-     *
-     * Extracts patterns that are typical filenames (no slashes, no dots, no wildcards).
-     *
-     * @return array<string> Filename patterns to ignore
-     */
-    public function getIgnoredFilenames(): array
-    {
-        $filenames = [];
-        foreach ($this->excludePatterns as $pattern) {
-            $pattern = strtolower(trim($pattern, '/'));
-            // Include as filename if:
-            // - No slashes (not a path)
-            // - No dots or starts with dot (not an extension)
-            // - No wildcards (not a glob)
-            // - Shorter length (typical filenames)
-            if (!str_contains($pattern, '/')
-                && !str_contains($pattern, '*')
-                && !str_contains($pattern, '?')
-                && strlen($pattern) <= 10
-                && (!str_contains($pattern, '.') || str_starts_with($pattern, '.'))) {
-                $filenames[] = $pattern;
-            }
-        }
-        return $filenames;
-    }
-
-    /**
-     * Get ignored file extension patterns from unified patterns.
-     *
-     * Extracts patterns that start with a dot and are likely file extensions.
-     *
-     * @return array<string> File extensions to ignore
-     */
-    public function getIgnoredExtensions(): array
-    {
-        $extensions = [];
-        foreach ($this->excludePatterns as $pattern) {
-            $pattern = strtolower(trim($pattern, '/'));
-            // Include as extension if:
-            // - No slashes (not a path)
-            // - No wildcards (not a glob)
-            // - Starts with dot (typical extension format)
-            if (!str_contains($pattern, '/')
-                && !str_contains($pattern, '*')
-                && !str_contains($pattern, '?')
-                && str_starts_with($pattern, '.')) {
-                $extensions[] = $pattern;
-            }
-        }
-        return $extensions;
     }
 }
