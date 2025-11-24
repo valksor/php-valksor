@@ -3,6 +3,7 @@
 [![valksor](https://badgen.net/static/org/valksor/green)](https://github.com/valksor) 
 [![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-memoize/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-memoize/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-memoize?branch=master)
+[![php](https://badgen.net/static/php/>=8.4/purple)](https://www.php.net/releases/8.4/en.php)
 
 A PHP library providing memoization functionality to cache the results of expensive function calls and return the cached result when the same inputs occur again.
 

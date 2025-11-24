@@ -3,6 +3,7 @@
 [![valksor](https://badgen.net/static/org/valksor/green)](https://github.com/valksor) 
 [![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-bundle/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/valksor/php-bundle/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-bundle?branch=master)
+[![php](https://badgen.net/static/php/>=8.4/purple)](https://www.php.net/releases/8.4/en.php)
 
 A comprehensive Symfony bundle that provides automatic component discovery, configuration management, and dependency injection for Valksor components and related packages.
 

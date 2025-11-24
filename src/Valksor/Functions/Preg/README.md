@@ -3,6 +3,7 @@
 [![valksor](https://badgen.net/static/org/valksor/green)](https://github.com/valksor) 
 [![BSD-3-Clause](https://img.shields.io/badge/BSD--3--Clause-green?style=flat)](https://github.com/valksor/php-functions-preg/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/valksor/php-functions-preg/badge.svg?branch=master)](https://coveralls.io/github/valksor/php-functions-preg?branch=master)
+[![php](https://badgen.net/static/php/>=8.4/purple)](https://www.php.net/releases/8.4/en.php)
 
 A PHP library providing enhanced regular expression (preg\_\*) functions with improved error handling and UTF-8 support.
 
