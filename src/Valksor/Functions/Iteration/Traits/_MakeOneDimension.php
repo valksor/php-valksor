@@ -12,12 +12,25 @@
 
 namespace Valksor\Functions\Iteration\Traits;
 
+use Generator;
+
 use function ltrim;
 
 use const PHP_INT_MAX;
 
 trait _MakeOneDimension
 {
+    /**
+     * @param array  $array     The multidimensional array to flatten
+     * @param string $base      The base key path for nested elements
+     * @param string $separator The separator between nested keys
+     * @param bool   $onlyLast  If true, only yields the deepest nested values
+     * @param int    $depth     Current recursion depth (for internal use)
+     * @param int    $maxDepth  Maximum recursion depth
+     * @param bool   $allowList Whether to treat indexed arrays as associative
+     *
+     * @return Generator<string, mixed> Yields key-value pairs
+     */
     public function makeOneDimension(
         array $array,
         string $base = '',
@@ -25,9 +38,8 @@ trait _MakeOneDimension
         bool $onlyLast = false,
         int $depth = 0,
         int $maxDepth = PHP_INT_MAX,
-        array $result = [],
         bool $allowList = false,
-    ): array {
+    ): Generator {
         static $_helper = null;
 
         if (null === $_helper) {
@@ -42,17 +54,23 @@ trait _MakeOneDimension
                 $key = ltrim(string: $base . '.' . $key, characters: '.');
 
                 if ($_helper->isAssociative(array: $value, allowList: $allowList)) {
-                    $result = $_helper->makeOneDimension(array: $value, base: $key, separator: $separator, onlyLast: $onlyLast, depth: $depth + 1, maxDepth: $maxDepth, result: $result, allowList: $allowList);
+                    yield from $_helper->makeOneDimension(
+                        array: $value,
+                        base: $key,
+                        separator: $separator,
+                        onlyLast: $onlyLast,
+                        depth: $depth + 1,
+                        maxDepth: $maxDepth,
+                        allowList: $allowList,
+                    );
 
                     if ($onlyLast) {
                         continue;
                     }
                 }
 
-                $result[$key] = $value;
+                yield $key => $value;
             }
         }
-
-        return $result;
     }
 }

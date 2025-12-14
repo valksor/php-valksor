@@ -1,0 +1,6 @@
+{% block valksor_form_type_cloudflare_turnstile_widget %}
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+    {% set attributes = attr|merge({class: (attr.class|default('cf-turnstile'))}) %}
+
+    <div class="cf-turnstile" data-sitekey="{{ key }}" {% for key, attribute in attributes %}{{ key|e }}="{{ attribute }}"{% endfor %}></div>
+{% endblock %}

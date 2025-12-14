@@ -13,8 +13,10 @@
 namespace Valksor\XlsxParser\Xlsx;
 
 use FilesystemIterator;
+use Generator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use SplFileInfo;
 use Valksor\XlsxParser\Exception\InvalidArchiveException;
 use ZipArchive;
 
@@ -77,17 +79,43 @@ final class Archive
             return;
         }
 
-        foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->tmpPath, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST, ) as $file) {
-            if ($file->isDir()) {
-                rmdir($file->getRealPath());
-
-                continue;
+        foreach ($this->generateFilesToDelete($this->tmpPath) as $file) {
+            if ($file instanceof SplFileInfo) {
+                if ($file->isDir()) {
+                    rmdir($file->getRealPath());
+                } else {
+                    unlink($file->getRealPath());
+                }
+            } else {
+                // Handle the root directory (string path)
+                rmdir($file);
             }
+        }
+    }
 
-            unlink($file->getRealPath());
+    /**
+     * Generator that yields files and directories for deletion in proper order.
+     *
+     * @param string $path The path to clean up
+     *
+     * @return Generator<SplFileInfo|string> Yields files first, then directories, ending with the root path
+     */
+    private function generateFilesToDelete(
+        string $path,
+    ): Generator {
+        if (!is_dir($path)) {
+            return;
         }
 
-        rmdir($this->tmpPath);
+        foreach (new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS),
+            RecursiveIteratorIterator::CHILD_FIRST,
+        ) as $file) {
+            yield $file;
+        }
+
+        // Finally yield the directory itself
+        yield $path;
     }
 
     private function getArchive(): ZipArchive

@@ -28,6 +28,8 @@ final class DoctrineMigrationsFilterTest extends TestCase
 {
     public function testFilterDisablesAfterDoctrineConsoleCommand(): void
     {
+        $this->requireDoctrineMigrations();
+
         $filter = new DoctrineMigrationsFilter();
         $tableName = new TableMetadataStorageConfiguration()->getTableName();
 
@@ -41,6 +43,8 @@ final class DoctrineMigrationsFilterTest extends TestCase
 
     public function testHandlesDoctrineAbstractAssets(): void
     {
+        $this->requireDoctrineMigrations();
+
         $filter = new DoctrineMigrationsFilter();
         $tableName = new TableMetadataStorageConfiguration()->getTableName();
 
@@ -50,10 +54,24 @@ final class DoctrineMigrationsFilterTest extends TestCase
 
     public function testSkipsDoctrineMigrationsMetadataTable(): void
     {
+        $this->requireDoctrineMigrations();
+
         $filter = new DoctrineMigrationsFilter();
         $tableName = new TableMetadataStorageConfiguration()->getTableName();
 
         self::assertFalse($filter($tableName));
         self::assertTrue($filter('another_table'));
+    }
+
+    private function isDoctrineMigrationsAvailable(): bool
+    {
+        return class_exists('Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration');
+    }
+
+    private function requireDoctrineMigrations(): void
+    {
+        if (!$this->isDoctrineMigrationsAvailable()) {
+            self::markTestSkipped('Doctrine Migrations component not available');
+        }
     }
 }

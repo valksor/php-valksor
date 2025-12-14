@@ -73,7 +73,7 @@ final class SpxDataCollectorTest extends TestCase
 
         $this->assertStringContainsString('SPX_KEY=test-key', $url);
         $this->assertStringContainsString('key=spx-full-12345', $url);
-        $this->assertStringContainsString('SPX_UI_URI=/report.html', $url);
+        $this->assertStringContainsString('SPX_UI_URI=/v1/report.html', $url);
     }
 
     /**

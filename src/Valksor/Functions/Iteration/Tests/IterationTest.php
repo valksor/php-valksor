@@ -220,17 +220,38 @@ final class IterationTest extends TestCase
     public function testMakeOneDimensionFlattensWithOptions(): void
     {
         $input = ['user' => ['profile' => ['name' => 'Alice', 'age' => 30]]];
-        $flattened = $this->iteration->makeOneDimension($input);
 
+        // Test basic flattening - generator yields correct key-value pairs
+        $flattened = [];
+
+        foreach ($this->iteration->makeOneDimension($input) as $key => $value) {
+            $flattened[$key] = $value;
+        }
         self::assertSame('Alice', $flattened['user.profile.name']);
+        self::assertSame(30, $flattened['user.profile.age']);
 
-        $onlyLast = $this->iteration->makeOneDimension($input, onlyLast: true);
+        // Test onlyLast parameter - should skip intermediate levels
+        $onlyLast = [];
+
+        foreach ($this->iteration->makeOneDimension($input, onlyLast: true) as $key => $value) {
+            $onlyLast[$key] = $value;
+        }
         self::assertSame(['user.profile.name' => 'Alice', 'user.profile.age' => 30], $onlyLast);
 
-        $limited = $this->iteration->makeOneDimension($input, maxDepth: 0);
+        // Test maxDepth parameter - should limit recursion depth
+        $limited = [];
+
+        foreach ($this->iteration->makeOneDimension($input, maxDepth: 0) as $key => $value) {
+            $limited[$key] = $value;
+        }
         self::assertSame(['user' => ['profile' => ['name' => 'Alice', 'age' => 30]]], $limited);
 
-        $withList = $this->iteration->makeOneDimension(['items' => [1, 2]], allowList: true);
+        // Test allowList parameter - should treat arrays as both list and associative
+        $withList = [];
+
+        foreach ($this->iteration->makeOneDimension(['items' => [1, 2]], allowList: true) as $key => $value) {
+            $withList[$key] = $value;
+        }
         self::assertSame(
             [
                 'items.0' => 1,

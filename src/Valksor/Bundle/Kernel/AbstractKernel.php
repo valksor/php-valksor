@@ -26,14 +26,12 @@ use function file_exists;
 use function glob;
 use function is_dir;
 use function is_file;
-use function pathinfo;
 use function sort;
 use function sprintf;
 use function strlen;
 use function ucfirst;
 
 use const GLOB_NOSORT;
-use const PATHINFO_FILENAME;
 
 abstract class AbstractKernel extends BaseKernel
 {
@@ -63,7 +61,6 @@ abstract class AbstractKernel extends BaseKernel
 
         parent::__construct($environment, $debug);
 
-        // Load app-specific .env files
         $this->loadAppEnvironmentFiles();
     }
 
@@ -102,7 +99,6 @@ abstract class AbstractKernel extends BaseKernel
         $infrastructureDir = $this->getProjectDir() . '/' . $this->infrastructure . '/config';
         $appDir = $this->getAppConfigDir();
 
-        // Set app-specific parameters
         $container->parameters()
             ->set('app.id', $this->id)
             ->set('app.namespace', ucfirst(explode('.', $this->id, 2)[0]));
@@ -121,7 +117,6 @@ abstract class AbstractKernel extends BaseKernel
         $appDir = $this->getAppConfigDir();
 
         $this->importInfrastructureRoutesWithOverride($infrastructureDir, $appDir, $routes);
-        // Import app routes normally
         $this->importRoutesWithWildcardSupport($appDir . '/{routes}/*.%s', $routes);
         $this->importRoutesWithWildcardSupport($appDir . '/{routes}/' . $this->environment . '/*.%s', $routes);
         $this->importRoutes($appDir . '/routes.%s', $routes);
@@ -141,7 +136,6 @@ abstract class AbstractKernel extends BaseKernel
     private function extractBaseDirectoryFromWildcard(
         string $wildcardPath,
     ): ?string {
-        // Extract the base directory before the first wildcard
         $wildcardStart = strpos($wildcardPath, '{');
 
         if (false === $wildcardStart) {
@@ -152,7 +146,6 @@ abstract class AbstractKernel extends BaseKernel
             return null;
         }
 
-        // Find the directory separator before the wildcard
         $dirSeparator = strrpos($wildcardPath, '/', $wildcardStart - strlen($wildcardPath));
 
         if (false === $dirSeparator) {
@@ -190,11 +183,36 @@ abstract class AbstractKernel extends BaseKernel
         return $this->allBundles;
     }
 
-    private function hasOverride(
+    private function importAllConfigs(
         string $dir,
-        string $base,
-    ): bool {
-        return is_file($dir . '/' . $base . '.override.php');
+        ContainerConfigurator $container,
+    ): void {
+        if (!is_dir($dir)) {
+            return;
+        }
+
+        $files = glob($dir . '/*.php', GLOB_NOSORT) ?: [];
+        sort($files);
+
+        foreach ($files as $file) {
+            $container->import($file);
+        }
+    }
+
+    private function importAllRoutes(
+        string $dir,
+        RoutingConfigurator $routes,
+    ): void {
+        if (!is_dir($dir)) {
+            return;
+        }
+
+        $files = glob($dir . '/*.php', GLOB_NOSORT) ?: [];
+        sort($files);
+
+        foreach ($files as $file) {
+            $routes->import($file);
+        }
     }
 
     private function importConfig(
@@ -228,42 +246,16 @@ abstract class AbstractKernel extends BaseKernel
         }
     }
 
-    private function importDirConfigsWithOverride(
-        string $infrastructureDir,
-        string $appDir,
-        ContainerConfigurator $container,
-    ): void {
-        foreach ($this->listInfrastructureFilesWithOverride($infrastructureDir, $appDir) as $infrastructureFile) {
-            $container->import($infrastructureFile);
-        }
-    }
-
-    private function importDirRoutesWithOverride(
-        string $infrastructureDir,
-        string $appDir,
-        RoutingConfigurator $routes,
-    ): void {
-        foreach ($this->listInfrastructureFilesWithOverride($infrastructureDir, $appDir) as $infrastructureFile) {
-            $routes->import($infrastructureFile);
-        }
-    }
-
     private function importInfrastructurePackagesWithOverride(
         string $infrastructureConfigDir,
         string $appConfigDir,
         ContainerConfigurator $container,
     ): void {
-        $this->importDirConfigsWithOverride(
-            $infrastructureConfigDir . '/packages',
-            $appConfigDir . '/packages',
-            $container,
-        );
+        $this->importAllConfigs($infrastructureConfigDir . '/packages', $container);
+        $this->importAllConfigs($infrastructureConfigDir . '/packages/' . $this->environment, $container);
 
-        $this->importDirConfigsWithOverride(
-            $infrastructureConfigDir . '/packages/' . $this->environment,
-            $appConfigDir . '/packages/' . $this->environment,
-            $container,
-        );
+        $this->importAllConfigs($appConfigDir . '/packages', $container);
+        $this->importAllConfigs($appConfigDir . '/packages/' . $this->environment, $container);
     }
 
     private function importInfrastructureRoutesWithOverride(
@@ -271,21 +263,15 @@ abstract class AbstractKernel extends BaseKernel
         string $appConfigDir,
         RoutingConfigurator $routes,
     ): void {
-        $this->importDirRoutesWithOverride(
-            $infrastructureConfigDir . '/routes',
-            $appConfigDir . '/routes',
-            $routes,
-        );
+        $this->importAllRoutes($infrastructureConfigDir . '/routes', $routes);
+        $this->importAllRoutes($infrastructureConfigDir . '/routes/' . $this->environment, $routes);
 
-        $this->importDirRoutesWithOverride(
-            $infrastructureConfigDir . '/routes/' . $this->environment,
-            $appConfigDir . '/routes/' . $this->environment,
-            $routes,
-        );
+        $this->importAllRoutes($appConfigDir . '/routes', $routes);
+        $this->importAllRoutes($appConfigDir . '/routes/' . $this->environment, $routes);
 
         $infrastructureFile = $infrastructureConfigDir . '/routes.php';
 
-        if (is_file($infrastructureFile) && !$this->hasOverride($appConfigDir, 'routes')) {
+        if (is_file($infrastructureFile)) {
             $routes->import($infrastructureFile);
         }
     }
@@ -325,38 +311,6 @@ abstract class AbstractKernel extends BaseKernel
         string $filename,
     ): bool {
         return str_contains($filename, '{') || str_contains($filename, '*');
-    }
-
-    /**
-     * Build a sorted list of infrastructure config files (php) from a directory,
-     * excluding any whose base names are overridden by app-level override files.
-     * Results are sorted alphabetically.
-     *
-     * @return array<string>
-     */
-    private function listInfrastructureFilesWithOverride(
-        string $infrastructureDir,
-        string $appDir,
-    ): array {
-        if (!is_dir($infrastructureDir)) {
-            return [];
-        }
-
-        $files = glob($infrastructureDir . '/*.php', GLOB_NOSORT) ?: [];
-        sort($files);
-
-        $result = [];
-
-        foreach ($files as $infrastructureFile) {
-            $base = pathinfo($infrastructureFile, PATHINFO_FILENAME);
-
-            if ($this->hasOverride($appDir, $base)) {
-                continue;
-            }
-            $result[] = $infrastructureFile;
-        }
-
-        return $result;
     }
 
     /**

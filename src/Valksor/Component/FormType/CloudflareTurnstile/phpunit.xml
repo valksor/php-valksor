@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
+    bootstrap="Tests/bootstrap.php"
+    colors="true"
+    cacheDirectory="/tmp/.phpunit.cache"
+    executionOrder="depends"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutCoverageMetadata="true"
+    controlGarbageCollector="true"
+>
+
+    <php>
+        <ini name="memory_limit" value="-1" />
+    </php>
+
+    <testsuites>
+        <testsuite name="FormType: CloudflareTurnstile Component">
+            <directory>Tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory>.</directory>
+        </include>
+        <exclude>
+            <directory>.coverage</directory>
+            <directory>.github</directory>
+            <directory>.phpunit.cache</directory>
+            <directory>Resources</directory>
+            <directory>Tests</directory>
+            <directory>docs</directory>
+            <directory>var</directory>
+            <directory>vendor</directory>
+        </exclude>
+    </source>
+
+    <coverage
+        ignoreDeprecatedCodeUnits="true"
+        disableCodeCoverageIgnore="true"
+    >
+        <report>
+            <cobertura outputFile=".coverage/cobertura.xml"/>
+            <html outputDirectory=".coverage"/>
+            <text outputFile=".coverage/coverage.txt"/>
+        </report>
+    </coverage>
+
+    <logging>
+        <junit outputFile=".coverage/junit.xml"/>
+    </logging>
+</phpunit>

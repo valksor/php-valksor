@@ -34,6 +34,7 @@ use Valksor\Functions\Memoize\MemoizeCache;
 use function array_key_exists;
 use function array_merge_recursive;
 use function class_exists;
+use function count;
 use function dirname;
 use function file_get_contents;
 use function in_array;
@@ -140,10 +141,63 @@ final class ValksorBundle extends AbstractBundle
         $wrapper = static fn (string $package, string $componentClass) => $enableIfStandalone($package, '');
         new ValksorConfiguration()->addSection($rootNode, $wrapper, '');
 
-        foreach ($this->discoverComponents() as $component => $componentData) {
-            $this->callback($component, $componentData, function (object $object, string $class, string $component) use ($enableIfStandalone, $rootNode): void {
+        // Track which parent nodes need addDefaultsIfNotSet()
+        $parentNodeNeedsDefaults = [];
+        $allComponents = $this->discoverComponents();
+
+        // First pass: collect requirements from all components
+        foreach ($allComponents as $component => $componentData) {
+            $this->callback($component, $componentData, function (object $object, string $class, string $component) use (&$parentNodeNeedsDefaults): void {
+                $configPath = $this->getComponentConfigPath($class, $component);
+
+                // Track all parent nodes this component touches
+                for ($i = 0; $i < count($configPath) - 1; $i++) {
+                    $pathPart = $configPath[$i];
+
+                    if (!isset($parentNodeNeedsDefaults[$pathPart])) {
+                        $parentNodeNeedsDefaults[$pathPart] = !$object->usesArrayPrototype();
+                    } else {
+                        // If ANY component needs defaults, mark it as needed
+                        $parentNodeNeedsDefaults[$pathPart] = $parentNodeNeedsDefaults[$pathPart] || !$object->usesArrayPrototype();
+                    }
+                }
+            });
+        }
+
+        $createdNodes = [];
+
+        // Second pass: build the configuration tree with collected requirements
+        foreach ($allComponents as $component => $componentData) {
+            $this->callback($component, $componentData, function (object $object, string $class, string $component) use ($enableIfStandalone, $rootNode, &$createdNodes, $parentNodeNeedsDefaults): void {
+                // Get namespace-based path
+                $configPath = $this->getComponentConfigPath($class, $component);
+
+                // Build nested structure
+                $currentNode = $rootNode;
+
+                // Navigate/create all parent nodes
+                for ($i = 0; $i < count($configPath) - 1; $i++) {
+                    $pathPart = $configPath[$i];
+
+                    if (!isset($createdNodes[$pathPart])) {
+                        $node = $currentNode->children()
+                            ->arrayNode($pathPart);
+
+                        // Apply addDefaultsIfNotSet() if any component needs it
+                        if ($parentNodeNeedsDefaults[$pathPart] ?? false) {
+                            $node->addDefaultsIfNotSet();
+                        }
+
+                        $currentNode = $node;
+                        $createdNodes[$pathPart] = $currentNode;
+                    } else {
+                        $currentNode = $createdNodes[$pathPart];
+                    }
+                }
+
+                // Add component at the final location
                 $wrapper = static fn (string $package, string $componentClass) => $enableIfStandalone($package, $class);
-                $object->addSection($rootNode, $wrapper, $component);
+                $object->addSection($currentNode, $wrapper, end($configPath));
             });
         }
     }
@@ -436,6 +490,40 @@ final class ValksorBundle extends AbstractBundle
         }
 
         throw new RuntimeException('Could not find project root (composer.json with vendor directory)');
+    }
+
+    /**
+     * Extract configuration path from component namespace.
+     *
+     * Maps namespace structure to configuration path, e.g.:
+     * - Valksor\Component\FormType\CloudflareTurnstile\DependencyInjection\CloudflareTurnstileConfiguration
+     *   → ['form_type', 'cloudflare_turnstile']
+     * - Valksor\Component\Sse\DependencyInjection\SseConfiguration
+     *   → ['sse']
+     */
+    private function getComponentConfigPath(
+        string $className,
+        string $componentName,
+    ): array {
+        // Handle Valksor components: Valksor\Component\<Category>\...\<Component>Configuration
+        $valksorPattern = '#^Valksor\\\\Component\\\\([^\\\\]+)\\\\[^\\\\]+\\\\DependencyInjection\\\\[^\\\\]+$#';
+
+        if (preg_match($valksorPattern, $className, $matches)) {
+            $category = $matches[1]; // e.g., "FormType"
+
+            // Convert PascalCase to snake_case
+            $configSection = strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $category));
+
+            return [$configSection, $componentName];
+        }
+
+        // Handle ValksorDev components: ValksorDev\<Component>\DependencyInjection\<Component>Configuration
+        // These are flat (no category) but might need special handling
+        $valksorDevPattern = '#^ValksorDev\\\\([^\\\\]+)\\\\DependencyInjection\\\\[^\\\\]+$#';
+
+        return [$componentName];
+
+        // Default: flat structure
     }
 
     private function memoize(): MemoizeCache

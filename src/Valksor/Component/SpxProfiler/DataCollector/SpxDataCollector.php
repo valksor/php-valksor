@@ -64,7 +64,7 @@ class SpxDataCollector extends AbstractDataCollector
     /**
      * URL pattern for SPX report.
      */
-    private const string REPORT_URL_PATTERN = '/?SPX_KEY=%s&SPX_UI_URI=/report.html&key=%s';
+    private const string REPORT_URL_PATTERN = '/?SPX_KEY=%s&SPX_UI_URI=/v1/report.html&key=%s';
 
     /**
      * Default timezone for date formatting (UTC+2/3).

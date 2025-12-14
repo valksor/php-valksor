@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.23762376237624" branch-rate="0" lines-covered="48" lines-valid="202" branches-covered="0" branches-valid="0" complexity="94" version="0.4" timestamp="0">
+<coverage line-rate="0.068965517241379" branch-rate="0" lines-covered="14" lines-valid="203" branches-covered="0" branches-valid="0" complexity="94" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/Component/DoctrineTools</source>
   </sources>
@@ -131,146 +131,146 @@
         </class>
       </classes>
     </package>
-    <package name="Doctrine/DBAL/Traits/_ConvertToDatabaseValue.php" line-rate="1" branch-rate="0" complexity="2">
+    <package name="Doctrine/DBAL/Traits/_ConvertToDatabaseValue.php" line-rate="0" branch-rate="0" complexity="2">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToDatabaseValue" filename="Doctrine/DBAL/Traits/_ConvertToDatabaseValue.php" line-rate="1" branch-rate="0" complexity="2">
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToDatabaseValue" filename="Doctrine/DBAL/Traits/_ConvertToDatabaseValue.php" line-rate="0" branch-rate="0" complexity="2">
           <methods>
-            <method name="convertToDatabaseValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="2">
+            <method name="convertToDatabaseValue" signature="$value, AbstractPlatform $platform" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="29" hits="4"/>
-                <line number="30" hits="4"/>
-                <line number="33" hits="4"/>
+                <line number="29" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="33" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="29" hits="4"/>
-            <line number="30" hits="4"/>
-            <line number="33" hits="4"/>
+            <line number="29" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="33" hits="0"/>
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Doctrine/DBAL/Traits/_ConvertToPHPValue.php" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+    <package name="Doctrine/DBAL/Traits/_ConvertToPHPValue.php" line-rate="0" branch-rate="0" complexity="5">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToPHPValue" filename="Doctrine/DBAL/Traits/_ConvertToPHPValue.php" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits\_ConvertToPHPValue" filename="Doctrine/DBAL/Traits/_ConvertToPHPValue.php" line-rate="0" branch-rate="0" complexity="5">
           <methods>
-            <method name="convertToPHPValueForType" signature="$value, AbstractPlatform $platform, DateTimeInterface $object, string $function, string $prefix" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+            <method name="convertToPHPValueForType" signature="$value, AbstractPlatform $platform, DateTimeInterface $object, string $function, string $prefix" line-rate="0" branch-rate="0" complexity="5">
               <lines>
-                <line number="35" hits="6"/>
+                <line number="35" hits="0"/>
                 <line number="36" hits="0"/>
-                <line number="39" hits="6"/>
-                <line number="41" hits="6"/>
-                <line number="42" hits="6"/>
-                <line number="43" hits="6"/>
-                <line number="44" hits="6"/>
-                <line number="45" hits="6"/>
-                <line number="47" hits="5"/>
-                <line number="48" hits="1"/>
-                <line number="51" hits="4"/>
+                <line number="39" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="42" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="51" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="35" hits="6"/>
+            <line number="35" hits="0"/>
             <line number="36" hits="0"/>
-            <line number="39" hits="6"/>
-            <line number="41" hits="6"/>
-            <line number="42" hits="6"/>
-            <line number="43" hits="6"/>
-            <line number="44" hits="6"/>
-            <line number="45" hits="6"/>
-            <line number="47" hits="5"/>
-            <line number="48" hits="1"/>
-            <line number="51" hits="4"/>
+            <line number="39" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="42" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="51" hits="0"/>
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Doctrine/DBAL/Type/UTCDateImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+    <package name="Doctrine/DBAL/Type/UTCDateImmutableType.php" line-rate="0" branch-rate="0" complexity="1">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateImmutableType" filename="Doctrine/DBAL/Type/UTCDateImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateImmutableType" filename="Doctrine/DBAL/Type/UTCDateImmutableType.php" line-rate="0" branch-rate="0" complexity="1">
           <methods>
-            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="34" hits="2"/>
+                <line number="34" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="34" hits="2"/>
+            <line number="34" hits="0"/>
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Doctrine/DBAL/Type/UTCDateTimeImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+    <package name="Doctrine/DBAL/Type/UTCDateTimeImmutableType.php" line-rate="0" branch-rate="0" complexity="1">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeImmutableType" filename="Doctrine/DBAL/Type/UTCDateTimeImmutableType.php" line-rate="1" branch-rate="0" complexity="1">
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeImmutableType" filename="Doctrine/DBAL/Type/UTCDateTimeImmutableType.php" line-rate="0" branch-rate="0" complexity="1">
           <methods>
-            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="34" hits="1"/>
+                <line number="34" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="34" hits="1"/>
+            <line number="34" hits="0"/>
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Doctrine/DBAL/Type/UTCDateTimeType.php" line-rate="1" branch-rate="0" complexity="1">
+    <package name="Doctrine/DBAL/Type/UTCDateTimeType.php" line-rate="0" branch-rate="0" complexity="1">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeType" filename="Doctrine/DBAL/Type/UTCDateTimeType.php" line-rate="1" branch-rate="0" complexity="1">
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateTimeType" filename="Doctrine/DBAL/Type/UTCDateTimeType.php" line-rate="0" branch-rate="0" complexity="1">
           <methods>
-            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="33" hits="1"/>
+                <line number="33" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="33" hits="1"/>
+            <line number="33" hits="0"/>
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Doctrine/DBAL/Type/UTCDateType.php" line-rate="1" branch-rate="0" complexity="1">
+    <package name="Doctrine/DBAL/Type/UTCDateType.php" line-rate="0" branch-rate="0" complexity="1">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateType" filename="Doctrine/DBAL/Type/UTCDateType.php" line-rate="1" branch-rate="0" complexity="1">
+        <class name="Valksor\Component\DoctrineTools\Doctrine\DBAL\Type\UTCDateType" filename="Doctrine/DBAL/Type/UTCDateType.php" line-rate="0" branch-rate="0" complexity="1">
           <methods>
-            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="1" branch-rate="0" complexity="1">
+            <method name="convertToPHPValue" signature="$value, AbstractPlatform $platform" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="33" hits="2"/>
+                <line number="33" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="33" hits="2"/>
+            <line number="33" hits="0"/>
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Doctrine/Migrations/VersionComparatorWithoutNamespace.php" line-rate="1" branch-rate="0" complexity="2">
+    <package name="Doctrine/Migrations/VersionComparatorWithoutNamespace.php" line-rate="0" branch-rate="0" complexity="2">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\Doctrine\Migrations\VersionComparatorWithoutNamespace" filename="Doctrine/Migrations/VersionComparatorWithoutNamespace.php" line-rate="1" branch-rate="0" complexity="2">
+        <class name="Valksor\Component\DoctrineTools\Doctrine\Migrations\VersionComparatorWithoutNamespace" filename="Doctrine/Migrations/VersionComparatorWithoutNamespace.php" line-rate="0" branch-rate="0" complexity="2">
           <methods>
-            <method name="compare" signature="Version $a, Version $b" line-rate="1" branch-rate="0" complexity="1">
+            <method name="compare" signature="Version $a, Version $b" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="28" hits="2"/>
+                <line number="28" hits="0"/>
               </lines>
             </method>
-            <method name="versionWithoutNamespace" signature="Version $version" line-rate="1" branch-rate="0" complexity="1">
+            <method name="versionWithoutNamespace" signature="Version $version" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="34" hits="2"/>
-                <line number="36" hits="2"/>
+                <line number="34" hits="0"/>
+                <line number="36" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="28" hits="2"/>
-            <line number="34" hits="2"/>
-            <line number="36" hits="2"/>
+            <line number="28" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="36" hits="0"/>
           </lines>
         </class>
       </classes>
@@ -779,32 +779,32 @@
         </class>
       </classes>
     </package>
-    <package name="EventSubscriber/DoctrineMigrationsFilter.php" line-rate="0.73684210526316" branch-rate="0" complexity="9">
+    <package name="EventSubscriber/DoctrineMigrationsFilter.php" line-rate="0" branch-rate="0" complexity="9">
       <classes>
-        <class name="Valksor\Component\DoctrineTools\EventSubscriber\DoctrineMigrationsFilter" filename="EventSubscriber/DoctrineMigrationsFilter.php" line-rate="0.73684210526316" branch-rate="0" complexity="9">
+        <class name="Valksor\Component\DoctrineTools\EventSubscriber\DoctrineMigrationsFilter" filename="EventSubscriber/DoctrineMigrationsFilter.php" line-rate="0" branch-rate="0" complexity="9">
           <methods>
-            <method name="__invoke" signature="AbstractAsset|string $asset" line-rate="0.90909090909091" branch-rate="0" complexity="5">
+            <method name="__invoke" signature="AbstractAsset|string $asset" line-rate="0" branch-rate="0" complexity="5">
               <lines>
-                <line number="32" hits="3"/>
-                <line number="33" hits="1"/>
-                <line number="36" hits="2"/>
-                <line number="38" hits="2"/>
-                <line number="39" hits="1"/>
-                <line number="41" hits="1"/>
-                <line number="44" hits="2"/>
+                <line number="32" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="39" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="44" hits="0"/>
                 <line number="45" hits="0"/>
-                <line number="48" hits="2"/>
-                <line number="49" hits="1"/>
-                <line number="52" hits="2"/>
+                <line number="48" hits="0"/>
+                <line number="49" hits="0"/>
+                <line number="52" hits="0"/>
               </lines>
             </method>
-            <method name="onConsoleCommand" signature="ConsoleCommandEvent $event" line-rate="0.8" branch-rate="0" complexity="3">
+            <method name="onConsoleCommand" signature="ConsoleCommandEvent $event" line-rate="0" branch-rate="0" complexity="3">
               <lines>
-                <line number="58" hits="1"/>
-                <line number="60" hits="1"/>
+                <line number="58" hits="0"/>
+                <line number="60" hits="0"/>
                 <line number="61" hits="0"/>
-                <line number="70" hits="1"/>
-                <line number="71" hits="1"/>
+                <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
               </lines>
             </method>
             <method name="getSubscribedEvents" signature="" line-rate="0" branch-rate="0" complexity="1">
@@ -816,22 +816,22 @@
             </method>
           </methods>
           <lines>
-            <line number="32" hits="3"/>
-            <line number="33" hits="1"/>
-            <line number="36" hits="2"/>
-            <line number="38" hits="2"/>
-            <line number="39" hits="1"/>
-            <line number="41" hits="1"/>
-            <line number="44" hits="2"/>
+            <line number="32" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="44" hits="0"/>
             <line number="45" hits="0"/>
-            <line number="48" hits="2"/>
-            <line number="49" hits="1"/>
-            <line number="52" hits="2"/>
-            <line number="58" hits="1"/>
-            <line number="60" hits="1"/>
+            <line number="48" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="52" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="60" hits="0"/>
             <line number="61" hits="0"/>
-            <line number="70" hits="1"/>
-            <line number="71" hits="1"/>
+            <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
             <line number="77" hits="0"/>
             <line number="78" hits="0"/>
             <line number="79" hits="0"/>
@@ -919,38 +919,38 @@
           <methods>
             <method name="__construct" signature="string $datetime" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="32" hits="9"/>
-                <line number="34" hits="9"/>
+                <line number="32" hits="6"/>
+                <line number="34" hits="6"/>
               </lines>
             </method>
             <method name="createFromFormat" signature="string $format, string $datetime, ?DateTimeZone $timezone" line-rate="0.75" branch-rate="0" complexity="3">
               <lines>
-                <line number="45" hits="4"/>
-                <line number="47" hits="4"/>
-                <line number="48" hits="4"/>
+                <line number="45" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="48" hits="1"/>
                 <line number="51" hits="0"/>
               </lines>
             </method>
             <method name="createFromInterface" signature="DateTimeInterface $object" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="60" hits="4"/>
+                <line number="60" hits="2"/>
               </lines>
             </method>
             <method name="getUTCTimeZone" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="65" hits="16"/>
+                <line number="65" hits="6"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="32" hits="9"/>
-            <line number="34" hits="9"/>
-            <line number="45" hits="4"/>
-            <line number="47" hits="4"/>
-            <line number="48" hits="4"/>
+            <line number="32" hits="6"/>
+            <line number="34" hits="6"/>
+            <line number="45" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="48" hits="1"/>
             <line number="51" hits="0"/>
-            <line number="60" hits="4"/>
-            <line number="65" hits="16"/>
+            <line number="60" hits="2"/>
+            <line number="65" hits="6"/>
           </lines>
         </class>
       </classes>

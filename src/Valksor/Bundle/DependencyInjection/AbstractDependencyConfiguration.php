@@ -74,6 +74,11 @@ abstract class AbstractDependencyConfiguration implements Dependency
     ): void {
     }
 
+    public function usesArrayPrototype(): bool
+    {
+        return false;
+    }
+
     public function usesDoctrine(): bool
     {
         return false;

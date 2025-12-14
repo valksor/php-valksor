@@ -28,6 +28,14 @@ final class Pagination
 
     private int $visible;
 
+    /**
+     * @param int $visible   Number of visible page links
+     * @param int $total     Total number of pages
+     * @param int $current   Current page number
+     * @param int $indicator Indicator for omitted pages
+     *
+     * @return array<int> Array of page numbers with indicators
+     */
     public function paginate(
         int $visible,
         int $total,
@@ -51,6 +59,9 @@ final class Pagination
         }
     }
 
+    /**
+     * @return array<int> Array of page numbers with single omitted indicator
+     */
     private function getDataWithSingleOmitted(): array
     {
         $rest = $this->visible - ($this->total - $this->current);
@@ -70,6 +81,9 @@ final class Pagination
         ];
     }
 
+    /**
+     * @return array<int> Array of page numbers with two omitted indicators
+     */
     private function getDataWithTwoOmitted(): array
     {
         $withoutCurrent = ($this->visible - 1) / 2;
@@ -94,6 +108,9 @@ final class Pagination
         ];
     }
 
+    /**
+     * @return array<int> Array of pagination data
+     */
     private function getPaginationData(): array
     {
         $this->validate();

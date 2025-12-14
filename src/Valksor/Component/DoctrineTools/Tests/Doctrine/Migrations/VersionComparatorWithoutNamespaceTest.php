@@ -23,6 +23,7 @@ final class VersionComparatorWithoutNamespaceTest extends TestCase
 {
     public function testCompareIgnoresNamespacePrefix(): void
     {
+        $this->requireDoctrineMigrations();
         $comparator = new VersionComparatorWithoutNamespace();
 
         $older = new Version('App\\Migrations\\Version20240101000000');
@@ -33,11 +34,25 @@ final class VersionComparatorWithoutNamespaceTest extends TestCase
 
     public function testCompareOrdersVersionsAlphabeticallyBySuffix(): void
     {
+        $this->requireDoctrineMigrations();
         $comparator = new VersionComparatorWithoutNamespace();
 
         $left = new Version('Company\\Module\\VersionB');
         $right = new Version('Another\\Namespace\\VersionA');
 
         self::assertGreaterThan(0, $comparator->compare($left, $right));
+    }
+
+    private function isDoctrineMigrationsAvailable(): bool
+    {
+        return interface_exists('Doctrine\Migrations\Version\Comparator')
+            && class_exists('Doctrine\Migrations\Version\Version');
+    }
+
+    private function requireDoctrineMigrations(): void
+    {
+        if (!$this->isDoctrineMigrationsAvailable()) {
+            self::markTestSkipped('Doctrine Migrations component not available');
+        }
     }
 }

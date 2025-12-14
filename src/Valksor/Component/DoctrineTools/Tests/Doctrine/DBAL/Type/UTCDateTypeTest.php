@@ -36,6 +36,7 @@ final class UTCDateTypeTest extends TestCase
      */
     public function testConvertToDatabaseValueNormalizesTimezone(): void
     {
+        $this->requireDoctrineDBAL();
         $platform = $this->createStub(AbstractPlatform::class);
         $platform
             ->method('getDateFormatString')
@@ -54,6 +55,7 @@ final class UTCDateTypeTest extends TestCase
      */
     public function testConvertToPhpValueCreatesUtcDateTime(): void
     {
+        $this->requireDoctrineDBAL();
         $platform = $this->createStub(AbstractPlatform::class);
         $platform
             ->method('getDateTimeFormatString')
@@ -71,6 +73,8 @@ final class UTCDateTypeTest extends TestCase
      */
     public function testConvertToPhpValueRejectsInvalidFormat(): void
     {
+        $this->requireDoctrineDBAL();
+
         $this->expectException(InvalidFormat::class);
 
         $platform = $this->createStub(AbstractPlatform::class);
@@ -85,5 +89,18 @@ final class UTCDateTypeTest extends TestCase
     protected function tearDown(): void
     {
         UTCDateTimeImmutable::$timezone = null;
+    }
+
+    private function isDoctrineDBALAvailable(): bool
+    {
+        return class_exists('Doctrine\DBAL\Platforms\AbstractPlatform')
+            && class_exists('Doctrine\DBAL\Types\Exception\InvalidFormat');
+    }
+
+    private function requireDoctrineDBAL(): void
+    {
+        if (!$this->isDoctrineDBALAvailable()) {
+            self::markTestSkipped('Doctrine DBAL component not available');
+        }
     }
 }

@@ -1,0 +1,9 @@
+{% block valksor_form_type_honeypot_widget %}
+    {% set attr = attr|merge({
+        style: 'position:absolute;left:-5000px;top:-5000px;',
+        tabindex: '-1',
+        autocomplete: 'off',
+        'aria-hidden': 'true',
+    }) %}
+    <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{% endblock %}
