@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0" branch-rate="0" lines-covered="0" lines-valid="117" branches-covered="0" branches-valid="0" complexity="33" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Component/FormType/CloudflareTurnstile</source>
+  </sources>
+  <packages>
+    <package name="Constraints/CloudflareTurnstile.php" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Constraints\CloudflareTurnstile" filename="Constraints/CloudflareTurnstile.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="__construct" signature="?string $type, ?array $groups, mixed $payload" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="29" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Constraints/CloudflareTurnstileValidator.php" line-rate="0" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Constraints\CloudflareTurnstileValidator" filename="Constraints/CloudflareTurnstileValidator.php" line-rate="0" branch-rate="0" complexity="7">
+          <methods>
+            <method name="__construct" signature="RequestStack $requestStack, CloudflareTurnstileHttpClient $turnstileHttpClient" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="27" hits="0"/>
+              </lines>
+            </method>
+            <method name="validate" signature="mixed $value, Constraint $constraint" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="39" hits="0"/>
+                <line number="40" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="53" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="55" hits="0"/>
+                <line number="57" hits="0"/>
+                <line number="60" hits="0"/>
+                <line number="62" hits="0"/>
+                <line number="63" hits="0"/>
+                <line number="64" hits="0"/>
+                <line number="66" hits="0"/>
+                <line number="69" hits="0"/>
+                <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="57" hits="0"/>
+            <line number="60" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="63" hits="0"/>
+            <line number="64" hits="0"/>
+            <line number="66" hits="0"/>
+            <line number="69" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="DependencyInjection/CloudflareTurnstileConfiguration.php" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\DependencyInjection\CloudflareTurnstileConfiguration" filename="DependencyInjection/CloudflareTurnstileConfiguration.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="addSection" signature="ArrayNodeDefinition $rootNode, callable $enableIfStandalone, string $component" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="37" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="39" hits="0"/>
+                <line number="40" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="42" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="49" hits="0"/>
+                <line number="50" hits="0"/>
+              </lines>
+            </method>
+            <method name="build" signature="ContainerBuilder $container" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="56" hits="0"/>
+              </lines>
+            </method>
+            <method name="usesArrayPrototype" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="61" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="42" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="61" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="DependencyInjection/CompilerPass/TwigCompilerPass.php" line-rate="0" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\DependencyInjection\CompilerPass\TwigCompilerPass" filename="DependencyInjection/CompilerPass/TwigCompilerPass.php" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="process" signature="ContainerBuilder $container" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="29" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Form/Type/CloudflareTurnstileType.php" line-rate="0" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Form\Type\CloudflareTurnstileType" filename="Form/Type/CloudflareTurnstileType.php" line-rate="0" branch-rate="0" complexity="7">
+          <methods>
+            <method name="__construct" signature="CloudflareTurnstileRegistry $registry" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="0"/>
+              </lines>
+            </method>
+            <method name="buildView" signature="FormView $view, FormInterface $form, array $options" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="38" hits="0"/>
+                <line number="40" hits="0"/>
+              </lines>
+            </method>
+            <method name="configureOptions" signature="OptionsResolver $resolver" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="46" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="49" hits="0"/>
+                <line number="50" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="52" hits="0"/>
+                <line number="53" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="55" hits="0"/>
+                <line number="56" hits="0"/>
+                <line number="57" hits="0"/>
+                <line number="60" hits="0"/>
+                <line number="61" hits="0"/>
+                <line number="64" hits="0"/>
+                <line number="65" hits="0"/>
+              </lines>
+            </method>
+            <method name="getBlockPrefix" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="70" hits="0"/>
+              </lines>
+            </method>
+            <method name="getParent" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="75" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="52" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="57" hits="0"/>
+            <line number="60" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="64" hits="0"/>
+            <line number="65" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="75" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="HttpClient/CloudflareTurnstileHttpClient.php" line-rate="0" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\HttpClient\CloudflareTurnstileHttpClient" filename="HttpClient/CloudflareTurnstileHttpClient.php" line-rate="0" branch-rate="0" complexity="5">
+          <methods>
+            <method name="__construct" signature="CloudflareTurnstileRegistry $registry, HttpClientInterface $httpClient, LoggerInterface $logger" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="0"/>
+              </lines>
+            </method>
+            <method name="verifyResponse" signature="string $turnstileResponse, string $type" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="49" hits="0"/>
+                <line number="50" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="52" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="57" hits="0"/>
+                <line number="58" hits="0"/>
+                <line number="59" hits="0"/>
+                <line number="60" hits="0"/>
+                <line number="61" hits="0"/>
+                <line number="62" hits="0"/>
+                <line number="63" hits="0"/>
+                <line number="64" hits="0"/>
+                <line number="65" hits="0"/>
+                <line number="66" hits="0"/>
+                <line number="69" hits="0"/>
+                <line number="70" hits="0"/>
+                <line number="71" hits="0"/>
+                <line number="72" hits="0"/>
+                <line number="73" hits="0"/>
+                <line number="74" hits="0"/>
+                <line number="75" hits="0"/>
+                <line number="76" hits="0"/>
+                <line number="77" hits="0"/>
+                <line number="79" hits="0"/>
+                <line number="82" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="52" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="57" hits="0"/>
+            <line number="58" hits="0"/>
+            <line number="59" hits="0"/>
+            <line number="60" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="62" hits="0"/>
+            <line number="63" hits="0"/>
+            <line number="64" hits="0"/>
+            <line number="65" hits="0"/>
+            <line number="66" hits="0"/>
+            <line number="69" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="71" hits="0"/>
+            <line number="72" hits="0"/>
+            <line number="73" hits="0"/>
+            <line number="74" hits="0"/>
+            <line number="75" hits="0"/>
+            <line number="76" hits="0"/>
+            <line number="77" hits="0"/>
+            <line number="79" hits="0"/>
+            <line number="82" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Service/CloudflareTurnstileRegistry.php" line-rate="0" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Service\CloudflareTurnstileRegistry" filename="Service/CloudflareTurnstileRegistry.php" line-rate="0" branch-rate="0" complexity="6">
+          <methods>
+            <method name="__construct" signature="ParameterBagInterface $parameterBag" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="0"/>
+              </lines>
+            </method>
+            <method name="getAvailableTypes" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="39" hits="0"/>
+              </lines>
+            </method>
+            <method name="getSecretKey" signature="string $type" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="48" hits="0"/>
+                <line number="50" hits="0"/>
+              </lines>
+            </method>
+            <method name="getSiteKey" signature="string $type" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="59" hits="0"/>
+                <line number="61" hits="0"/>
+              </lines>
+            </method>
+            <method name="hasType" signature="string $type" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="70" hits="0"/>
+              </lines>
+            </method>
+            <method name="getTypes" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="80" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="59" hits="0"/>
+            <line number="61" hits="0"/>
+            <line number="70" hits="0"/>
+            <line number="80" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

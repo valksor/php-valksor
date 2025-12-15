@@ -64,12 +64,16 @@ final class AbstractKernelTest extends TestCase
         $kernel->exposeConfigureContainer($configurator);
 
         $expected = [
-            $this->projectDir . '/infra/config/packages/foo.php',
-            $this->projectDir . '/infra/config/packages/dev/env.php',
-            $this->projectDir . '/infra/config/services.php',
+            $this->projectDir . '/apps/app.main/config/packages/bar.override.php',
+            $this->projectDir . '/apps/app.main/config/packages/dev/skip.override.php',
+            $this->projectDir . '/apps/app.main/config/services.php',
             $this->projectDir . '/apps/app.main/config/{packages}/*.php',
             $this->projectDir . '/apps/app.main/config/{packages}/dev/*.php',
-            $this->projectDir . '/apps/app.main/config/services.php',
+            $this->projectDir . '/infra/config/packages/bar.php',
+            $this->projectDir . '/infra/config/packages/dev/env.php',
+            $this->projectDir . '/infra/config/packages/dev/skip.php',
+            $this->projectDir . '/infra/config/packages/foo.php',
+            $this->projectDir . '/infra/config/services.php',
         ];
 
         sort($imports);
@@ -100,11 +104,16 @@ final class AbstractKernelTest extends TestCase
         $kernel->exposeConfigureRoutes($routesConfigurator);
 
         $expected = [
-            $this->projectDir . '/infra/config/routes/alpha.php',
-            $this->projectDir . '/infra/config/routes/dev/gamma.php',
+            $this->projectDir . '/apps/app.main/config/routes/beta.override.php',
+            $this->projectDir . '/apps/app.main/config/routes/dev/delta.override.php',
+            $this->projectDir . '/apps/app.main/config/routes.php',
             $this->projectDir . '/apps/app.main/config/{routes}/*.php',
             $this->projectDir . '/apps/app.main/config/{routes}/dev/*.php',
-            $this->projectDir . '/apps/app.main/config/routes.php',
+            $this->projectDir . '/infra/config/routes.php',
+            $this->projectDir . '/infra/config/routes/alpha.php',
+            $this->projectDir . '/infra/config/routes/beta.php',
+            $this->projectDir . '/infra/config/routes/dev/gamma.php',
+            $this->projectDir . '/infra/config/routes/dev/delta.php',
         ];
 
         sort($imports);
@@ -158,28 +167,6 @@ final class AbstractKernelTest extends TestCase
 
         self::assertSame($this->projectDir . '/infra/config', $parameters['.kernel.config_dir']);
         self::assertArrayHasKey('Infra\\Bundle', $parameters['.kernel.bundles_definition']);
-    }
-
-    /**
-     * @throws ReflectionException
-     */
-    public function testListInfrastructureFilesWithOverrideSkipsOverriddenFiles(): void
-    {
-        mkdir($this->projectDir . '/infra/config/routes', 0o777, true);
-        mkdir($this->projectDir . '/apps/app.main/config/routes', 0o777, true);
-
-        file_put_contents($this->projectDir . '/infra/config/routes/a.php', '<?php');
-        file_put_contents($this->projectDir . '/infra/config/routes/b.php', '<?php');
-        file_put_contents($this->projectDir . '/apps/app.main/config/routes/b.override.php', '<?php');
-
-        $kernel = new TestKernel($this->projectDir, 'app.main', 'dev');
-
-        $method = new ReflectionMethod(AbstractKernel::class, 'listInfrastructureFilesWithOverride');
-
-        $files = $method->invoke($kernel, $this->projectDir . '/infra/config/routes', $this->projectDir . '/apps/app.main/config/routes');
-
-        self::assertCount(1, $files);
-        self::assertStringContainsString('a.php', $files[0]);
     }
 
     public function testLoadAppEnvironmentFilesRespectsPrecedence(): void
