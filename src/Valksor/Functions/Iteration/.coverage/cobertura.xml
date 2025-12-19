@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.99393939393939" branch-rate="0" lines-covered="164" lines-valid="165" branches-covered="0" branches-valid="0" complexity="92" version="0.4" timestamp="0">
+<coverage line-rate="0.9940119760479" branch-rate="0" lines-covered="166" lines-valid="167" branches-covered="0" branches-valid="0" complexity="91" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/Functions/Iteration</source>
   </sources>
@@ -433,19 +433,23 @@
         </class>
       </classes>
     </package>
-    <package name="Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="3">
+    <package name="Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="2">
       <classes>
-        <class name="Valksor\Functions\Iteration\Traits\_JsonEncode" filename="Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="3">
+        <class name="Valksor\Functions\Iteration\Traits\_JsonEncode" filename="Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="2">
           <methods>
-            <method name="jsonEncode" signature="mixed $value, int $flags" line-rate="1" branch-rate="0" complexity="3">
+            <method name="jsonEncode" signature="mixed $value, int $flags" line-rate="1" branch-rate="0" complexity="2">
               <lines>
-                <line number="35" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
                 <line number="37" hits="1"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="35" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
             <line number="37" hits="1"/>
           </lines>
         </class>

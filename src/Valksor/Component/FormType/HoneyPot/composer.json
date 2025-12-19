@@ -1,0 +1,39 @@
+{
+    "name": "valksor/php-form-type-honey-pot",
+    "description": "",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "symfony",
+        "valksor"
+    ],
+    "homepage": "https://github.com/valksor/php-valksor",
+    "require": {
+        "php": ">=8.4",
+        "symfony/config": "*",
+        "symfony/options-resolver": "*",
+        "symfony/form": "*",
+        "symfony/http-foundation": "*",
+        "symfony/dependency-injection": "*",
+        "valksor/php-bundle": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Component\\FormType\\HoneyPot\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

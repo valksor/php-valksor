@@ -10,11 +10,10 @@
  * file that was distributed with this source code.
  */
 
+// PACKAGE: Always includes unicode/slashes unescaping and zero fraction preservation.
+
 namespace Valksor\Functions\Iteration\Traits;
 
-use JsonException;
-
-use function defined;
 use function json_encode;
 
 use const JSON_PRESERVE_ZERO_FRACTION;
@@ -25,15 +24,16 @@ use const JSON_UNESCAPED_UNICODE;
 
 trait _JsonEncode
 {
-    /**
-     * @throws JsonException
-     */
     public function jsonEncode(
         mixed $value,
         int $flags = 0,
     ): string {
-        $flags = (JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | (0 !== ($flags & 0b0010) ? JSON_PRETTY_PRINT : 0) | (defined(constant_name: 'JSON_PRESERVE_ZERO_FRACTION') ? JSON_PRESERVE_ZERO_FRACTION : 0));
+        $baseFlags = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRESERVE_ZERO_FRACTION | JSON_THROW_ON_ERROR;
 
-        return json_encode(value: $value, flags: $flags | JSON_THROW_ON_ERROR);
+        if ($flags & JSON_PRETTY_PRINT) {
+            $baseFlags |= JSON_PRETTY_PRINT;
+        }
+
+        return json_encode(value: $value, flags: $baseFlags);
     }
 }

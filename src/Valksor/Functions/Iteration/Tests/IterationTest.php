@@ -204,7 +204,7 @@ final class IterationTest extends TestCase
     {
         self::assertSame('{"foo":1.0}', $this->iteration->jsonEncode(['foo' => 1.0]));
 
-        $pretty = $this->iteration->jsonEncode(['foo' => 1], 0b0010);
+        $pretty = $this->iteration->jsonEncode(['foo' => 1], JSON_PRETTY_PRINT);
         self::assertStringContainsString("\n", $pretty);
         self::assertStringContainsString('"foo": 1', $pretty);
     }

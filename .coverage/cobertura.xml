@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.69003352636391" branch-rate="0" lines-covered="2264" lines-valid="3281" branches-covered="0" branches-valid="0" complexity="1439" version="0.4" timestamp="0">
+<coverage line-rate="0.68199817240329" branch-rate="0" lines-covered="2239" lines-valid="3283" branches-covered="0" branches-valid="0" complexity="1438" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor</source>
   </sources>
@@ -3518,9 +3518,9 @@
         </class>
       </classes>
     </package>
-    <package name="Component/SpxProfiler/DataCollector/SpxDataCollector.php" line-rate="0.74331550802139" branch-rate="0" complexity="74">
+    <package name="Component/SpxProfiler/DataCollector/SpxDataCollector.php" line-rate="0.59893048128342" branch-rate="0" complexity="74">
       <classes>
-        <class name="Valksor\Component\SpxProfiler\DataCollector\SpxDataCollector" filename="Component/SpxProfiler/DataCollector/SpxDataCollector.php" line-rate="0.74331550802139" branch-rate="0" complexity="74">
+        <class name="Valksor\Component\SpxProfiler\DataCollector\SpxDataCollector" filename="Component/SpxProfiler/DataCollector/SpxDataCollector.php" line-rate="0.59893048128342" branch-rate="0" complexity="74">
           <methods>
             <method name="__construct" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
@@ -3700,24 +3700,24 @@
                 <line number="346" hits="0"/>
               </lines>
             </method>
-            <method name="findReportForRequest" signature="string $requestUri, int $timestamp" line-rate="0.6875" branch-rate="0" complexity="6">
+            <method name="findReportForRequest" signature="string $requestUri, int $timestamp" line-rate="0.3125" branch-rate="0" complexity="6">
               <lines>
                 <line number="359" hits="4"/>
                 <line number="360" hits="4"/>
                 <line number="361" hits="4"/>
                 <line number="363" hits="4"/>
-                <line number="364" hits="0"/>
-                <line number="367" hits="4"/>
-                <line number="369" hits="4"/>
+                <line number="364" hits="4"/>
+                <line number="367" hits="0"/>
+                <line number="369" hits="0"/>
                 <line number="370" hits="0"/>
-                <line number="374" hits="4"/>
-                <line number="376" hits="4"/>
+                <line number="374" hits="0"/>
+                <line number="376" hits="0"/>
                 <line number="377" hits="0"/>
                 <line number="379" hits="0"/>
-                <line number="383" hits="4"/>
-                <line number="385" hits="4"/>
+                <line number="383" hits="0"/>
+                <line number="385" hits="0"/>
                 <line number="386" hits="0"/>
-                <line number="389" hits="4"/>
+                <line number="389" hits="0"/>
               </lines>
             </method>
             <method name="getProfilerTime" signature="Request $request" line-rate="1" branch-rate="0" complexity="5">
@@ -3750,30 +3750,30 @@
                 <line number="442" hits="4"/>
               </lines>
             </method>
-            <method name="processReportFiles" signature="array $files, string $requestUri, int $timestamp, bool $matchExactUri" line-rate="0.7" branch-rate="0" complexity="10">
+            <method name="processReportFiles" signature="array $files, string $requestUri, int $timestamp, bool $matchExactUri" line-rate="0" branch-rate="0" complexity="10">
               <lines>
-                <line number="456" hits="4"/>
-                <line number="457" hits="4"/>
-                <line number="459" hits="4"/>
-                <line number="460" hits="4"/>
-                <line number="462" hits="4"/>
+                <line number="456" hits="0"/>
+                <line number="457" hits="0"/>
+                <line number="459" hits="0"/>
+                <line number="460" hits="0"/>
+                <line number="462" hits="0"/>
                 <line number="463" hits="0"/>
-                <line number="466" hits="4"/>
-                <line number="468" hits="4"/>
-                <line number="469" hits="1"/>
-                <line number="472" hits="1"/>
-                <line number="475" hits="4"/>
-                <line number="477" hits="4"/>
+                <line number="466" hits="0"/>
+                <line number="468" hits="0"/>
+                <line number="469" hits="0"/>
+                <line number="472" hits="0"/>
+                <line number="475" hits="0"/>
+                <line number="477" hits="0"/>
                 <line number="478" hits="0"/>
-                <line number="481" hits="4"/>
-                <line number="484" hits="4"/>
-                <line number="485" hits="4"/>
-                <line number="489" hits="4"/>
-                <line number="490" hits="4"/>
-                <line number="494" hits="4"/>
-                <line number="495" hits="4"/>
-                <line number="496" hits="4"/>
-                <line number="499" hits="4"/>
+                <line number="481" hits="0"/>
+                <line number="484" hits="0"/>
+                <line number="485" hits="0"/>
+                <line number="489" hits="0"/>
+                <line number="490" hits="0"/>
+                <line number="494" hits="0"/>
+                <line number="495" hits="0"/>
+                <line number="496" hits="0"/>
+                <line number="499" hits="0"/>
                 <line number="500" hits="0"/>
                 <line number="501" hits="0"/>
                 <line number="502" hits="0"/>
@@ -3781,7 +3781,7 @@
                 <line number="504" hits="0"/>
                 <line number="505" hits="0"/>
                 <line number="506" hits="0"/>
-                <line number="510" hits="4"/>
+                <line number="510" hits="0"/>
               </lines>
             </method>
             <method name="sortReportsByTimeDifference" signature="array $reports" line-rate="0.57142857142857" branch-rate="0" complexity="13">
@@ -3913,18 +3913,18 @@
             <line number="360" hits="4"/>
             <line number="361" hits="4"/>
             <line number="363" hits="4"/>
-            <line number="364" hits="0"/>
-            <line number="367" hits="4"/>
-            <line number="369" hits="4"/>
+            <line number="364" hits="4"/>
+            <line number="367" hits="0"/>
+            <line number="369" hits="0"/>
             <line number="370" hits="0"/>
-            <line number="374" hits="4"/>
-            <line number="376" hits="4"/>
+            <line number="374" hits="0"/>
+            <line number="376" hits="0"/>
             <line number="377" hits="0"/>
             <line number="379" hits="0"/>
-            <line number="383" hits="4"/>
-            <line number="385" hits="4"/>
+            <line number="383" hits="0"/>
+            <line number="385" hits="0"/>
             <line number="386" hits="0"/>
-            <line number="389" hits="4"/>
+            <line number="389" hits="0"/>
             <line number="399" hits="5"/>
             <line number="401" hits="5"/>
             <line number="402" hits="2"/>
@@ -3947,28 +3947,28 @@
             <line number="440" hits="4"/>
             <line number="441" hits="4"/>
             <line number="442" hits="4"/>
-            <line number="456" hits="4"/>
-            <line number="457" hits="4"/>
-            <line number="459" hits="4"/>
-            <line number="460" hits="4"/>
-            <line number="462" hits="4"/>
+            <line number="456" hits="0"/>
+            <line number="457" hits="0"/>
+            <line number="459" hits="0"/>
+            <line number="460" hits="0"/>
+            <line number="462" hits="0"/>
             <line number="463" hits="0"/>
-            <line number="466" hits="4"/>
-            <line number="468" hits="4"/>
-            <line number="469" hits="1"/>
-            <line number="472" hits="1"/>
-            <line number="475" hits="4"/>
-            <line number="477" hits="4"/>
+            <line number="466" hits="0"/>
+            <line number="468" hits="0"/>
+            <line number="469" hits="0"/>
+            <line number="472" hits="0"/>
+            <line number="475" hits="0"/>
+            <line number="477" hits="0"/>
             <line number="478" hits="0"/>
-            <line number="481" hits="4"/>
-            <line number="484" hits="4"/>
-            <line number="485" hits="4"/>
-            <line number="489" hits="4"/>
-            <line number="490" hits="4"/>
-            <line number="494" hits="4"/>
-            <line number="495" hits="4"/>
-            <line number="496" hits="4"/>
-            <line number="499" hits="4"/>
+            <line number="481" hits="0"/>
+            <line number="484" hits="0"/>
+            <line number="485" hits="0"/>
+            <line number="489" hits="0"/>
+            <line number="490" hits="0"/>
+            <line number="494" hits="0"/>
+            <line number="495" hits="0"/>
+            <line number="496" hits="0"/>
+            <line number="499" hits="0"/>
             <line number="500" hits="0"/>
             <line number="501" hits="0"/>
             <line number="502" hits="0"/>
@@ -3976,7 +3976,7 @@
             <line number="504" hits="0"/>
             <line number="505" hits="0"/>
             <line number="506" hits="0"/>
-            <line number="510" hits="4"/>
+            <line number="510" hits="0"/>
             <line number="519" hits="1"/>
             <line number="521" hits="1"/>
             <line number="522" hits="1"/>
@@ -6216,35 +6216,39 @@
           <methods>
             <method name="jsonDecode" signature="string $json, bool $associative, int $depth, int $flags" line-rate="1" branch-rate="0" complexity="3">
               <lines>
-                <line number="37" hits="7"/>
-                <line number="39" hits="7"/>
+                <line number="37" hits="3"/>
+                <line number="39" hits="3"/>
                 <line number="40" hits="1"/>
-                <line number="43" hits="7"/>
+                <line number="43" hits="3"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="37" hits="7"/>
-            <line number="39" hits="7"/>
+            <line number="37" hits="3"/>
+            <line number="39" hits="3"/>
             <line number="40" hits="1"/>
-            <line number="43" hits="7"/>
+            <line number="43" hits="3"/>
           </lines>
         </class>
       </classes>
     </package>
-    <package name="Functions/Iteration/Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="3">
+    <package name="Functions/Iteration/Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="2">
       <classes>
-        <class name="Valksor\Functions\Iteration\Traits\_JsonEncode" filename="Functions/Iteration/Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="3">
+        <class name="Valksor\Functions\Iteration\Traits\_JsonEncode" filename="Functions/Iteration/Traits/_JsonEncode.php" line-rate="1" branch-rate="0" complexity="2">
           <methods>
-            <method name="jsonEncode" signature="mixed $value, int $flags" line-rate="1" branch-rate="0" complexity="3">
+            <method name="jsonEncode" signature="mixed $value, int $flags" line-rate="1" branch-rate="0" complexity="2">
               <lines>
-                <line number="35" hits="3"/>
+                <line number="31" hits="3"/>
+                <line number="33" hits="3"/>
+                <line number="34" hits="1"/>
                 <line number="37" hits="3"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="35" hits="3"/>
+            <line number="31" hits="3"/>
+            <line number="33" hits="3"/>
+            <line number="34" hits="1"/>
             <line number="37" hits="3"/>
           </lines>
         </class>
@@ -9738,12 +9742,12 @@
           <methods>
             <method name="strStartsWithAny" signature="string $haystack, array $needles" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="21" hits="5"/>
+                <line number="21" hits="1"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="21" hits="5"/>
+            <line number="21" hits="1"/>
           </lines>
         </class>
       </classes>
