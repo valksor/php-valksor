@@ -13,6 +13,7 @@
 namespace Valksor\Bundle;
 
 use FilesystemIterator;
+use Psr\Cache\InvalidArgumentException;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionException;
@@ -23,6 +24,7 @@ use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
+use Symfony\Contracts\Cache\CacheInterface;
 use Throwable;
 use Valksor\Bundle\DependencyInjection\Dependency;
 use Valksor\Bundle\DependencyInjection\ValksorConfiguration;
@@ -203,6 +205,30 @@ final class ValksorBundle extends AbstractBundle
     }
 
     /**
+     * Get all configuration defaults from discovered components.
+     *
+     * Uses auto-discovery to collect defaults from all configuration classes
+     * into a hierarchical array matching the configuration tree structure.
+     *
+     * @param CacheInterface|null $cache Optional cache pool for performance.
+     *                                   Should be configured by the application using this bundle.
+     *
+     * @return array<string, mixed> Hierarchical array of all configuration defaults
+     *
+     * @throws InvalidArgumentException
+     * @throws ParsingException
+     */
+    public function getAllConfigurationDefaults(
+        ?CacheInterface $cache = null,
+    ): array {
+        if (null === $cache) {
+            return $this->computeAllDefaults();
+        }
+
+        return $cache->get('valksor.bundle.defaults', fn () => $this->computeAllDefaults());
+    }
+
+    /**
      * @param array<string, mixed> $config
      *
      * @throws ParsingException
@@ -345,6 +371,40 @@ final class ValksorBundle extends AbstractBundle
 
             $callback($object, $class, $component);
         }
+    }
+
+    /**
+     * Compute all configuration defaults from discovered components.
+     *
+     * @return array<string, mixed> Hierarchical array of all configuration defaults
+     *
+     * @throws ParsingException
+     */
+    private function computeAllDefaults(): array
+    {
+        $defaults = [];
+
+        foreach ($this->discoverComponents() as $componentId => $componentData) {
+            $className = $componentData['class'];
+
+            $componentDefaults = $className::getDefaults();
+
+            if ([] === $componentDefaults) {
+                continue;
+            }
+
+            $current = &$defaults;
+
+            foreach ($this->getComponentConfigPath($className, $componentId) as $key) {
+                if (!isset($current[$key])) {
+                    $current[$key] = [];
+                }
+                $current = &$current[$key];
+            }
+            $current = $componentDefaults;
+        }
+
+        return $defaults;
     }
 
     /**
@@ -517,10 +577,7 @@ final class ValksorBundle extends AbstractBundle
             return [$configSection, $componentName];
         }
 
-        // Handle ValksorDev components: ValksorDev\<Component>\DependencyInjection\<Component>Configuration
-        // These are flat (no category) but might need special handling
-        $valksorDevPattern = '#^ValksorDev\\\\([^\\\\]+)\\\\DependencyInjection\\\\[^\\\\]+$#';
-
+        // Default: flat structure
         return [$componentName];
 
         // Default: flat structure

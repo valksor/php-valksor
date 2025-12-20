@@ -79,4 +79,17 @@ final class ValksorConfiguration extends AbstractDependencyConfiguration
             ]);
         }
     }
+
+    public static function getDefaults(): array
+    {
+        return [
+            'project' => [
+                'apps_dir' => 'apps',
+                'infrastructure_dir' => 'infrastructure',
+                'autoload' => [
+                    'namespace_prefix' => 'Application',
+                ],
+            ],
+        ];
+    }
 }

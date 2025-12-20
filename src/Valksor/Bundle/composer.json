@@ -21,6 +21,8 @@
         "doctrine/migrations": "*",
         "seld/jsonlint": "*",
         "symfony/config": "*",
+        "symfony/cache-contracts": "*",
+        "psr/cache": "*",
         "symfony/console": "*",
         "symfony/dependency-injection": "*",
         "symfony/dotenv": "*",

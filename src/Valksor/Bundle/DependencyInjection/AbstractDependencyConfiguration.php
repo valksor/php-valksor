@@ -85,6 +85,20 @@ abstract class AbstractDependencyConfiguration implements Dependency
     }
 
     /**
+     * Get default configuration values for this component.
+     *
+     * Override this method in child classes to provide default values.
+     * The returned array structure should match the configuration tree
+     * defined in addSection().
+     *
+     * @return array<string, mixed> Default configuration values
+     */
+    public static function getDefaults(): array
+    {
+        return [];
+    }
+
+    /**
      * @return array<string, mixed>
      */
     protected function mergeConfig(

@@ -45,4 +45,6 @@ interface Dependency
     ): void;
 
     public function usesDoctrine(): bool;
+
+    public static function getDefaults(): array;
 }
