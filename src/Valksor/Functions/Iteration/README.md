@@ -111,7 +111,7 @@ If you discover any security-related issues, please email us at packages@valksor
 
 - **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
 - **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
-- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions) for questions and community support
+- **Discussions**: [GitHub Discussions](https://github.com/orgs/valksor/discussions/categories/php-valksor) for questions and community support
 - **Stack Overflow**: Use tag `valksor-php-functions-iteration`
 
 ## Credits

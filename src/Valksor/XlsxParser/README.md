@@ -139,7 +139,7 @@ If you discover any security-related issues, please email us at packages@valksor
 
 - **Documentation**: [Valksor Documentation](https://github.com/valksor/php-valksor)
 - **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/valksor/php-valksor/discussions)
+- **Discussions**: [GitHub Discussions](https://github.com/orgs/valksor/discussions/categories/php-valksor)
 
 ## Credits
 
