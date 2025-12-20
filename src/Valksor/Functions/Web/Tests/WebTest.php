@@ -280,6 +280,31 @@ final class WebTest extends TestCase
         self::assertSame($expected, $this->web->requestMethods());
     }
 
+    public function testResponseTextReturnsCorrectStatusText(): void
+    {
+        self::assertSame('OK', $this->web->responseText(200));
+        self::assertSame('Created', $this->web->responseText(201));
+        self::assertSame('No Content', $this->web->responseText(204));
+        self::assertSame('Bad Request', $this->web->responseText(400));
+        self::assertSame('Unauthorized', $this->web->responseText(401));
+        self::assertSame('Forbidden', $this->web->responseText(403));
+        self::assertSame('Not Found', $this->web->responseText(404));
+        self::assertSame('Internal Server Error', $this->web->responseText(500));
+        self::assertSame('Service Unavailable', $this->web->responseText(503));
+    }
+
+    public function testResponseTextReturnsDefaultForUnknownStatusCode(): void
+    {
+        self::assertSame('Unknown Status Code', $this->web->responseText(999));
+        self::assertSame('Unknown Status Code', $this->web->responseText(0));
+        self::assertSame('Unknown Status Code', $this->web->responseText(-1));
+    }
+
+    public function testResponseTextUsesDefaultParameter(): void
+    {
+        self::assertSame('OK', $this->web->responseText());
+    }
+
     /**
      * @throws ReflectionException
      */

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/var/www/html/valksor/src/Valksor/Functions/Web/phpunit.xml" tests="25" assertions="58" errors="0" failures="0" skipped="0" time="0.001000">
-    <testsuite name="Web Functions" tests="25" assertions="58" errors="0" failures="0" skipped="0" time="0.001000">
-      <testsuite name="Valksor\Functions\Web\Tests\WebTest" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" tests="25" assertions="58" errors="0" failures="0" skipped="0" time="0.001000">
+  <testsuite name="/var/www/html/valksor/src/Valksor/Functions/Web/phpunit.xml" tests="28" assertions="71" errors="0" failures="0" skipped="0" time="0.001000">
+    <testsuite name="Web Functions" tests="28" assertions="71" errors="0" failures="0" skipped="0" time="0.001000">
+      <testsuite name="Valksor\Functions\Web\Tests\WebTest" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" tests="28" assertions="71" errors="0" failures="0" skipped="0" time="0.001000">
         <testcase name="testArrayFromQueryStringParsesKeys" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="55" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
         <testcase name="testBuildArrayFromObjectProducesArray" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="68" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
         <testcase name="testBuildHttpQueryArrayHandlesObjectsArraysAndFiles" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="84" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="3" time="0.001000"/>
@@ -23,11 +23,14 @@
         <testcase name="testRemoteIpColumns" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="235" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="2" time="0.001000"/>
         <testcase name="testRequestIdentityBuildsAugmentedData" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="253" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="4" time="0.001000"/>
         <testcase name="testRequestMethodsReturnsListFromRequestClass" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="264" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
-        <testcase name="testResultRecursivelyExpandsStructures" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="286" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
-        <testcase name="testRouteExistsChecksCollection" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="302" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="2" time="0.001000"/>
-        <testcase name="testSchemaUsesHttpsDetection" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="363" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="2" time="0.001000"/>
-        <testcase name="testUrlEncodeNormalisesPortAndQuery" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="369" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
-        <testcase name="testValidateEmailAndIp" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="375" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="5" time="0.001000"/>
+        <testcase name="testResponseTextReturnsCorrectStatusText" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="283" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="9" time="0.001000"/>
+        <testcase name="testResponseTextReturnsDefaultForUnknownStatusCode" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="296" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="3" time="0.001000"/>
+        <testcase name="testResponseTextUsesDefaultParameter" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="303" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
+        <testcase name="testResultRecursivelyExpandsStructures" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="311" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
+        <testcase name="testRouteExistsChecksCollection" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="327" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="2" time="0.001000"/>
+        <testcase name="testSchemaUsesHttpsDetection" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="388" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="2" time="0.001000"/>
+        <testcase name="testUrlEncodeNormalisesPortAndQuery" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="394" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="1" time="0.001000"/>
+        <testcase name="testValidateEmailAndIp" file="/var/www/html/valksor/src/Valksor/Functions/Web/Tests/WebTest.php" line="400" class="Valksor\Functions\Web\Tests\WebTest" classname="Valksor.Functions.Web.Tests.WebTest" assertions="5" time="0.001000"/>
       </testsuite>
     </testsuite>
   </testsuite>

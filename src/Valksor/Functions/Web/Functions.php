@@ -35,6 +35,7 @@ final class Functions
     use Traits\_RemoteIpCF;
     use Traits\_RequestIdentity;
     use Traits\_RequestMethods;
+    use Traits\_ResponseText;
     use Traits\_Result;
     use Traits\_RouteExists;
     use Traits\_Schema;

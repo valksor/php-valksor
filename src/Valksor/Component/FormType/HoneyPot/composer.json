@@ -12,10 +12,10 @@
     "require": {
         "php": ">=8.4",
         "symfony/config": "*",
-        "symfony/options-resolver": "*",
+        "symfony/dependency-injection": "*",
         "symfony/form": "*",
         "symfony/http-foundation": "*",
-        "symfony/dependency-injection": "*",
+        "symfony/options-resolver": "*",
         "valksor/php-bundle": "*"
     },
     "require-dev": {

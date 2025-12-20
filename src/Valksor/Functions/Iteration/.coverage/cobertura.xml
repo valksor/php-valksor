@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.9940119760479" branch-rate="0" lines-covered="166" lines-valid="167" branches-covered="0" branches-valid="0" complexity="91" version="0.4" timestamp="0">
+<coverage line-rate="0.99479166666667" branch-rate="0" lines-covered="191" lines-valid="192" branches-covered="0" branches-valid="0" complexity="109" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/Functions/Iteration</source>
   </sources>
@@ -26,6 +26,102 @@
         <class name="Valksor\Functions\Iteration\Functions" filename="Functions.php" line-rate="0" branch-rate="0" complexity="0">
           <methods/>
           <lines/>
+        </class>
+      </classes>
+    </package>
+    <package name="Lazy.php" line-rate="1" branch-rate="0" complexity="18">
+      <classes>
+        <class name="Valksor\Functions\Iteration\Lazy" filename="Lazy.php" line-rate="1" branch-rate="0" complexity="18">
+          <methods>
+            <method name="__construct" signature="callable $producer" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="50" hits="36"/>
+              </lines>
+            </method>
+            <method name="__call" signature="string $name, array $arguments" line-rate="1" branch-rate="0" complexity="9">
+              <lines>
+                <line number="60" hits="15"/>
+                <line number="62" hits="15"/>
+                <line number="63" hits="5"/>
+                <line number="66" hits="10"/>
+                <line number="68" hits="10"/>
+                <line number="69" hits="4"/>
+                <line number="72" hits="6"/>
+                <line number="74" hits="6"/>
+                <line number="75" hits="2"/>
+                <line number="78" hits="4"/>
+                <line number="80" hits="4"/>
+                <line number="81" hits="1"/>
+                <line number="84" hits="3"/>
+              </lines>
+            </method>
+            <method name="count" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="89" hits="5"/>
+              </lines>
+            </method>
+            <method name="getIterator" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="97" hits="4"/>
+              </lines>
+            </method>
+            <method name="offsetExists" signature="mixed $offset" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="103" hits="4"/>
+              </lines>
+            </method>
+            <method name="offsetGet" signature="mixed $offset" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="109" hits="7"/>
+              </lines>
+            </method>
+            <method name="offsetSet" signature="mixed $offset, mixed $value" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="116" hits="2"/>
+                <line number="118" hits="2"/>
+                <line number="119" hits="1"/>
+                <line number="121" hits="1"/>
+              </lines>
+            </method>
+            <method name="offsetUnset" signature="mixed $offset" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="128" hits="1"/>
+                <line number="129" hits="1"/>
+              </lines>
+            </method>
+            <method name="resolve" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="137" hits="35"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="50" hits="36"/>
+            <line number="60" hits="15"/>
+            <line number="62" hits="15"/>
+            <line number="63" hits="5"/>
+            <line number="66" hits="10"/>
+            <line number="68" hits="10"/>
+            <line number="69" hits="4"/>
+            <line number="72" hits="6"/>
+            <line number="74" hits="6"/>
+            <line number="75" hits="2"/>
+            <line number="78" hits="4"/>
+            <line number="80" hits="4"/>
+            <line number="81" hits="1"/>
+            <line number="84" hits="3"/>
+            <line number="89" hits="5"/>
+            <line number="97" hits="4"/>
+            <line number="103" hits="4"/>
+            <line number="109" hits="7"/>
+            <line number="116" hits="2"/>
+            <line number="118" hits="2"/>
+            <line number="119" hits="1"/>
+            <line number="121" hits="1"/>
+            <line number="128" hits="1"/>
+            <line number="129" hits="1"/>
+            <line number="137" hits="35"/>
+          </lines>
         </class>
       </classes>
     </package>
