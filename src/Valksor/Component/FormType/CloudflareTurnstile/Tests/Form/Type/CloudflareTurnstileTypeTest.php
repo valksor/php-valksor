@@ -1,6 +1,15 @@
 <?php declare(strict_types = 1);
 
-// PACKAGE: Tests for CloudflareTurnstileType form type.
+/*
+ * This file is part of the Valksor package.
+ *
+ * (c) Davis Zalitis (k0d3r1s)
+ * (c) SIA Valksor <packages@valksor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 // PACKAGE: Verifies form configuration, view building, and option validation.
 
 namespace Valksor\Component\FormType\CloudflareTurnstile\Tests\Form\Type;
@@ -12,6 +21,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Throwable;
 use Valksor\Component\FormType\CloudflareTurnstile\Constraints\CloudflareTurnstile;
 use Valksor\Component\FormType\CloudflareTurnstile\Form\Type\CloudflareTurnstileType;
 use Valksor\Component\FormType\CloudflareTurnstile\Service\CloudflareTurnstileRegistry;
@@ -55,25 +65,6 @@ final class CloudflareTurnstileTypeTest extends TestCase
         $this->assertInstanceOf(Closure::class, $options['constraints']);
     }
 
-    public function testConfigureOptionsThrowsExceptionWhenTypeNotSet(): void
-    {
-        $resolver = new OptionsResolver();
-        $this->type->configureOptions($resolver);
-
-        $exceptionThrown = false;
-        $exceptionMessage = '';
-
-        try {
-            $resolver->resolve([]);
-        } catch (\Throwable $e) {
-            $exceptionThrown = true;
-            $exceptionMessage = $e->getMessage();
-        }
-
-        $this->assertTrue($exceptionThrown, 'Expected exception was not thrown when type is not set');
-        $this->assertStringContainsString('The "type" option is required', $exceptionMessage);
-    }
-
     public function testConfigureOptionsThrowsExceptionForNonExistentType(): void
     {
         $resolver = new OptionsResolver();
@@ -84,7 +75,7 @@ final class CloudflareTurnstileTypeTest extends TestCase
 
         try {
             $resolver->resolve(['type' => 'nonexistent_type']);
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             $exceptionThrown = true;
             $exceptionMessage = $e->getMessage();
         }
@@ -94,14 +85,23 @@ final class CloudflareTurnstileTypeTest extends TestCase
         $this->assertStringContainsString('Available types:', $exceptionMessage);
     }
 
-    public function testGetBlockPrefixReturnsCorrectPrefix(): void
+    public function testConfigureOptionsThrowsExceptionWhenTypeNotSet(): void
     {
-        $this->assertSame('valksor_form_type_cloudflare_turnstile', $this->type->getBlockPrefix());
-    }
+        $resolver = new OptionsResolver();
+        $this->type->configureOptions($resolver);
 
-    public function testGetParentReturnsTextType(): void
-    {
-        $this->assertSame(TextType::class, $this->type->getParent());
+        $exceptionThrown = false;
+        $exceptionMessage = '';
+
+        try {
+            $resolver->resolve([]);
+        } catch (Throwable $e) {
+            $exceptionThrown = true;
+            $exceptionMessage = $e->getMessage();
+        }
+
+        $this->assertTrue($exceptionThrown, 'Expected exception was not thrown when type is not set');
+        $this->assertStringContainsString('The "type" option is required', $exceptionMessage);
     }
 
     public function testConstraintClosureReturnsCorrectConstraint(): void
@@ -118,6 +118,16 @@ final class CloudflareTurnstileTypeTest extends TestCase
 
         $this->assertInstanceOf(CloudflareTurnstile::class, $constraint);
         $this->assertSame('contact', $constraint->type);
+    }
+
+    public function testGetBlockPrefixReturnsCorrectPrefix(): void
+    {
+        $this->assertSame('valksor_form_type_cloudflare_turnstile', $this->type->getBlockPrefix());
+    }
+
+    public function testGetParentReturnsTextType(): void
+    {
+        $this->assertSame(TextType::class, $this->type->getParent());
     }
 
     protected function setUp(): void

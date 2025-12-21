@@ -1,6 +1,15 @@
 <?php declare(strict_types = 1);
 
-// PACKAGE: Tests for CloudflareTurnstileHttpClient.
+/*
+ * This file is part of the Valksor package.
+ *
+ * (c) Davis Zalitis (k0d3r1s)
+ * (c) SIA Valksor <packages@valksor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 // PACKAGE: Verifies HTTP verification requests to Cloudflare API.
 
 namespace Valksor\Component\FormType\CloudflareTurnstile\Tests\HttpClient;
@@ -16,10 +25,73 @@ use Valksor\Component\FormType\CloudflareTurnstile\Service\CloudflareTurnstileRe
 
 final class CloudflareTurnstileHttpClientTest extends TestCase
 {
-    private CloudflareTurnstileRegistry $registry;
     private HttpClientInterface $httpClient;
     private LoggerInterface $logger;
+    private CloudflareTurnstileRegistry $registry;
     private CloudflareTurnstileHttpClient $turnstileHttpClient;
+
+    public function testVerifyResponseReturnsFalseForInvalidType(): void
+    {
+        $this->logger->expects($this->once())
+            ->method('error')
+            ->with($this->stringContains('Cloudflare Turnstile configuration "invalid" not found'));
+
+        $result = $this->turnstileHttpClient->verifyResponse('test-token', 'invalid');
+
+        $this->assertFalse($result);
+    }
+
+    public function testVerifyResponseReturnsFalseOnFailure(): void
+    {
+        $response = $this->createMock(ResponseInterface::class);
+        $response->expects($this->once())
+            ->method('toArray')
+            ->willReturn(['success' => false]);
+
+        $this->httpClient->expects($this->once())
+            ->method('request')
+            ->willReturn($response);
+
+        $result = $this->turnstileHttpClient->verifyResponse('invalid-token', 'default');
+
+        $this->assertFalse($result);
+    }
+
+    public function testVerifyResponseReturnsFalseOnHttpException(): void
+    {
+        $response = $this->createMock(ResponseInterface::class);
+        $response->expects($this->once())
+            ->method('toArray')
+            ->willThrowException($this->createMock(TransportExceptionInterface::class));
+
+        $this->httpClient->expects($this->once())
+            ->method('request')
+            ->willReturn($response);
+
+        $this->logger->expects($this->once())
+            ->method('error')
+            ->with($this->stringContains('Cloudflare Turnstile HTTP exception'));
+
+        $result = $this->turnstileHttpClient->verifyResponse('test-token', 'default');
+
+        $this->assertFalse($result);
+    }
+
+    public function testVerifyResponseReturnsFalseWhenSuccessKeyMissing(): void
+    {
+        $response = $this->createMock(ResponseInterface::class);
+        $response->expects($this->once())
+            ->method('toArray')
+            ->willReturn(['error' => 'something went wrong']);
+
+        $this->httpClient->expects($this->once())
+            ->method('request')
+            ->willReturn($response);
+
+        $result = $this->turnstileHttpClient->verifyResponse('test-token', 'default');
+
+        $this->assertFalse($result);
+    }
 
     public function testVerifyResponseReturnsTrueOnSuccess(): void
     {
@@ -45,69 +117,6 @@ final class CloudflareTurnstileHttpClientTest extends TestCase
         $result = $this->turnstileHttpClient->verifyResponse('test-token', 'default');
 
         $this->assertTrue($result);
-    }
-
-    public function testVerifyResponseReturnsFalseOnFailure(): void
-    {
-        $response = $this->createMock(ResponseInterface::class);
-        $response->expects($this->once())
-            ->method('toArray')
-            ->willReturn(['success' => false]);
-
-        $this->httpClient->expects($this->once())
-            ->method('request')
-            ->willReturn($response);
-
-        $result = $this->turnstileHttpClient->verifyResponse('invalid-token', 'default');
-
-        $this->assertFalse($result);
-    }
-
-    public function testVerifyResponseReturnsFalseWhenSuccessKeyMissing(): void
-    {
-        $response = $this->createMock(ResponseInterface::class);
-        $response->expects($this->once())
-            ->method('toArray')
-            ->willReturn(['error' => 'something went wrong']);
-
-        $this->httpClient->expects($this->once())
-            ->method('request')
-            ->willReturn($response);
-
-        $result = $this->turnstileHttpClient->verifyResponse('test-token', 'default');
-
-        $this->assertFalse($result);
-    }
-
-    public function testVerifyResponseReturnsFalseForInvalidType(): void
-    {
-        $this->logger->expects($this->once())
-            ->method('error')
-            ->with($this->stringContains('Cloudflare Turnstile configuration "invalid" not found'));
-
-        $result = $this->turnstileHttpClient->verifyResponse('test-token', 'invalid');
-
-        $this->assertFalse($result);
-    }
-
-    public function testVerifyResponseReturnsFalseOnHttpException(): void
-    {
-        $response = $this->createMock(ResponseInterface::class);
-        $response->expects($this->once())
-            ->method('toArray')
-            ->willThrowException($this->createMock(TransportExceptionInterface::class));
-
-        $this->httpClient->expects($this->once())
-            ->method('request')
-            ->willReturn($response);
-
-        $this->logger->expects($this->once())
-            ->method('error')
-            ->with($this->stringContains('Cloudflare Turnstile HTTP exception'));
-
-        $result = $this->turnstileHttpClient->verifyResponse('test-token', 'default');
-
-        $this->assertFalse($result);
     }
 
     public function testVerifyResponseUsesCorrectSecretForType(): void

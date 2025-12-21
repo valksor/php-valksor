@@ -1,6 +1,15 @@
 <?php declare(strict_types = 1);
 
-// PACKAGE: Tests for CloudflareTurnstileValidator.
+/*
+ * This file is part of the Valksor package.
+ *
+ * (c) Davis Zalitis (k0d3r1s)
+ * (c) SIA Valksor <packages@valksor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 // PACKAGE: Verifies turnstile response validation logic.
 
 namespace Valksor\Component\FormType\CloudflareTurnstile\Tests\Constraints;
@@ -23,35 +32,36 @@ use Valksor\Component\FormType\CloudflareTurnstile\Service\CloudflareTurnstileRe
 
 final class CloudflareTurnstileValidatorTest extends TestCase
 {
+    private ExecutionContextInterface $context;
     private RequestStack $requestStack;
     private HttpClientInterface $symfonyHttpClient;
-    private ExecutionContextInterface $context;
     private CloudflareTurnstileValidator $validator;
 
-    public function testValidateThrowsExceptionForWrongConstraintType(): void
+    public function testValidateAddsViolationWhenHttpClientReturnsFalse(): void
     {
-        $wrongConstraint = $this->createMock(Constraint::class);
+        $constraint = new CloudflareTurnstile(type: 'default');
 
-        $this->expectException(UnexpectedTypeException::class);
+        $request = new Request([], ['cf-turnstile-response' => 'test-token']);
+        $this->requestStack->expects($this->once())
+            ->method('getCurrentRequest')
+            ->willReturn($request);
 
-        $this->validator->validate('value', $wrongConstraint);
-    }
+        $response = $this->createMock(ResponseInterface::class);
+        $response->expects($this->once())
+            ->method('toArray')
+            ->willReturn(['success' => false]);
 
-    public function testValidateAddsViolationWhenTypeIsNull(): void
-    {
-        $constraint = new CloudflareTurnstile(type: null);
+        $this->symfonyHttpClient->expects($this->once())
+            ->method('request')
+            ->willReturn($response);
 
         $violationBuilder = $this->createMock(ConstraintViolationBuilderInterface::class);
-        $violationBuilder->expects($this->once())
-            ->method('setParameter')
-            ->with('{{ type }}', 'undefined')
-            ->willReturnSelf();
         $violationBuilder->expects($this->once())
             ->method('addViolation');
 
         $this->context->expects($this->once())
             ->method('buildViolation')
-            ->with($constraint->notFoundMessage)
+            ->with($constraint->message)
             ->willReturn($violationBuilder);
 
         $this->validator->validate('value', $constraint);
@@ -98,31 +108,21 @@ final class CloudflareTurnstileValidatorTest extends TestCase
         $this->validator->validate('value', $constraint);
     }
 
-    public function testValidateAddsViolationWhenHttpClientReturnsFalse(): void
+    public function testValidateAddsViolationWhenTypeIsNull(): void
     {
-        $constraint = new CloudflareTurnstile(type: 'default');
-
-        $request = new Request([], ['cf-turnstile-response' => 'test-token']);
-        $this->requestStack->expects($this->once())
-            ->method('getCurrentRequest')
-            ->willReturn($request);
-
-        $response = $this->createMock(ResponseInterface::class);
-        $response->expects($this->once())
-            ->method('toArray')
-            ->willReturn(['success' => false]);
-
-        $this->symfonyHttpClient->expects($this->once())
-            ->method('request')
-            ->willReturn($response);
+        $constraint = new CloudflareTurnstile(type: null);
 
         $violationBuilder = $this->createMock(ConstraintViolationBuilderInterface::class);
+        $violationBuilder->expects($this->once())
+            ->method('setParameter')
+            ->with('{{ type }}', 'undefined')
+            ->willReturnSelf();
         $violationBuilder->expects($this->once())
             ->method('addViolation');
 
         $this->context->expects($this->once())
             ->method('buildViolation')
-            ->with($constraint->message)
+            ->with($constraint->notFoundMessage)
             ->willReturn($violationBuilder);
 
         $this->validator->validate('value', $constraint);
@@ -150,6 +150,15 @@ final class CloudflareTurnstileValidatorTest extends TestCase
             ->method('buildViolation');
 
         $this->validator->validate('value', $constraint);
+    }
+
+    public function testValidateThrowsExceptionForWrongConstraintType(): void
+    {
+        $wrongConstraint = $this->createMock(Constraint::class);
+
+        $this->expectException(UnexpectedTypeException::class);
+
+        $this->validator->validate('value', $wrongConstraint);
     }
 
     protected function setUp(): void

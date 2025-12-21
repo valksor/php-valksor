@@ -1,6 +1,15 @@
 <?php declare(strict_types = 1);
 
-// PACKAGE: Tests for CloudflareTurnstileRegistry service.
+/*
+ * This file is part of the Valksor package.
+ *
+ * (c) Davis Zalitis (k0d3r1s)
+ * (c) SIA Valksor <packages@valksor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 // PACKAGE: Verifies site key, secret key retrieval and type validation.
 
 namespace Valksor\Component\FormType\CloudflareTurnstile\Tests\Service;
@@ -15,6 +24,11 @@ final class CloudflareTurnstileRegistryTest extends TestCase
     private ParameterBag $parameterBag;
     private CloudflareTurnstileRegistry $registry;
 
+    public function testGetAvailableTypesReturnsConfiguredTypes(): void
+    {
+        $this->assertSame(['default', 'contact'], $this->registry->getAvailableTypes());
+    }
+
     public function testGetAvailableTypesReturnsEmptyArrayWhenNoTypesConfigured(): void
     {
         $parameterBag = new ParameterBag([
@@ -23,11 +37,6 @@ final class CloudflareTurnstileRegistryTest extends TestCase
         $registry = new CloudflareTurnstileRegistry($parameterBag);
 
         $this->assertSame([], $registry->getAvailableTypes());
-    }
-
-    public function testGetAvailableTypesReturnsConfiguredTypes(): void
-    {
-        $this->assertSame(['default', 'contact'], $this->registry->getAvailableTypes());
     }
 
     public function testGetSecretKeyReturnsCorrectKey(): void
@@ -58,16 +67,16 @@ final class CloudflareTurnstileRegistryTest extends TestCase
         $this->registry->getSiteKey('nonexistent');
     }
 
-    public function testHasTypeReturnsTrueForExistingType(): void
-    {
-        $this->assertTrue($this->registry->hasType('default'));
-        $this->assertTrue($this->registry->hasType('contact'));
-    }
-
     public function testHasTypeReturnsFalseForNonExistingType(): void
     {
         $this->assertFalse($this->registry->hasType('nonexistent'));
         $this->assertFalse($this->registry->hasType(''));
+    }
+
+    public function testHasTypeReturnsTrueForExistingType(): void
+    {
+        $this->assertTrue($this->registry->hasType('default'));
+        $this->assertTrue($this->registry->hasType('contact'));
     }
 
     protected function setUp(): void

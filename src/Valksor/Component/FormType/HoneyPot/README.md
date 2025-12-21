@@ -54,11 +54,11 @@ $form = $this->createFormBuilder([], [
 
 ### Configuration Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `honeypot` | `bool` | `false` | Enable/disable honeypot |
-| `honeypot_field_name` | `string` | `'website'` | Name of the honeypot field |
-| `honeypot_message` | `string` | `'This form should not be submitted by bots.'` | Error message on bot detection |
+| Option                | Type     | Default                                        | Description                    |
+| --------------------- | -------- | ---------------------------------------------- | ------------------------------ |
+| `honeypot`            | `bool`   | `false`                                        | Enable/disable honeypot        |
+| `honeypot_field_name` | `string` | `'website'`                                    | Name of the honeypot field     |
+| `honeypot_message`    | `string` | `'This form should not be submitted by bots.'` | Error message on bot detection |
 
 ### How It Works
 
@@ -110,7 +110,6 @@ If you discover any security-related issues, please email us at packages@valksor
 - **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
 - **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
 - **Discussions**: [GitHub Discussions](https://github.com/orgs/valksor/discussions/categories/php-valksor) for questions and community support
-- **Stack Overflow**: Use tag `valksor-php-form-type-honey-pot`
 
 ## Credits
 

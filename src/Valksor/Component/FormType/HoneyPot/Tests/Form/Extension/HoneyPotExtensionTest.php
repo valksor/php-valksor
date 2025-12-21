@@ -1,6 +1,15 @@
 <?php declare(strict_types = 1);
 
-// PACKAGE: Tests for HoneyPotExtension form extension.
+/*
+ * This file is part of the Valksor package.
+ *
+ * (c) Davis Zalitis (k0d3r1s)
+ * (c) SIA Valksor <packages@valksor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 // PACKAGE: Verifies honeypot field addition and bot detection logic.
 
 namespace Valksor\Component\FormType\HoneyPot\Tests\Form\Extension;
@@ -18,55 +27,34 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Valksor\Component\FormType\HoneyPot\Form\Extension\HoneyPotExtension;
 
+use function ini_get;
+use function is_callable;
+
 final class HoneyPotExtensionTest extends TestCase
 {
-    private RequestStack $requestStack;
     private HoneyPotExtension $extension;
+    private RequestStack $requestStack;
 
-    public function testGetExtendedTypesReturnsFormType(): void
-    {
-        $types = HoneyPotExtension::getExtendedTypes();
-
-        $this->assertContains(FormType::class, $types);
-    }
-
-    public function testConfigureOptionsSetsDefaults(): void
-    {
-        $resolver = new OptionsResolver();
-        $this->extension->configureOptions($resolver);
-
-        $options = $resolver->resolve([]);
-
-        $this->assertFalse($options['honeypot']);
-        $this->assertSame('website', $options['honeypot_field_name']);
-        $this->assertSame('This form should not be submitted by bots.', $options['honeypot_message']);
-    }
-
-    public function testConfigureOptionsAllowsCustomValues(): void
-    {
-        $resolver = new OptionsResolver();
-        $this->extension->configureOptions($resolver);
-
-        $options = $resolver->resolve([
-            'honeypot' => true,
-            'honeypot_field_name' => 'custom_field',
-            'honeypot_message' => 'Custom bot message',
-        ]);
-
-        $this->assertTrue($options['honeypot']);
-        $this->assertSame('custom_field', $options['honeypot_field_name']);
-        $this->assertSame('Custom bot message', $options['honeypot_message']);
-    }
-
-    public function testBuildFormDoesNothingWhenHoneypotDisabled(): void
+    public function testBuildFormAddsCustomFieldName(): void
     {
         $builder = $this->createMock(FormBuilderInterface::class);
-        $builder->expects($this->never())
-            ->method('add');
-        $builder->expects($this->never())
+        $builder->expects($this->once())
+            ->method('add')
+            ->with(
+                'custom_honeypot',
+                TextType::class,
+                $this->anything(),
+            )
+            ->willReturnSelf();
+
+        $builder->expects($this->once())
             ->method('addEventListener');
 
-        $this->extension->buildForm($builder, ['honeypot' => false]);
+        $this->extension->buildForm($builder, [
+            'honeypot' => true,
+            'honeypot_field_name' => 'custom_honeypot',
+            'honeypot_message' => 'Bot detected',
+        ]);
     }
 
     public function testBuildFormAddsHoneypotFieldWhenEnabled(): void
@@ -100,26 +88,78 @@ final class HoneyPotExtensionTest extends TestCase
         ]);
     }
 
-    public function testBuildFormAddsCustomFieldName(): void
+    public function testBuildFormDoesNothingWhenHoneypotDisabled(): void
     {
         $builder = $this->createMock(FormBuilderInterface::class);
-        $builder->expects($this->once())
-            ->method('add')
-            ->with(
-                'custom_honeypot',
-                TextType::class,
-                $this->anything(),
-            )
-            ->willReturnSelf();
-
-        $builder->expects($this->once())
+        $builder->expects($this->never())
+            ->method('add');
+        $builder->expects($this->never())
             ->method('addEventListener');
+
+        $this->extension->buildForm($builder, ['honeypot' => false]);
+    }
+
+    public function testConfigureOptionsAllowsCustomValues(): void
+    {
+        $resolver = new OptionsResolver();
+        $this->extension->configureOptions($resolver);
+
+        $options = $resolver->resolve([
+            'honeypot' => true,
+            'honeypot_field_name' => 'custom_field',
+            'honeypot_message' => 'Custom bot message',
+        ]);
+
+        $this->assertTrue($options['honeypot']);
+        $this->assertSame('custom_field', $options['honeypot_field_name']);
+        $this->assertSame('Custom bot message', $options['honeypot_message']);
+    }
+
+    public function testConfigureOptionsSetsDefaults(): void
+    {
+        $resolver = new OptionsResolver();
+        $this->extension->configureOptions($resolver);
+
+        $options = $resolver->resolve([]);
+
+        $this->assertFalse($options['honeypot']);
+        $this->assertSame('website', $options['honeypot_field_name']);
+        $this->assertSame('This form should not be submitted by bots.', $options['honeypot_message']);
+    }
+
+    public function testGetExtendedTypesReturnsFormType(): void
+    {
+        $types = HoneyPotExtension::getExtendedTypes();
+
+        $this->assertContains(FormType::class, $types);
+    }
+
+    public function testPreSubmitListenerDoesNothingWhenDataIsNotArray(): void
+    {
+        $listenerCallback = null;
+
+        $builder = $this->createMock(FormBuilderInterface::class);
+        $builder->method('add')->willReturnSelf();
+        $builder->expects($this->once())
+            ->method('addEventListener')
+            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
+                $listenerCallback = $callback;
+
+                return true;
+            }));
 
         $this->extension->buildForm($builder, [
             'honeypot' => true,
-            'honeypot_field_name' => 'custom_honeypot',
+            'honeypot_field_name' => 'website',
             'honeypot_message' => 'Bot detected',
         ]);
+
+        $form = $this->createMock(FormInterface::class);
+        $event = new FormEvent($form, 'string data');
+
+        $listenerCallback($event);
+
+        $this->assertSame('string data', $event->getData());
     }
 
     public function testPreSubmitListenerDoesNothingWhenHoneypotEmpty(): void
@@ -148,6 +188,39 @@ final class HoneyPotExtensionTest extends TestCase
         $listenerCallback($event);
 
         $this->assertSame(['name' => 'John', 'website' => ''], $event->getData());
+    }
+
+    public function testPreSubmitListenerHandlesNullRequest(): void
+    {
+        $listenerCallback = null;
+
+        $builder = $this->createMock(FormBuilderInterface::class);
+        $builder->method('add')->willReturnSelf();
+        $builder->expects($this->once())
+            ->method('addEventListener')
+            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
+                $listenerCallback = $callback;
+
+                return true;
+            }));
+
+        $this->requestStack->expects($this->once())
+            ->method('getCurrentRequest')
+            ->willReturn(null);
+
+        $this->extension->buildForm($builder, [
+            'honeypot' => true,
+            'honeypot_field_name' => 'website',
+            'honeypot_message' => 'Bot detected!',
+        ]);
+
+        $form = $this->createMock(FormInterface::class);
+        $event = new FormEvent($form, ['name' => 'Bot', 'website' => 'http://spam.com']);
+
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Bot detected!');
+
+        $listenerCallback($event);
     }
 
     public function testPreSubmitListenerThrowsExceptionWhenHoneypotFilled(): void
@@ -198,67 +271,6 @@ final class HoneyPotExtensionTest extends TestCase
 
         $this->assertTrue($exceptionThrown, 'Expected InvalidArgumentException was not thrown');
         $this->assertSame('Bot detected!', $exceptionMessage);
-    }
-
-    public function testPreSubmitListenerHandlesNullRequest(): void
-    {
-        $listenerCallback = null;
-
-        $builder = $this->createMock(FormBuilderInterface::class);
-        $builder->method('add')->willReturnSelf();
-        $builder->expects($this->once())
-            ->method('addEventListener')
-            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
-                $listenerCallback = $callback;
-
-                return true;
-            }));
-
-        $this->requestStack->expects($this->once())
-            ->method('getCurrentRequest')
-            ->willReturn(null);
-
-        $this->extension->buildForm($builder, [
-            'honeypot' => true,
-            'honeypot_field_name' => 'website',
-            'honeypot_message' => 'Bot detected!',
-        ]);
-
-        $form = $this->createMock(FormInterface::class);
-        $event = new FormEvent($form, ['name' => 'Bot', 'website' => 'http://spam.com']);
-
-        $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Bot detected!');
-
-        $listenerCallback($event);
-    }
-
-    public function testPreSubmitListenerDoesNothingWhenDataIsNotArray(): void
-    {
-        $listenerCallback = null;
-
-        $builder = $this->createMock(FormBuilderInterface::class);
-        $builder->method('add')->willReturnSelf();
-        $builder->expects($this->once())
-            ->method('addEventListener')
-            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
-                $listenerCallback = $callback;
-
-                return true;
-            }));
-
-        $this->extension->buildForm($builder, [
-            'honeypot' => true,
-            'honeypot_field_name' => 'website',
-            'honeypot_message' => 'Bot detected',
-        ]);
-
-        $form = $this->createMock(FormInterface::class);
-        $event = new FormEvent($form, 'string data');
-
-        $listenerCallback($event);
-
-        $this->assertSame('string data', $event->getData());
     }
 
     protected function setUp(): void

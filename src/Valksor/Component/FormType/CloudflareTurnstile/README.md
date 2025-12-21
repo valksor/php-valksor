@@ -50,11 +50,11 @@ valksor:
     cloudflare_turnstile:
         types:
             managed:
-                sitekey: 'your_sitekey_managed'
-                secret: 'your_secret_managed'
+                sitekey: "your_sitekey_managed"
+                secret: "your_secret_managed"
             non_interactive:
-                sitekey: 'your_sitekey_non_interactive'
-                secret: 'your_secret_non_interactive'
+                sitekey: "your_sitekey_non_interactive"
+                secret: "your_secret_non_interactive"
 ```
 
 ## Features
@@ -63,11 +63,11 @@ valksor:
 
 Managed by `CloudflareTurnstileRegistry`. Add types in config.
 
-| Type | Description |
-|------|-------------|
-| `managed` | Standard interactive widget |
-| `non_interactive` | Non-interactive verification |
-| `invisible` | Invisible background verification |
+| Type              | Description                       |
+| ----------------- | --------------------------------- |
+| `managed`         | Standard interactive widget       |
+| `non_interactive` | Non-interactive verification      |
+| `invisible`       | Invisible background verification |
 
 ### Server Validation
 
@@ -79,10 +79,10 @@ Uses `fields.html.twig` template. Turnstile widget renders automatically with si
 
 ### Required Options
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `type` | `string` | Required. Must match configured types (managed, non_interactive, etc.) |
-| `mapped` | `bool` | Default: `false`. Field is not mapped to entity |
+| Option   | Type     | Description                                                            |
+| -------- | -------- | ---------------------------------------------------------------------- |
+| `type`   | `string` | Required. Must match configured types (managed, non_interactive, etc.) |
+| `mapped` | `bool`   | Default: `false`. Field is not mapped to entity                        |
 
 ## Testing
 
@@ -123,7 +123,6 @@ If you discover any security-related issues, please email us at packages@valksor
 - **Documentation**: [Full documentation](https://github.com/valksor/php-valksor)
 - **Issues**: [GitHub Issues](https://github.com/valksor/php-valksor/issues) for bug reports and feature requests
 - **Discussions**: [GitHub Discussions](https://github.com/orgs/valksor/discussions/categories/php-valksor) for questions and community support
-- **Stack Overflow**: Use tag `valksor-php-form-type-cloudflare-turnstile`
 
 ## Credits
 

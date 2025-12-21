@@ -1,6 +1,15 @@
 <?php declare(strict_types = 1);
 
-// PACKAGE: Tests for HoneyPot TwigCompilerPass.
+/*
+ * This file is part of the Valksor package.
+ *
+ * (c) Davis Zalitis (k0d3r1s)
+ * (c) SIA Valksor <packages@valksor.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 // PACKAGE: Verifies Twig path and form resources registration.
 
 namespace Valksor\Component\FormType\HoneyPot\Tests\DependencyInjection\CompilerPass;
@@ -13,6 +22,49 @@ use Valksor\Component\FormType\HoneyPot\DependencyInjection\CompilerPass\TwigCom
 final class TwigCompilerPassTest extends TestCase
 {
     private TwigCompilerPass $compilerPass;
+
+    public function testProcessAddsTwigPathAndFormResources(): void
+    {
+        $definition = $this->createMock(Definition::class);
+        $definition->expects($this->once())
+            ->method('addMethodCall')
+            ->with(
+                'addPath',
+                $this->callback(fn (array $args) => str_contains($args[0], 'Resources/views')
+                        && 'ValksorFTHoneyPot' === $args[1]),
+            );
+
+        $container = $this->createMock(ContainerBuilder::class);
+        $container->expects($this->once())
+            ->method('hasParameter')
+            ->with('twig.form.resources')
+            ->willReturn(true);
+
+        $container->expects($this->once())
+            ->method('hasDefinition')
+            ->with('twig.loader.native_filesystem')
+            ->willReturn(true);
+
+        $container->expects($this->once())
+            ->method('getDefinition')
+            ->with('twig.loader.native_filesystem')
+            ->willReturn($definition);
+
+        $container->expects($this->once())
+            ->method('getParameter')
+            ->with('twig.form.resources')
+            ->willReturn(['@SomeBundle/form.html.twig']);
+
+        $container->expects($this->once())
+            ->method('setParameter')
+            ->with(
+                'twig.form.resources',
+                $this->callback(fn (array $resources) => '@ValksorFTHoneyPot/fields.html.twig' === $resources[0]
+                        && '@SomeBundle/form.html.twig' === $resources[1]),
+            );
+
+        $this->compilerPass->process($container);
+    }
 
     public function testProcessDoesNothingWhenTwigFormResourcesParameterMissing(): void
     {
@@ -43,53 +95,6 @@ final class TwigCompilerPassTest extends TestCase
 
         $container->expects($this->never())
             ->method('getDefinition');
-
-        $this->compilerPass->process($container);
-    }
-
-    public function testProcessAddsTwigPathAndFormResources(): void
-    {
-        $definition = $this->createMock(Definition::class);
-        $definition->expects($this->once())
-            ->method('addMethodCall')
-            ->with(
-                'addPath',
-                $this->callback(function (array $args) {
-                    return str_contains($args[0], 'Resources/views')
-                        && $args[1] === 'ValksorFTHoneyPot';
-                }),
-            );
-
-        $container = $this->createMock(ContainerBuilder::class);
-        $container->expects($this->once())
-            ->method('hasParameter')
-            ->with('twig.form.resources')
-            ->willReturn(true);
-
-        $container->expects($this->once())
-            ->method('hasDefinition')
-            ->with('twig.loader.native_filesystem')
-            ->willReturn(true);
-
-        $container->expects($this->once())
-            ->method('getDefinition')
-            ->with('twig.loader.native_filesystem')
-            ->willReturn($definition);
-
-        $container->expects($this->once())
-            ->method('getParameter')
-            ->with('twig.form.resources')
-            ->willReturn(['@SomeBundle/form.html.twig']);
-
-        $container->expects($this->once())
-            ->method('setParameter')
-            ->with(
-                'twig.form.resources',
-                $this->callback(function (array $resources) {
-                    return $resources[0] === '@ValksorFTHoneyPot/fields.html.twig'
-                        && $resources[1] === '@SomeBundle/form.html.twig';
-                }),
-            );
 
         $this->compilerPass->process($container);
     }
