@@ -1,6 +1,6 @@
 {
     "name": "valksor/php-form-type-cloudflare-turnstile",
-    "description": "",
+    "description": "Symfony Form type for Cloudflare Turnstile bot protection",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
@@ -10,17 +10,17 @@
     ],
     "homepage": "https://github.com/valksor/php-valksor",
     "require": {
-        "php": ">=8.4"
+        "php": ">=8.4",
+        "symfony/dependency-injection": "*",
+        "symfony/form": "*",
+        "symfony/http-client": "*",
+        "symfony/http-foundation": "*",
+        "symfony/options-resolver": "*",
+        "symfony/validator": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^12.0",
-        "psr/log": "^3.0",
-        "symfony/dependency-injection": "^7.2",
-        "symfony/form": "^7.2",
-        "symfony/http-client": "^7.2",
-        "symfony/http-foundation": "^7.2",
-        "symfony/options-resolver": "^7.2",
-        "symfony/validator": "^7.2"
+        "psr/log": "^3.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": false,

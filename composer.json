@@ -63,6 +63,9 @@
         "valksor/php-bundle": "self.version",
         "valksor/php-docs": "self.version",
         "valksor/php-doctrine-tools": "self.version",
+        "valksor/php-form-type": "self.version",
+        "valksor/php-form-type-cloudflare-turnstile": "self.version",
+        "valksor/php-form-type-honey-pot": "self.version",
         "valksor/php-functions": "self.version",
         "valksor/php-spx-profiler": "self.version",
         "valksor/php-sse": "self.version"
