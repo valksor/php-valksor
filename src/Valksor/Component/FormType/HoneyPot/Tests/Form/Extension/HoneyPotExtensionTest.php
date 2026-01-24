@@ -79,7 +79,7 @@ final class HoneyPotExtensionTest extends TestCase
 
         $builder->expects($this->once())
             ->method('addEventListener')
-            ->with(FormEvents::PRE_SUBMIT, $this->callback(fn ($arg) => is_callable($arg)));
+            ->with(FormEvents::PRE_SUBMIT, $this->callback(static fn ($arg) => is_callable($arg)));
 
         $this->extension->buildForm($builder, [
             'honeypot' => true,
@@ -142,7 +142,7 @@ final class HoneyPotExtensionTest extends TestCase
         $builder->method('add')->willReturnSelf();
         $builder->expects($this->once())
             ->method('addEventListener')
-            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
+            ->with(FormEvents::PRE_SUBMIT, $this->callback(static function ($callback) use (&$listenerCallback) {
                 $listenerCallback = $callback;
 
                 return true;
@@ -170,7 +170,7 @@ final class HoneyPotExtensionTest extends TestCase
         $builder->method('add')->willReturnSelf();
         $builder->expects($this->once())
             ->method('addEventListener')
-            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
+            ->with(FormEvents::PRE_SUBMIT, $this->callback(static function ($callback) use (&$listenerCallback) {
                 $listenerCallback = $callback;
 
                 return true;
@@ -198,7 +198,7 @@ final class HoneyPotExtensionTest extends TestCase
         $builder->method('add')->willReturnSelf();
         $builder->expects($this->once())
             ->method('addEventListener')
-            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
+            ->with(FormEvents::PRE_SUBMIT, $this->callback(static function ($callback) use (&$listenerCallback) {
                 $listenerCallback = $callback;
 
                 return true;
@@ -231,7 +231,7 @@ final class HoneyPotExtensionTest extends TestCase
         $builder->method('add')->willReturnSelf();
         $builder->expects($this->once())
             ->method('addEventListener')
-            ->with(FormEvents::PRE_SUBMIT, $this->callback(function ($callback) use (&$listenerCallback) {
+            ->with(FormEvents::PRE_SUBMIT, $this->callback(static function ($callback) use (&$listenerCallback) {
                 $listenerCallback = $callback;
 
                 return true;

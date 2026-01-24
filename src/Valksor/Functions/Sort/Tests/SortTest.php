@@ -421,8 +421,8 @@ final class SortTest extends TestCase
             ['name' => 'Charlie', 'score' => 85, 'original_index' => 2],
         ];
 
-        $getComparedValue = fn ($element) => $element['score'];
-        $compareValues = fn ($a, $b) => $a <=> $b;
+        $getComparedValue = static fn ($element) => $element['score'];
+        $compareValues = static fn ($a, $b) => $a <=> $b;
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 
@@ -440,11 +440,11 @@ final class SortTest extends TestCase
             ['name' => 'Charlie', 'score' => 90.0],
         ];
 
-        $getComparedValue = function ($element) {
+        $getComparedValue = static function ($element) {
             return (int) $element['score']; // Convert to int for testing
         };
 
-        $compareValues = fn ($a, $b) => $a <=> $b;
+        $compareValues = static fn ($a, $b) => $a <=> $b;
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 
@@ -463,8 +463,8 @@ final class SortTest extends TestCase
             ['name' => 'David', 'category' => 'B', 'score' => 90],
         ];
 
-        $getComparedValue = fn ($element) => [$element['category'], $element['score']];
-        $compareValues = fn ($a, $b) => $a[0] <=> $b[0] ?: ($a[1] <=> $b[1]);
+        $getComparedValue = static fn ($element) => [$element['category'], $element['score']];
+        $compareValues = static fn ($a, $b) => $a[0] <=> $b[0] ?: ($a[1] <=> $b[1]);
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 
@@ -482,8 +482,8 @@ final class SortTest extends TestCase
             ['name' => 'Charlie', 'score' => 78],
         ];
 
-        $getComparedValue = fn ($element) => $element['score'];
-        $compareValues = fn ($a, $b) => $b <=> $a; // Descending order
+        $getComparedValue = static fn ($element) => $element['score'];
+        $compareValues = static fn ($a, $b) => $b <=> $a; // Descending order
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 
@@ -501,8 +501,8 @@ final class SortTest extends TestCase
             ['name' => 'David', 'score' => 85, 'original_index' => 3],
         ];
 
-        $getComparedValue = fn ($element) => $element['score'];
-        $compareValues = fn ($a, $b) => $a <=> $b;
+        $getComparedValue = static fn ($element) => $element['score'];
+        $compareValues = static fn ($a, $b) => $a <=> $b;
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 
@@ -516,8 +516,8 @@ final class SortTest extends TestCase
     {
         $elements = [];
 
-        $getComparedValue = fn ($element) => $element['score'];
-        $compareValues = fn ($a, $b) => $a <=> $b;
+        $getComparedValue = static fn ($element) => $element['score'];
+        $compareValues = static fn ($a, $b) => $a <=> $b;
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 
@@ -528,8 +528,8 @@ final class SortTest extends TestCase
     {
         $elements = [['name' => 'Alice', 'score' => 85]];
 
-        $getComparedValue = fn ($element) => $element['score'];
-        $compareValues = fn ($a, $b) => $a <=> $b;
+        $getComparedValue = static fn ($element) => $element['score'];
+        $compareValues = static fn ($a, $b) => $a <=> $b;
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 
@@ -545,8 +545,8 @@ final class SortTest extends TestCase
             ['name' => 'David', 'city' => 'Austin'],
         ];
 
-        $getComparedValue = fn ($element) => $element['city'];
-        $compareValues = fn ($a, $b) => $a <=> $b;
+        $getComparedValue = static fn ($element) => $element['city'];
+        $compareValues = static fn ($a, $b) => $a <=> $b;
 
         $result = $this->sortFunctions->stableSort($elements, $getComparedValue, $compareValues);
 

@@ -104,7 +104,7 @@ final class ValksorBundle extends AbstractBundle
         }
 
         foreach ($this->discoverComponents() as $component => $componentData) {
-            $this->callback($component, $componentData, function (object $object) use ($container): void {
+            $this->callback($component, $componentData, static function (object $object) use ($container): void {
                 $object->build($container);
             });
         }
@@ -253,7 +253,7 @@ final class ValksorBundle extends AbstractBundle
         }
 
         foreach ($this->discoverComponents() as $component => $componentData) {
-            $this->callback($component, $componentData, function (object $object, string $class, string $component) use ($container, $builder): void {
+            $this->callback($component, $componentData, static function (object $object, string $class, string $component) use ($container, $builder): void {
                 $object->registerConfiguration($container, $builder, $component);
             }, $builder);
         }
@@ -290,7 +290,7 @@ final class ValksorBundle extends AbstractBundle
         }
 
         foreach ($this->discoverComponents() as $component => $componentData) {
-            $this->callback($component, $componentData, function (object $object, string $class, string $component) use ($container, $builder, &$usesDoctrine): void {
+            $this->callback($component, $componentData, static function (object $object, string $class, string $component) use ($container, $builder, &$usesDoctrine): void {
                 $object->registerPreConfiguration($container, $builder, $component);
                 $usesDoctrine = $usesDoctrine || $object->usesDoctrine();
             }, $builder);

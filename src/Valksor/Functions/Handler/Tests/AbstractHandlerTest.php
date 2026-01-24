@@ -26,9 +26,9 @@ final class AbstractHandlerTest extends TestCase
 
     public function testChainProcessesRequestThroughMultipleHandlers(): void
     {
-        $handler1 = new ConditionalHandler(fn () => null);
-        $handler2 = new ConditionalHandler(fn () => 'result2');
-        $handler3 = new ConditionalHandler(fn () => 'result3');
+        $handler1 = new ConditionalHandler(static fn () => null);
+        $handler2 = new ConditionalHandler(static fn () => 'result2');
+        $handler3 = new ConditionalHandler(static fn () => 'result3');
 
         $handler1->next($handler2);
         $handler2->next($handler3);
@@ -49,9 +49,9 @@ final class AbstractHandlerTest extends TestCase
 
     public function testChainReturnsNullWhenNoHandlerCanProcess(): void
     {
-        $handler1 = new ConditionalHandler(fn () => null);
-        $handler2 = new ConditionalHandler(fn () => null);
-        $handler3 = new ConditionalHandler(fn () => null);
+        $handler1 = new ConditionalHandler(static fn () => null);
+        $handler2 = new ConditionalHandler(static fn () => null);
+        $handler3 = new ConditionalHandler(static fn () => null);
 
         $handler1->next($handler2);
         $handler2->next($handler3);
@@ -61,8 +61,8 @@ final class AbstractHandlerTest extends TestCase
 
     public function testChainStopsAtFirstHandlerThatReturnsValue(): void
     {
-        $handler1 = new ConditionalHandler(fn () => 'result1');
-        $handler2 = new ConditionalHandler(fn () => 'result2');
+        $handler1 = new ConditionalHandler(static fn () => 'result1');
+        $handler2 = new ConditionalHandler(static fn () => 'result2');
 
         $handler1->next($handler2);
 
@@ -101,8 +101,8 @@ final class AbstractHandlerTest extends TestCase
 
     public function testHandlerCanDecideToProcessOrPass(): void
     {
-        $handler1 = new ConditionalHandler(fn (...$args) => 'process' === $args[0] ? 'handled-by-1' : null);
-        $handler2 = new ConditionalHandler(fn (...$args) => 'pass' === $args[0] ? 'handled-by-2' : null);
+        $handler1 = new ConditionalHandler(static fn (...$args) => 'process' === $args[0] ? 'handled-by-1' : null);
+        $handler2 = new ConditionalHandler(static fn (...$args) => 'pass' === $args[0] ? 'handled-by-2' : null);
 
         $handler1->next($handler2);
 
@@ -136,11 +136,11 @@ final class AbstractHandlerTest extends TestCase
 
     public function testLongChainOfHandlers(): void
     {
-        $handler1 = new ConditionalHandler(fn () => null);
-        $handler2 = new ConditionalHandler(fn () => null);
-        $handler3 = new ConditionalHandler(fn () => null);
-        $handler4 = new ConditionalHandler(fn () => null);
-        $handler5 = new ConditionalHandler(fn () => 'final-result');
+        $handler1 = new ConditionalHandler(static fn () => null);
+        $handler2 = new ConditionalHandler(static fn () => null);
+        $handler3 = new ConditionalHandler(static fn () => null);
+        $handler4 = new ConditionalHandler(static fn () => null);
+        $handler5 = new ConditionalHandler(static fn () => 'final-result');
 
         $handler1->next($handler2);
         $handler2->next($handler3);
@@ -152,9 +152,9 @@ final class AbstractHandlerTest extends TestCase
 
     public function testMultipleHandlersWithComplexLogic(): void
     {
-        $numberHandler = new ConditionalHandler(fn (...$args) => is_int($args[0] ?? null) ? 'number' : null);
-        $stringHandler = new ConditionalHandler(fn (...$args) => is_string($args[0] ?? null) ? 'string' : null);
-        $arrayHandler = new ConditionalHandler(fn (...$args) => is_array($args[0] ?? null) ? 'array' : null);
+        $numberHandler = new ConditionalHandler(static fn (...$args) => is_int($args[0] ?? null) ? 'number' : null);
+        $stringHandler = new ConditionalHandler(static fn (...$args) => is_string($args[0] ?? null) ? 'string' : null);
+        $arrayHandler = new ConditionalHandler(static fn (...$args) => is_array($args[0] ?? null) ? 'array' : null);
 
         $numberHandler->next($stringHandler);
         $stringHandler->next($arrayHandler);

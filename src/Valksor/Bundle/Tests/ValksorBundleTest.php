@@ -65,7 +65,7 @@ namespace Valksor\Bundle\Tests {
                     'class' => TrackingDependency::class,
                     'available' => true,
                 ],
-            ], function () use ($bundle): void {
+            ], static function () use ($bundle): void {
                 $bundle->build(new ContainerBuilder());
             });
 
@@ -89,7 +89,7 @@ namespace Valksor\Bundle\Tests {
             ];
 
             $invocations = 0;
-            $method->invoke($bundle, 'example', $componentData, function (object $object, string $class, string $component) use (&$invocations): void {
+            $method->invoke($bundle, 'example', $componentData, static function (object $object, string $class, string $component) use (&$invocations): void {
                 $invocations++;
                 self::assertInstanceOf(ExampleDependency::class, $object);
                 self::assertSame(ExampleDependency::class, $class);
@@ -116,7 +116,7 @@ namespace Valksor\Bundle\Tests {
             ];
 
             $invocations = 0;
-            $method->invoke($bundle, 'example', $componentData, function () use (&$invocations): void {
+            $method->invoke($bundle, 'example', $componentData, static function () use (&$invocations): void {
                 $invocations++;
             }, $builder);
 
@@ -140,7 +140,7 @@ namespace Valksor\Bundle\Tests {
             ];
 
             $invocations = 0;
-            $method->invoke($bundle, 'example', $componentData, function () use (&$invocations): void {
+            $method->invoke($bundle, 'example', $componentData, static function () use (&$invocations): void {
                 $invocations++;
             }, $builder);
 
@@ -164,7 +164,7 @@ namespace Valksor\Bundle\Tests {
             ];
 
             $invocations = 0;
-            $method->invoke($bundle, 'example', $componentData, function () use (&$invocations): void {
+            $method->invoke($bundle, 'example', $componentData, static function () use (&$invocations): void {
                 $invocations++;
             }, $builder);
 
@@ -188,7 +188,7 @@ namespace Valksor\Bundle\Tests {
             ];
 
             $invocations = 0;
-            $method->invoke($bundle, 'example', $componentData, function () use (&$invocations): void {
+            $method->invoke($bundle, 'example', $componentData, static function () use (&$invocations): void {
                 $invocations++;
             }, $builder);
 
@@ -218,7 +218,7 @@ namespace Valksor\Bundle\Tests {
                     'class' => TrackingDependency::class,
                     'available' => true,
                 ],
-            ], function () use ($bundle, $definition): void {
+            ], static function () use ($bundle, $definition): void {
                 $bundle->configure($definition);
             });
 
@@ -296,7 +296,7 @@ namespace Valksor\Bundle\Tests {
                     'class' => TrackingDependency::class,
                     'available' => true,
                 ],
-            ], function () use ($bundle, $config, $configurator, $builder): void {
+            ], static function () use ($bundle, $config, $configurator, $builder): void {
                 $bundle->loadExtension($config, $configurator, $builder);
             });
 
@@ -326,7 +326,7 @@ namespace Valksor\Bundle\Tests {
                     'class' => TrackingDependency::class,
                     'available' => true,
                 ],
-            ], function () use ($bundle, $config, $configurator, $builder): void {
+            ], static function () use ($bundle, $config, $configurator, $builder): void {
                 $bundle->loadExtension($config, $configurator, $builder);
             });
 
@@ -371,7 +371,7 @@ namespace Valksor\Bundle\Tests {
                     'class' => TrackingDependency::class,
                     'available' => true,
                 ],
-            ], function () use ($bundle, $configurator, $builder): void {
+            ], static function () use ($bundle, $configurator, $builder): void {
                 $bundle->prependExtension($configurator, $builder);
             });
 
@@ -407,7 +407,7 @@ namespace Valksor\Bundle\Tests {
                     'class' => TrackingDependency::class,
                     'available' => true,
                 ],
-            ], function () use ($bundle, $configurator, $builder): void {
+            ], static function () use ($bundle, $configurator, $builder): void {
                 $bundle->prependExtension($configurator, $builder);
             });
 

@@ -440,7 +440,7 @@ final class PregTest extends TestCase
     // ReplaceCallback Tests
     public function testReplaceCallback(): void
     {
-        $callback = fn ($matches) => strtoupper($matches[0]);
+        $callback = static fn ($matches) => strtoupper($matches[0]);
         $result = $this->preg->replaceCallback('/\w+/', $callback, 'hello world');
 
         $this->assertSame('HELLO WORLD', $result);
@@ -448,13 +448,13 @@ final class PregTest extends TestCase
 
     public function testReplaceCallbackMethodSignature(): void
     {
-        $result = $this->preg->replaceCallback('/test/', fn ($matches) => 'replacement', 'test');
+        $result = $this->preg->replaceCallback('/test/', static fn ($matches) => 'replacement', 'test');
         $this->assertSame('replacement', $result);
     }
 
     public function testReplaceCallbackReturnsString(): void
     {
-        $result = $this->preg->replaceCallback('/test/', fn () => 'ok', 'test');
+        $result = $this->preg->replaceCallback('/test/', static fn () => 'ok', 'test');
 
         $this->assertIsString($result);
     }
@@ -463,7 +463,7 @@ final class PregTest extends TestCase
     {
         $pattern = "/\xFF/";
         $subject = "prefix \xFF suffix";
-        $callback = fn () => 'X';
+        $callback = static fn () => 'X';
 
         $result = $this->preg->replaceCallback($pattern, $callback, $subject);
 
@@ -472,7 +472,7 @@ final class PregTest extends TestCase
 
     public function testReplaceCallbackWithArrayPattern(): void
     {
-        $callback = fn ($matches) => strtoupper($matches[0]);
+        $callback = static fn ($matches) => strtoupper($matches[0]);
         $result = $this->preg->replaceCallback(['/\w+/', '/\d+/'], $callback, 'hello 123 world 456');
 
         $this->assertSame('HELLO 123 WORLD 456', $result);
@@ -480,7 +480,7 @@ final class PregTest extends TestCase
 
     public function testReplaceCallbackWithComplexPattern(): void
     {
-        $callback = fn ($matches) => '[' . $matches[1] . ']';
+        $callback = static fn ($matches) => '[' . $matches[1] . ']';
         $result = $this->preg->replaceCallback('/\b([A-Z][a-z]+)\b/', $callback, 'Hello World Test Case');
 
         $this->assertSame('[Hello] [World] [Test] [Case]', $result);
@@ -489,7 +489,7 @@ final class PregTest extends TestCase
     public function testReplaceCallbackWithCount(): void
     {
         $count = null;
-        $callback = fn ($matches) => strtoupper($matches[0]);
+        $callback = static fn ($matches) => strtoupper($matches[0]);
         $result = $this->preg->replaceCallback('/\w+/', $callback, 'hello world test', -1, $count);
 
         $this->assertSame('HELLO WORLD TEST', $result);
@@ -498,7 +498,7 @@ final class PregTest extends TestCase
 
     public function testReplaceCallbackWithEmptySubject(): void
     {
-        $callback = fn () => 'ok';
+        $callback = static fn () => 'ok';
         $result = $this->preg->replaceCallback('/test/', $callback, '');
 
         $this->assertSame('', $result);
@@ -507,13 +507,13 @@ final class PregTest extends TestCase
     public function testReplaceCallbackWithInvalidRegex(): void
     {
         $this->expectException(RuntimeException::class);
-        $this->preg->replaceCallback('/[invalid/', fn ($matches) => 'replacement', 'test');
+        $this->preg->replaceCallback('/[invalid/', static fn ($matches) => 'replacement', 'test');
     }
 
     public function testReplaceCallbackWithLargeInput(): void
     {
         $subject = str_repeat('test ', 100);
-        $callback = fn ($matches) => 'ok';
+        $callback = static fn ($matches) => 'ok';
         $result = $this->preg->replaceCallback('/test/', $callback, $subject);
 
         $this->assertSame(str_repeat('ok ', 100), $result);
@@ -521,7 +521,7 @@ final class PregTest extends TestCase
 
     public function testReplaceCallbackWithLimit(): void
     {
-        $callback = fn ($matches) => strtoupper($matches[0]);
+        $callback = static fn ($matches) => strtoupper($matches[0]);
         $result = $this->preg->replaceCallback('/\w+/', $callback, 'hello world test', 1);
 
         $this->assertSame('HELLO world test', $result);
@@ -529,7 +529,7 @@ final class PregTest extends TestCase
 
     public function testReplaceCallbackWithUnicodeCharacters(): void
     {
-        $callback = fn ($matches) => mb_strtoupper($matches[0]);
+        $callback = static fn ($matches) => mb_strtoupper($matches[0]);
         $result = $this->preg->replaceCallback('/\w+/u', $callback, 'héllo wörld');
 
         $this->assertSame('HÉLLO WÖRLD', $result);
@@ -572,7 +572,7 @@ final class PregTest extends TestCase
         // Note: /e modifier was removed in PHP 7.0, using replaceCallback pattern instead
         $result = $this->preg->replaceCallback(
             '/\b([A-Z][a-z]+)\b/',
-            fn ($matches) => '<strong>' . $matches[0] . '</strong>',
+            static fn ($matches) => '<strong>' . $matches[0] . '</strong>',
             'Hello World Test Case',
         );
 
@@ -759,8 +759,8 @@ final class PregTest extends TestCase
 
     public function testStaticHelperClassIsCreatedInReplaceCallback(): void
     {
-        $result1 = $this->preg->replaceCallback('/test1/', fn () => 'ok1', 'test1');
-        $result2 = $this->preg->replaceCallback('/test2/', fn () => 'ok2', 'test2');
+        $result1 = $this->preg->replaceCallback('/test1/', static fn () => 'ok1', 'test1');
+        $result2 = $this->preg->replaceCallback('/test2/', static fn () => 'ok2', 'test2');
 
         $this->assertSame('ok1', $result1);
         $this->assertSame('ok2', $result2);

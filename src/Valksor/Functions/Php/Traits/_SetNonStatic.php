@@ -44,6 +44,7 @@ trait _SetNonStatic
             };
         }
 
+        // @php-cs-fixer-disable static_closure
         $_helper->void(function: function () use ($object, $property, $value): void {
             $object->{$property} = $value;
         }, clone: $object);

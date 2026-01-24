@@ -27,6 +27,7 @@ trait _ReturnObject
             };
         }
 
+        // @php-cs-fixer-disable static_closure
         return $_helper->return(fn () => $object->{$function}(...$arguments), $object, ...$arguments);
     }
 }

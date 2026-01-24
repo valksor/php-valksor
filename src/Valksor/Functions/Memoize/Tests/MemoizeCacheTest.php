@@ -56,7 +56,7 @@ final class MemoizeCacheTest extends TestCase
         $result = $this->memoizeCache->memoize(
             TestContext::USER,
             'test-key',
-            fn () => 'test-value',
+            static fn () => 'test-value',
         );
 
         $this->assertSame('test-value', $result);
@@ -65,7 +65,7 @@ final class MemoizeCacheTest extends TestCase
     public function testMemoizeCacheRefreshFunctionality(): void
     {
         $counter = 0;
-        $callback = function () use (&$counter) {
+        $callback = static function () use (&$counter) {
             $counter++;
 
             return "value-$counter";
@@ -83,7 +83,7 @@ final class MemoizeCacheTest extends TestCase
     public function testMemoizeCacheValueMethodWorks(): void
     {
         // First, cache a value
-        $this->memoizeCache->memoize(TestContext::CACHE, 'key1', fn () => 'cached-value');
+        $this->memoizeCache->memoize(TestContext::CACHE, 'key1', static fn () => 'cached-value');
 
         // Then retrieve it
         $result = $this->memoizeCache->value(TestContext::CACHE, 'key1');
@@ -96,7 +96,7 @@ final class MemoizeCacheTest extends TestCase
         $result = $this->memoizeCache->memoize(
             TestContext::PRODUCT,
             'product',
-            fn () => 'nested-cache-value',
+            static fn () => 'nested-cache-value',
             false,
             'details',
             'price',

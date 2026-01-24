@@ -27,7 +27,7 @@ final class MemoizeTest extends TestCase
         $this->memoize->memoize(
             TestContext::USER,
             'root',
-            fn () => 'deep-value',
+            static fn () => 'deep-value',
             false,
             'branch1',
             'branch2',
@@ -52,7 +52,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::PRODUCT,
             'level1',
-            fn () => 'nested-from-scratch',
+            static fn () => 'nested-from-scratch',
             false,
             'level2',
             'level3',
@@ -74,7 +74,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'test-key',
-            fn () => 'test-value',
+            static fn () => 'test-value',
         );
 
         $this->assertSame('test-value', $result);
@@ -86,7 +86,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::ORDER,
             'new-key',
-            fn () => 'context-init-value',
+            static fn () => 'context-init-value',
         );
 
         $this->assertSame('context-init-value', $result);
@@ -95,7 +95,7 @@ final class MemoizeTest extends TestCase
     public function testMemoizeOverwritesValueWhenRefreshIsTrue(): void
     {
         $counter = 0;
-        $callback = function () use (&$counter) {
+        $callback = static function () use (&$counter) {
             $counter++;
 
             return "value-$counter";
@@ -135,8 +135,8 @@ final class MemoizeTest extends TestCase
 
     public function testMemoizeSubKeysAreIsolated(): void
     {
-        $callback1 = fn () => 'value1';
-        $callback2 = fn () => 'value2';
+        $callback1 = static fn () => 'value1';
+        $callback2 = static fn () => 'value2';
 
         $result1 = $this->memoize->memoize(TestContext::USER, 'user', $callback1, false, 'profile');
         $result2 = $this->memoize->memoize(TestContext::USER, 'user', $callback2, false, 'settings');
@@ -151,7 +151,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'array-test',
-            fn () => $array,
+            static fn () => $array,
         );
 
         $this->assertIsArray($result);
@@ -164,7 +164,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'false-test',
-            fn () => false,
+            static fn () => false,
         );
 
         $this->assertFalse($result);
@@ -187,8 +187,8 @@ final class MemoizeTest extends TestCase
 
     public function testMemoizeWithDifferentContextsAreIsolated(): void
     {
-        $callback1 = fn () => 'user-value';
-        $callback2 = fn () => 'product-value';
+        $callback1 = static fn () => 'user-value';
+        $callback2 = static fn () => 'product-value';
 
         $result1 = $this->memoize->memoize(TestContext::USER, 'same-key', $callback1);
         $result2 = $this->memoize->memoize(TestContext::PRODUCT, 'same-key', $callback2);
@@ -199,8 +199,8 @@ final class MemoizeTest extends TestCase
 
     public function testMemoizeWithDifferentKeysExecutesSeparateCallbacks(): void
     {
-        $callback1 = fn () => 'value1';
-        $callback2 = fn () => 'value2';
+        $callback1 = static fn () => 'value1';
+        $callback2 = static fn () => 'value2';
 
         $result1 = $this->memoize->memoize(TestContext::USER, 'key1', $callback1);
         $result2 = $this->memoize->memoize(TestContext::USER, 'key2', $callback2);
@@ -215,7 +215,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             '',
-            fn () => 'empty-string-key-value',
+            static fn () => 'empty-string-key-value',
         );
 
         $this->assertSame('empty-string-key-value', $result);
@@ -230,7 +230,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'int-test',
-            fn () => 42,
+            static fn () => 42,
         );
 
         $this->assertIsInt($result);
@@ -246,7 +246,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             42,
-            fn () => 'int-key-value',
+            static fn () => 'int-key-value',
         );
 
         $this->assertSame('int-key-value', $result);
@@ -257,7 +257,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'user',
-            fn () => 'deep-nested-value',
+            static fn () => 'deep-nested-value',
             false,
             'profile',
             'settings',
@@ -272,7 +272,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'null-test',
-            fn () => null,
+            static fn () => null,
         );
 
         $this->assertNull($result);
@@ -286,7 +286,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'object-test',
-            fn () => $object,
+            static fn () => $object,
         );
 
         $this->assertIsObject($result);
@@ -330,7 +330,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'user',
-            fn () => 'nested-value',
+            static fn () => 'nested-value',
             false,
             'profile',
         );
@@ -343,7 +343,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'string-key',
-            fn () => 'string-key-value',
+            static fn () => 'string-key-value',
         );
 
         $this->assertSame('string-key-value', $result);
@@ -358,7 +358,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             'string-test',
-            fn () => 'string-value',
+            static fn () => 'string-value',
         );
 
         $this->assertIsString($result);
@@ -371,7 +371,7 @@ final class MemoizeTest extends TestCase
         $result = $this->memoize->memoize(
             TestContext::USER,
             0,
-            fn () => 'zero-key-value',
+            static fn () => 'zero-key-value',
         );
 
         $this->assertSame('zero-key-value', $result);
@@ -396,7 +396,7 @@ final class MemoizeTest extends TestCase
     public function testValueRetrievesExistingCachedValue(): void
     {
         // First, cache a value
-        $this->memoize->memoize(TestContext::USER, 'cached-key', fn () => 'cached-value');
+        $this->memoize->memoize(TestContext::USER, 'cached-key', static fn () => 'cached-value');
 
         // Then retrieve it with value()
         $result = $this->memoize->value(TestContext::USER, 'cached-key');
@@ -421,7 +421,7 @@ final class MemoizeTest extends TestCase
     public function testValueReturnsDefaultForNonExistentSubKey(): void
     {
         // Cache value without sub-key
-        $this->memoize->memoize(TestContext::USER, 'user', fn () => 'value');
+        $this->memoize->memoize(TestContext::USER, 'user', static fn () => 'value');
 
         // Try to retrieve with non-existent sub-key
         $result = $this->memoize->value(TestContext::USER, 'user', 'default', 'non-existent');
@@ -447,7 +447,7 @@ final class MemoizeTest extends TestCase
     public function testValueWithEmptySubKeysArray(): void
     {
         // Cache a simple value
-        $this->memoize->memoize(TestContext::USER, 'simple', fn () => 'simple-value');
+        $this->memoize->memoize(TestContext::USER, 'simple', static fn () => 'simple-value');
 
         // Retrieve without any subkeys (empty variadic)
         $result = $this->memoize->value(TestContext::USER, 'simple');
@@ -465,7 +465,7 @@ final class MemoizeTest extends TestCase
     public function testValueWithIntermediatePathThatDoesntExist(): void
     {
         // Cache nested structure with some values
-        $this->memoize->memoize(TestContext::USER, 'root', fn () => 'value1', false, 'level1');
+        $this->memoize->memoize(TestContext::USER, 'root', static fn () => 'value1', false, 'level1');
 
         // Try to access a path that doesn't exist at an intermediate level
         $result = $this->memoize->value(TestContext::USER, 'root', 'default', 'nonexistent', 'deep');
@@ -479,7 +479,7 @@ final class MemoizeTest extends TestCase
         $this->memoize->memoize(
             TestContext::USER,
             'user',
-            fn () => 'deep-value',
+            static fn () => 'deep-value',
             false,
             'profile',
             'settings',
@@ -499,7 +499,7 @@ final class MemoizeTest extends TestCase
     public function testValueWithSingleSubKey(): void
     {
         // Cache value with sub-key
-        $this->memoize->memoize(TestContext::USER, 'user', fn () => 'profile-value', false, 'profile');
+        $this->memoize->memoize(TestContext::USER, 'user', static fn () => 'profile-value', false, 'profile');
 
         // Retrieve with sub-key
         $result = $this->memoize->value(TestContext::USER, 'user', null, 'profile');

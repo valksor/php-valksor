@@ -44,6 +44,7 @@ trait _GetNonStatic
             };
         }
 
+        // @php-cs-fixer-disable static_closure
         return $_helper->return(fn () => $object->{$property}, $object, ...$arguments);
     }
 }

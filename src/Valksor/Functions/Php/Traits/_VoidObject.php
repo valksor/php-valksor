@@ -27,6 +27,7 @@ trait _VoidObject
             };
         }
 
+        // @php-cs-fixer-disable static_closure
         $_helper->void(fn () => $object->{$function}(...$arguments), $object, ...$arguments);
     }
 }

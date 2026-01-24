@@ -41,9 +41,9 @@ final class ChainTest extends TestCase
         ];
 
         $result = Chain::of($data)
-            ->pipe(fn ($items) => array_filter($items, static fn ($item) => $item['score'] >= 80))
-            ->pipe(fn ($items) => array_map(static fn ($item) => $item['name'], $items))
-            ->pipe(fn ($items) => implode(', ', $items))
+            ->pipe(static fn ($items) => array_filter($items, static fn ($item) => $item['score'] >= 80))
+            ->pipe(static fn ($items) => array_map(static fn ($item) => $item['name'], $items))
+            ->pipe(static fn ($items) => implode(', ', $items))
             ->get();
 
         $this->assertSame('Alice, Bob', $result);
@@ -54,9 +54,9 @@ final class ChainTest extends TestCase
     public function testComplexPipelineWithStringManipulation(): void
     {
         $result = Chain::of('  hello world  ')
-            ->pipe(fn ($value) => trim($value))
-            ->pipe(fn ($value) => strtoupper($value))
-            ->pipe(fn ($value) => str_replace(' ', '_', $value))
+            ->pipe(static fn ($value) => trim($value))
+            ->pipe(static fn ($value) => strtoupper($value))
+            ->pipe(static fn ($value) => str_replace(' ', '_', $value))
             ->get();
 
         $this->assertSame('HELLO_WORLD', $result);
@@ -107,12 +107,12 @@ final class ChainTest extends TestCase
     public function testLongPipelineChain(): void
     {
         $result = Chain::of(1)
-            ->pipe(fn ($n) => $n + 1)  // 2
-            ->pipe(fn ($n) => $n * 2)   // 4
-            ->pipe(fn ($n) => $n + 3)   // 7
-            ->pipe(fn ($n) => $n * 3)   // 21
-            ->pipe(fn ($n) => $n - 1)   // 20
-            ->pipe(fn ($n) => intdiv($n, 4))   // 5
+            ->pipe(static fn ($n) => $n + 1)  // 2
+            ->pipe(static fn ($n) => $n * 2)   // 4
+            ->pipe(static fn ($n) => $n + 3)   // 7
+            ->pipe(static fn ($n) => $n * 3)   // 21
+            ->pipe(static fn ($n) => $n - 1)   // 20
+            ->pipe(static fn ($n) => intdiv($n, 4))   // 5
             ->get();
 
         $this->assertSame(5, $result);
@@ -120,8 +120,8 @@ final class ChainTest extends TestCase
 
     public function testMultipleIndependentChains(): void
     {
-        $chain1 = Chain::of(5)->pipe(fn ($n) => $n * 2);
-        $chain2 = Chain::of(5)->pipe(fn ($n) => $n + 10);
+        $chain1 = Chain::of(5)->pipe(static fn ($n) => $n * 2);
+        $chain2 = Chain::of(5)->pipe(static fn ($n) => $n + 10);
 
         $this->assertSame(10, $chain1->get());
         $this->assertSame(15, $chain2->get());
@@ -149,14 +149,14 @@ final class ChainTest extends TestCase
 
     public function testPipeChangesType(): void
     {
-        $result = Chain::of('123')->pipe(fn ($value) => (int) $value);
+        $result = Chain::of('123')->pipe(static fn ($value) => (int) $value);
         $this->assertSame(123, $result->get());
     }
 
     public function testPipeDoesNotMutateOriginalChain(): void
     {
         $chain = Chain::of(5);
-        $chain->pipe(fn ($value) => $value * 10);
+        $chain->pipe(static fn ($value) => $value * 10);
 
         $this->assertSame(5, $chain->get());
     }
@@ -164,7 +164,7 @@ final class ChainTest extends TestCase
     public function testPipeReturnsNewChainInstance(): void
     {
         $chain1 = Chain::of('test');
-        $chain2 = $chain1->pipe(fn ($value) => strtoupper($value));
+        $chain2 = $chain1->pipe(static fn ($value) => strtoupper($value));
 
         $this->assertNotSame($chain1, $chain2);
         $this->assertSame('test', $chain1->get());
@@ -175,23 +175,23 @@ final class ChainTest extends TestCase
 
     public function testPipeTransformsValue(): void
     {
-        $result = Chain::of('hello')->pipe(fn ($value) => strtoupper($value));
+        $result = Chain::of('hello')->pipe(static fn ($value) => strtoupper($value));
         $this->assertSame('HELLO', $result->get());
     }
 
     public function testPipeWithArrayOperations(): void
     {
         $result = Chain::of([1, 2, 3])
-            ->pipe(fn ($value) => array_map(static fn ($n) => $n * 2, $value))
-            ->pipe(fn ($value) => array_sum($value));
+            ->pipe(static fn ($value) => array_map(static fn ($n) => $n * 2, $value))
+            ->pipe(static fn ($value) => array_sum($value));
         $this->assertSame(12, $result->get());
     }
 
     public function testPipeWithBoolean(): void
     {
         $result = Chain::of(true)
-            ->pipe(fn ($value) => !$value)
-            ->pipe(fn ($value) => $value ? 'yes' : 'no')
+            ->pipe(static fn ($value) => !$value)
+            ->pipe(static fn ($value) => $value ? 'yes' : 'no')
             ->get();
 
         $this->assertSame('no', $result);
@@ -214,23 +214,23 @@ final class ChainTest extends TestCase
     public function testPipeWithMultipleOperations(): void
     {
         $result = Chain::of('hello')
-            ->pipe(fn ($value) => strtoupper($value))
-            ->pipe(fn ($value) => $value . ' WORLD');
+            ->pipe(static fn ($value) => strtoupper($value))
+            ->pipe(static fn ($value) => $value . ' WORLD');
         $this->assertSame('HELLO WORLD', $result->get());
     }
 
     public function testPipeWithNull(): void
     {
-        $result = Chain::of(null)->pipe(fn ($value) => $value ?? 'default');
+        $result = Chain::of(null)->pipe(static fn ($value) => $value ?? 'default');
         $this->assertSame('default', $result->get());
     }
 
     public function testPipeWithNumericOperations(): void
     {
         $result = Chain::of(10)
-            ->pipe(fn ($value) => $value * 2)
-            ->pipe(fn ($value) => $value + 5)
-            ->pipe(fn ($value) => intdiv($value, 5));
+            ->pipe(static fn ($value) => $value * 2)
+            ->pipe(static fn ($value) => $value + 5)
+            ->pipe(static fn ($value) => intdiv($value, 5));
         $this->assertSame(5, $result->get());
     }
 
@@ -239,7 +239,7 @@ final class ChainTest extends TestCase
         $obj = new stdClass();
         $obj->value = 10;
 
-        $result = Chain::of($obj)->pipe(fn ($obj) => $obj->value * 2);
+        $result = Chain::of($obj)->pipe(static fn ($obj) => $obj->value * 2);
         $this->assertSame(20, $result->get());
     }
 }

@@ -30,7 +30,7 @@ final class TwigCompilerPassTest extends TestCase
             ->method('addMethodCall')
             ->with(
                 'addPath',
-                $this->callback(fn (array $args) => str_contains($args[0], 'Resources/views')
+                $this->callback(static fn (array $args) => str_contains($args[0], 'Resources/views')
                         && 'ValksorFTCloudflareTurnstile' === $args[1]),
             );
 
@@ -59,7 +59,7 @@ final class TwigCompilerPassTest extends TestCase
             ->method('setParameter')
             ->with(
                 'twig.form.resources',
-                $this->callback(fn (array $resources) => '@ValksorFTCloudflareTurnstile/fields.html.twig' === $resources[0]
+                $this->callback(static fn (array $resources) => '@ValksorFTCloudflareTurnstile/fields.html.twig' === $resources[0]
                         && '@SomeBundle/form.html.twig' === $resources[1]),
             );
 
