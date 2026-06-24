@@ -1,0 +1,46 @@
+{
+    "name": "valksor/php-cache",
+    "description": "Resilient Redis cache and session decorators with graceful degradation for long-running Symfony worker runtimes",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "keywords": [
+        "php",
+        "cache",
+        "redis",
+        "resilience",
+        "circuit-breaker",
+        "session",
+        "symfony",
+        "valksor"
+    ],
+    "homepage": "https://github.com/valksor/php-valksor",
+    "require": {
+        "php": ">=8.4",
+        "ext-redis": "*",
+        "psr/cache": "*",
+        "psr/log": "*",
+        "symfony/cache": "*",
+        "symfony/cache-contracts": "*",
+        "symfony/dependency-injection": "*",
+        "symfony/http-foundation": "*",
+        "symfony/service-contracts": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false,
+    "autoload": {
+        "psr-4": {
+            "Valksor\\Component\\Cache\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
