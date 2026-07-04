@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/var/www/html/valksor/phpunit.xml" tests="922" assertions="2436" errors="0" failures="0" skipped="0" time="0.001000">
-    <testsuite name="Valksor Complete" tests="922" assertions="2436" errors="0" failures="0" skipped="0" time="0.001000">
+  <testsuite name="/var/www/html/valksor/phpunit.xml" tests="925" assertions="2440" errors="0" failures="0" skipped="0" time="0.001000">
+    <testsuite name="Valksor Complete" tests="925" assertions="2440" errors="0" failures="0" skipped="0" time="0.001000">
       <testsuite name="Valksor\Functions\Date\Tests\DateTest" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" tests="63" assertions="190" errors="0" failures="0" skipped="0" time="0.001000">
         <testcase name="testCalculateEasterWithDifferentCenturies" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="26" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" assertions="3" time="0.001000"/>
         <testcase name="testCalculateEasterWithEarlyYears" file="/var/www/html/valksor/src/Valksor/Functions/Date/Tests/DateTest.php" line="39" class="Valksor\Functions\Date\Tests\DateTest" classname="Valksor.Functions.Date.Tests.DateTest" assertions="4" time="0.001000"/>
@@ -794,7 +794,7 @@
         <testcase name="testGetClassFromFileParsesClassName" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Traits/TraitsTest.php" line="27" class="Valksor\Bundle\Tests\Traits\TraitsTest" classname="Valksor.Bundle.Tests.Traits.TraitsTest" assertions="3" time="0.001000"/>
         <testcase name="testLoadReflectionCachesInstances" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/Traits/TraitsTest.php" line="49" class="Valksor\Bundle\Tests\Traits\TraitsTest" classname="Valksor.Bundle.Tests.Traits.TraitsTest" assertions="2" time="0.001000"/>
       </testsuite>
-      <testsuite name="Valksor\Bundle\Tests\ValksorBundleTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" tests="16" assertions="34" errors="0" failures="0" skipped="0" time="0.001000">
+      <testsuite name="Valksor\Bundle\Tests\ValksorBundleTest" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" tests="19" assertions="38" errors="0" failures="0" skipped="0" time="0.001000">
         <testcase name="testBuildInvokesTrackingDependency" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="60" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="1" time="0.001000"/>
         <testcase name="testCallbackRunsWhenComponentEnabled" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="78" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="4" time="0.001000"/>
         <testcase name="testCallbackSkipsWhenClassIsMissing" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="105" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="1" time="0.001000"/>
@@ -811,6 +811,9 @@
         <testcase name="testPrependExtensionSkipsGlobalMigrationsWhenDoctrineUnused" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="395" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="3" time="0.001000"/>
         <testcase name="testPrependExtensionSkipsPreConfigurationWhenComponentAbsentFromConfig" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="426" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="1" time="0.001000"/>
         <testcase name="testPrependExtensionSkipsPreConfigurationWhenComponentDisabled" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="453" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="1" time="0.001000"/>
+        <testcase name="testResolveEnabledReadsFlatParameterForTopLevelComponent" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="485" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="1" time="0.001000"/>
+        <testcase name="testResolveEnabledReadsNestedParameterForNamespacedComponent" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="512" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="2" time="0.001000"/>
+        <testcase name="testResolveEnabledSkipsNestedComponentWhenDisabled" file="/var/www/html/valksor/src/Valksor/Bundle/Tests/ValksorBundleTest.php" line="535" class="Valksor\Bundle\Tests\ValksorBundleTest" classname="Valksor.Bundle.Tests.ValksorBundleTest" assertions="1" time="0.001000"/>
       </testsuite>
       <testsuite name="Valksor\Component\SpxProfiler\Tests\DataCollector\SpxDataCollectorTest" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DataCollector/SpxDataCollectorTest.php" tests="27" assertions="68" errors="0" failures="0" skipped="0" time="0.001000">
         <testcase name="testAddReportsToResultWithEmptyReports" file="/var/www/html/valksor/src/Valksor/Component/SpxProfiler/Tests/DataCollector/SpxDataCollectorTest.php" line="31" class="Valksor\Component\SpxProfiler\Tests\DataCollector\SpxDataCollectorTest" classname="Valksor.Component.SpxProfiler.Tests.DataCollector.SpxDataCollectorTest" assertions="3" time="0.001000"/>
