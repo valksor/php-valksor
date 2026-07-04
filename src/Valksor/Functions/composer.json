@@ -27,7 +27,7 @@
         "symfony/string": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^12.0"
+        "phpunit/phpunit": "^13.0"
     },
     "replace": {
         "valksor/php-functions-date": "self.version",
