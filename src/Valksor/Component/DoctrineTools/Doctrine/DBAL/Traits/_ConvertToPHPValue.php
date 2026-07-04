@@ -14,7 +14,6 @@ namespace Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits;
 
 use DateTime;
 use DateTimeImmutable;
-use DateTimeInterface;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\Exception\InvalidFormat;
@@ -26,9 +25,9 @@ trait _ConvertToPHPValue
      * @throws ConversionException
      */
     private function convertToPHPValueForType(
-        $value,
+        mixed $value,
         AbstractPlatform $platform,
-        DateTimeInterface $object,
+        DateTime|DateTimeImmutable $object,
         string $function,
         string $prefix = '',
     ): DateTime|DateTimeImmutable|null {
@@ -42,7 +41,7 @@ trait _ConvertToPHPValue
             format: $prefix . $platform->getDateTimeFormatString(),
             datetime: $value,
             timezone: $tz,
-        ) ?: $function(datetime: $value, timezone: $tz);
+        ) ?: $function($value, $tz);
 
         if (false === $dateTime) {
             throw InvalidFormat::new(value: $value, toType: $object::class, expectedFormat: $prefix . $platform->getDateTimeFormatString());

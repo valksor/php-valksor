@@ -13,6 +13,7 @@
 namespace Valksor\Component\DoctrineTools\EventSubscriber;
 
 use Doctrine\DBAL\Schema\AbstractAsset;
+use Doctrine\DBAL\Schema\Name;
 use Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration;
 use Doctrine\Migrations\Tools\Console\Command\DoctrineCommand;
 use Symfony\Component\Console\ConsoleEvents;
@@ -26,6 +27,9 @@ class DoctrineMigrationsFilter implements EventSubscriberInterface
 {
     private bool $enabled = true;
 
+    /**
+     * @param AbstractAsset<Name>|string $asset
+     */
     public function __invoke(
         AbstractAsset|string $asset,
     ): bool {

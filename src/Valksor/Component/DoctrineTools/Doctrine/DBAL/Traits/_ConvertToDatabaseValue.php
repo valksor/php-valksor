@@ -12,6 +12,8 @@
 
 namespace Valksor\Component\DoctrineTools\Doctrine\DBAL\Traits;
 
+use DateTime;
+use DateTimeImmutable;
 use DateTimeInterface;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Exception\InvalidType;
@@ -27,7 +29,8 @@ trait _ConvertToDatabaseValue
         AbstractPlatform $platform,
     ): ?string {
         if ($value instanceof DateTimeInterface) {
-            $value = $value->setTimezone(timezone: UTCDateTimeImmutable::getUTCTimeZone());
+            $value = ($value instanceof DateTimeImmutable ? $value : DateTime::createFromInterface($value))
+                ->setTimezone(timezone: UTCDateTimeImmutable::getUTCTimeZone());
         }
 
         return parent::convertToDatabaseValue(value: $value, platform: $platform);

@@ -83,6 +83,12 @@ final class DoctrineToolsConfiguration extends AbstractDependencyConfiguration
                 foreach ($finder as $file) {
                     $fileContents = file_get_contents($file->getRealPath());
 
+                    /** @var array<int, string> $namespaceMatches */
+                    $namespaceMatches = [];
+
+                    /** @var array<int, string> $classMatches */
+                    $classMatches = [];
+
                     if ($_helper->match('/namespace\s+(.+?);/', $fileContents, $namespaceMatches)
                         && $_helper->match('/class\s+(\w+)/', $fileContents, $classMatches)) {
                         $className = $classMatches[1];

@@ -17,6 +17,9 @@ use DateTimeInterface;
 use DateTimeZone;
 use Exception;
 
+/**
+ * @phpstan-consistent-constructor
+ */
 class UTCDateTimeImmutable extends DateTimeImmutable
 {
     public const string FORMAT = 'Y-m-d H:i:s.u';
@@ -57,6 +60,8 @@ class UTCDateTimeImmutable extends DateTimeImmutable
     public static function createFromInterface(
         DateTimeInterface $object,
     ): static {
+        $object = DateTimeImmutable::createFromInterface($object);
+
         return new static($object->setTimezone(self::getUTCTimeZone())->format(self::FORMAT));
     }
 

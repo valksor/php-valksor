@@ -13,6 +13,7 @@
 namespace Valksor\Component\DoctrineTools\Doctrine\ORM\Query\AST;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;
+use Doctrine\ORM\Query\AST\Node;
 use Doctrine\ORM\Query\Parser;
 use Doctrine\ORM\Query\QueryException;
 use Doctrine\ORM\Query\SqlWalker;
@@ -24,7 +25,11 @@ use function vsprintf;
 abstract class BaseFunction extends FunctionNode
 {
     protected string $functionPrototype;
+
+    /** @var array<int, Node|null> */
     protected array $nodes = [];
+
+    /** @var list<string> */
     protected array $nodesMapping = [];
 
     public function getSql(
