@@ -360,9 +360,11 @@ namespace Valksor\Bundle\Tests {
 
             $builder = new ContainerBuilder();
 
-            foreach (['framework', 'doctrine', 'doctrine_migrations'] as $alias) {
+            foreach (['valksor', 'framework', 'doctrine', 'doctrine_migrations'] as $alias) {
                 $this->registerExtension($builder, $alias);
             }
+
+            $builder->loadFromExtension('valksor', ['tracking_component' => ['enabled' => true]]);
 
             $configurator = $this->createConfigurator($builder);
 
@@ -396,9 +398,11 @@ namespace Valksor\Bundle\Tests {
 
             $builder = new ContainerBuilder();
 
-            foreach (['framework', 'doctrine', 'doctrine_migrations'] as $alias) {
+            foreach (['valksor', 'framework', 'doctrine', 'doctrine_migrations'] as $alias) {
                 $this->registerExtension($builder, $alias);
             }
+
+            $builder->loadFromExtension('valksor', ['tracking_component' => ['enabled' => true]]);
 
             $configurator = $this->createConfigurator($builder);
 
@@ -414,6 +418,62 @@ namespace Valksor\Bundle\Tests {
             self::assertSame(1, TrackingDependency::$registerPreConfigurationCalls);
             self::assertSame(1, TrackingDependency::$usesDoctrineCalls);
             self::assertSame([], $builder->getExtensionConfig('doctrine_migrations'));
+        }
+
+        /**
+         * @throws ParsingException
+         */
+        public function testPrependExtensionSkipsPreConfigurationWhenComponentAbsentFromConfig(): void
+        {
+            $bundle = new ValksorBundle();
+
+            $builder = new ContainerBuilder();
+
+            foreach (['valksor', 'framework', 'doctrine', 'doctrine_migrations'] as $alias) {
+                $this->registerExtension($builder, $alias);
+            }
+
+            $configurator = $this->createConfigurator($builder);
+
+            $this->withDiscoveredComponents($bundle, [
+                'tracking_component' => [
+                    'class' => TrackingDependency::class,
+                    'available' => true,
+                ],
+            ], static function () use ($bundle, $configurator, $builder): void {
+                $bundle->prependExtension($configurator, $builder);
+            });
+
+            self::assertSame(0, TrackingDependency::$registerPreConfigurationCalls);
+        }
+
+        /**
+         * @throws ParsingException
+         */
+        public function testPrependExtensionSkipsPreConfigurationWhenComponentDisabled(): void
+        {
+            $bundle = new ValksorBundle();
+
+            $builder = new ContainerBuilder();
+
+            foreach (['valksor', 'framework', 'doctrine', 'doctrine_migrations'] as $alias) {
+                $this->registerExtension($builder, $alias);
+            }
+
+            $builder->loadFromExtension('valksor', ['tracking_component' => ['enabled' => false]]);
+
+            $configurator = $this->createConfigurator($builder);
+
+            $this->withDiscoveredComponents($bundle, [
+                'tracking_component' => [
+                    'class' => TrackingDependency::class,
+                    'available' => true,
+                ],
+            ], static function () use ($bundle, $configurator, $builder): void {
+                $bundle->prependExtension($configurator, $builder);
+            });
+
+            self::assertSame(0, TrackingDependency::$registerPreConfigurationCalls);
         }
 
         protected function tearDown(): void

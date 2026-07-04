@@ -22,6 +22,7 @@ use Seld\JsonLint\ParsingException;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 use Symfony\Contracts\Cache\CacheInterface;
@@ -41,6 +42,7 @@ use function dirname;
 use function file_get_contents;
 use function in_array;
 use function is_a;
+use function is_array;
 use function is_bool;
 use function is_dir;
 use function is_file;
@@ -351,22 +353,22 @@ final class ValksorBundle extends AbstractBundle
 
         $package = self::VALKSOR . '/' . $component;
 
-        if (!$_helper->willBeAvailable($package, $class, [sprintf('%s/bundle', self::VALKSOR)])) {
+        $willBeAvailable = $_helper->willBeAvailable($package, $class, [sprintf('%s/bundle', self::VALKSOR)]);
+
+        if (!$willBeAvailable) {
             return;
         }
 
         $object = new $class();
 
         if (is_a($object, Dependency::class)) {
-            if (null !== $builder) {
-                try {
-                    $enabled = self::p($builder, $component, 'enabled');
+            // Mirror the config-tree default: canBeDisabled() (default true) only when the
+            // component is standalone, otherwise canBeEnabled() (default false). $willBeAvailable
+            // is already guaranteed true by the early return above.
+            $default = !class_exists(FullStack::class);
 
-                    if (!is_bool($enabled) || !$enabled) {
-                        return;
-                    }
-                } catch (Throwable) {
-                }
+            if (null !== $builder && !$this->resolveEnabled($builder, $class, $component, $default)) {
+                return;
             }
 
             $callback($object, $class, $component);
@@ -588,5 +590,51 @@ final class ValksorBundle extends AbstractBundle
     private function memoize(): MemoizeCache
     {
         return $this->cache ??= new MemoizeCache();
+    }
+
+    /**
+     * Resolve whether a component is enabled, symmetrically across the prepend and load phases.
+     *
+     * During loadExtension the flattened `valksor.<component>.enabled` parameter exists and is the
+     * authoritative source. During prependExtension that parameter does not exist yet, so the flag
+     * is read from the merged extension config using the same normalization Symfony applies to a
+     * canBeEnabled()/canBeDisabled() node — falling back to $default when the component is absent.
+     */
+    private function resolveEnabled(
+        ContainerBuilder $builder,
+        string $class,
+        string $component,
+        bool $default,
+    ): bool {
+        try {
+            $enabled = self::p($builder, $component, 'enabled');
+
+            return is_bool($enabled) && $enabled;
+        } catch (ParameterNotFoundException) {
+        }
+
+        $config = self::getConfig(self::VALKSOR, $builder);
+
+        foreach ($this->getComponentConfigPath($class, $component) as $key) {
+            if (!is_array($config) || !array_key_exists($key, $config)) {
+                return $default;
+            }
+
+            $config = $config[$key];
+        }
+
+        if (null === $config) {
+            return true;
+        }
+
+        if (is_bool($config)) {
+            return $config;
+        }
+
+        if (is_array($config)) {
+            return (bool) ($config['enabled'] ?? true);
+        }
+
+        return $default;
     }
 }
