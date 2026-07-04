@@ -154,7 +154,7 @@ final class HoneyPotExtensionTest extends TestCase
             'honeypot_message' => 'Bot detected',
         ]);
 
-        $form = $this->createMock(FormInterface::class);
+        $form = $this->createStub(FormInterface::class);
         $event = new FormEvent($form, 'string data');
 
         $listenerCallback($event);
@@ -182,7 +182,7 @@ final class HoneyPotExtensionTest extends TestCase
             'honeypot_message' => 'Bot detected',
         ]);
 
-        $form = $this->createMock(FormInterface::class);
+        $form = $this->createStub(FormInterface::class);
         $event = new FormEvent($form, ['name' => 'John', 'website' => '']);
 
         $listenerCallback($event);
@@ -204,8 +204,7 @@ final class HoneyPotExtensionTest extends TestCase
                 return true;
             }));
 
-        $this->requestStack->expects($this->once())
-            ->method('getCurrentRequest')
+        $this->requestStack->method('getCurrentRequest')
             ->willReturn(null);
 
         $this->extension->buildForm($builder, [
@@ -214,7 +213,7 @@ final class HoneyPotExtensionTest extends TestCase
             'honeypot_message' => 'Bot detected!',
         ]);
 
-        $form = $this->createMock(FormInterface::class);
+        $form = $this->createStub(FormInterface::class);
         $event = new FormEvent($form, ['name' => 'Bot', 'website' => 'http://spam.com']);
 
         $this->expectException(InvalidArgumentException::class);
@@ -241,8 +240,7 @@ final class HoneyPotExtensionTest extends TestCase
         $request->headers->set('User-Agent', 'TestBot/1.0');
         $request->server->set('REMOTE_ADDR', '127.0.0.1');
 
-        $this->requestStack->expects($this->once())
-            ->method('getCurrentRequest')
+        $this->requestStack->method('getCurrentRequest')
             ->willReturn($request);
 
         $this->extension->buildForm($builder, [
@@ -251,7 +249,7 @@ final class HoneyPotExtensionTest extends TestCase
             'honeypot_message' => 'Bot detected!',
         ]);
 
-        $form = $this->createMock(FormInterface::class);
+        $form = $this->createStub(FormInterface::class);
         $event = new FormEvent($form, ['name' => 'Bot', 'website' => 'http://spam.com']);
 
         $exceptionThrown = false;
@@ -275,7 +273,7 @@ final class HoneyPotExtensionTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->requestStack = $this->createMock(RequestStack::class);
+        $this->requestStack = $this->createStub(RequestStack::class);
         $this->extension = new HoneyPotExtension($this->requestStack);
     }
 }

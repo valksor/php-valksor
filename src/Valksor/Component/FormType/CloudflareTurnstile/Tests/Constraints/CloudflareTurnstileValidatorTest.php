@@ -84,6 +84,10 @@ final class CloudflareTurnstileValidatorTest extends TestCase
             ->with($constraint->message)
             ->willReturn($violationBuilder);
 
+        // A missing request short-circuits before the HTTP client is reached.
+        $this->symfonyHttpClient->expects($this->never())
+            ->method('request');
+
         $this->validator->validate('value', $constraint);
     }
 
@@ -105,6 +109,10 @@ final class CloudflareTurnstileValidatorTest extends TestCase
             ->with($constraint->message)
             ->willReturn($violationBuilder);
 
+        // An empty turnstile response short-circuits before the HTTP client is reached.
+        $this->symfonyHttpClient->expects($this->never())
+            ->method('request');
+
         $this->validator->validate('value', $constraint);
     }
 
@@ -124,6 +132,12 @@ final class CloudflareTurnstileValidatorTest extends TestCase
             ->method('buildViolation')
             ->with($constraint->notFoundMessage)
             ->willReturn($violationBuilder);
+
+        // A null type short-circuits before the request/HTTP client are ever touched.
+        $this->requestStack->expects($this->never())
+            ->method('getCurrentRequest');
+        $this->symfonyHttpClient->expects($this->never())
+            ->method('request');
 
         $this->validator->validate('value', $constraint);
     }
@@ -154,7 +168,15 @@ final class CloudflareTurnstileValidatorTest extends TestCase
 
     public function testValidateThrowsExceptionForWrongConstraintType(): void
     {
-        $wrongConstraint = $this->createMock(Constraint::class);
+        $wrongConstraint = $this->createStub(Constraint::class);
+
+        // A wrong constraint type throws before any collaborator is invoked.
+        $this->requestStack->expects($this->never())
+            ->method('getCurrentRequest');
+        $this->symfonyHttpClient->expects($this->never())
+            ->method('request');
+        $this->context->expects($this->never())
+            ->method('buildViolation');
 
         $this->expectException(UnexpectedTypeException::class);
 

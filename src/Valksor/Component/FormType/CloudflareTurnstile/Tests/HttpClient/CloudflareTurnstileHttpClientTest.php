@@ -36,6 +36,10 @@ final class CloudflareTurnstileHttpClientTest extends TestCase
             ->method('error')
             ->with($this->stringContains('Cloudflare Turnstile configuration "invalid" not found'));
 
+        // An unknown type is rejected before any HTTP request is made.
+        $this->httpClient->expects($this->never())
+            ->method('request');
+
         $result = $this->turnstileHttpClient->verifyResponse('test-token', 'invalid');
 
         $this->assertFalse($result);
@@ -52,6 +56,10 @@ final class CloudflareTurnstileHttpClientTest extends TestCase
             ->method('request')
             ->willReturn($response);
 
+        // A failed verification returns false without logging an error.
+        $this->logger->expects($this->never())
+            ->method('error');
+
         $result = $this->turnstileHttpClient->verifyResponse('invalid-token', 'default');
 
         $this->assertFalse($result);
@@ -62,7 +70,7 @@ final class CloudflareTurnstileHttpClientTest extends TestCase
         $response = $this->createMock(ResponseInterface::class);
         $response->expects($this->once())
             ->method('toArray')
-            ->willThrowException($this->createMock(TransportExceptionInterface::class));
+            ->willThrowException($this->createStub(TransportExceptionInterface::class));
 
         $this->httpClient->expects($this->once())
             ->method('request')
@@ -87,6 +95,10 @@ final class CloudflareTurnstileHttpClientTest extends TestCase
         $this->httpClient->expects($this->once())
             ->method('request')
             ->willReturn($response);
+
+        // A missing "success" key returns false without logging an error.
+        $this->logger->expects($this->never())
+            ->method('error');
 
         $result = $this->turnstileHttpClient->verifyResponse('test-token', 'default');
 
@@ -114,6 +126,10 @@ final class CloudflareTurnstileHttpClientTest extends TestCase
             )
             ->willReturn($response);
 
+        // A successful verification does not log an error.
+        $this->logger->expects($this->never())
+            ->method('error');
+
         $result = $this->turnstileHttpClient->verifyResponse('test-token', 'default');
 
         $this->assertTrue($result);
@@ -139,6 +155,10 @@ final class CloudflareTurnstileHttpClientTest extends TestCase
                 ],
             )
             ->willReturn($response);
+
+        // A successful verification does not log an error.
+        $this->logger->expects($this->never())
+            ->method('error');
 
         $result = $this->turnstileHttpClient->verifyResponse('test-token', 'contact');
 

@@ -34,7 +34,7 @@ final class CloudflareTurnstileTypeTest extends TestCase
     public function testBuildViewSetsKeyAndTypeVariables(): void
     {
         $view = new FormView();
-        $form = $this->createMock(FormInterface::class);
+        $form = $this->createStub(FormInterface::class);
 
         $this->type->buildView($view, $form, ['type' => 'default']);
 
@@ -45,7 +45,7 @@ final class CloudflareTurnstileTypeTest extends TestCase
     public function testBuildViewWithDifferentType(): void
     {
         $view = new FormView();
-        $form = $this->createMock(FormInterface::class);
+        $form = $this->createStub(FormInterface::class);
 
         $this->type->buildView($view, $form, ['type' => 'contact']);
 
