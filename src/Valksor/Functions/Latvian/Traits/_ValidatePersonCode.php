@@ -35,10 +35,10 @@ trait _ValidatePersonCode
         $personCode = $_helper->cleanPersonCode(personCode: $personCode);
 
         if (32 === (int) substr(string: $personCode, offset: 0, length: 2)) {
-            if (!$_helper->validateNewPersonCode(personCode: $personCode)) {
+            if (!$_helper->validatePersonCodeNew(personCode: $personCode)) {
                 return false;
             }
-        } elseif (!$_helper->validateOldPersonCode(personCode: $personCode) && !$_helper->validateDate(date: $personCode)) {
+        } elseif (!$_helper->validatePersonCodeOld(personCode: $personCode) && !$_helper->validateDate(date: $personCode)) {
             return false;
         }
 

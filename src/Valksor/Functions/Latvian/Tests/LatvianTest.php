@@ -12,7 +12,6 @@
 
 namespace Valksor\Functions\Latvian\Tests;
 
-use Error;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use stdClass;
@@ -94,6 +93,22 @@ final class LatvianTest extends TestCase
         );
     }
 
+    public function testValidatePersonCodeAcceptsOldCodeValidByDateFallback(): void
+    {
+        // Invalid old checksum, but a real birth date (17 Feb) accepts it via the date fallback.
+        self::assertTrue($this->latvian->validatePersonCode('17020692090'));
+    }
+
+    public function testValidatePersonCodeAcceptsValidNewCode(): void
+    {
+        self::assertTrue($this->latvian->validatePersonCode('32990268037'));
+    }
+
+    public function testValidatePersonCodeAcceptsValidOldCode(): void
+    {
+        self::assertTrue($this->latvian->validatePersonCode('17020692093'));
+    }
+
     public function testValidatePersonCodeNewAcceptsFormattedInput(): void
     {
         self::assertTrue($this->latvian->validatePersonCodeNew('32 99026-8037'));
@@ -130,28 +145,15 @@ final class LatvianTest extends TestCase
         self::assertTrue($this->latvian->validatePersonCodeOld('17020692093'));
     }
 
-    public function testValidatePersonCodeThrowsDueToMissingOldHelperMethod(): void
+    public function testValidatePersonCodeRejectsInvalidNewCode(): void
     {
-        $this->expectException(Error::class);
-        $this->latvian->validatePersonCode('17020692093');
+        self::assertFalse($this->latvian->validatePersonCode('32990268030'));
     }
 
-    public function testValidatePersonCodeThrowsDueToMissingOldHelperMethodOnDateFallback(): void
+    public function testValidatePersonCodeRejectsOldCodeWithInvalidChecksumAndDate(): void
     {
-        $this->expectException(Error::class);
-        $this->latvian->validatePersonCode('01019912340');
-    }
-
-    public function testValidatePersonCodeThrowsDueToMissingOldHelperMethodOnInvalidCode(): void
-    {
-        $this->expectException(Error::class);
-        $this->latvian->validatePersonCode('17020692090');
-    }
-
-    public function testValidatePersonCodeThrowsWhenHelperMethodMissingForNewCodes(): void
-    {
-        $this->expectException(Error::class);
-        $this->latvian->validatePersonCode('3299 0268037');
+        // Not a new-format code, invalid old checksum, and an impossible date (day/month 00).
+        self::assertFalse($this->latvian->validatePersonCode('00000000000'));
     }
 
     protected function setUp(): void

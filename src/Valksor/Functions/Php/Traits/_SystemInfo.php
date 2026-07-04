@@ -22,11 +22,16 @@ use const PHP_OS_FAMILY;
 
 trait _SystemInfo
 {
-    public function systemInfo(): array
-    {
-        $architecture = strtolower(php_uname('m'));
+    /**
+     * @return array{os: string, arch: string, extension: string}
+     */
+    public function normalizeSystemInfo(
+        string $osFamily,
+        string $machine,
+    ): array {
+        $architecture = strtolower($machine);
 
-        $normalizedOs = match (strtolower(PHP_OS_FAMILY)) {
+        $normalizedOs = match (strtolower($osFamily)) {
             'windows' => 'windows',
             'darwin' => 'darwin',
             'linux' => 'linux',
@@ -45,5 +50,10 @@ trait _SystemInfo
             'arch' => $normalizedArch,
             'extension' => 'windows' === $normalizedOs ? '.exe' : '',
         ];
+    }
+
+    public function systemInfo(): array
+    {
+        return $this->normalizeSystemInfo(osFamily: PHP_OS_FAMILY, machine: php_uname('m'));
     }
 }

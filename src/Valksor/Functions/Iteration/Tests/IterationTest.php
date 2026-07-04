@@ -19,7 +19,6 @@ use Valksor\Functions\Iteration\Exception\FieldNotFoundException;
 use Valksor\Functions\Iteration\Functions;
 use Valksor\Functions\Iteration\Traits\_Cases;
 use Valksor\Functions\Iteration\Traits\_Value;
-use ValueError;
 
 enum SampleBacked: string
 {
@@ -262,10 +261,9 @@ final class IterationTest extends TestCase
         );
     }
 
-    public function testPickThrowsWhenRandomizerSeedInvalid(): void
+    public function testPickReturnsAKeyFromTheArray(): void
     {
-        $this->expectException(ValueError::class);
-        $this->iteration->pick(['first' => 1, 'second' => 2]);
+        self::assertContains($this->iteration->pick(['first' => 1, 'second' => 2]), ['first', 'second']);
     }
 
     public function testRecursiveKSortSortsNestedArrays(): void

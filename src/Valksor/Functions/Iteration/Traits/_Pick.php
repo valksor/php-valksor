@@ -12,29 +12,21 @@
 
 namespace Valksor\Functions\Iteration\Traits;
 
-use Valksor\Functions\Local;
 use Valksor\Functions\Php;
-
-use function array_rand;
 
 trait _Pick
 {
     public function pick(
         array $array,
-    ): int|string|array {
+    ): int|string {
         static $_helper = null;
 
         if (null === $_helper) {
             $_helper = new class {
-                use Local\Traits\_IsInstalled;
                 use Php\Traits\_Randomizer;
             };
         }
 
-        if ($_helper->isInstalled(packages: ['random'])) {
-            return $_helper->randomizer()->pickArrayKeys(array: $array, num: 1)[0];
-        }
-
-        return array_rand(array: $array);
+        return $_helper->randomizer()->pickArrayKeys(array: $array, num: 1)[0];
     }
 }

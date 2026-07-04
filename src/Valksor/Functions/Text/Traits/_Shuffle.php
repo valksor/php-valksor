@@ -12,10 +12,7 @@
 
 namespace Valksor\Functions\Text\Traits;
 
-use Valksor\Functions\Local;
 use Valksor\Functions\Php;
-
-use function str_shuffle;
 
 trait _Shuffle
 {
@@ -26,15 +23,10 @@ trait _Shuffle
 
         if (null === $_helper) {
             $_helper = new class {
-                use Local\Traits\_IsInstalled;
                 use Php\Traits\_Randomizer;
             };
         }
 
-        if ($_helper->isInstalled(packages: ['random'])) {
-            return $_helper->randomizer()->shuffleBytes(bytes: $string);
-        }
-
-        return str_shuffle(string: $string);
+        return $_helper->randomizer()->shuffleBytes(bytes: $string);
     }
 }

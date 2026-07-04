@@ -22,6 +22,6 @@ trait _Randomizer
 {
     public function randomizer(): Randomizer
     {
-        return new Randomizer(engine: new Xoshiro256StarStar(seed: hash(algo: 'xxh128', data: (string) time(), binary: true)));
+        return new Randomizer(engine: new Xoshiro256StarStar(seed: hash(algo: 'ripemd256', data: (string) time(), binary: true)));
     }
 }

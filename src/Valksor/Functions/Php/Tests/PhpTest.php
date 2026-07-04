@@ -13,28 +13,18 @@
 namespace Valksor\Functions\Php\Tests;
 
 use BadFunctionCallException;
+use Doctrine\Persistence\Proxy;
 use Error;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use Random\Randomizer;
 use ReflectionClass;
 use ReflectionException;
 use RuntimeException;
 use Throwable;
+use Valksor\Functions\Php\Exception\SystemCompatibilityException;
 use Valksor\Functions\Php\Functions;
-
-use function function_exists;
-
-if (!function_exists('Valksor\Functions\Php\Tests\php_uname')) {
-    function php_uname(
-        string $mode = 'a',
-    ): string|false {
-        if ('m' === $mode) {
-            return $_ENV['TEST_UNAME_M'] ?? 'x86_64';
-        }
-
-        return php_uname($mode);
-    }
-}
+use Valksor\Functions\Php\Traits\_GetReflection;
 
 final class PhpTest extends TestCase
 {
@@ -299,6 +289,31 @@ final class PhpTest extends TestCase
         $this->php->getNonStatic($object, 'staticProperty');
     }
 
+    public function testGetReflectionResolvesDoctrineProxyToParentClass(): void
+    {
+        // getReflection() is not exposed on the Functions facade (only the string-typed
+        // callers reach it), so compose the trait directly the way production code does.
+        $_helper = new class {
+            use _GetReflection;
+        };
+
+        // A Doctrine proxy reflects to its parent (the real entity) class.
+        $proxy = new /** @implements Proxy<RuntimeException> */ class extends RuntimeException implements Proxy {
+            public function __load(): void
+            {
+            }
+
+            public function __isInitialized(): bool
+            {
+                return true;
+            }
+        };
+
+        $reflection = $_helper->getReflection($proxy);
+
+        self::assertSame(RuntimeException::class, $reflection->getName());
+    }
+
     public function testGetReturnsNullForUninitializedProperty(): void
     {
         $object = new class {
@@ -356,6 +371,17 @@ final class PhpTest extends TestCase
         $this->expectExceptionMessage('Property "instanceProperty" is not static');
 
         $this->php->getStatic($object, 'instanceProperty');
+    }
+
+    public function testGetStaticThrowsWhenPropertyDoesNotExist(): void
+    {
+        // A missing property makes ReflectionProperty throw, exercising the catch block.
+        $object = new class {};
+
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Property "missing" is not static');
+
+        $this->php->getStatic($object, 'missing');
     }
 
     public function testGetThrowsForUninitializedPropertyWhenRequested(): void
@@ -417,6 +443,49 @@ final class PhpTest extends TestCase
         self::assertSame('Valksor\Functions\Php\Tests', $namespace);
     }
 
+    public function testNormalizeSystemInfoDarwinArm64(): void
+    {
+        $info = $this->php->normalizeSystemInfo('Darwin', 'arm64');
+
+        self::assertSame('darwin', $info['os']);
+        self::assertSame('arm64', $info['arch']);
+        self::assertSame('', $info['extension']);
+    }
+
+    public function testNormalizeSystemInfoLinux386(): void
+    {
+        $info = $this->php->normalizeSystemInfo('Linux', 'i686');
+
+        self::assertSame('linux', $info['os']);
+        self::assertSame('386', $info['arch']);
+        self::assertSame('', $info['extension']);
+    }
+
+    public function testNormalizeSystemInfoThrowsOnUnsupportedArch(): void
+    {
+        $this->expectException(SystemCompatibilityException::class);
+        $this->expectExceptionMessage('unsupported architecture');
+
+        $this->php->normalizeSystemInfo('Linux', 'sparc');
+    }
+
+    public function testNormalizeSystemInfoThrowsOnUnsupportedOs(): void
+    {
+        $this->expectException(SystemCompatibilityException::class);
+        $this->expectExceptionMessage('unsupported OS');
+
+        $this->php->normalizeSystemInfo('Solaris', 'amd64');
+    }
+
+    public function testNormalizeSystemInfoWindowsAmd64(): void
+    {
+        $info = $this->php->normalizeSystemInfo('Windows', 'AMD64');
+
+        self::assertSame('windows', $info['os']);
+        self::assertSame('amd64', $info['arch']);
+        self::assertSame('.exe', $info['extension']);
+    }
+
     // ========== PARAMETER TESTS ==========
 
     public function testParameterReturnsArrayParameter(): void
@@ -457,12 +526,7 @@ final class PhpTest extends TestCase
 
     public function testRandomizerCreatesInstance(): void
     {
-        if (PHP_VERSION_ID < 80200) {
-            $this->markTestSkipped('Randomizer requires PHP 8.2+');
-        }
-
-        // Randomizer has hash generation issues in test environment
-        $this->markTestSkipped('Randomizer test skipped due to hash generation in test environment');
+        self::assertInstanceOf(Randomizer::class, $this->php->randomizer());
     }
 
     // ========== RETURN FUNCTION TESTS ==========
@@ -595,6 +659,17 @@ final class PhpTest extends TestCase
         $this->php->setStatic($object, 'instanceProperty', 'modified');
     }
 
+    public function testSetStaticThrowsWhenPropertyDoesNotExist(): void
+    {
+        // A missing property makes ReflectionProperty throw, exercising the catch block.
+        $object = new class {};
+
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Property "missing" is not static');
+
+        $this->php->setStatic($object, 'missing', 'value');
+    }
+
     public function testSetThrowsOnInvalidProperty(): void
     {
         $object = new class {
@@ -700,13 +775,5 @@ final class PhpTest extends TestCase
     protected function setUp(): void
     {
         $this->php = new Functions();
-
-        // Clean up environment
-        unset($_ENV['TEST_UNAME_M']);
-    }
-
-    protected function tearDown(): void
-    {
-        unset($_ENV['TEST_UNAME_M']);
     }
 }
