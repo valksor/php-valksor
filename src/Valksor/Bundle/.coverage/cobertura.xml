@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage line-rate="0.61471321695761" branch-rate="0" lines-covered="493" lines-valid="802" branches-covered="0" branches-valid="0" complexity="320" version="0.4" timestamp="0">
+<coverage line-rate="0.61423220973783" branch-rate="0" lines-covered="492" lines-valid="801" branches-covered="0" branches-valid="0" complexity="319" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/Bundle</source>
   </sources>
@@ -1011,16 +1011,16 @@
         </class>
       </classes>
     </package>
-    <package name="Runtime/AppContextResolver.php" line-rate="0.94186046511628" branch-rate="0" complexity="31">
+    <package name="Runtime/AppContextResolver.php" line-rate="0.94117647058824" branch-rate="0" complexity="30">
       <classes>
-        <class name="Valksor\Bundle\Runtime\AppContextResolver" filename="Runtime/AppContextResolver.php" line-rate="0.94186046511628" branch-rate="0" complexity="31">
+        <class name="Valksor\Bundle\Runtime\AppContextResolver" filename="Runtime/AppContextResolver.php" line-rate="0.94117647058824" branch-rate="0" complexity="30">
           <methods>
             <method name="isDebugEnabled" signature="array $context" line-rate="1" branch-rate="0" complexity="1">
               <lines>
                 <line number="45" hits="4"/>
               </lines>
             </method>
-            <method name="resolve" signature="array $context, string $projectDir, string $appId, ?string $appsDir, ?string $infrastructureDir" line-rate="0.98571428571429" branch-rate="0" complexity="21">
+            <method name="resolve" signature="array $context, string $projectDir, string $appId, ?string $appsDir, ?string $infrastructureDir" line-rate="0.98550724637681" branch-rate="0" complexity="20">
               <lines>
                 <line number="62" hits="5"/>
                 <line number="63" hits="5"/>
@@ -1086,35 +1086,34 @@
                 <line number="161" hits="5"/>
                 <line number="164" hits="5"/>
                 <line number="165" hits="5"/>
-                <line number="166" hits="5"/>
-                <line number="168" hits="5"/>
+                <line number="167" hits="5"/>
+                <line number="169" hits="5"/>
                 <line number="170" hits="5"/>
-                <line number="171" hits="5"/>
-                <line number="173" hits="5"/>
-                <line number="176" hits="5"/>
+                <line number="172" hits="5"/>
+                <line number="174" hits="5"/>
               </lines>
             </method>
             <method name="normalizeDebugValue" signature="string $value" line-rate="1" branch-rate="0" complexity="2">
               <lines>
-                <line number="182" hits="5"/>
+                <line number="180" hits="5"/>
               </lines>
             </method>
             <method name="toBool" signature="mixed $value" line-rate="0.71428571428571" branch-rate="0" complexity="7">
               <lines>
-                <line number="188" hits="6"/>
-                <line number="189" hits="0"/>
-                <line number="192" hits="6"/>
-                <line number="193" hits="6"/>
-                <line number="196" hits="1"/>
-                <line number="197" hits="0"/>
+                <line number="186" hits="6"/>
+                <line number="187" hits="0"/>
+                <line number="190" hits="6"/>
+                <line number="191" hits="6"/>
+                <line number="194" hits="1"/>
+                <line number="195" hits="0"/>
+                <line number="198" hits="1"/>
                 <line number="200" hits="1"/>
-                <line number="202" hits="1"/>
-                <line number="203" hits="0"/>
-                <line number="206" hits="1"/>
-                <line number="207" hits="1"/>
-                <line number="210" hits="1"/>
-                <line number="211" hits="1"/>
-                <line number="214" hits="0"/>
+                <line number="201" hits="0"/>
+                <line number="204" hits="1"/>
+                <line number="205" hits="1"/>
+                <line number="208" hits="1"/>
+                <line number="209" hits="1"/>
+                <line number="212" hits="0"/>
               </lines>
             </method>
           </methods>
@@ -1184,27 +1183,26 @@
             <line number="161" hits="5"/>
             <line number="164" hits="5"/>
             <line number="165" hits="5"/>
-            <line number="166" hits="5"/>
-            <line number="168" hits="5"/>
+            <line number="167" hits="5"/>
+            <line number="169" hits="5"/>
             <line number="170" hits="5"/>
-            <line number="171" hits="5"/>
-            <line number="173" hits="5"/>
-            <line number="176" hits="5"/>
-            <line number="182" hits="5"/>
-            <line number="188" hits="6"/>
-            <line number="189" hits="0"/>
-            <line number="192" hits="6"/>
-            <line number="193" hits="6"/>
-            <line number="196" hits="1"/>
-            <line number="197" hits="0"/>
+            <line number="172" hits="5"/>
+            <line number="174" hits="5"/>
+            <line number="180" hits="5"/>
+            <line number="186" hits="6"/>
+            <line number="187" hits="0"/>
+            <line number="190" hits="6"/>
+            <line number="191" hits="6"/>
+            <line number="194" hits="1"/>
+            <line number="195" hits="0"/>
+            <line number="198" hits="1"/>
             <line number="200" hits="1"/>
-            <line number="202" hits="1"/>
-            <line number="203" hits="0"/>
-            <line number="206" hits="1"/>
-            <line number="207" hits="1"/>
-            <line number="210" hits="1"/>
-            <line number="211" hits="1"/>
-            <line number="214" hits="0"/>
+            <line number="201" hits="0"/>
+            <line number="204" hits="1"/>
+            <line number="205" hits="1"/>
+            <line number="208" hits="1"/>
+            <line number="209" hits="1"/>
+            <line number="212" hits="0"/>
           </lines>
         </class>
       </classes>
@@ -1347,32 +1345,32 @@
             </method>
             <method name="matchPatternParts" signature="array $patternParts, array $pathParts, int $pIdx, int $pathIdx" line-rate="0" branch-rate="0" complexity="10">
               <lines>
-                <line number="400" hits="0"/>
-                <line number="401" hits="0"/>
-                <line number="405" hits="0"/>
-                <line number="406" hits="0"/>
+                <line number="403" hits="0"/>
+                <line number="404" hits="0"/>
+                <line number="408" hits="0"/>
                 <line number="409" hits="0"/>
                 <line number="412" hits="0"/>
-                <line number="414" hits="0"/>
                 <line number="415" hits="0"/>
-                <line number="419" hits="0"/>
-                <line number="420" hits="0"/>
-                <line number="421" hits="0"/>
+                <line number="417" hits="0"/>
+                <line number="418" hits="0"/>
+                <line number="422" hits="0"/>
+                <line number="423" hits="0"/>
                 <line number="424" hits="0"/>
-                <line number="428" hits="0"/>
-                <line number="429" hits="0"/>
-                <line number="433" hits="0"/>
-                <line number="434" hits="0"/>
+                <line number="427" hits="0"/>
+                <line number="431" hits="0"/>
+                <line number="432" hits="0"/>
+                <line number="436" hits="0"/>
                 <line number="437" hits="0"/>
+                <line number="440" hits="0"/>
               </lines>
             </method>
             <method name="matchRecursivePatternSimple" signature="string $pattern, string $path" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="448" hits="0"/>
-                <line number="449" hits="0"/>
+                <line number="451" hits="0"/>
                 <line number="452" hits="0"/>
-                <line number="453" hits="0"/>
                 <line number="455" hits="0"/>
+                <line number="456" hits="0"/>
+                <line number="458" hits="0"/>
               </lines>
             </method>
           </methods>
@@ -1469,28 +1467,28 @@
             <line number="379" hits="0"/>
             <line number="383" hits="0"/>
             <line number="387" hits="0"/>
-            <line number="400" hits="0"/>
-            <line number="401" hits="0"/>
-            <line number="405" hits="0"/>
-            <line number="406" hits="0"/>
+            <line number="403" hits="0"/>
+            <line number="404" hits="0"/>
+            <line number="408" hits="0"/>
             <line number="409" hits="0"/>
             <line number="412" hits="0"/>
-            <line number="414" hits="0"/>
             <line number="415" hits="0"/>
-            <line number="419" hits="0"/>
-            <line number="420" hits="0"/>
-            <line number="421" hits="0"/>
+            <line number="417" hits="0"/>
+            <line number="418" hits="0"/>
+            <line number="422" hits="0"/>
+            <line number="423" hits="0"/>
             <line number="424" hits="0"/>
-            <line number="428" hits="0"/>
-            <line number="429" hits="0"/>
-            <line number="433" hits="0"/>
-            <line number="434" hits="0"/>
+            <line number="427" hits="0"/>
+            <line number="431" hits="0"/>
+            <line number="432" hits="0"/>
+            <line number="436" hits="0"/>
             <line number="437" hits="0"/>
-            <line number="448" hits="0"/>
-            <line number="449" hits="0"/>
+            <line number="440" hits="0"/>
+            <line number="451" hits="0"/>
             <line number="452" hits="0"/>
-            <line number="453" hits="0"/>
             <line number="455" hits="0"/>
+            <line number="456" hits="0"/>
+            <line number="458" hits="0"/>
           </lines>
         </class>
       </classes>
@@ -1501,46 +1499,46 @@
           <methods>
             <method name="createPathFilterWithExclusions" signature="array $excludePatterns, string $projectDir" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="37" hits="0"/>
-                <line number="38" hits="0"/>
-                <line number="41" hits="0"/>
-                <line number="42" hits="0"/>
+                <line number="39" hits="0"/>
+                <line number="40" hits="0"/>
                 <line number="43" hits="0"/>
                 <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
                 <line number="46" hits="0"/>
+                <line number="48" hits="0"/>
               </lines>
             </method>
             <method name="extractDefaultExclusions" signature="PathFilter $filter" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="55" hits="0"/>
-                <line number="56" hits="0"/>
-                <line number="58" hits="0"/>
                 <line number="59" hits="0"/>
-                <line number="60" hits="0"/>
-                <line number="61" hits="0"/>
                 <line number="62" hits="0"/>
-                <line number="63" hits="0"/>
                 <line number="64" hits="0"/>
+                <line number="65" hits="0"/>
+                <line number="66" hits="0"/>
+                <line number="67" hits="0"/>
+                <line number="68" hits="0"/>
+                <line number="69" hits="0"/>
+                <line number="70" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="37" hits="0"/>
-            <line number="38" hits="0"/>
-            <line number="41" hits="0"/>
-            <line number="42" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="40" hits="0"/>
             <line number="43" hits="0"/>
             <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
             <line number="46" hits="0"/>
-            <line number="55" hits="0"/>
-            <line number="56" hits="0"/>
-            <line number="58" hits="0"/>
+            <line number="48" hits="0"/>
             <line number="59" hits="0"/>
-            <line number="60" hits="0"/>
-            <line number="61" hits="0"/>
             <line number="62" hits="0"/>
-            <line number="63" hits="0"/>
             <line number="64" hits="0"/>
+            <line number="65" hits="0"/>
+            <line number="66" hits="0"/>
+            <line number="67" hits="0"/>
+            <line number="68" hits="0"/>
+            <line number="69" hits="0"/>
+            <line number="70" hits="0"/>
           </lines>
         </class>
       </classes>
@@ -1881,17 +1879,17 @@
             </method>
             <method name="getComponentConfigPath" signature="string $className, string $componentName" line-rate="0.5" branch-rate="0" complexity="2">
               <lines>
-                <line number="569" hits="1"/>
                 <line number="571" hits="1"/>
-                <line number="572" hits="0"/>
-                <line number="575" hits="0"/>
+                <line number="573" hits="1"/>
+                <line number="574" hits="0"/>
                 <line number="577" hits="0"/>
-                <line number="581" hits="1"/>
+                <line number="579" hits="0"/>
+                <line number="583" hits="1"/>
               </lines>
             </method>
             <method name="memoize" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="588" hits="1"/>
+                <line number="590" hits="1"/>
               </lines>
             </method>
           </methods>
@@ -2086,13 +2084,13 @@
             <line number="546" hits="0"/>
             <line number="549" hits="0"/>
             <line number="552" hits="0"/>
-            <line number="569" hits="1"/>
             <line number="571" hits="1"/>
-            <line number="572" hits="0"/>
-            <line number="575" hits="0"/>
+            <line number="573" hits="1"/>
+            <line number="574" hits="0"/>
             <line number="577" hits="0"/>
-            <line number="581" hits="1"/>
-            <line number="588" hits="1"/>
+            <line number="579" hits="0"/>
+            <line number="583" hits="1"/>
+            <line number="590" hits="1"/>
           </lines>
         </class>
       </classes>
