@@ -28,6 +28,8 @@ class PathFilterHelper
     /**
      * Create PathFilter with custom exclusion patterns.
      * Merges default PathFilter exclusions with user-defined patterns.
+     *
+     * @param array<string> $excludePatterns
      */
     public static function createPathFilterWithExclusions(
         array $excludePatterns,
@@ -48,11 +50,15 @@ class PathFilterHelper
 
     /**
      * Extract default exclusions from PathFilter using reflection.
+     *
+     * @return array<string, array<string>>
      */
     public static function extractDefaultExclusions(
         PathFilter $filter,
     ): array {
         $reflection = new ReflectionClass($filter);
+
+        /** @var array<string> $excludePatterns */
         $excludePatterns = $reflection->getProperty('excludePatterns')->getValue($filter);
 
         return [

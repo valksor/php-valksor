@@ -77,6 +77,12 @@ final class CloudflareTurnstileRegistry
      */
     private function getTypes(): array
     {
-        return $this->parameterBag->get('valksor.form_type.cloudflare_turnstile.types', []);
+        if (!$this->parameterBag->has('valksor.form_type.cloudflare_turnstile.types')) {
+            return [];
+        }
+
+        return $this->parameterBag->get('valksor.form_type.cloudflare_turnstile.types');
+
+        /* @var array<string, array{site_key: string, secret_key: string}> $types */
     }
 }

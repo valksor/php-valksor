@@ -65,8 +65,8 @@ final class PathFilter
      * both files and directories. This eliminates artificial categorization and
      * ensures any pattern works regardless of whether it matches a file or directory.
      *
-     * @param array  $patterns   List of patterns to ignore (unified approach)
-     * @param string $projectDir Project root directory for path normalization
+     * @param array<string> $patterns   List of patterns to ignore (unified approach)
+     * @param string        $projectDir Project root directory for path normalization
      */
     public function __construct(
         array $patterns,
@@ -389,6 +389,9 @@ final class PathFilter
 
     /**
      * Recursively match pattern parts against path parts.
+     *
+     * @param list<string> $patternParts
+     * @param list<string> $pathParts
      */
     private static function matchPatternParts(
         array $patternParts,

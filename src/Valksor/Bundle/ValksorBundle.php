@@ -560,6 +560,8 @@ final class ValksorBundle extends AbstractBundle
      *   → ['form_type', 'cloudflare_turnstile']
      * - Valksor\Component\Sse\DependencyInjection\SseConfiguration
      *   → ['sse']
+     *
+     * @return list<string>
      */
     private function getComponentConfigPath(
         string $className,

@@ -52,7 +52,7 @@ class CloudflareTurnstileType extends AbstractType
                 ),
             ])
             ->setAllowedTypes('type', ['string', 'null'])
-            ->setNormalizer('type', function (OptionsResolver $resolver, ?string $value): ?string {
+            ->setNormalizer('type', function (OptionsResolver $resolver, ?string $value): string {
                 if (null === $value) {
                     throw new InvalidOptionsException('The "type" option is required for CloudflareTurnstileType. Available types: ' . implode(', ', $this->registry->getAvailableTypes()));
                 }

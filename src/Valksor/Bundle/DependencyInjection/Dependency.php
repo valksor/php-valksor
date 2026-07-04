@@ -46,5 +46,8 @@ interface Dependency
 
     public function usesDoctrine(): bool;
 
+    /**
+     * @return array<string, mixed>
+     */
     public static function getDefaults(): array;
 }

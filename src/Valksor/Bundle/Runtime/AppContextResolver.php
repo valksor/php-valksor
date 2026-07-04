@@ -161,17 +161,15 @@ final class AppContextResolver
             $context[$key] = $value;
         }
 
-        if ([] !== $updates) {
-            $dotenvVars = $_SERVER['SYMFONY_DOTENV_VARS'] ?? $_ENV['SYMFONY_DOTENV_VARS'] ?? '';
-            $tracked = array_flip(array_filter('' === $dotenvVars ? [] : explode(',', $dotenvVars)));
+        $dotenvVars = $_SERVER['SYMFONY_DOTENV_VARS'] ?? $_ENV['SYMFONY_DOTENV_VARS'] ?? '';
+        $tracked = array_flip(array_filter('' === $dotenvVars ? [] : explode(',', $dotenvVars)));
 
-            $tracked += array_fill_keys(array_keys($updates), true);
+        $tracked += array_fill_keys(array_keys($updates), true);
 
-            $dotenvVars = implode(',', array_keys($tracked));
-            $_ENV['SYMFONY_DOTENV_VARS'] = $_SERVER['SYMFONY_DOTENV_VARS'] = $dotenvVars;
+        $dotenvVars = implode(',', array_keys($tracked));
+        $_ENV['SYMFONY_DOTENV_VARS'] = $_SERVER['SYMFONY_DOTENV_VARS'] = $dotenvVars;
 
-            $dotenv->populate($updates, true);
-        }
+        $dotenv->populate($updates, true);
 
         return $context;
     }
