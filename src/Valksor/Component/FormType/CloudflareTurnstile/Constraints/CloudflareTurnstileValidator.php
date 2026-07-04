@@ -42,7 +42,7 @@ final class CloudflareTurnstileValidator extends ConstraintValidator
 
         if (null === $constraint->type) {
             $this->context->buildViolation($constraint->notFoundMessage)
-                ->setParameter('{{ type }}', 'undefined')
+                ->setParameters(['{{ type }}' => 'undefined'])
                 ->addViolation();
 
             return;

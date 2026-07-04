@@ -114,8 +114,8 @@ final class CloudflareTurnstileValidatorTest extends TestCase
 
         $violationBuilder = $this->createMock(ConstraintViolationBuilderInterface::class);
         $violationBuilder->expects($this->once())
-            ->method('setParameter')
-            ->with('{{ type }}', 'undefined')
+            ->method('setParameters')
+            ->with(['{{ type }}' => 'undefined'])
             ->willReturnSelf();
         $violationBuilder->expects($this->once())
             ->method('addViolation');

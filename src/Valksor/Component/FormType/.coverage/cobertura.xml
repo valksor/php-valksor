@@ -1,0 +1,2080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage line-rate="0.92695214105793" branch-rate="0" lines-covered="736" lines-valid="794" branches-covered="0" branches-valid="0" complexity="114" version="0.4" timestamp="0">
+  <sources>
+    <source>/var/www/html/valksor/src/Valksor/Component/FormType</source>
+  </sources>
+  <packages>
+    <package name="CloudflareTurnstile/Constraints/CloudflareTurnstile.php" line-rate="1" branch-rate="0" complexity="1">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Constraints\CloudflareTurnstile" filename="CloudflareTurnstile/Constraints/CloudflareTurnstile.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="__construct" signature="?string $type, ?array $groups, mixed $payload" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="29" hits="12"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="12"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Constraints/CloudflareTurnstileValidator.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Constraints\CloudflareTurnstileValidator" filename="CloudflareTurnstile/Constraints/CloudflareTurnstileValidator.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="__construct" signature="RequestStack $requestStack, CloudflareTurnstileHttpClient $turnstileHttpClient" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="27" hits="6"/>
+              </lines>
+            </method>
+            <method name="validate" signature="mixed $value, Constraint $constraint" line-rate="1" branch-rate="0" complexity="6">
+              <lines>
+                <line number="39" hits="6"/>
+                <line number="40" hits="1"/>
+                <line number="43" hits="5"/>
+                <line number="44" hits="1"/>
+                <line number="45" hits="1"/>
+                <line number="46" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="51" hits="4"/>
+                <line number="53" hits="4"/>
+                <line number="54" hits="1"/>
+                <line number="55" hits="1"/>
+                <line number="57" hits="1"/>
+                <line number="60" hits="3"/>
+                <line number="62" hits="3"/>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="66" hits="1"/>
+                <line number="69" hits="2"/>
+                <line number="70" hits="1"/>
+                <line number="71" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="6"/>
+            <line number="39" hits="6"/>
+            <line number="40" hits="1"/>
+            <line number="43" hits="5"/>
+            <line number="44" hits="1"/>
+            <line number="45" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="51" hits="4"/>
+            <line number="53" hits="4"/>
+            <line number="54" hits="1"/>
+            <line number="55" hits="1"/>
+            <line number="57" hits="1"/>
+            <line number="60" hits="3"/>
+            <line number="62" hits="3"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="66" hits="1"/>
+            <line number="69" hits="2"/>
+            <line number="70" hits="1"/>
+            <line number="71" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/DependencyInjection/CloudflareTurnstileConfiguration.php" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\DependencyInjection\CloudflareTurnstileConfiguration" filename="CloudflareTurnstile/DependencyInjection/CloudflareTurnstileConfiguration.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="addSection" signature="ArrayNodeDefinition $rootNode, callable $enableIfStandalone, string $component" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="37" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="39" hits="0"/>
+                <line number="40" hits="0"/>
+                <line number="41" hits="0"/>
+                <line number="42" hits="0"/>
+                <line number="43" hits="0"/>
+                <line number="44" hits="0"/>
+                <line number="45" hits="0"/>
+                <line number="46" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="49" hits="0"/>
+                <line number="50" hits="0"/>
+              </lines>
+            </method>
+            <method name="build" signature="ContainerBuilder $container" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="56" hits="0"/>
+              </lines>
+            </method>
+            <method name="usesArrayPrototype" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="61" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="39" hits="0"/>
+            <line number="40" hits="0"/>
+            <line number="41" hits="0"/>
+            <line number="42" hits="0"/>
+            <line number="43" hits="0"/>
+            <line number="44" hits="0"/>
+            <line number="45" hits="0"/>
+            <line number="46" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="49" hits="0"/>
+            <line number="50" hits="0"/>
+            <line number="56" hits="0"/>
+            <line number="61" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/DependencyInjection/CompilerPass/TwigCompilerPass.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\DependencyInjection\CompilerPass\TwigCompilerPass" filename="CloudflareTurnstile/DependencyInjection/CompilerPass/TwigCompilerPass.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="process" signature="ContainerBuilder $container" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="23" hits="4"/>
+                <line number="24" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="28" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="33" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="35" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="4"/>
+            <line number="24" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="28" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="33" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="35" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Form/Type/CloudflareTurnstileType.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Form\Type\CloudflareTurnstileType" filename="CloudflareTurnstile/Form/Type/CloudflareTurnstileType.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="__construct" signature="CloudflareTurnstileRegistry $registry" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="31" hits="8"/>
+              </lines>
+            </method>
+            <method name="buildView" signature="FormView $view, FormInterface $form, array $options" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="38" hits="2"/>
+                <line number="40" hits="2"/>
+              </lines>
+            </method>
+            <method name="configureOptions" signature="OptionsResolver $resolver" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="46" hits="4"/>
+                <line number="47" hits="4"/>
+                <line number="48" hits="4"/>
+                <line number="49" hits="4"/>
+                <line number="50" hits="4"/>
+                <line number="51" hits="4"/>
+                <line number="52" hits="4"/>
+                <line number="53" hits="4"/>
+                <line number="54" hits="4"/>
+                <line number="55" hits="4"/>
+                <line number="56" hits="4"/>
+                <line number="57" hits="1"/>
+                <line number="60" hits="3"/>
+                <line number="61" hits="1"/>
+                <line number="64" hits="2"/>
+                <line number="65" hits="4"/>
+              </lines>
+            </method>
+            <method name="getBlockPrefix" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="70" hits="1"/>
+              </lines>
+            </method>
+            <method name="getParent" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="75" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="31" hits="8"/>
+            <line number="38" hits="2"/>
+            <line number="40" hits="2"/>
+            <line number="46" hits="4"/>
+            <line number="47" hits="4"/>
+            <line number="48" hits="4"/>
+            <line number="49" hits="4"/>
+            <line number="50" hits="4"/>
+            <line number="51" hits="4"/>
+            <line number="52" hits="4"/>
+            <line number="53" hits="4"/>
+            <line number="54" hits="4"/>
+            <line number="55" hits="4"/>
+            <line number="56" hits="4"/>
+            <line number="57" hits="1"/>
+            <line number="60" hits="3"/>
+            <line number="61" hits="1"/>
+            <line number="64" hits="2"/>
+            <line number="65" hits="4"/>
+            <line number="70" hits="1"/>
+            <line number="75" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/HttpClient/CloudflareTurnstileHttpClient.php" line-rate="1" branch-rate="0" complexity="5">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\HttpClient\CloudflareTurnstileHttpClient" filename="CloudflareTurnstile/HttpClient/CloudflareTurnstileHttpClient.php" line-rate="1" branch-rate="0" complexity="5">
+          <methods>
+            <method name="__construct" signature="CloudflareTurnstileRegistry $registry, HttpClientInterface $httpClient, LoggerInterface $logger" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="12"/>
+              </lines>
+            </method>
+            <method name="verifyResponse" signature="string $turnstileResponse, string $type" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="44" hits="8"/>
+                <line number="45" hits="1"/>
+                <line number="46" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="49" hits="1"/>
+                <line number="50" hits="1"/>
+                <line number="51" hits="1"/>
+                <line number="52" hits="1"/>
+                <line number="54" hits="1"/>
+                <line number="57" hits="7"/>
+                <line number="58" hits="7"/>
+                <line number="59" hits="7"/>
+                <line number="60" hits="7"/>
+                <line number="61" hits="7"/>
+                <line number="62" hits="7"/>
+                <line number="63" hits="7"/>
+                <line number="64" hits="7"/>
+                <line number="65" hits="7"/>
+                <line number="66" hits="7"/>
+                <line number="69" hits="7"/>
+                <line number="70" hits="1"/>
+                <line number="71" hits="1"/>
+                <line number="72" hits="1"/>
+                <line number="73" hits="1"/>
+                <line number="74" hits="1"/>
+                <line number="75" hits="1"/>
+                <line number="76" hits="1"/>
+                <line number="77" hits="1"/>
+                <line number="79" hits="1"/>
+                <line number="82" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="12"/>
+            <line number="44" hits="8"/>
+            <line number="45" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="49" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="52" hits="1"/>
+            <line number="54" hits="1"/>
+            <line number="57" hits="7"/>
+            <line number="58" hits="7"/>
+            <line number="59" hits="7"/>
+            <line number="60" hits="7"/>
+            <line number="61" hits="7"/>
+            <line number="62" hits="7"/>
+            <line number="63" hits="7"/>
+            <line number="64" hits="7"/>
+            <line number="65" hits="7"/>
+            <line number="66" hits="7"/>
+            <line number="69" hits="7"/>
+            <line number="70" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="72" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="74" hits="1"/>
+            <line number="75" hits="1"/>
+            <line number="76" hits="1"/>
+            <line number="77" hits="1"/>
+            <line number="79" hits="1"/>
+            <line number="82" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Resources/config/services.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="CloudflareTurnstile/Service/CloudflareTurnstileRegistry.php" line-rate="1" branch-rate="0" complexity="6">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Service\CloudflareTurnstileRegistry" filename="CloudflareTurnstile/Service/CloudflareTurnstileRegistry.php" line-rate="1" branch-rate="0" complexity="6">
+          <methods>
+            <method name="__construct" signature="ParameterBagInterface $parameterBag" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="28"/>
+              </lines>
+            </method>
+            <method name="getAvailableTypes" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="39" hits="4"/>
+              </lines>
+            </method>
+            <method name="getSecretKey" signature="string $type" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="48" hits="10"/>
+                <line number="50" hits="10"/>
+              </lines>
+            </method>
+            <method name="getSiteKey" signature="string $type" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="59" hits="4"/>
+                <line number="61" hits="4"/>
+              </lines>
+            </method>
+            <method name="hasType" signature="string $type" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="70" hits="5"/>
+              </lines>
+            </method>
+            <method name="getTypes" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="80" hits="22"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="28"/>
+            <line number="39" hits="4"/>
+            <line number="48" hits="10"/>
+            <line number="50" hits="10"/>
+            <line number="59" hits="4"/>
+            <line number="61" hits="4"/>
+            <line number="70" hits="5"/>
+            <line number="80" hits="22"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Tests/Constraints/CloudflareTurnstileTest.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Tests\Constraints\CloudflareTurnstileTest" filename="CloudflareTurnstile/Tests/Constraints/CloudflareTurnstileTest.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="testConstraintExtendsSymfonyConstraint" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="26" hits="1"/>
+                <line number="28" hits="1"/>
+              </lines>
+            </method>
+            <method name="testConstraintIsAttribute" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="43" hits="1"/>
+              </lines>
+            </method>
+            <method name="testDefaultMessageValues" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="48" hits="1"/>
+                <line number="50" hits="1"/>
+                <line number="51" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGroupsCanBeSetViaConstructor" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="56" hits="1"/>
+                <line number="58" hits="1"/>
+              </lines>
+            </method>
+            <method name="testPayloadCanBeSetViaConstructor" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="66" hits="1"/>
+              </lines>
+            </method>
+            <method name="testTypeCanBeSetViaConstructor" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="71" hits="1"/>
+                <line number="73" hits="1"/>
+              </lines>
+            </method>
+            <method name="testTypeIsNullByDefault" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="78" hits="1"/>
+                <line number="80" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="56" hits="1"/>
+            <line number="58" hits="1"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="66" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="80" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Tests/Constraints/CloudflareTurnstileValidatorTest.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Tests\Constraints\CloudflareTurnstileValidatorTest" filename="CloudflareTurnstile/Tests/Constraints/CloudflareTurnstileValidatorTest.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="testValidateAddsViolationWhenHttpClientReturnsFalse" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="42" hits="1"/>
+                <line number="44" hits="1"/>
+                <line number="45" hits="1"/>
+                <line number="46" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="49" hits="1"/>
+                <line number="50" hits="1"/>
+                <line number="51" hits="1"/>
+                <line number="52" hits="1"/>
+                <line number="54" hits="1"/>
+                <line number="55" hits="1"/>
+                <line number="56" hits="1"/>
+                <line number="58" hits="1"/>
+                <line number="59" hits="1"/>
+                <line number="60" hits="1"/>
+                <line number="62" hits="1"/>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="65" hits="1"/>
+                <line number="67" hits="1"/>
+              </lines>
+            </method>
+            <method name="testValidateAddsViolationWhenNoRequest" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="72" hits="1"/>
+                <line number="74" hits="1"/>
+                <line number="75" hits="1"/>
+                <line number="76" hits="1"/>
+                <line number="78" hits="1"/>
+                <line number="79" hits="1"/>
+                <line number="80" hits="1"/>
+                <line number="82" hits="1"/>
+                <line number="83" hits="1"/>
+                <line number="84" hits="1"/>
+                <line number="85" hits="1"/>
+                <line number="87" hits="1"/>
+              </lines>
+            </method>
+            <method name="testValidateAddsViolationWhenTurnstileResponseIsEmpty" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="92" hits="1"/>
+                <line number="94" hits="1"/>
+                <line number="95" hits="1"/>
+                <line number="96" hits="1"/>
+                <line number="97" hits="1"/>
+                <line number="99" hits="1"/>
+                <line number="100" hits="1"/>
+                <line number="101" hits="1"/>
+                <line number="103" hits="1"/>
+                <line number="104" hits="1"/>
+                <line number="105" hits="1"/>
+                <line number="106" hits="1"/>
+                <line number="108" hits="1"/>
+              </lines>
+            </method>
+            <method name="testValidateAddsViolationWhenTypeIsNull" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="113" hits="1"/>
+                <line number="115" hits="1"/>
+                <line number="116" hits="1"/>
+                <line number="117" hits="1"/>
+                <line number="118" hits="1"/>
+                <line number="119" hits="1"/>
+                <line number="120" hits="1"/>
+                <line number="121" hits="1"/>
+                <line number="123" hits="1"/>
+                <line number="124" hits="1"/>
+                <line number="125" hits="1"/>
+                <line number="126" hits="1"/>
+                <line number="128" hits="1"/>
+              </lines>
+            </method>
+            <method name="testValidatePassesWhenHttpClientReturnsTrue" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="133" hits="1"/>
+                <line number="135" hits="1"/>
+                <line number="136" hits="1"/>
+                <line number="137" hits="1"/>
+                <line number="138" hits="1"/>
+                <line number="140" hits="1"/>
+                <line number="141" hits="1"/>
+                <line number="142" hits="1"/>
+                <line number="143" hits="1"/>
+                <line number="145" hits="1"/>
+                <line number="146" hits="1"/>
+                <line number="147" hits="1"/>
+                <line number="149" hits="1"/>
+                <line number="150" hits="1"/>
+                <line number="152" hits="1"/>
+              </lines>
+            </method>
+            <method name="testValidateThrowsExceptionForWrongConstraintType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="157" hits="1"/>
+                <line number="159" hits="1"/>
+                <line number="161" hits="1"/>
+              </lines>
+            </method>
+            <method name="setUp" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="166" hits="6"/>
+                <line number="167" hits="6"/>
+                <line number="168" hits="6"/>
+                <line number="170" hits="6"/>
+                <line number="171" hits="6"/>
+                <line number="172" hits="6"/>
+                <line number="173" hits="6"/>
+                <line number="174" hits="6"/>
+                <line number="175" hits="6"/>
+                <line number="176" hits="6"/>
+                <line number="177" hits="6"/>
+                <line number="179" hits="6"/>
+                <line number="180" hits="6"/>
+                <line number="181" hits="6"/>
+                <line number="182" hits="6"/>
+                <line number="183" hits="6"/>
+                <line number="184" hits="6"/>
+                <line number="186" hits="6"/>
+                <line number="187" hits="6"/>
+                <line number="188" hits="6"/>
+                <line number="189" hits="6"/>
+                <line number="190" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="42" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="45" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="49" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="52" hits="1"/>
+            <line number="54" hits="1"/>
+            <line number="55" hits="1"/>
+            <line number="56" hits="1"/>
+            <line number="58" hits="1"/>
+            <line number="59" hits="1"/>
+            <line number="60" hits="1"/>
+            <line number="62" hits="1"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="65" hits="1"/>
+            <line number="67" hits="1"/>
+            <line number="72" hits="1"/>
+            <line number="74" hits="1"/>
+            <line number="75" hits="1"/>
+            <line number="76" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="79" hits="1"/>
+            <line number="80" hits="1"/>
+            <line number="82" hits="1"/>
+            <line number="83" hits="1"/>
+            <line number="84" hits="1"/>
+            <line number="85" hits="1"/>
+            <line number="87" hits="1"/>
+            <line number="92" hits="1"/>
+            <line number="94" hits="1"/>
+            <line number="95" hits="1"/>
+            <line number="96" hits="1"/>
+            <line number="97" hits="1"/>
+            <line number="99" hits="1"/>
+            <line number="100" hits="1"/>
+            <line number="101" hits="1"/>
+            <line number="103" hits="1"/>
+            <line number="104" hits="1"/>
+            <line number="105" hits="1"/>
+            <line number="106" hits="1"/>
+            <line number="108" hits="1"/>
+            <line number="113" hits="1"/>
+            <line number="115" hits="1"/>
+            <line number="116" hits="1"/>
+            <line number="117" hits="1"/>
+            <line number="118" hits="1"/>
+            <line number="119" hits="1"/>
+            <line number="120" hits="1"/>
+            <line number="121" hits="1"/>
+            <line number="123" hits="1"/>
+            <line number="124" hits="1"/>
+            <line number="125" hits="1"/>
+            <line number="126" hits="1"/>
+            <line number="128" hits="1"/>
+            <line number="133" hits="1"/>
+            <line number="135" hits="1"/>
+            <line number="136" hits="1"/>
+            <line number="137" hits="1"/>
+            <line number="138" hits="1"/>
+            <line number="140" hits="1"/>
+            <line number="141" hits="1"/>
+            <line number="142" hits="1"/>
+            <line number="143" hits="1"/>
+            <line number="145" hits="1"/>
+            <line number="146" hits="1"/>
+            <line number="147" hits="1"/>
+            <line number="149" hits="1"/>
+            <line number="150" hits="1"/>
+            <line number="152" hits="1"/>
+            <line number="157" hits="1"/>
+            <line number="159" hits="1"/>
+            <line number="161" hits="1"/>
+            <line number="166" hits="6"/>
+            <line number="167" hits="6"/>
+            <line number="168" hits="6"/>
+            <line number="170" hits="6"/>
+            <line number="171" hits="6"/>
+            <line number="172" hits="6"/>
+            <line number="173" hits="6"/>
+            <line number="174" hits="6"/>
+            <line number="175" hits="6"/>
+            <line number="176" hits="6"/>
+            <line number="177" hits="6"/>
+            <line number="179" hits="6"/>
+            <line number="180" hits="6"/>
+            <line number="181" hits="6"/>
+            <line number="182" hits="6"/>
+            <line number="183" hits="6"/>
+            <line number="184" hits="6"/>
+            <line number="186" hits="6"/>
+            <line number="187" hits="6"/>
+            <line number="188" hits="6"/>
+            <line number="189" hits="6"/>
+            <line number="190" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Tests/DependencyInjection/CompilerPass/TwigCompilerPassTest.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Tests\DependencyInjection\CompilerPass\TwigCompilerPassTest" filename="CloudflareTurnstile/Tests/DependencyInjection/CompilerPass/TwigCompilerPassTest.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="testProcessAddsTwigPathAndFormResources" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="43" hits="1"/>
+                <line number="44" hits="1"/>
+                <line number="45" hits="1"/>
+                <line number="46" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="49" hits="1"/>
+                <line number="50" hits="1"/>
+                <line number="51" hits="1"/>
+                <line number="53" hits="1"/>
+                <line number="54" hits="1"/>
+                <line number="55" hits="1"/>
+                <line number="56" hits="1"/>
+                <line number="58" hits="1"/>
+                <line number="59" hits="1"/>
+                <line number="60" hits="1"/>
+                <line number="61" hits="1"/>
+                <line number="62" hits="1"/>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="66" hits="1"/>
+              </lines>
+            </method>
+            <method name="testProcessDoesNothingWhenTwigFormResourcesParameterMissing" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="71" hits="1"/>
+                <line number="72" hits="1"/>
+                <line number="73" hits="1"/>
+                <line number="74" hits="1"/>
+                <line number="75" hits="1"/>
+                <line number="77" hits="1"/>
+                <line number="78" hits="1"/>
+                <line number="80" hits="1"/>
+              </lines>
+            </method>
+            <method name="testProcessDoesNothingWhenTwigLoaderDefinitionMissing" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="85" hits="1"/>
+                <line number="86" hits="1"/>
+                <line number="87" hits="1"/>
+                <line number="88" hits="1"/>
+                <line number="89" hits="1"/>
+                <line number="91" hits="1"/>
+                <line number="92" hits="1"/>
+                <line number="93" hits="1"/>
+                <line number="94" hits="1"/>
+                <line number="96" hits="1"/>
+                <line number="97" hits="1"/>
+                <line number="99" hits="1"/>
+              </lines>
+            </method>
+            <method name="testProcessHandlesEmptyFormResources" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="104" hits="1"/>
+                <line number="105" hits="1"/>
+                <line number="106" hits="1"/>
+                <line number="108" hits="1"/>
+                <line number="109" hits="1"/>
+                <line number="110" hits="1"/>
+                <line number="111" hits="1"/>
+                <line number="112" hits="1"/>
+                <line number="114" hits="1"/>
+                <line number="115" hits="1"/>
+                <line number="116" hits="1"/>
+                <line number="117" hits="1"/>
+                <line number="118" hits="1"/>
+                <line number="119" hits="1"/>
+                <line number="121" hits="1"/>
+              </lines>
+            </method>
+            <method name="setUp" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="126" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="45" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="49" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="53" hits="1"/>
+            <line number="54" hits="1"/>
+            <line number="55" hits="1"/>
+            <line number="56" hits="1"/>
+            <line number="58" hits="1"/>
+            <line number="59" hits="1"/>
+            <line number="60" hits="1"/>
+            <line number="61" hits="1"/>
+            <line number="62" hits="1"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="66" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="72" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="74" hits="1"/>
+            <line number="75" hits="1"/>
+            <line number="77" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="80" hits="1"/>
+            <line number="85" hits="1"/>
+            <line number="86" hits="1"/>
+            <line number="87" hits="1"/>
+            <line number="88" hits="1"/>
+            <line number="89" hits="1"/>
+            <line number="91" hits="1"/>
+            <line number="92" hits="1"/>
+            <line number="93" hits="1"/>
+            <line number="94" hits="1"/>
+            <line number="96" hits="1"/>
+            <line number="97" hits="1"/>
+            <line number="99" hits="1"/>
+            <line number="104" hits="1"/>
+            <line number="105" hits="1"/>
+            <line number="106" hits="1"/>
+            <line number="108" hits="1"/>
+            <line number="109" hits="1"/>
+            <line number="110" hits="1"/>
+            <line number="111" hits="1"/>
+            <line number="112" hits="1"/>
+            <line number="114" hits="1"/>
+            <line number="115" hits="1"/>
+            <line number="116" hits="1"/>
+            <line number="117" hits="1"/>
+            <line number="118" hits="1"/>
+            <line number="119" hits="1"/>
+            <line number="121" hits="1"/>
+            <line number="126" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Tests/Form/Type/CloudflareTurnstileTypeTest.php" line-rate="1" branch-rate="0" complexity="11">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Tests\Form\Type\CloudflareTurnstileTypeTest" filename="CloudflareTurnstile/Tests/Form/Type/CloudflareTurnstileTypeTest.php" line-rate="1" branch-rate="0" complexity="11">
+          <methods>
+            <method name="testBuildViewSetsKeyAndTypeVariables" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="42" hits="1"/>
+              </lines>
+            </method>
+            <method name="testBuildViewWithDifferentType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="47" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="50" hits="1"/>
+                <line number="52" hits="1"/>
+                <line number="53" hits="1"/>
+              </lines>
+            </method>
+            <method name="testConfigureOptionsSetsDefaults" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="58" hits="1"/>
+                <line number="59" hits="1"/>
+                <line number="61" hits="1"/>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="65" hits="1"/>
+              </lines>
+            </method>
+            <method name="testConfigureOptionsThrowsExceptionForNonExistentType" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="70" hits="1"/>
+                <line number="71" hits="1"/>
+                <line number="73" hits="1"/>
+                <line number="74" hits="1"/>
+                <line number="77" hits="1"/>
+                <line number="78" hits="1"/>
+                <line number="79" hits="1"/>
+                <line number="80" hits="1"/>
+                <line number="83" hits="1"/>
+                <line number="84" hits="1"/>
+                <line number="85" hits="1"/>
+              </lines>
+            </method>
+            <method name="testConfigureOptionsThrowsExceptionWhenTypeNotSet" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="90" hits="1"/>
+                <line number="91" hits="1"/>
+                <line number="93" hits="1"/>
+                <line number="94" hits="1"/>
+                <line number="97" hits="1"/>
+                <line number="98" hits="1"/>
+                <line number="99" hits="1"/>
+                <line number="100" hits="1"/>
+                <line number="103" hits="1"/>
+                <line number="104" hits="1"/>
+              </lines>
+            </method>
+            <method name="testConstraintClosureReturnsCorrectConstraint" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="109" hits="1"/>
+                <line number="110" hits="1"/>
+                <line number="112" hits="1"/>
+                <line number="115" hits="1"/>
+                <line number="117" hits="1"/>
+                <line number="119" hits="1"/>
+                <line number="120" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetBlockPrefixReturnsCorrectPrefix" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="125" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetParentReturnsTextType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="130" hits="1"/>
+              </lines>
+            </method>
+            <method name="setUp" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="135" hits="8"/>
+                <line number="136" hits="8"/>
+                <line number="137" hits="8"/>
+                <line number="138" hits="8"/>
+                <line number="139" hits="8"/>
+                <line number="140" hits="8"/>
+                <line number="141" hits="8"/>
+                <line number="142" hits="8"/>
+                <line number="143" hits="8"/>
+                <line number="144" hits="8"/>
+                <line number="145" hits="8"/>
+                <line number="146" hits="8"/>
+                <line number="148" hits="8"/>
+                <line number="149" hits="8"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="52" hits="1"/>
+            <line number="53" hits="1"/>
+            <line number="58" hits="1"/>
+            <line number="59" hits="1"/>
+            <line number="61" hits="1"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="65" hits="1"/>
+            <line number="70" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="74" hits="1"/>
+            <line number="77" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="79" hits="1"/>
+            <line number="80" hits="1"/>
+            <line number="83" hits="1"/>
+            <line number="84" hits="1"/>
+            <line number="85" hits="1"/>
+            <line number="90" hits="1"/>
+            <line number="91" hits="1"/>
+            <line number="93" hits="1"/>
+            <line number="94" hits="1"/>
+            <line number="97" hits="1"/>
+            <line number="98" hits="1"/>
+            <line number="99" hits="1"/>
+            <line number="100" hits="1"/>
+            <line number="103" hits="1"/>
+            <line number="104" hits="1"/>
+            <line number="109" hits="1"/>
+            <line number="110" hits="1"/>
+            <line number="112" hits="1"/>
+            <line number="115" hits="1"/>
+            <line number="117" hits="1"/>
+            <line number="119" hits="1"/>
+            <line number="120" hits="1"/>
+            <line number="125" hits="1"/>
+            <line number="130" hits="1"/>
+            <line number="135" hits="8"/>
+            <line number="136" hits="8"/>
+            <line number="137" hits="8"/>
+            <line number="138" hits="8"/>
+            <line number="139" hits="8"/>
+            <line number="140" hits="8"/>
+            <line number="141" hits="8"/>
+            <line number="142" hits="8"/>
+            <line number="143" hits="8"/>
+            <line number="144" hits="8"/>
+            <line number="145" hits="8"/>
+            <line number="146" hits="8"/>
+            <line number="148" hits="8"/>
+            <line number="149" hits="8"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Tests/HttpClient/CloudflareTurnstileHttpClientTest.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Tests\HttpClient\CloudflareTurnstileHttpClientTest" filename="CloudflareTurnstile/Tests/HttpClient/CloudflareTurnstileHttpClientTest.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="testVerifyResponseReturnsFalseForInvalidType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="41" hits="1"/>
+              </lines>
+            </method>
+            <method name="testVerifyResponseReturnsFalseOnFailure" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="46" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="49" hits="1"/>
+                <line number="51" hits="1"/>
+                <line number="52" hits="1"/>
+                <line number="53" hits="1"/>
+                <line number="55" hits="1"/>
+                <line number="57" hits="1"/>
+              </lines>
+            </method>
+            <method name="testVerifyResponseReturnsFalseOnHttpException" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="62" hits="1"/>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="65" hits="1"/>
+                <line number="67" hits="1"/>
+                <line number="68" hits="1"/>
+                <line number="69" hits="1"/>
+                <line number="71" hits="1"/>
+                <line number="72" hits="1"/>
+                <line number="73" hits="1"/>
+                <line number="75" hits="1"/>
+                <line number="77" hits="1"/>
+              </lines>
+            </method>
+            <method name="testVerifyResponseReturnsFalseWhenSuccessKeyMissing" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="82" hits="1"/>
+                <line number="83" hits="1"/>
+                <line number="84" hits="1"/>
+                <line number="85" hits="1"/>
+                <line number="87" hits="1"/>
+                <line number="88" hits="1"/>
+                <line number="89" hits="1"/>
+                <line number="91" hits="1"/>
+                <line number="93" hits="1"/>
+              </lines>
+            </method>
+            <method name="testVerifyResponseReturnsTrueOnSuccess" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="98" hits="1"/>
+                <line number="99" hits="1"/>
+                <line number="100" hits="1"/>
+                <line number="101" hits="1"/>
+                <line number="103" hits="1"/>
+                <line number="104" hits="1"/>
+                <line number="105" hits="1"/>
+                <line number="106" hits="1"/>
+                <line number="107" hits="1"/>
+                <line number="108" hits="1"/>
+                <line number="109" hits="1"/>
+                <line number="110" hits="1"/>
+                <line number="111" hits="1"/>
+                <line number="112" hits="1"/>
+                <line number="113" hits="1"/>
+                <line number="114" hits="1"/>
+                <line number="115" hits="1"/>
+                <line number="117" hits="1"/>
+                <line number="119" hits="1"/>
+              </lines>
+            </method>
+            <method name="testVerifyResponseUsesCorrectSecretForType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="124" hits="1"/>
+                <line number="125" hits="1"/>
+                <line number="126" hits="1"/>
+                <line number="127" hits="1"/>
+                <line number="129" hits="1"/>
+                <line number="130" hits="1"/>
+                <line number="131" hits="1"/>
+                <line number="132" hits="1"/>
+                <line number="133" hits="1"/>
+                <line number="134" hits="1"/>
+                <line number="135" hits="1"/>
+                <line number="136" hits="1"/>
+                <line number="137" hits="1"/>
+                <line number="138" hits="1"/>
+                <line number="139" hits="1"/>
+                <line number="140" hits="1"/>
+                <line number="141" hits="1"/>
+                <line number="143" hits="1"/>
+                <line number="145" hits="1"/>
+              </lines>
+            </method>
+            <method name="setUp" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="150" hits="6"/>
+                <line number="151" hits="6"/>
+                <line number="152" hits="6"/>
+                <line number="153" hits="6"/>
+                <line number="154" hits="6"/>
+                <line number="155" hits="6"/>
+                <line number="156" hits="6"/>
+                <line number="157" hits="6"/>
+                <line number="158" hits="6"/>
+                <line number="159" hits="6"/>
+                <line number="160" hits="6"/>
+                <line number="161" hits="6"/>
+                <line number="163" hits="6"/>
+                <line number="164" hits="6"/>
+                <line number="165" hits="6"/>
+                <line number="167" hits="6"/>
+                <line number="168" hits="6"/>
+                <line number="169" hits="6"/>
+                <line number="170" hits="6"/>
+                <line number="171" hits="6"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="49" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="52" hits="1"/>
+            <line number="53" hits="1"/>
+            <line number="55" hits="1"/>
+            <line number="57" hits="1"/>
+            <line number="62" hits="1"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="65" hits="1"/>
+            <line number="67" hits="1"/>
+            <line number="68" hits="1"/>
+            <line number="69" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="72" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="75" hits="1"/>
+            <line number="77" hits="1"/>
+            <line number="82" hits="1"/>
+            <line number="83" hits="1"/>
+            <line number="84" hits="1"/>
+            <line number="85" hits="1"/>
+            <line number="87" hits="1"/>
+            <line number="88" hits="1"/>
+            <line number="89" hits="1"/>
+            <line number="91" hits="1"/>
+            <line number="93" hits="1"/>
+            <line number="98" hits="1"/>
+            <line number="99" hits="1"/>
+            <line number="100" hits="1"/>
+            <line number="101" hits="1"/>
+            <line number="103" hits="1"/>
+            <line number="104" hits="1"/>
+            <line number="105" hits="1"/>
+            <line number="106" hits="1"/>
+            <line number="107" hits="1"/>
+            <line number="108" hits="1"/>
+            <line number="109" hits="1"/>
+            <line number="110" hits="1"/>
+            <line number="111" hits="1"/>
+            <line number="112" hits="1"/>
+            <line number="113" hits="1"/>
+            <line number="114" hits="1"/>
+            <line number="115" hits="1"/>
+            <line number="117" hits="1"/>
+            <line number="119" hits="1"/>
+            <line number="124" hits="1"/>
+            <line number="125" hits="1"/>
+            <line number="126" hits="1"/>
+            <line number="127" hits="1"/>
+            <line number="129" hits="1"/>
+            <line number="130" hits="1"/>
+            <line number="131" hits="1"/>
+            <line number="132" hits="1"/>
+            <line number="133" hits="1"/>
+            <line number="134" hits="1"/>
+            <line number="135" hits="1"/>
+            <line number="136" hits="1"/>
+            <line number="137" hits="1"/>
+            <line number="138" hits="1"/>
+            <line number="139" hits="1"/>
+            <line number="140" hits="1"/>
+            <line number="141" hits="1"/>
+            <line number="143" hits="1"/>
+            <line number="145" hits="1"/>
+            <line number="150" hits="6"/>
+            <line number="151" hits="6"/>
+            <line number="152" hits="6"/>
+            <line number="153" hits="6"/>
+            <line number="154" hits="6"/>
+            <line number="155" hits="6"/>
+            <line number="156" hits="6"/>
+            <line number="157" hits="6"/>
+            <line number="158" hits="6"/>
+            <line number="159" hits="6"/>
+            <line number="160" hits="6"/>
+            <line number="161" hits="6"/>
+            <line number="163" hits="6"/>
+            <line number="164" hits="6"/>
+            <line number="165" hits="6"/>
+            <line number="167" hits="6"/>
+            <line number="168" hits="6"/>
+            <line number="169" hits="6"/>
+            <line number="170" hits="6"/>
+            <line number="171" hits="6"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Tests/Service/CloudflareTurnstileRegistryTest.php" line-rate="1" branch-rate="0" complexity="9">
+      <classes>
+        <class name="Valksor\Component\FormType\CloudflareTurnstile\Tests\Service\CloudflareTurnstileRegistryTest" filename="CloudflareTurnstile/Tests/Service/CloudflareTurnstileRegistryTest.php" line-rate="1" branch-rate="0" complexity="9">
+          <methods>
+            <method name="testGetAvailableTypesReturnsConfiguredTypes" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="29" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetAvailableTypesReturnsEmptyArrayWhenNoTypesConfigured" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="39" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetSecretKeyReturnsCorrectKey" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="44" hits="1"/>
+                <line number="45" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetSecretKeyThrowsExceptionForInvalidType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="50" hits="1"/>
+                <line number="51" hits="1"/>
+                <line number="53" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetSiteKeyReturnsCorrectKey" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="58" hits="1"/>
+                <line number="59" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetSiteKeyThrowsExceptionForInvalidType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="64" hits="1"/>
+                <line number="65" hits="1"/>
+                <line number="67" hits="1"/>
+              </lines>
+            </method>
+            <method name="testHasTypeReturnsFalseForNonExistingType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="72" hits="1"/>
+                <line number="73" hits="1"/>
+              </lines>
+            </method>
+            <method name="testHasTypeReturnsTrueForExistingType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="78" hits="1"/>
+                <line number="79" hits="1"/>
+              </lines>
+            </method>
+            <method name="setUp" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="84" hits="8"/>
+                <line number="85" hits="8"/>
+                <line number="86" hits="8"/>
+                <line number="87" hits="8"/>
+                <line number="88" hits="8"/>
+                <line number="89" hits="8"/>
+                <line number="90" hits="8"/>
+                <line number="91" hits="8"/>
+                <line number="92" hits="8"/>
+                <line number="93" hits="8"/>
+                <line number="94" hits="8"/>
+                <line number="95" hits="8"/>
+                <line number="97" hits="8"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="45" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="53" hits="1"/>
+            <line number="58" hits="1"/>
+            <line number="59" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="65" hits="1"/>
+            <line number="67" hits="1"/>
+            <line number="72" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="79" hits="1"/>
+            <line number="84" hits="8"/>
+            <line number="85" hits="8"/>
+            <line number="86" hits="8"/>
+            <line number="87" hits="8"/>
+            <line number="88" hits="8"/>
+            <line number="89" hits="8"/>
+            <line number="90" hits="8"/>
+            <line number="91" hits="8"/>
+            <line number="92" hits="8"/>
+            <line number="93" hits="8"/>
+            <line number="94" hits="8"/>
+            <line number="95" hits="8"/>
+            <line number="97" hits="8"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="CloudflareTurnstile/Tests/bootstrap.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="HoneyPot/DependencyInjection/CompilerPass/TwigCompilerPass.php" line-rate="1" branch-rate="0" complexity="4">
+      <classes>
+        <class name="Valksor\Component\FormType\HoneyPot\DependencyInjection\CompilerPass\TwigCompilerPass" filename="HoneyPot/DependencyInjection/CompilerPass/TwigCompilerPass.php" line-rate="1" branch-rate="0" complexity="4">
+          <methods>
+            <method name="process" signature="ContainerBuilder $container" line-rate="1" branch-rate="0" complexity="4">
+              <lines>
+                <line number="23" hits="4"/>
+                <line number="24" hits="2"/>
+                <line number="27" hits="2"/>
+                <line number="28" hits="2"/>
+                <line number="29" hits="2"/>
+                <line number="30" hits="2"/>
+                <line number="31" hits="2"/>
+                <line number="33" hits="2"/>
+                <line number="34" hits="2"/>
+                <line number="35" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="4"/>
+            <line number="24" hits="2"/>
+            <line number="27" hits="2"/>
+            <line number="28" hits="2"/>
+            <line number="29" hits="2"/>
+            <line number="30" hits="2"/>
+            <line number="31" hits="2"/>
+            <line number="33" hits="2"/>
+            <line number="34" hits="2"/>
+            <line number="35" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="HoneyPot/DependencyInjection/HoneyPotConfiguration.php" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Valksor\Component\FormType\HoneyPot\DependencyInjection\HoneyPotConfiguration" filename="HoneyPot/DependencyInjection/HoneyPotConfiguration.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="addSection" signature="ArrayNodeDefinition $rootNode, callable $enableIfStandalone, string $component" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+              </lines>
+            </method>
+            <method name="build" signature="ContainerBuilder $container" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="41" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="41" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="HoneyPot/Form/Extension/HoneyPotExtension.php" line-rate="1" branch-rate="0" complexity="8">
+      <classes>
+        <class name="Valksor\Component\FormType\HoneyPot\Form\Extension\HoneyPotExtension" filename="HoneyPot/Form/Extension/HoneyPotExtension.php" line-rate="1" branch-rate="0" complexity="8">
+          <methods>
+            <method name="__construct" signature="RequestStack $requestStack" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="34" hits="10"/>
+              </lines>
+            </method>
+            <method name="buildForm" signature="FormBuilderInterface $builder, array $options" line-rate="1" branch-rate="0" complexity="5">
+              <lines>
+                <line number="40" hits="7"/>
+                <line number="41" hits="1"/>
+                <line number="45" hits="6"/>
+                <line number="46" hits="6"/>
+                <line number="47" hits="6"/>
+                <line number="48" hits="6"/>
+                <line number="49" hits="6"/>
+                <line number="50" hits="6"/>
+                <line number="51" hits="6"/>
+                <line number="52" hits="6"/>
+                <line number="53" hits="6"/>
+                <line number="56" hits="6"/>
+                <line number="57" hits="4"/>
+                <line number="59" hits="4"/>
+                <line number="61" hits="2"/>
+                <line number="63" hits="2"/>
+                <line number="66" hits="1"/>
+                <line number="67" hits="1"/>
+                <line number="68" hits="1"/>
+                <line number="69" hits="1"/>
+                <line number="70" hits="1"/>
+                <line number="71" hits="1"/>
+                <line number="74" hits="2"/>
+                <line number="76" hits="6"/>
+              </lines>
+            </method>
+            <method name="configureOptions" signature="OptionsResolver $resolver" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="82" hits="2"/>
+                <line number="83" hits="2"/>
+                <line number="84" hits="2"/>
+                <line number="85" hits="2"/>
+                <line number="86" hits="2"/>
+              </lines>
+            </method>
+            <method name="getExtendedTypes" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="91" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="10"/>
+            <line number="40" hits="7"/>
+            <line number="41" hits="1"/>
+            <line number="45" hits="6"/>
+            <line number="46" hits="6"/>
+            <line number="47" hits="6"/>
+            <line number="48" hits="6"/>
+            <line number="49" hits="6"/>
+            <line number="50" hits="6"/>
+            <line number="51" hits="6"/>
+            <line number="52" hits="6"/>
+            <line number="53" hits="6"/>
+            <line number="56" hits="6"/>
+            <line number="57" hits="4"/>
+            <line number="59" hits="4"/>
+            <line number="61" hits="2"/>
+            <line number="63" hits="2"/>
+            <line number="66" hits="1"/>
+            <line number="67" hits="1"/>
+            <line number="68" hits="1"/>
+            <line number="69" hits="1"/>
+            <line number="70" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="74" hits="2"/>
+            <line number="76" hits="6"/>
+            <line number="82" hits="2"/>
+            <line number="83" hits="2"/>
+            <line number="84" hits="2"/>
+            <line number="85" hits="2"/>
+            <line number="86" hits="2"/>
+            <line number="91" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="HoneyPot/Resources/config/services.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+    <package name="HoneyPot/Tests/DependencyInjection/CompilerPass/TwigCompilerPassTest.php" line-rate="1" branch-rate="0" complexity="7">
+      <classes>
+        <class name="Valksor\Component\FormType\HoneyPot\Tests\DependencyInjection\CompilerPass\TwigCompilerPassTest" filename="HoneyPot/Tests/DependencyInjection/CompilerPass/TwigCompilerPassTest.php" line-rate="1" branch-rate="0" complexity="7">
+          <methods>
+            <method name="testProcessAddsTwigPathAndFormResources" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="39" hits="1"/>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="43" hits="1"/>
+                <line number="44" hits="1"/>
+                <line number="45" hits="1"/>
+                <line number="46" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="49" hits="1"/>
+                <line number="50" hits="1"/>
+                <line number="51" hits="1"/>
+                <line number="53" hits="1"/>
+                <line number="54" hits="1"/>
+                <line number="55" hits="1"/>
+                <line number="56" hits="1"/>
+                <line number="58" hits="1"/>
+                <line number="59" hits="1"/>
+                <line number="60" hits="1"/>
+                <line number="61" hits="1"/>
+                <line number="62" hits="1"/>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="66" hits="1"/>
+              </lines>
+            </method>
+            <method name="testProcessDoesNothingWhenTwigFormResourcesParameterMissing" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="71" hits="1"/>
+                <line number="72" hits="1"/>
+                <line number="73" hits="1"/>
+                <line number="74" hits="1"/>
+                <line number="75" hits="1"/>
+                <line number="77" hits="1"/>
+                <line number="78" hits="1"/>
+                <line number="80" hits="1"/>
+              </lines>
+            </method>
+            <method name="testProcessDoesNothingWhenTwigLoaderDefinitionMissing" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="85" hits="1"/>
+                <line number="86" hits="1"/>
+                <line number="87" hits="1"/>
+                <line number="88" hits="1"/>
+                <line number="89" hits="1"/>
+                <line number="91" hits="1"/>
+                <line number="92" hits="1"/>
+                <line number="93" hits="1"/>
+                <line number="94" hits="1"/>
+                <line number="96" hits="1"/>
+                <line number="97" hits="1"/>
+                <line number="99" hits="1"/>
+              </lines>
+            </method>
+            <method name="testProcessHandlesEmptyFormResources" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="104" hits="1"/>
+                <line number="105" hits="1"/>
+                <line number="106" hits="1"/>
+                <line number="108" hits="1"/>
+                <line number="109" hits="1"/>
+                <line number="110" hits="1"/>
+                <line number="111" hits="1"/>
+                <line number="112" hits="1"/>
+                <line number="114" hits="1"/>
+                <line number="115" hits="1"/>
+                <line number="116" hits="1"/>
+                <line number="117" hits="1"/>
+                <line number="118" hits="1"/>
+                <line number="119" hits="1"/>
+                <line number="121" hits="1"/>
+              </lines>
+            </method>
+            <method name="setUp" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="126" hits="4"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="39" hits="1"/>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="45" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="49" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="53" hits="1"/>
+            <line number="54" hits="1"/>
+            <line number="55" hits="1"/>
+            <line number="56" hits="1"/>
+            <line number="58" hits="1"/>
+            <line number="59" hits="1"/>
+            <line number="60" hits="1"/>
+            <line number="61" hits="1"/>
+            <line number="62" hits="1"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="66" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="72" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="74" hits="1"/>
+            <line number="75" hits="1"/>
+            <line number="77" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="80" hits="1"/>
+            <line number="85" hits="1"/>
+            <line number="86" hits="1"/>
+            <line number="87" hits="1"/>
+            <line number="88" hits="1"/>
+            <line number="89" hits="1"/>
+            <line number="91" hits="1"/>
+            <line number="92" hits="1"/>
+            <line number="93" hits="1"/>
+            <line number="94" hits="1"/>
+            <line number="96" hits="1"/>
+            <line number="97" hits="1"/>
+            <line number="99" hits="1"/>
+            <line number="104" hits="1"/>
+            <line number="105" hits="1"/>
+            <line number="106" hits="1"/>
+            <line number="108" hits="1"/>
+            <line number="109" hits="1"/>
+            <line number="110" hits="1"/>
+            <line number="111" hits="1"/>
+            <line number="112" hits="1"/>
+            <line number="114" hits="1"/>
+            <line number="115" hits="1"/>
+            <line number="116" hits="1"/>
+            <line number="117" hits="1"/>
+            <line number="118" hits="1"/>
+            <line number="119" hits="1"/>
+            <line number="121" hits="1"/>
+            <line number="126" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="HoneyPot/Tests/Form/Extension/HoneyPotExtensionTest.php" line-rate="1" branch-rate="0" complexity="12">
+      <classes>
+        <class name="Valksor\Component\FormType\HoneyPot\Tests\Form\Extension\HoneyPotExtensionTest" filename="HoneyPot/Tests/Form/Extension/HoneyPotExtensionTest.php" line-rate="1" branch-rate="0" complexity="12">
+          <methods>
+            <method name="testBuildFormAddsCustomFieldName" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="40" hits="1"/>
+                <line number="41" hits="1"/>
+                <line number="42" hits="1"/>
+                <line number="43" hits="1"/>
+                <line number="44" hits="1"/>
+                <line number="45" hits="1"/>
+                <line number="46" hits="1"/>
+                <line number="47" hits="1"/>
+                <line number="48" hits="1"/>
+                <line number="50" hits="1"/>
+                <line number="51" hits="1"/>
+                <line number="53" hits="1"/>
+                <line number="54" hits="1"/>
+                <line number="55" hits="1"/>
+                <line number="56" hits="1"/>
+                <line number="57" hits="1"/>
+              </lines>
+            </method>
+            <method name="testBuildFormAddsHoneypotFieldWhenEnabled" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="62" hits="1"/>
+                <line number="63" hits="1"/>
+                <line number="64" hits="1"/>
+                <line number="65" hits="1"/>
+                <line number="66" hits="1"/>
+                <line number="67" hits="1"/>
+                <line number="68" hits="1"/>
+                <line number="69" hits="1"/>
+                <line number="70" hits="1"/>
+                <line number="71" hits="1"/>
+                <line number="72" hits="1"/>
+                <line number="73" hits="1"/>
+                <line number="74" hits="1"/>
+                <line number="75" hits="1"/>
+                <line number="76" hits="1"/>
+                <line number="77" hits="1"/>
+                <line number="78" hits="1"/>
+                <line number="80" hits="1"/>
+                <line number="81" hits="1"/>
+                <line number="82" hits="1"/>
+                <line number="84" hits="1"/>
+                <line number="85" hits="1"/>
+                <line number="86" hits="1"/>
+                <line number="87" hits="1"/>
+                <line number="88" hits="1"/>
+              </lines>
+            </method>
+            <method name="testBuildFormDoesNothingWhenHoneypotDisabled" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="93" hits="1"/>
+                <line number="94" hits="1"/>
+                <line number="95" hits="1"/>
+                <line number="96" hits="1"/>
+                <line number="97" hits="1"/>
+                <line number="99" hits="1"/>
+              </lines>
+            </method>
+            <method name="testConfigureOptionsAllowsCustomValues" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="104" hits="1"/>
+                <line number="105" hits="1"/>
+                <line number="107" hits="1"/>
+                <line number="108" hits="1"/>
+                <line number="109" hits="1"/>
+                <line number="110" hits="1"/>
+                <line number="111" hits="1"/>
+                <line number="113" hits="1"/>
+                <line number="114" hits="1"/>
+                <line number="115" hits="1"/>
+              </lines>
+            </method>
+            <method name="testConfigureOptionsSetsDefaults" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="120" hits="1"/>
+                <line number="121" hits="1"/>
+                <line number="123" hits="1"/>
+                <line number="125" hits="1"/>
+                <line number="126" hits="1"/>
+                <line number="127" hits="1"/>
+              </lines>
+            </method>
+            <method name="testGetExtendedTypesReturnsFormType" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="132" hits="1"/>
+                <line number="134" hits="1"/>
+              </lines>
+            </method>
+            <method name="testPreSubmitListenerDoesNothingWhenDataIsNotArray" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="139" hits="1"/>
+                <line number="141" hits="1"/>
+                <line number="142" hits="1"/>
+                <line number="143" hits="1"/>
+                <line number="144" hits="1"/>
+                <line number="145" hits="1"/>
+                <line number="146" hits="1"/>
+                <line number="148" hits="1"/>
+                <line number="149" hits="1"/>
+                <line number="151" hits="1"/>
+                <line number="152" hits="1"/>
+                <line number="153" hits="1"/>
+                <line number="154" hits="1"/>
+                <line number="155" hits="1"/>
+                <line number="157" hits="1"/>
+                <line number="158" hits="1"/>
+                <line number="160" hits="1"/>
+                <line number="162" hits="1"/>
+              </lines>
+            </method>
+            <method name="testPreSubmitListenerDoesNothingWhenHoneypotEmpty" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="167" hits="1"/>
+                <line number="169" hits="1"/>
+                <line number="170" hits="1"/>
+                <line number="171" hits="1"/>
+                <line number="172" hits="1"/>
+                <line number="173" hits="1"/>
+                <line number="174" hits="1"/>
+                <line number="176" hits="1"/>
+                <line number="177" hits="1"/>
+                <line number="179" hits="1"/>
+                <line number="180" hits="1"/>
+                <line number="181" hits="1"/>
+                <line number="182" hits="1"/>
+                <line number="183" hits="1"/>
+                <line number="185" hits="1"/>
+                <line number="186" hits="1"/>
+                <line number="188" hits="1"/>
+                <line number="190" hits="1"/>
+              </lines>
+            </method>
+            <method name="testPreSubmitListenerHandlesNullRequest" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="195" hits="1"/>
+                <line number="197" hits="1"/>
+                <line number="198" hits="1"/>
+                <line number="199" hits="1"/>
+                <line number="200" hits="1"/>
+                <line number="201" hits="1"/>
+                <line number="202" hits="1"/>
+                <line number="204" hits="1"/>
+                <line number="205" hits="1"/>
+                <line number="207" hits="1"/>
+                <line number="208" hits="1"/>
+                <line number="209" hits="1"/>
+                <line number="211" hits="1"/>
+                <line number="212" hits="1"/>
+                <line number="213" hits="1"/>
+                <line number="214" hits="1"/>
+                <line number="215" hits="1"/>
+                <line number="217" hits="1"/>
+                <line number="218" hits="1"/>
+                <line number="220" hits="1"/>
+                <line number="221" hits="1"/>
+                <line number="223" hits="1"/>
+              </lines>
+            </method>
+            <method name="testPreSubmitListenerThrowsExceptionWhenHoneypotFilled" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="228" hits="1"/>
+                <line number="230" hits="1"/>
+                <line number="231" hits="1"/>
+                <line number="232" hits="1"/>
+                <line number="233" hits="1"/>
+                <line number="234" hits="1"/>
+                <line number="235" hits="1"/>
+                <line number="237" hits="1"/>
+                <line number="238" hits="1"/>
+                <line number="240" hits="1"/>
+                <line number="241" hits="1"/>
+                <line number="242" hits="1"/>
+                <line number="244" hits="1"/>
+                <line number="245" hits="1"/>
+                <line number="246" hits="1"/>
+                <line number="248" hits="1"/>
+                <line number="249" hits="1"/>
+                <line number="250" hits="1"/>
+                <line number="251" hits="1"/>
+                <line number="252" hits="1"/>
+                <line number="254" hits="1"/>
+                <line number="255" hits="1"/>
+                <line number="257" hits="1"/>
+                <line number="258" hits="1"/>
+                <line number="260" hits="1"/>
+                <line number="261" hits="1"/>
+                <line number="264" hits="1"/>
+                <line number="265" hits="1"/>
+                <line number="266" hits="1"/>
+                <line number="267" hits="1"/>
+                <line number="269" hits="1"/>
+                <line number="272" hits="1"/>
+                <line number="273" hits="1"/>
+              </lines>
+            </method>
+            <method name="setUp" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="278" hits="10"/>
+                <line number="279" hits="10"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="40" hits="1"/>
+            <line number="41" hits="1"/>
+            <line number="42" hits="1"/>
+            <line number="43" hits="1"/>
+            <line number="44" hits="1"/>
+            <line number="45" hits="1"/>
+            <line number="46" hits="1"/>
+            <line number="47" hits="1"/>
+            <line number="48" hits="1"/>
+            <line number="50" hits="1"/>
+            <line number="51" hits="1"/>
+            <line number="53" hits="1"/>
+            <line number="54" hits="1"/>
+            <line number="55" hits="1"/>
+            <line number="56" hits="1"/>
+            <line number="57" hits="1"/>
+            <line number="62" hits="1"/>
+            <line number="63" hits="1"/>
+            <line number="64" hits="1"/>
+            <line number="65" hits="1"/>
+            <line number="66" hits="1"/>
+            <line number="67" hits="1"/>
+            <line number="68" hits="1"/>
+            <line number="69" hits="1"/>
+            <line number="70" hits="1"/>
+            <line number="71" hits="1"/>
+            <line number="72" hits="1"/>
+            <line number="73" hits="1"/>
+            <line number="74" hits="1"/>
+            <line number="75" hits="1"/>
+            <line number="76" hits="1"/>
+            <line number="77" hits="1"/>
+            <line number="78" hits="1"/>
+            <line number="80" hits="1"/>
+            <line number="81" hits="1"/>
+            <line number="82" hits="1"/>
+            <line number="84" hits="1"/>
+            <line number="85" hits="1"/>
+            <line number="86" hits="1"/>
+            <line number="87" hits="1"/>
+            <line number="88" hits="1"/>
+            <line number="93" hits="1"/>
+            <line number="94" hits="1"/>
+            <line number="95" hits="1"/>
+            <line number="96" hits="1"/>
+            <line number="97" hits="1"/>
+            <line number="99" hits="1"/>
+            <line number="104" hits="1"/>
+            <line number="105" hits="1"/>
+            <line number="107" hits="1"/>
+            <line number="108" hits="1"/>
+            <line number="109" hits="1"/>
+            <line number="110" hits="1"/>
+            <line number="111" hits="1"/>
+            <line number="113" hits="1"/>
+            <line number="114" hits="1"/>
+            <line number="115" hits="1"/>
+            <line number="120" hits="1"/>
+            <line number="121" hits="1"/>
+            <line number="123" hits="1"/>
+            <line number="125" hits="1"/>
+            <line number="126" hits="1"/>
+            <line number="127" hits="1"/>
+            <line number="132" hits="1"/>
+            <line number="134" hits="1"/>
+            <line number="139" hits="1"/>
+            <line number="141" hits="1"/>
+            <line number="142" hits="1"/>
+            <line number="143" hits="1"/>
+            <line number="144" hits="1"/>
+            <line number="145" hits="1"/>
+            <line number="146" hits="1"/>
+            <line number="148" hits="1"/>
+            <line number="149" hits="1"/>
+            <line number="151" hits="1"/>
+            <line number="152" hits="1"/>
+            <line number="153" hits="1"/>
+            <line number="154" hits="1"/>
+            <line number="155" hits="1"/>
+            <line number="157" hits="1"/>
+            <line number="158" hits="1"/>
+            <line number="160" hits="1"/>
+            <line number="162" hits="1"/>
+            <line number="167" hits="1"/>
+            <line number="169" hits="1"/>
+            <line number="170" hits="1"/>
+            <line number="171" hits="1"/>
+            <line number="172" hits="1"/>
+            <line number="173" hits="1"/>
+            <line number="174" hits="1"/>
+            <line number="176" hits="1"/>
+            <line number="177" hits="1"/>
+            <line number="179" hits="1"/>
+            <line number="180" hits="1"/>
+            <line number="181" hits="1"/>
+            <line number="182" hits="1"/>
+            <line number="183" hits="1"/>
+            <line number="185" hits="1"/>
+            <line number="186" hits="1"/>
+            <line number="188" hits="1"/>
+            <line number="190" hits="1"/>
+            <line number="195" hits="1"/>
+            <line number="197" hits="1"/>
+            <line number="198" hits="1"/>
+            <line number="199" hits="1"/>
+            <line number="200" hits="1"/>
+            <line number="201" hits="1"/>
+            <line number="202" hits="1"/>
+            <line number="204" hits="1"/>
+            <line number="205" hits="1"/>
+            <line number="207" hits="1"/>
+            <line number="208" hits="1"/>
+            <line number="209" hits="1"/>
+            <line number="211" hits="1"/>
+            <line number="212" hits="1"/>
+            <line number="213" hits="1"/>
+            <line number="214" hits="1"/>
+            <line number="215" hits="1"/>
+            <line number="217" hits="1"/>
+            <line number="218" hits="1"/>
+            <line number="220" hits="1"/>
+            <line number="221" hits="1"/>
+            <line number="223" hits="1"/>
+            <line number="228" hits="1"/>
+            <line number="230" hits="1"/>
+            <line number="231" hits="1"/>
+            <line number="232" hits="1"/>
+            <line number="233" hits="1"/>
+            <line number="234" hits="1"/>
+            <line number="235" hits="1"/>
+            <line number="237" hits="1"/>
+            <line number="238" hits="1"/>
+            <line number="240" hits="1"/>
+            <line number="241" hits="1"/>
+            <line number="242" hits="1"/>
+            <line number="244" hits="1"/>
+            <line number="245" hits="1"/>
+            <line number="246" hits="1"/>
+            <line number="248" hits="1"/>
+            <line number="249" hits="1"/>
+            <line number="250" hits="1"/>
+            <line number="251" hits="1"/>
+            <line number="252" hits="1"/>
+            <line number="254" hits="1"/>
+            <line number="255" hits="1"/>
+            <line number="257" hits="1"/>
+            <line number="258" hits="1"/>
+            <line number="260" hits="1"/>
+            <line number="261" hits="1"/>
+            <line number="264" hits="1"/>
+            <line number="265" hits="1"/>
+            <line number="266" hits="1"/>
+            <line number="267" hits="1"/>
+            <line number="269" hits="1"/>
+            <line number="272" hits="1"/>
+            <line number="273" hits="1"/>
+            <line number="278" hits="10"/>
+            <line number="279" hits="10"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="HoneyPot/Tests/bootstrap.php" line-rate="0" branch-rate="0" complexity="0">
+      <classes/>
+    </package>
+  </packages>
+</coverage>
