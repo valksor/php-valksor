@@ -56,7 +56,7 @@
     "require-dev": {
         "composer/composer": "^2",
         "friendsofphp/php-cs-fixer": "*",
-        "phpunit/phpunit": "^12.0",
+        "phpunit/phpunit": "^13.0",
         "roave/security-advisories": "dev-latest"
     },
     "replace": {
