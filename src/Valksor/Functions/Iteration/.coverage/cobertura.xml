@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.99479166666667" branch-rate="0" lines-covered="191" lines-valid="192" branches-covered="0" branches-valid="0" complexity="109" version="0.4" timestamp="0">
+<coverage line-rate="0.99473684210526" branch-rate="0" lines-covered="189" lines-valid="190" branches-covered="0" branches-valid="0" complexity="109" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/Functions/Iteration</source>
   </sources>
@@ -163,7 +162,6 @@
                 <line number="32" hits="1"/>
                 <line number="33" hits="1"/>
                 <line number="34" hits="1"/>
-                <line number="35" hits="2"/>
                 <line number="38" hits="1"/>
               </lines>
             </method>
@@ -175,7 +173,6 @@
             <line number="32" hits="1"/>
             <line number="33" hits="1"/>
             <line number="34" hits="1"/>
-            <line number="35" hits="2"/>
             <line number="38" hits="1"/>
           </lines>
         </class>
@@ -266,7 +263,6 @@
                 <line number="38" hits="1"/>
                 <line number="39" hits="1"/>
                 <line number="40" hits="1"/>
-                <line number="41" hits="1"/>
               </lines>
             </method>
           </methods>
@@ -278,7 +274,6 @@
             <line number="38" hits="1"/>
             <line number="39" hits="1"/>
             <line number="40" hits="1"/>
-            <line number="41" hits="1"/>
           </lines>
         </class>
       </classes>

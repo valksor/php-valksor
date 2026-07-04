@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.71847858640311" branch-rate="0" lines-covered="2399" lines-valid="3339" branches-covered="0" branches-valid="0" complexity="1467" version="0.4" timestamp="0">
+<coverage line-rate="0.7183353437877" branch-rate="0" lines-covered="2382" lines-valid="3316" branches-covered="0" branches-valid="0" complexity="1467" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor</source>
   </sources>
@@ -2389,11 +2388,6 @@
                 <line number="53" hits="0"/>
               </lines>
             </method>
-            <method name="customFunction" signature="" line-rate="0" branch-rate="0" complexity="0">
-              <lines>
-                <line number="56" hits="0"/>
-              </lines>
-            </method>
             <method name="addNodeMapping" signature="string $parserMethod" line-rate="0" branch-rate="0" complexity="1">
               <lines>
                 <line number="61" hits="0"/>
@@ -2423,7 +2417,6 @@
             <line number="51" hits="0"/>
             <line number="52" hits="0"/>
             <line number="53" hits="0"/>
-            <line number="56" hits="0"/>
             <line number="61" hits="0"/>
             <line number="70" hits="0"/>
             <line number="71" hits="0"/>
@@ -2666,8 +2659,6 @@
             </method>
             <method name="updatedTimestamps" signature="" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="64" hits="0"/>
-                <line number="65" hits="0"/>
                 <line number="68" hits="0"/>
                 <line number="70" hits="0"/>
                 <line number="71" hits="0"/>
@@ -2689,8 +2680,6 @@
             <line number="47" hits="0"/>
             <line number="56" hits="0"/>
             <line number="58" hits="0"/>
-            <line number="64" hits="0"/>
-            <line number="65" hits="0"/>
             <line number="68" hits="0"/>
             <line number="70" hits="0"/>
             <line number="71" hits="0"/>
@@ -2753,7 +2742,6 @@
             </method>
             <method name="prePersist" signature="" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="29" hits="0"/>
                 <line number="32" hits="0"/>
                 <line number="33" hits="0"/>
               </lines>
@@ -2767,7 +2755,6 @@
           </methods>
           <lines>
             <line number="26" hits="0"/>
-            <line number="29" hits="0"/>
             <line number="32" hits="0"/>
             <line number="33" hits="0"/>
             <line number="40" hits="0"/>
@@ -5684,12 +5671,10 @@
                 <line number="38" hits="6"/>
                 <line number="39" hits="1"/>
                 <line number="40" hits="5"/>
-                <line number="41" hits="6"/>
                 <line number="44" hits="6"/>
                 <line number="48" hits="7"/>
                 <line number="49" hits="1"/>
                 <line number="50" hits="7"/>
-                <line number="51" hits="7"/>
               </lines>
             </method>
           </methods>
@@ -5703,12 +5688,10 @@
             <line number="38" hits="6"/>
             <line number="39" hits="1"/>
             <line number="40" hits="5"/>
-            <line number="41" hits="6"/>
             <line number="44" hits="6"/>
             <line number="48" hits="7"/>
             <line number="49" hits="1"/>
             <line number="50" hits="7"/>
-            <line number="51" hits="7"/>
           </lines>
         </class>
       </classes>
@@ -6052,7 +6035,6 @@
                 <line number="32" hits="1"/>
                 <line number="33" hits="1"/>
                 <line number="34" hits="1"/>
-                <line number="35" hits="2"/>
                 <line number="38" hits="1"/>
               </lines>
             </method>
@@ -6064,7 +6046,6 @@
             <line number="32" hits="1"/>
             <line number="33" hits="1"/>
             <line number="34" hits="1"/>
-            <line number="35" hits="2"/>
             <line number="38" hits="1"/>
           </lines>
         </class>
@@ -6155,7 +6136,6 @@
                 <line number="38" hits="2"/>
                 <line number="39" hits="2"/>
                 <line number="40" hits="2"/>
-                <line number="41" hits="2"/>
               </lines>
             </method>
           </methods>
@@ -6167,7 +6147,6 @@
             <line number="38" hits="2"/>
             <line number="39" hits="2"/>
             <line number="40" hits="2"/>
-            <line number="41" hits="2"/>
           </lines>
         </class>
       </classes>
@@ -7461,7 +7440,6 @@
                 <line number="26" hits="6"/>
                 <line number="27" hits="6"/>
                 <line number="28" hits="9"/>
-                <line number="29" hits="9"/>
                 <line number="32" hits="1"/>
               </lines>
             </method>
@@ -7472,7 +7450,6 @@
             <line number="26" hits="6"/>
             <line number="27" hits="6"/>
             <line number="28" hits="9"/>
-            <line number="29" hits="9"/>
             <line number="32" hits="1"/>
           </lines>
         </class>
@@ -7809,7 +7786,6 @@
                 <line number="31" hits="1"/>
                 <line number="32" hits="1"/>
                 <line number="33" hits="1"/>
-                <line number="34" hits="1"/>
               </lines>
             </method>
           </methods>
@@ -7821,7 +7797,6 @@
             <line number="31" hits="1"/>
             <line number="32" hits="1"/>
             <line number="33" hits="1"/>
-            <line number="34" hits="1"/>
           </lines>
         </class>
       </classes>
@@ -8434,11 +8409,11 @@
         </class>
       </classes>
     </package>
-    <package name="Functions/Php/Traits/_SystemInfo.php" line-rate="0.72222222222222" branch-rate="0" complexity="13">
+    <package name="Functions/Php/Traits/_SystemInfo.php" line-rate="0.66666666666667" branch-rate="0" complexity="13">
       <classes>
-        <class name="Valksor\Functions\Php\Traits\_SystemInfo" filename="Functions/Php/Traits/_SystemInfo.php" line-rate="0.72222222222222" branch-rate="0" complexity="13">
+        <class name="Valksor\Functions\Php\Traits\_SystemInfo" filename="Functions/Php/Traits/_SystemInfo.php" line-rate="0.66666666666667" branch-rate="0" complexity="13">
           <methods>
-            <method name="systemInfo" signature="" line-rate="0.72222222222222" branch-rate="0" complexity="13">
+            <method name="systemInfo" signature="" line-rate="0.66666666666667" branch-rate="0" complexity="13">
               <lines>
                 <line number="27" hits="4"/>
                 <line number="29" hits="4"/>
@@ -8446,13 +8421,10 @@
                 <line number="31" hits="0"/>
                 <line number="32" hits="4"/>
                 <line number="33" hits="0"/>
-                <line number="34" hits="4"/>
-                <line number="36" hits="4"/>
                 <line number="37" hits="4"/>
                 <line number="38" hits="4"/>
                 <line number="39" hits="0"/>
                 <line number="40" hits="0"/>
-                <line number="41" hits="4"/>
                 <line number="43" hits="4"/>
                 <line number="44" hits="4"/>
                 <line number="45" hits="4"/>
@@ -8468,13 +8440,10 @@
             <line number="31" hits="0"/>
             <line number="32" hits="4"/>
             <line number="33" hits="0"/>
-            <line number="34" hits="4"/>
-            <line number="36" hits="4"/>
             <line number="37" hits="4"/>
             <line number="38" hits="4"/>
             <line number="39" hits="0"/>
             <line number="40" hits="0"/>
-            <line number="41" hits="4"/>
             <line number="43" hits="4"/>
             <line number="44" hits="4"/>
             <line number="45" hits="4"/>
@@ -10117,7 +10086,6 @@
                 <line number="41" hits="6"/>
                 <line number="42" hits="5"/>
                 <line number="43" hits="1"/>
-                <line number="44" hits="6"/>
                 <line number="46" hits="6"/>
                 <line number="49" hits="6"/>
               </lines>
@@ -10133,7 +10101,6 @@
             <line number="41" hits="6"/>
             <line number="42" hits="5"/>
             <line number="43" hits="1"/>
-            <line number="44" hits="6"/>
             <line number="46" hits="6"/>
             <line number="49" hits="6"/>
           </lines>
@@ -10934,7 +10901,6 @@
                 <line number="51" hits="2"/>
                 <line number="52" hits="3"/>
                 <line number="53" hits="3"/>
-                <line number="54" hits="3"/>
               </lines>
             </method>
             <method name="transformNumber" signature="string $style, mixed $value" line-rate="1" branch-rate="0" complexity="5">
@@ -10951,7 +10917,6 @@
             <line number="51" hits="2"/>
             <line number="52" hits="3"/>
             <line number="53" hits="3"/>
-            <line number="54" hits="3"/>
             <line number="62" hits="3"/>
             <line number="63" hits="3"/>
           </lines>
@@ -11184,7 +11149,6 @@
                 <line number="48" hits="4"/>
                 <line number="49" hits="3"/>
                 <line number="50" hits="1"/>
-                <line number="51" hits="4"/>
                 <line number="55" hits="4"/>
               </lines>
             </method>
@@ -11215,7 +11179,6 @@
             <line number="48" hits="4"/>
             <line number="49" hits="3"/>
             <line number="50" hits="1"/>
-            <line number="51" hits="4"/>
             <line number="55" hits="4"/>
             <line number="60" hits="3"/>
             <line number="65" hits="3"/>
@@ -11307,7 +11270,6 @@
                 <line number="94" hits="3"/>
                 <line number="95" hits="3"/>
                 <line number="96" hits="3"/>
-                <line number="97" hits="3"/>
               </lines>
             </method>
             <method name="processColumn" signature="" line-rate="1" branch-rate="0" complexity="1">
@@ -11369,7 +11331,6 @@
             <line number="94" hits="3"/>
             <line number="95" hits="3"/>
             <line number="96" hits="3"/>
-            <line number="97" hits="3"/>
             <line number="103" hits="3"/>
             <line number="104" hits="3"/>
             <line number="105" hits="3"/>
@@ -11388,9 +11349,9 @@
         </class>
       </classes>
     </package>
-    <package name="XlsxParser/Xlsx/SharedStrings.php" line-rate="0.90909090909091" branch-rate="0" complexity="7">
+    <package name="XlsxParser/Xlsx/SharedStrings.php" line-rate="0.9" branch-rate="0" complexity="7">
       <classes>
-        <class name="Valksor\XlsxParser\Xlsx\SharedStrings" filename="XlsxParser/Xlsx/SharedStrings.php" line-rate="0.90909090909091" branch-rate="0" complexity="7">
+        <class name="Valksor\XlsxParser\Xlsx\SharedStrings" filename="XlsxParser/Xlsx/SharedStrings.php" line-rate="0.9" branch-rate="0" complexity="7">
           <methods>
             <method name="readNext" signature="" line-rate="1" branch-rate="0" complexity="3">
               <lines>
@@ -11402,13 +11363,12 @@
                 <line number="41" hits="2"/>
               </lines>
             </method>
-            <method name="process" signature="XMLReader $xml" line-rate="0.8" branch-rate="0" complexity="4">
+            <method name="process" signature="XMLReader $xml" line-rate="0.75" branch-rate="0" complexity="4">
               <lines>
                 <line number="47" hits="2"/>
                 <line number="48" hits="2"/>
                 <line number="49" hits="2"/>
                 <line number="50" hits="0"/>
-                <line number="51" hits="2"/>
               </lines>
             </method>
           </methods>
@@ -11423,7 +11383,6 @@
             <line number="48" hits="2"/>
             <line number="49" hits="2"/>
             <line number="50" hits="0"/>
-            <line number="51" hits="2"/>
           </lines>
         </class>
       </classes>
@@ -11471,7 +11430,6 @@
                 <line number="88" hits="2"/>
                 <line number="89" hits="2"/>
                 <line number="90" hits="2"/>
-                <line number="91" hits="2"/>
               </lines>
             </method>
             <method name="processCellXfs" signature="XMLReader $xml" line-rate="1" branch-rate="0" complexity="5">
@@ -11481,7 +11439,6 @@
                 <line number="100" hits="2"/>
                 <line number="101" hits="2"/>
                 <line number="102" hits="2"/>
-                <line number="103" hits="2"/>
                 <line number="106" hits="2"/>
               </lines>
             </method>
@@ -11522,13 +11479,11 @@
             <line number="88" hits="2"/>
             <line number="89" hits="2"/>
             <line number="90" hits="2"/>
-            <line number="91" hits="2"/>
             <line number="98" hits="2"/>
             <line number="99" hits="2"/>
             <line number="100" hits="2"/>
             <line number="101" hits="2"/>
             <line number="102" hits="2"/>
-            <line number="103" hits="2"/>
             <line number="106" hits="2"/>
             <line number="112" hits="2"/>
             <line number="113" hits="2"/>
@@ -11583,7 +11538,6 @@
                 <line number="46" hits="4"/>
                 <line number="47" hits="3"/>
                 <line number="48" hits="4"/>
-                <line number="49" hits="4"/>
               </lines>
             </method>
             <method name="getRows" signature="int $index" line-rate="1" branch-rate="0" complexity="1">
@@ -11628,7 +11582,6 @@
             <line number="46" hits="4"/>
             <line number="47" hits="3"/>
             <line number="48" hits="4"/>
-            <line number="49" hits="4"/>
             <line number="55" hits="3"/>
             <line number="60" hits="8"/>
             <line number="65" hits="5"/>
