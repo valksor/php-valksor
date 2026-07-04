@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage line-rate="1" branch-rate="0" lines-covered="199" lines-valid="199" branches-covered="0" branches-valid="0" complexity="139" version="0.4" timestamp="0">
+<coverage line-rate="1" branch-rate="0" lines-covered="198" lines-valid="198" branches-covered="0" branches-valid="0" complexity="138" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/XlsxParser</source>
   </sources>
@@ -268,9 +268,9 @@
         </class>
       </classes>
     </package>
-    <package name="Xlsx/Archive.php" line-rate="1" branch-rate="0" complexity="16">
+    <package name="Xlsx/Archive.php" line-rate="1" branch-rate="0" complexity="15">
       <classes>
-        <class name="Valksor\XlsxParser\Xlsx\Archive" filename="Xlsx/Archive.php" line-rate="1" branch-rate="0" complexity="16">
+        <class name="Valksor\XlsxParser\Xlsx\Archive" filename="Xlsx/Archive.php" line-rate="1" branch-rate="0" complexity="15">
           <methods>
             <method name="__construct" signature="string $archivePath" line-rate="1" branch-rate="0" complexity="2">
               <lines>
@@ -313,25 +313,24 @@
                 <line number="91" hits="6"/>
               </lines>
             </method>
-            <method name="generateFilesToDelete" signature="string $path" line-rate="1" branch-rate="0" complexity="2">
+            <method name="generateFilesToDelete" signature="string $path" line-rate="1" branch-rate="0" complexity="1">
               <lines>
                 <line number="106" hits="6"/>
                 <line number="107" hits="6"/>
                 <line number="108" hits="6"/>
                 <line number="109" hits="6"/>
-                <line number="110" hits="5"/>
-                <line number="114" hits="6"/>
+                <line number="112" hits="6"/>
               </lines>
             </method>
             <method name="getArchive" signature="" line-rate="1" branch-rate="0" complexity="3">
               <lines>
+                <line number="117" hits="9"/>
+                <line number="118" hits="9"/>
                 <line number="119" hits="9"/>
-                <line number="120" hits="9"/>
                 <line number="121" hits="9"/>
-                <line number="123" hits="9"/>
+                <line number="122" hits="3"/>
                 <line number="124" hits="3"/>
-                <line number="126" hits="3"/>
-                <line number="130" hits="6"/>
+                <line number="128" hits="6"/>
               </lines>
             </method>
           </methods>
@@ -361,15 +360,14 @@
             <line number="107" hits="6"/>
             <line number="108" hits="6"/>
             <line number="109" hits="6"/>
-            <line number="110" hits="5"/>
-            <line number="114" hits="6"/>
+            <line number="112" hits="6"/>
+            <line number="117" hits="9"/>
+            <line number="118" hits="9"/>
             <line number="119" hits="9"/>
-            <line number="120" hits="9"/>
             <line number="121" hits="9"/>
-            <line number="123" hits="9"/>
+            <line number="122" hits="3"/>
             <line number="124" hits="3"/>
-            <line number="126" hits="3"/>
-            <line number="130" hits="6"/>
+            <line number="128" hits="6"/>
           </lines>
         </class>
       </classes>
