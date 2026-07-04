@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="1" branch-rate="0" lines-covered="168" lines-valid="168" branches-covered="0" branches-valid="0" complexity="82" version="0.4" timestamp="0">
+<coverage line-rate="1" branch-rate="0" lines-covered="167" lines-valid="167" branches-covered="0" branches-valid="0" complexity="82" version="0.4" timestamp="0">
   <sources>
     <source>/var/www/html/valksor/src/Valksor/Functions/Web</source>
   </sources>
@@ -80,7 +79,6 @@
                 <line number="41" hits="6"/>
                 <line number="42" hits="5"/>
                 <line number="43" hits="1"/>
-                <line number="44" hits="6"/>
                 <line number="46" hits="6"/>
                 <line number="49" hits="6"/>
               </lines>
@@ -96,7 +94,6 @@
             <line number="41" hits="6"/>
             <line number="42" hits="5"/>
             <line number="43" hits="1"/>
-            <line number="44" hits="6"/>
             <line number="46" hits="6"/>
             <line number="49" hits="6"/>
           </lines>
