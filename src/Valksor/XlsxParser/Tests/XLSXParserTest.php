@@ -104,6 +104,22 @@ Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed 
         $workbook->getIndex('worksheet');
     }
 
+    public function testOpenRichTextSharedStrings(): void
+    {
+        $workbook = new XLSXParser()->open(__DIR__ . '/assets/richtext.xlsx');
+        $this->assertEquals(['data', ], $workbook->getWorksheets());
+        $values = [];
+
+        foreach ($workbook->getRows($workbook->getIndex('data')) as $key => $row) {
+            $values[$key] = $row;
+        }
+
+        // Reading this shared-string cell drives SharedStrings::process() through the rich-text
+        // <r>/<rPr>/<b> elements that fall to the `default => null` arm; the two <t> runs are then
+        // concatenated by AbstractXMLDictionary::get() into the final value.
+        $this->assertSame('bold text', $values[1][0]);
+    }
+
     public function testOpenWrongIndex(): void
     {
         $this->expectException(InvalidIndexException::class);
