@@ -33,7 +33,7 @@ final class SpxDataCollectorTest extends TestCase
         $method = new ReflectionClass($this->collector)->getMethod('addReportsToResult');
 
         $result = ['url' => null, 'metadata' => null, 'multiple_reports' => []];
-        $method->invoke($this->collector, [], 'test-key', $result);
+        $result = $method->invoke($this->collector, [], 'test-key', $result);
 
         $this->assertNull($result['url']);
         $this->assertNull($result['metadata']);
@@ -368,7 +368,7 @@ final class SpxDataCollectorTest extends TestCase
             ['file' => 'file2', 'time_diff' => -1, 'abs_time_diff' => 1], // Before, 1 second
         ];
 
-        $method->invoke($this->collector, $reports);
+        $reports = $method->invoke($this->collector, $reports);
 
         // Let's see what the actual sorting produces and update expectations accordingly
         $this->assertContains($reports[0]['file'], ['file1', 'file2', 'file3']);

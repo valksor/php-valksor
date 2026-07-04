@@ -34,6 +34,7 @@ use function filemtime;
 use function glob;
 use function implode;
 use function ini_get;
+use function is_array;
 use function is_dir;
 use function number_format;
 use function pathinfo;
@@ -73,6 +74,9 @@ class SpxDataCollector extends AbstractDataCollector
 
     private ?string $baseUri = null;
 
+    /**
+     * @var array{report_url: string|null, report_metadata: array<string, mixed>|null, multiple_reports: list<array{url: string, metadata: array<string, mixed>}>}|null
+     */
     private ?array $loadedReportData = null;
 
     public function __construct()
@@ -133,23 +137,27 @@ class SpxDataCollector extends AbstractDataCollector
     }
 
     /**
+     * @return list<array{url: string, metadata: array<string, mixed>}>
+     *
      * @throws Exception
      */
     public function getMultipleReports(): array
     {
         $this->loadReportData();
 
-        return $this->loadedReportData['multiple_reports'];
+        return $this->loadedReportData['multiple_reports'] ?? [];
     }
 
     /**
+     * @return array<string, mixed>|null
+     *
      * @throws Exception
      */
     public function getReportMetadata(): ?array
     {
         $this->loadReportData();
 
-        return $this->loadedReportData['report_metadata'];
+        return $this->loadedReportData['report_metadata'] ?? null;
     }
 
     /**
@@ -234,19 +242,24 @@ class SpxDataCollector extends AbstractDataCollector
     /**
      * Add report information to the result array.
      *
+     * @param list<array{file: string, data: array<string, mixed>, time_diff: int, abs_time_diff: int}>                                                $reports
+     * @param array{url: string|null, metadata: array<string, mixed>|null, multiple_reports: list<array{url: string, metadata: array<string, mixed>}>} $result
+     *
+     * @return array{url: string|null, metadata: array<string, mixed>|null, multiple_reports: list<array{url: string, metadata: array<string, mixed>}>}
+     *
      * @throws DateMalformedStringException
      */
     private function addReportsToResult(
         array $reports,
         string $spxKey,
-        array &$result,
-    ): void {
+        array $result,
+    ): array {
         if (empty($reports)) {
-            return;
+            return $result;
         }
 
         // Sort reports by time difference
-        $this->sortReportsByTimeDifference($reports);
+        $reports = $this->sortReportsByTimeDifference($reports);
 
         // If we found multiple reports, add them to the result
         if (count($reports) > 1) {
@@ -263,6 +276,8 @@ class SpxDataCollector extends AbstractDataCollector
         $reportKey = pathinfo($reports[0]['file'], PATHINFO_FILENAME);
         $result['url'] = $this->createReportUrl($reportKey, $spxKey);
         $result['metadata'] = $this->extractMetadata($reports[0]['data']);
+
+        return $result;
     }
 
     /**
@@ -277,6 +292,10 @@ class SpxDataCollector extends AbstractDataCollector
 
     /**
      * Extract metadata from a SPX report.
+     *
+     * @param array<string, mixed> $data
+     *
+     * @return array<string, mixed>
      *
      * @throws DateMalformedStringException
      */
@@ -349,6 +368,8 @@ class SpxDataCollector extends AbstractDataCollector
     /**
      * Find a report that matches the given request URI and has a timestamp close to the provided timestamp.
      *
+     * @return array{url: string|null, metadata: array<string, mixed>|null, multiple_reports: list<array{url: string, metadata: array<string, mixed>}>}
+     *
      * @throws JsonException
      * @throws DateMalformedStringException
      */
@@ -374,16 +395,14 @@ class SpxDataCollector extends AbstractDataCollector
         $matchingReports = $this->processReportFiles($files, $requestUri, $timestamp);
 
         if (!empty($matchingReports)) {
-            $this->addReportsToResult($matchingReports, $spxKey, $result);
-
-            return $result;
+            return $this->addReportsToResult($matchingReports, $spxKey, $result);
         }
 
         // If no matching report is found, use fallback reports
         $fallbackReports = $this->processReportFiles($files, $requestUri, $timestamp, false);
 
         if (!empty($fallbackReports)) {
-            $this->addReportsToResult($fallbackReports, $spxKey, $result);
+            $result = $this->addReportsToResult($fallbackReports, $spxKey, $result);
         }
 
         return $result;
@@ -436,14 +455,18 @@ class SpxDataCollector extends AbstractDataCollector
         $this->baseUri = sprintf(self::CONTROL_PANEL_URL_PATTERN, $spxKey);
 
         $this->loadedReportData = [
-            'report_url' => $reportInfo['url'] ?? null,
-            'report_metadata' => $reportInfo['metadata'] ?? null,
-            'multiple_reports' => $reportInfo['multiple_reports'] ?? [],
+            'report_url' => $reportInfo['url'],
+            'report_metadata' => $reportInfo['metadata'],
+            'multiple_reports' => $reportInfo['multiple_reports'],
         ];
     }
 
     /**
      * Process SPX report files and collect matching reports.
+     *
+     * @param array<int, string> $files
+     *
+     * @return list<array{file: string, data: array<string, mixed>, exec_ts: int, time_diff: int, abs_time_diff: int}>
      *
      * @throws JsonException
      */
@@ -474,10 +497,11 @@ class SpxDataCollector extends AbstractDataCollector
 
             $data = $_helper->jsonDecode($content, true);
 
-            if (!$data) {
+            if (!is_array($data)) {
                 continue;
             }
 
+            /** @var array<string, mixed> $data */
             $reportUri = $data['http_request_uri'] ?? '';
 
             // Skip if we're matching exact URI and it doesn't match
@@ -491,7 +515,7 @@ class SpxDataCollector extends AbstractDataCollector
             }
 
             // Calculate time difference
-            $reportTs = $data['exec_ts'] ?? 0;
+            $reportTs = (int) ($data['exec_ts'] ?? 0);
             $timeDiff = $reportTs - $timestamp;
             $absTimeDiff = abs($timeDiff);
 
@@ -512,10 +536,14 @@ class SpxDataCollector extends AbstractDataCollector
 
     /**
      * Sort reports by time difference, prioritizing exact matches and reports after the profiler time.
+     *
+     * @param list<array{file: string, data: array<string, mixed>, time_diff: int, abs_time_diff: int}> $reports
+     *
+     * @return list<array{file: string, data: array<string, mixed>, time_diff: int, abs_time_diff: int}>
      */
     private function sortReportsByTimeDifference(
-        array &$reports,
-    ): void {
+        array $reports,
+    ): array {
         usort($reports, static function (array $a, array $b): int {
             // Prioritize exact matches, then +1/-1 second matches
             $aExact = 0 === $a['abs_time_diff'];
@@ -558,5 +586,7 @@ class SpxDataCollector extends AbstractDataCollector
             // If both are after or both are before, sort by absolute time difference
             return $a['abs_time_diff'] - $b['abs_time_diff'];
         });
+
+        return $reports;
     }
 }
