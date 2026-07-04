@@ -40,6 +40,7 @@ use function class_exists;
 use function count;
 use function dirname;
 use function file_get_contents;
+use function implode;
 use function in_array;
 use function is_a;
 use function is_array;
@@ -607,7 +608,8 @@ final class ValksorBundle extends AbstractBundle
         bool $default,
     ): bool {
         try {
-            $enabled = self::p($builder, $component, 'enabled');
+            $path = $this->getComponentConfigPath($class, $component);
+            $enabled = $builder->getParameter(sprintf('%s.%s.enabled', self::VALKSOR, implode('.', $path)));
 
             return is_bool($enabled) && $enabled;
         } catch (ParameterNotFoundException) {

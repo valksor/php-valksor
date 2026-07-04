@@ -476,6 +476,81 @@ namespace Valksor\Bundle\Tests {
             self::assertSame(0, TrackingDependency::$registerPreConfigurationCalls);
         }
 
+        /**
+         * A top-level component keeps reading the flat valksor.<component>.enabled key unchanged.
+         * Uses the bundle-local ExampleDependency, whose namespace does not match the nested regex.
+         *
+         * @throws ReflectionException
+         */
+        public function testResolveEnabledReadsFlatParameterForTopLevelComponent(): void
+        {
+            $bundle = new ValksorBundle();
+            $builder = new ContainerBuilder();
+            $builder->setParameter('valksor.example.enabled', true);
+
+            $method = new ReflectionMethod(ValksorBundle::class, 'resolveEnabled');
+
+            $enabled = $method->invoke(
+                $bundle,
+                $builder,
+                ExampleDependency::class,
+                'example',
+                false,
+            );
+
+            self::assertTrue($enabled);
+        }
+
+        /**
+         * A namespaced component (Valksor\Component\<Category>\<Component>\...) is enabled via the
+         * nested flattened parameter valksor.<category>.<component>.enabled, not the flat key. The
+         * class name is a synthetic string exercising getComponentConfigPath()'s regex only -
+         * resolveEnabled never autoloads it, so no external package is referenced.
+         *
+         * @throws ReflectionException
+         */
+        public function testResolveEnabledReadsNestedParameterForNamespacedComponent(): void
+        {
+            $bundle = new ValksorBundle();
+            $builder = new ContainerBuilder();
+            $builder->setParameter('valksor.category.widget.enabled', true);
+
+            $method = new ReflectionMethod(ValksorBundle::class, 'resolveEnabled');
+
+            $enabled = $method->invoke(
+                $bundle,
+                $builder,
+                'Valksor\\Component\\Category\\Widget\\DependencyInjection\\WidgetConfiguration',
+                'widget',
+                false,
+            );
+
+            self::assertTrue($enabled);
+            self::assertFalse($builder->hasParameter('valksor.widget.enabled'));
+        }
+
+        /**
+         * @throws ReflectionException
+         */
+        public function testResolveEnabledSkipsNestedComponentWhenDisabled(): void
+        {
+            $bundle = new ValksorBundle();
+            $builder = new ContainerBuilder();
+            $builder->setParameter('valksor.category.widget.enabled', false);
+
+            $method = new ReflectionMethod(ValksorBundle::class, 'resolveEnabled');
+
+            $enabled = $method->invoke(
+                $bundle,
+                $builder,
+                'Valksor\\Component\\Category\\Widget\\DependencyInjection\\WidgetConfiguration',
+                'widget',
+                true,
+            );
+
+            self::assertFalse($enabled);
+        }
+
         protected function tearDown(): void
         {
             TrackingDependency::reset();
