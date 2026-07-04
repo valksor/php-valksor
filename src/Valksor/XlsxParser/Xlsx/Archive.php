@@ -103,12 +103,10 @@ final class Archive
     private function generateFilesToDelete(
         string $path,
     ): Generator {
-        foreach (new RecursiveIteratorIterator(
+        yield from new RecursiveIteratorIterator(
             new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS),
             RecursiveIteratorIterator::CHILD_FIRST,
-        ) as $file) {
-            yield $file;
-        }
+        );
 
         // Finally yield the directory itself
         yield $path;
